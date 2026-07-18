@@ -1,0 +1,7 @@
+id: glossary-battle-will
+slug: glossary-battle-will
+term: 战意
+definition: "攻击时，造成等同于此状态层数×攻击力18%的[附加伤害]，最多叠加5层。不可被其他技能消除。"
+related:
+  - 附加伤害
+  - 火星飞溅

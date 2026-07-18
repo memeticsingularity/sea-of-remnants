@@ -1,0 +1,62 @@
+id: equip-sturdy-heavy-shield
+slug: jian-qiang-zhong-dun
+name: 坚强重盾
+slot: 手部
+handType: 盾牌
+rarity: 紫
+enhance: 6
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+baseStats:
+  atk: 28
+  hp: 1341
+  critRate: "-3.3%"
+statsByLevel:
+  6:
+    atk: 28
+    hp: 1341
+    critRate: "-3.3%"
+requirements:
+  con: 85
+  str: 45
+enhanceRequirements:
+  - level: 1
+    con: 33
+    str: 18
+  - level: 2
+    con: 47
+    str: 25
+  - level: 3
+    con: 51
+    str: 27
+  - level: 4
+    con: 67
+    str: 36
+  - level: 5
+    con: 75
+    str: 40
+  - level: 6
+    con: 85
+    str: 45
+  - level: 7
+    con: 91
+    str: 48
+  - level: 8
+    con: 104
+    str: 55
+  - level: 9
+    con: 114
+    str: 61
+  - level: 10
+    con: 126
+    str: 67
+fixedAffixes:
+  - "给予的护盾效果提升[铠甲]层数×1%，至多提升15%。"
+randomAffixes:
+  - "攻击拥有[气绝]的敌方单位时，造成的伤害提升8%。"
+  - "对拥有[负面状态]的敌方单位暴击率提升2.5%，暴击伤害提升2.5%。"
+  - "每当自身获得护盾时，攻击力提升1级，持续2回合，至多提升至2级。"
+flavor: "贝壳在伤疤上垒砌更多，永不因为恐惧退缩。"
+source: 行装掉落
+image: /images/equipment/sturdy-heavy-shield.png

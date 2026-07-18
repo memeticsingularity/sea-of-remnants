@@ -1,0 +1,7 @@
+id: glossary-full-armed
+slug: glossary-full-armed
+term: 全副武装
+definition: "受到攻击时，消耗1层此状态，抵消不超过自身防御力450%的伤害。最多叠加1层。"
+related:
+  - 铠甲
+  - 防御

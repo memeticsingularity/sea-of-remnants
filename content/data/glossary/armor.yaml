@@ -1,0 +1,7 @@
+id: glossary-armor
+slug: glossary-armor
+term: 铠甲
+definition: "最多叠加15层。每获得5层此状态，获得1层[全副武装]，可抵消1次不超过自身防御力450%的伤害。不可被其他技能消除。"
+related:
+  - 全副武装
+  - 护盾效果

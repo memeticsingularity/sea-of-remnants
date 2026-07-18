@@ -42,6 +42,25 @@ rarity: 紫
   dotBoost: "7.2%"
   ```
 
+### 行装强化数据
+
+- 普通行装（手部 / 头部 / 躯干 / 腿部）支持 +1 到 +10 强化。
+- 奇珍不强化。
+- 使用 `statsByLevel` 记录各等级属性，key 为强化等级：
+  ```yaml
+  baseStats:
+    atk: 77
+    critRate: "5%"
+  statsByLevel:
+    6:
+      atk: 77
+      critRate: "5%"
+    10:
+      atk: 120
+      critRate: "8%"
+  ```
+- 使用 `enhanceRequirements` 记录每级穿戴属性要求。
+
 ### 养成建议
 
 使用 `buildNotes` 字段，支持 Markdown：

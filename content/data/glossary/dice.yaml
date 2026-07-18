@@ -1,0 +1,7 @@
+id: glossary-dice
+slug: glossary-dice
+term: 骰子
+definition: "可装备在职业技能上的辅助技，释放技能时会根据骰子效果提供额外伤害、状态或资源。"
+related:
+  - 职业技能
+  - 强化骰

@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
+import { formatStatName } from '@/utils/format'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
@@ -21,6 +22,9 @@ export function EquipmentDetailPage() {
       </div>
     )
   }
+
+  const maxEnhanceLevel = equipment.slot === '奇珍' ? 0 : 10
+  const statKeys = getAllStatKeys(equipment)
 
   return (
     <div>
@@ -54,6 +58,7 @@ export function EquipmentDetailPage() {
           <div className="mt-2 flex flex-wrap gap-2">
             <Tag variant="gold">{equipment.rarity}</Tag>
             <Tag>{equipment.slot}</Tag>
+            {equipment.handType && <Tag variant="cyan">{equipment.handType}</Tag>}
             {equipment.set && <Tag variant="cyan">{equipment.set}</Tag>}
           </div>
           {equipment.source && (
@@ -64,7 +69,60 @@ export function EquipmentDetailPage() {
 
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          {equipment.baseStats && Object.keys(equipment.baseStats).length > 0 && (
+          {maxEnhanceLevel > 0 && statKeys.length > 0 && (
+            <Card className="mb-6 overflow-x-auto">
+              <h2 className="mb-4 text-xl font-bold text-text">属性成长表</h2>
+              <table className="w-full min-w-[500px] text-sm">
+                <thead>
+                  <tr className="border-b border-border">
+                    <th className="px-2 py-2 text-left text-text-muted">强化等级</th>
+                    {statKeys.map((key) => (
+                      <th key={key} className="px-2 py-2 text-right text-text-muted">
+                        {formatStatName(key)}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {Array.from({ length: maxEnhanceLevel }, (_, i) => i + 1).map((level) => {
+                    const stats = equipment.statsByLevel?.[level]
+                    return (
+                      <tr
+                        key={level}
+                        className={`border-b border-border/50 ${
+                          level === 10 ? 'bg-accent/5' : ''
+                        }`}
+                      >
+                        <td className="px-2 py-2 font-medium text-text">+{level}</td>
+                        {statKeys.map((key) => {
+                          const value = stats?.[key]
+                          const isNegative =
+                            typeof value === 'number'
+                              ? value < 0
+                              : String(value).startsWith('-')
+                          return (
+                            <td
+                              key={key}
+                              className={`px-2 py-2 text-right ${
+                                isNegative ? 'text-negative' : 'text-text'
+                              }`}
+                            >
+                              {value !== undefined ? formatStatValue(value) : '-'}
+                            </td>
+                          )
+                        })}
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+              <p className="mt-2 text-xs text-text-muted">
+                默认高亮 +10 行，缺失数据的等级显示为 “-”。
+              </p>
+            </Card>
+          )}
+
+          {equipment.baseStats && Object.keys(equipment.baseStats).length > 0 && maxEnhanceLevel === 0 && (
             <Card className="mb-6">
               <h2 className="mb-4 text-xl font-bold text-text">基础属性</h2>
               <div className="grid grid-cols-2 gap-4">
@@ -202,21 +260,12 @@ export function EquipmentDetailPage() {
   )
 }
 
-function formatStatName(key: string): string {
-  const names: Record<string, string> = {
-    hp: '生命',
-    atk: '攻击',
-    def: '防御',
-    spd: '速度',
-    int: '智力',
-    per: '感知',
-    dotBoost: '持续伤害提升',
-    hull: '船体',
-    sails: '风帆',
-    cargo: '货舱',
-    crewCapacity: '船员容量',
-  }
-  return names[key] || key
+function getAllStatKeys(equipment: { statsByLevel?: Record<string, Record<string, number | string>> }): string[] {
+  const keys = new Set<string>()
+  Object.values(equipment.statsByLevel || {}).forEach((stats) => {
+    Object.keys(stats).forEach((key) => keys.add(key))
+  })
+  return Array.from(keys)
 }
 
 function formatStatValue(value: number | string | undefined): string {

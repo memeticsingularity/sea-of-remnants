@@ -1,0 +1,61 @@
+id: equip-harbor-hippie
+slug: hai-gang-xi-pi
+name: 海港嬉皮
+slot: 躯干
+rarity: 金
+enhance: 6
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+baseStats:
+  hp: 3668
+  effectHit: "39%"
+statsByLevel:
+  6:
+    hp: 3668
+    effectHit: "39%"
+requirements:
+  per: 110
+  agi: 58
+enhanceRequirements:
+  - level: 1
+    per: 51
+    agi: 27
+  - level: 2
+    per: 55
+    agi: 29
+  - level: 3
+    per: 75
+    agi: 40
+  - level: 4
+    per: 81
+    agi: 43
+  - level: 5
+    per: 104
+    agi: 55
+  - level: 6
+    per: 110
+    agi: 58
+  - level: 7
+    per: 114
+    agi: 61
+  - level: 8
+    per: 119
+    agi: 64
+  - level: 9
+    per: 136
+    agi: 72
+  - level: 10
+    per: 142
+    agi: 76
+fixedAffixes:
+  - "所受伤害降低16%，当场上来源为自身的[负面状态]合计达10层时，所受伤害再额外降低8%。"
+randomAffixes:
+  - "暴击伤害提升8%。"
+  - "每场战斗首个回合造成的伤害提升20%。"
+  - "首次触发[RogueLuck]（捣蛋时刻）时，刷新自身[个人技]的冷却时间。"
+tags:
+  - 负面状态
+flavor: "糟糕的名声就像身上的虱子一样多。更多的揶揄和嘲笑已并不值得库西感到困扰。就是这样。"
+source: 行装掉落
+image: /images/equipment/harbor-hippie.png

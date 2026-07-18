@@ -1,0 +1,6 @@
+id: glossary-personal-skill
+slug: glossary-personal-skill
+term: 个人技
+definition: "船员专属的个人技能，区别于职业技能，通常有独立的冷却时间。"
+related:
+  - 职业技能

@@ -1,0 +1,7 @@
+id: glossary-splash
+slug: glossary-splash
+term: 溅射
+definition: "攻击会对主目标与其两侧的副目标造成溅射伤害，副目标伤害等于对主目标造成的伤害乘以溅射系数。"
+related:
+  - 火星飞溅
+  - 附加伤害

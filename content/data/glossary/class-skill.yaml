@@ -1,0 +1,7 @@
+id: glossary-class-skill
+slug: glossary-class-skill
+term: 职业技能
+definition: "与船员职业绑定的主动技能，通常需要消耗行动点或资源释放，可配置骰子进行强化。"
+related:
+  - 个人技
+  - 骰子

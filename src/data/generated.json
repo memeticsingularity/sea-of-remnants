@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-18T16:00:38.434Z"
+    "generatedAt": "2026-07-18T16:16:40.340Z"
   },
   "crews": [
     {
@@ -333,6 +333,100 @@
       "image": "/images/equipment/fire-scene-belt.png"
     },
     {
+      "id": "equip-harbor-hippie",
+      "slug": "hai-gang-xi-pi",
+      "name": "海港嬉皮",
+      "slot": "躯干",
+      "rarity": "金",
+      "enhance": 6,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "hp": 3668,
+        "effectHit": "39%"
+      },
+      "statsByLevel": {
+        "6": {
+          "hp": 3668,
+          "effectHit": "39%"
+        }
+      },
+      "requirements": {
+        "per": 110,
+        "agi": 58
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "per": 51,
+          "agi": 27
+        },
+        {
+          "level": 2,
+          "per": 55,
+          "agi": 29
+        },
+        {
+          "level": 3,
+          "per": 75,
+          "agi": 40
+        },
+        {
+          "level": 4,
+          "per": 81,
+          "agi": 43
+        },
+        {
+          "level": 5,
+          "per": 104,
+          "agi": 55
+        },
+        {
+          "level": 6,
+          "per": 110,
+          "agi": 58
+        },
+        {
+          "level": 7,
+          "per": 114,
+          "agi": 61
+        },
+        {
+          "level": 8,
+          "per": 119,
+          "agi": 64
+        },
+        {
+          "level": 9,
+          "per": 136,
+          "agi": 72
+        },
+        {
+          "level": 10,
+          "per": 142,
+          "agi": 76
+        }
+      ],
+      "fixedAffixes": [
+        "所受伤害降低16%，当场上来源为自身的[负面状态]合计达10层时，所受伤害再额外降低8%。"
+      ],
+      "randomAffixes": [
+        "暴击伤害提升8%。",
+        "每场战斗首个回合造成的伤害提升20%。",
+        "首次触发[RogueLuck]（捣蛋时刻）时，刷新自身[个人技]的冷却时间。"
+      ],
+      "tags": [
+        "负面状态"
+      ],
+      "flavor": "糟糕的名声就像身上的虱子一样多。更多的揶揄和嘲笑已并不值得库西感到困扰。就是这样。",
+      "source": "行装掉落",
+      "image": "/images/equipment/harbor-hippie.png"
+    },
+    {
       "id": "equip-pointed-iron-shoes",
       "slug": "jian-tou-tie-xie",
       "name": "尖头铁鞋",
@@ -367,6 +461,100 @@
       "image": "/images/equipment/reckless-bracelet.png"
     },
     {
+      "id": "equip-secret-of-gorgeous-fantasy",
+      "slug": "hua-cai-huan-xiang-de-mi-mi",
+      "name": "华彩幻想的秘密",
+      "slot": "手部",
+      "handType": "单手剑",
+      "rarity": "金",
+      "enhance": 6,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "atk": 77,
+        "critRate": "5%",
+        "threat": 42
+      },
+      "statsByLevel": {
+        "6": {
+          "atk": 77,
+          "critRate": "5%",
+          "threat": 42
+        }
+      },
+      "requirements": {
+        "str": 110,
+        "con": 58
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "str": 51,
+          "con": 27
+        },
+        {
+          "level": 2,
+          "str": 55,
+          "con": 29
+        },
+        {
+          "level": 3,
+          "str": 75,
+          "con": 40
+        },
+        {
+          "level": 4,
+          "str": 81,
+          "con": 43
+        },
+        {
+          "level": 5,
+          "str": 104,
+          "con": 55
+        },
+        {
+          "level": 6,
+          "str": 110,
+          "con": 58
+        },
+        {
+          "level": 7,
+          "str": 114,
+          "con": 61
+        },
+        {
+          "level": 8,
+          "str": 119,
+          "con": 64
+        },
+        {
+          "level": 9,
+          "str": 136,
+          "con": 72
+        },
+        {
+          "level": 10,
+          "str": 142,
+          "con": 76
+        }
+      ],
+      "fixedAffixes": [
+        "造成伤害时，此次伤害额外提升X%，X=命中的目标数量×[战意]层数×2，[火星飞溅]生效次数变为无限。"
+      ],
+      "randomAffixes": [
+        "攻击体力值高于50%的敌方单位时，造成的伤害提升8%。",
+        "令其他我方单位获得[正面状态]时，为其恢复2%的体力值，1回合生效1次。",
+        "有敌方单位[力竭]时，场上其他敌方单位所受伤害提升3级，持续1回合。"
+      ],
+      "flavor": "英格莱姆在想一场酣畅的战斗——挥舞起华丽的剑，盎然的战意，包围他的敌人应声倒下……他只是想想。",
+      "source": "行装掉落",
+      "image": "/images/equipment/secret-of-gorgeous-fantasy.png"
+    },
+    {
       "id": "equip-shark-short-gun",
       "slug": "sha-yu-duan-qiang",
       "name": "鲨鱼短枪",
@@ -387,6 +575,100 @@
       "flavor": "鲨鱼咬中猎物的瞬间，兴奋令其浑身发烫，如同炙热的枪管，为击破敌人而欢呼。",
       "source": "行装掉落",
       "image": "/images/equipment/shark-short-gun.png"
+    },
+    {
+      "id": "equip-sturdy-heavy-shield",
+      "slug": "jian-qiang-zhong-dun",
+      "name": "坚强重盾",
+      "slot": "手部",
+      "handType": "盾牌",
+      "rarity": "紫",
+      "enhance": 6,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "atk": 28,
+        "hp": 1341,
+        "critRate": "-3.3%"
+      },
+      "statsByLevel": {
+        "6": {
+          "atk": 28,
+          "hp": 1341,
+          "critRate": "-3.3%"
+        }
+      },
+      "requirements": {
+        "con": 85,
+        "str": 45
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "con": 33,
+          "str": 18
+        },
+        {
+          "level": 2,
+          "con": 47,
+          "str": 25
+        },
+        {
+          "level": 3,
+          "con": 51,
+          "str": 27
+        },
+        {
+          "level": 4,
+          "con": 67,
+          "str": 36
+        },
+        {
+          "level": 5,
+          "con": 75,
+          "str": 40
+        },
+        {
+          "level": 6,
+          "con": 85,
+          "str": 45
+        },
+        {
+          "level": 7,
+          "con": 91,
+          "str": 48
+        },
+        {
+          "level": 8,
+          "con": 104,
+          "str": 55
+        },
+        {
+          "level": 9,
+          "con": 114,
+          "str": 61
+        },
+        {
+          "level": 10,
+          "con": 126,
+          "str": 67
+        }
+      ],
+      "fixedAffixes": [
+        "给予的护盾效果提升[铠甲]层数×1%，至多提升15%。"
+      ],
+      "randomAffixes": [
+        "攻击拥有[气绝]的敌方单位时，造成的伤害提升8%。",
+        "对拥有[负面状态]的敌方单位暴击率提升2.5%，暴击伤害提升2.5%。",
+        "每当自身获得护盾时，攻击力提升1级，持续2回合，至多提升至2级。"
+      ],
+      "flavor": "贝壳在伤疤上垒砌更多，永不因为恐惧退缩。",
+      "source": "行装掉落",
+      "image": "/images/equipment/sturdy-heavy-shield.png"
     },
     {
       "id": "equip-unreturned-nest",
@@ -714,12 +996,52 @@
   ],
   "glossary": [
     {
+      "id": "glossary-additional-damage",
+      "slug": "glossary-additional-damage",
+      "term": "附加伤害",
+      "definition": "伴随技能的特殊伤害类型，附加伤害不会产生暴击。",
+      "related": [
+        "战意",
+        "暴击率"
+      ]
+    },
+    {
       "id": "glossary-additive",
       "slug": "glossary-additive",
       "term": "加料",
       "definition": "战斗开始时，获得10层灵感。使用职业技能时，有概率触发加料，追加1/2/3次技能伤害，并消耗对应层数灵感。",
       "related": [
         "灵感"
+      ]
+    },
+    {
+      "id": "glossary-armor",
+      "slug": "glossary-armor",
+      "term": "铠甲",
+      "definition": "最多叠加15层。每获得5层此状态，获得1层[全副武装]，可抵消1次不超过自身防御力450%的伤害。不可被其他技能消除。",
+      "related": [
+        "全副武装",
+        "护盾效果"
+      ]
+    },
+    {
+      "id": "glossary-battle-will",
+      "slug": "glossary-battle-will",
+      "term": "战意",
+      "definition": "攻击时，造成等同于此状态层数×攻击力18%的[附加伤害]，最多叠加5层。不可被其他技能消除。",
+      "related": [
+        "附加伤害",
+        "火星飞溅"
+      ]
+    },
+    {
+      "id": "glossary-class-skill",
+      "slug": "glossary-class-skill",
+      "term": "职业技能",
+      "definition": "与船员职业绑定的主动技能，通常需要消耗行动点或资源释放，可配置骰子进行强化。",
+      "related": [
+        "个人技",
+        "骰子"
       ]
     },
     {
@@ -759,6 +1081,16 @@
       ]
     },
     {
+      "id": "glossary-dice",
+      "slug": "glossary-dice",
+      "term": "骰子",
+      "definition": "可装备在职业技能上的辅助技，释放技能时会根据骰子效果提供额外伤害、状态或资源。",
+      "related": [
+        "职业技能",
+        "强化骰"
+      ]
+    },
+    {
       "id": "glossary-effect-hit",
       "slug": "glossary-effect-hit",
       "term": "效果命中",
@@ -788,6 +1120,16 @@
       ]
     },
     {
+      "id": "glossary-exhaustion",
+      "slug": "glossary-exhaustion",
+      "term": "力竭",
+      "definition": "敌方单位进入的虚弱状态，此时对其或场上其他单位可能触发额外效果。",
+      "related": [
+        "气绝",
+        "负面状态"
+      ]
+    },
+    {
       "id": "glossary-extra-action",
       "slug": "glossary-extra-action",
       "term": "额外行动",
@@ -795,6 +1137,16 @@
       "related": [
         "灵感",
         "加料"
+      ]
+    },
+    {
+      "id": "glossary-full-armed",
+      "slug": "glossary-full-armed",
+      "term": "全副武装",
+      "definition": "受到攻击时，消耗1层此状态，抵消不超过自身防御力450%的伤害。最多叠加1层。",
+      "related": [
+        "铠甲",
+        "防御"
       ]
     },
     {
@@ -808,6 +1160,53 @@
       ]
     },
     {
+      "id": "glossary-knockout",
+      "slug": "glossary-knockout",
+      "term": "气绝",
+      "definition": "敌方单位被击破架势后气绝，进入架势崩溃状态，是[负面状态]的一种，此状态下其受到的伤害提升25%。",
+      "related": [
+        "负面状态",
+        "力竭"
+      ]
+    },
+    {
+      "id": "glossary-mars-splash",
+      "slug": "glossary-mars-splash",
+      "term": "火星飞溅",
+      "definition": "下次使用技能时，若技能不具有[溅射]效果则使其获得36%的[溅射]，若具有[溅射]效果则使其[溅射]目标数+2，且溅射伤害提升40%。不可被其他技能消除。",
+      "related": [
+        "溅射",
+        "战意"
+      ]
+    },
+    {
+      "id": "glossary-negative-state",
+      "slug": "glossary-negative-state",
+      "term": "负面状态",
+      "definition": "对目标产生不利影响的异常状态，如中毒、燃烧、眩晕等。部分技能或行装会根据负面状态层数触发额外效果。",
+      "related": [
+        "正面状态"
+      ]
+    },
+    {
+      "id": "glossary-personal-skill",
+      "slug": "glossary-personal-skill",
+      "term": "个人技",
+      "definition": "船员专属的个人技能，区别于职业技能，通常有独立的冷却时间。",
+      "related": [
+        "职业技能"
+      ]
+    },
+    {
+      "id": "glossary-positive-state",
+      "slug": "glossary-positive-state",
+      "term": "正面状态",
+      "definition": "对目标产生有利影响的增益状态，如护盾、攻击提升、暴击提升等。",
+      "related": [
+        "负面状态"
+      ]
+    },
+    {
       "id": "glossary-rogue-luck",
       "slug": "glossary-rogue-luck",
       "term": "RogueLuck",
@@ -817,12 +1216,32 @@
       ]
     },
     {
+      "id": "glossary-shield-effect",
+      "slug": "glossary-shield-effect",
+      "term": "护盾效果",
+      "definition": "与护盾相关的增益效果，影响护盾的强度、持续时间或触发条件。",
+      "related": [
+        "铠甲",
+        "正面状态"
+      ]
+    },
+    {
       "id": "glossary-shield",
       "slug": "glossary-shield",
       "term": "护盾",
       "definition": "可吸收一定伤害的临时生命值。部分技能效果与护盾值相关。",
       "related": [
         "强化骰"
+      ]
+    },
+    {
+      "id": "glossary-splash",
+      "slug": "glossary-splash",
+      "term": "溅射",
+      "definition": "攻击会对主目标与其两侧的副目标造成溅射伤害，副目标伤害等于对主目标造成的伤害乘以溅射系数。",
+      "related": [
+        "火星飞溅",
+        "附加伤害"
       ]
     }
   ],
@@ -998,6 +1417,18 @@
       "keywords": []
     },
     {
+      "id": "equip-harbor-hippie",
+      "title": "海港嬉皮",
+      "type": "行装",
+      "route": "/equipment/hai-gang-xi-pi",
+      "tags": [
+        "负面状态",
+        "躯干",
+        "金"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-pointed-iron-shoes",
       "title": "尖头铁鞋",
       "type": "行装",
@@ -1020,6 +1451,17 @@
       "keywords": []
     },
     {
+      "id": "equip-secret-of-gorgeous-fantasy",
+      "title": "华彩幻想的秘密",
+      "type": "行装",
+      "route": "/equipment/hua-cai-huan-xiang-de-mi-mi",
+      "tags": [
+        "手部",
+        "金"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-shark-short-gun",
       "title": "鲨鱼短枪",
       "type": "行装",
@@ -1027,6 +1469,17 @@
       "tags": [
         "手部",
         "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-sturdy-heavy-shield",
+      "title": "坚强重盾",
+      "type": "行装",
+      "route": "/equipment/jian-qiang-zhong-dun",
+      "tags": [
+        "手部",
+        "紫"
       ],
       "keywords": []
     },
@@ -1433,12 +1886,56 @@
       "keywords": []
     },
     {
+      "id": "glossary-additional-damage",
+      "title": "附加伤害",
+      "type": "术语",
+      "route": "/glossary#glossary-additional-damage",
+      "tags": [
+        "战意",
+        "暴击率"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-additive",
       "title": "加料",
       "type": "术语",
       "route": "/glossary#glossary-additive",
       "tags": [
         "灵感"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-armor",
+      "title": "铠甲",
+      "type": "术语",
+      "route": "/glossary#glossary-armor",
+      "tags": [
+        "全副武装",
+        "护盾效果"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-battle-will",
+      "title": "战意",
+      "type": "术语",
+      "route": "/glossary#glossary-battle-will",
+      "tags": [
+        "附加伤害",
+        "火星飞溅"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-class-skill",
+      "title": "职业技能",
+      "type": "术语",
+      "route": "/glossary#glossary-class-skill",
+      "tags": [
+        "个人技",
+        "骰子"
       ],
       "keywords": []
     },
@@ -1483,6 +1980,17 @@
       "keywords": []
     },
     {
+      "id": "glossary-dice",
+      "title": "骰子",
+      "type": "术语",
+      "route": "/glossary#glossary-dice",
+      "tags": [
+        "职业技能",
+        "强化骰"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-effect-hit",
       "title": "效果命中",
       "type": "术语",
@@ -1515,6 +2023,17 @@
       "keywords": []
     },
     {
+      "id": "glossary-exhaustion",
+      "title": "力竭",
+      "type": "术语",
+      "route": "/glossary#glossary-exhaustion",
+      "tags": [
+        "气绝",
+        "负面状态"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-extra-action",
       "title": "额外行动",
       "type": "术语",
@@ -1522,6 +2041,17 @@
       "tags": [
         "灵感",
         "加料"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-full-armed",
+      "title": "全副武装",
+      "type": "术语",
+      "route": "/glossary#glossary-full-armed",
+      "tags": [
+        "铠甲",
+        "防御"
       ],
       "keywords": []
     },
@@ -1537,6 +2067,58 @@
       "keywords": []
     },
     {
+      "id": "glossary-knockout",
+      "title": "气绝",
+      "type": "术语",
+      "route": "/glossary#glossary-knockout",
+      "tags": [
+        "负面状态",
+        "力竭"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-mars-splash",
+      "title": "火星飞溅",
+      "type": "术语",
+      "route": "/glossary#glossary-mars-splash",
+      "tags": [
+        "溅射",
+        "战意"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-negative-state",
+      "title": "负面状态",
+      "type": "术语",
+      "route": "/glossary#glossary-negative-state",
+      "tags": [
+        "正面状态"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-personal-skill",
+      "title": "个人技",
+      "type": "术语",
+      "route": "/glossary#glossary-personal-skill",
+      "tags": [
+        "职业技能"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-positive-state",
+      "title": "正面状态",
+      "type": "术语",
+      "route": "/glossary#glossary-positive-state",
+      "tags": [
+        "负面状态"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-rogue-luck",
       "title": "RogueLuck",
       "type": "术语",
@@ -1547,12 +2129,34 @@
       "keywords": []
     },
     {
+      "id": "glossary-shield-effect",
+      "title": "护盾效果",
+      "type": "术语",
+      "route": "/glossary#glossary-shield-effect",
+      "tags": [
+        "铠甲",
+        "正面状态"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-shield",
       "title": "护盾",
       "type": "术语",
       "route": "/glossary#glossary-shield",
       "tags": [
         "强化骰"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-splash",
+      "title": "溅射",
+      "type": "术语",
+      "route": "/glossary#glossary-splash",
+      "tags": [
+        "火星飞溅",
+        "附加伤害"
       ],
       "keywords": []
     },

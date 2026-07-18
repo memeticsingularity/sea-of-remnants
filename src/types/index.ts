@@ -76,6 +76,8 @@ export interface Equipment {
   enhance?: number
   maxEnhanceByFruitLevel?: MaxEnhanceEntry[]
   baseStats?: Record<string, number | string>
+  /** 各强化等级下的属性，key 为等级 1~10 */
+  statsByLevel?: Record<string, Record<string, number | string>>
   requirements?: Record<string, number>
   enhanceRequirements?: EnhanceRequirementEntry[]
   fixedAffixes?: string[]
