@@ -1,0 +1,11 @@
+id: equip-reckless-bracelet
+slug: mang-zhuang-shou-huan
+name: 莽撞手环
+slot: 奇珍
+rarity: SR
+fixedAffixes:
+  - "船员技能伤害提升30%，职业技能伤害降低5%。"
+flavor: |
+  愤怒的雄狮没有理智，它的利爪会撕碎一切——哪怕是黑格尼的货船。
+source: 奇珍掉落
+image: /images/equipment/reckless-bracelet.png

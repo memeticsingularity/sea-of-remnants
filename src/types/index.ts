@@ -38,10 +38,16 @@ export interface Dice {
   maxLevel?: number
   shortDesc: string
   detailedDesc?: string
+  levelDetails?: DiceLevelDetail[]
   relatedGlossary?: string[]
   image?: string
   source?: string
   buildNotes?: string
+}
+
+export interface DiceLevelDetail {
+  level: number
+  detailedDesc: string
 }
 
 export interface Song {

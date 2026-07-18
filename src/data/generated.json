@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-18T15:27:17.325Z"
+    "generatedAt": "2026-07-18T15:33:24.054Z"
   },
   "crews": [
     {
@@ -154,6 +154,64 @@
       "image": "/images/dice/electric-surge.png",
       "source": "骰子抽取 / 任务奖励",
       "buildNotes": "电涌骰适合搭配高总伤害技能使用，骰子总点数越高，额外伤害越高。\n建议优先给海葬等依赖单体爆发的输出角色装备。\n"
+    },
+    {
+      "id": "dice-heavy-force",
+      "slug": "zhong-po-shai",
+      "name": "重迫骰",
+      "type": "强化骰",
+      "level": 2,
+      "maxLevel": 10,
+      "shortDesc": "使用技能后，对敌方全体造成伤害，必定暴击，且每掷出6则额外提升暴击伤害。",
+      "detailedDesc": "使用技能后，每1点骰子点数对敌方全体造成攻击力9.9%的伤害，必定暴击，且每掷出一个6点则提升16.5%暴击伤害。",
+      "levelDetails": [
+        {
+          "level": 1,
+          "detailedDesc": "使用技能后，每1点骰子点数对敌方全体造成攻击力9%的伤害，必定暴击，且每掷出一个6点则提升15%暴击伤害。"
+        },
+        {
+          "level": 2,
+          "detailedDesc": "使用技能后，每1点骰子点数对敌方全体造成攻击力9.9%的伤害，必定暴击，且每掷出一个6点则提升16.5%暴击伤害。"
+        }
+      ],
+      "relatedGlossary": [
+        "骰子总点数",
+        "强化骰",
+        "暴击率"
+      ],
+      "image": "/images/dice/heavy-force.png",
+      "source": "骰子抽取 / 任务奖励"
+    },
+    {
+      "id": "dice-shield-fist",
+      "slug": "dun-quan-shai",
+      "name": "盾拳骰",
+      "type": "强化骰",
+      "level": 3,
+      "shortDesc": "使用技能前，获得护盾，并在使用技能后依据护盾值额外造成1次伤害。每掷出6则获得额外护盾。",
+      "detailedDesc": "使用技能前，获得（14.4%攻击力+24）×骰子总点数的护盾，持续2回合。使用技能后额外造成1次护盾值6%的伤害。每掷出1个6点，额外获得（43.2%攻击力+72）×骰子总点数的护盾。叠加护盾值不超过赋予者攻击力的1920%。",
+      "relatedGlossary": [
+        "护盾",
+        "骰子总点数",
+        "强化骰"
+      ],
+      "image": "/images/dice/shield-fist.png",
+      "source": "骰子抽取 / 任务奖励"
+    },
+    {
+      "id": "dice-swarm-butterfly",
+      "slug": "qun-die-shai",
+      "name": "群蝶骰",
+      "type": "强化骰",
+      "level": 2,
+      "shortDesc": "使用技能后，对所有技能目标造成额外伤害，命中的目标数量越多，额外造成的伤害越多。每掷出6则伤害额外提升。",
+      "detailedDesc": "使用技能后，对所有技能目标额外造成1次攻击力17.6%的伤害，且该技能每命中1个目标使该伤害提升骰子点数×8.8%，若目标为被召唤的敌方单位，则该伤害再提升20%。每掷出一个6点，造成的伤害再提升22%。",
+      "relatedGlossary": [
+        "骰子总点数",
+        "强化骰"
+      ],
+      "image": "/images/dice/swarm-butterfly.png",
+      "source": "骰子抽取 / 任务奖励"
     }
   ],
   "songs": [
@@ -238,6 +296,45 @@
       "source": "奇珍抽取 / 任务奖励",
       "image": "/images/equipment/contract-brooch.png",
       "buildNotes": "纯职业技能输出流的优质散件。 downside 是降低船员技能伤害，适合不怎么依赖船员技能的角色。\n"
+    },
+    {
+      "id": "equip-fire-scene-belt",
+      "slug": "huo-chang-yao-dai",
+      "name": "火场腰带",
+      "slot": "奇珍",
+      "rarity": "SR",
+      "fixedAffixes": [
+        "每使用1个[强化骰]，[暴击率]额外提升3%。"
+      ],
+      "flavor": "艾森迪亚束起烧焦的腰带，从过去的火场投身新的炽热烟花。\n",
+      "source": "奇珍掉落",
+      "image": "/images/equipment/fire-scene-belt.png"
+    },
+    {
+      "id": "equip-reckless-bracelet",
+      "slug": "mang-zhuang-shou-huan",
+      "name": "莽撞手环",
+      "slot": "奇珍",
+      "rarity": "SR",
+      "fixedAffixes": [
+        "船员技能伤害提升30%，职业技能伤害降低5%。"
+      ],
+      "flavor": "愤怒的雄狮没有理智，它的利爪会撕碎一切——哪怕是黑格尼的货船。\n",
+      "source": "奇珍掉落",
+      "image": "/images/equipment/reckless-bracelet.png"
+    },
+    {
+      "id": "equip-unreturned-nest",
+      "slug": "wei-gui-chao",
+      "name": "未归巢",
+      "slot": "奇珍",
+      "rarity": "SR",
+      "fixedAffixes": [
+        "在[防御]状态下受到伤害后，触发[防御反击]时造成的伤害提升30%，持续1回合。"
+      ],
+      "flavor": "奥森头盔上的鸟巢。\n奥森在世时一直身处前线，但这些鸟从未伤及分毫。奥森离世后，这身铠甲静置在了王宫，但鸟儿再也没有飞回来过。\n",
+      "source": "奇珍掉落",
+      "image": "/images/equipment/unreturned-nest.png"
     }
   ],
   "items": [
@@ -301,6 +398,33 @@
       "definition": "战斗开始时，获得10层灵感。使用职业技能时，有概率触发加料，追加1/2/3次技能伤害，并消耗对应层数灵感。",
       "related": [
         "灵感"
+      ]
+    },
+    {
+      "id": "glossary-critical-rate",
+      "slug": "glossary-critical-rate",
+      "term": "暴击率",
+      "definition": "攻击时触发暴击的概率。暴击通常造成更高伤害。",
+      "related": [
+        "强化骰"
+      ]
+    },
+    {
+      "id": "glossary-defense-counter",
+      "slug": "glossary-defense-counter",
+      "term": "防御反击",
+      "definition": "处于[防御]状态下受到伤害后触发的反击机制，可造成额外伤害。",
+      "related": [
+        "防御"
+      ]
+    },
+    {
+      "id": "glossary-defense",
+      "slug": "glossary-defense",
+      "term": "防御",
+      "definition": "一种战斗状态。处于[防御]状态下受到伤害后，可触发[防御反击]。",
+      "related": [
+        "防御反击"
       ]
     },
     {
@@ -368,6 +492,15 @@
       "definition": "捣蛋时刻，战斗中随机触发的特殊机制，通常伴随额外收益或效果。",
       "related": [
         "强化点"
+      ]
+    },
+    {
+      "id": "glossary-shield",
+      "slug": "glossary-shield",
+      "term": "护盾",
+      "definition": "可吸收一定伤害的临时生命值。部分技能效果与护盾值相关。",
+      "related": [
+        "强化骰"
       ]
     }
   ],
@@ -461,6 +594,36 @@
       "keywords": []
     },
     {
+      "id": "dice-heavy-force",
+      "title": "重迫骰",
+      "type": "骰子",
+      "route": "/dice/zhong-po-shai",
+      "tags": [
+        "强化骰"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "dice-shield-fist",
+      "title": "盾拳骰",
+      "type": "骰子",
+      "route": "/dice/dun-quan-shai",
+      "tags": [
+        "强化骰"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "dice-swarm-butterfly",
+      "title": "群蝶骰",
+      "type": "骰子",
+      "route": "/dice/qun-die-shai",
+      "tags": [
+        "强化骰"
+      ],
+      "keywords": []
+    },
+    {
       "id": "song-applause",
       "title": "喝彩，喝彩",
       "type": "船歌",
@@ -484,6 +647,39 @@
       "title": "契约胸针",
       "type": "行装",
       "route": "/equipment/qi-yue-xiong-zhen",
+      "tags": [
+        "奇珍",
+        "SR"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-fire-scene-belt",
+      "title": "火场腰带",
+      "type": "行装",
+      "route": "/equipment/huo-chang-yao-dai",
+      "tags": [
+        "奇珍",
+        "SR"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-reckless-bracelet",
+      "title": "莽撞手环",
+      "type": "行装",
+      "route": "/equipment/mang-zhuang-shou-huan",
+      "tags": [
+        "奇珍",
+        "SR"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-unreturned-nest",
+      "title": "未归巢",
+      "type": "行装",
+      "route": "/equipment/wei-gui-chao",
       "tags": [
         "奇珍",
         "SR"
@@ -528,6 +724,36 @@
       "route": "/glossary#glossary-additive",
       "tags": [
         "灵感"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-critical-rate",
+      "title": "暴击率",
+      "type": "术语",
+      "route": "/glossary#glossary-critical-rate",
+      "tags": [
+        "强化骰"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-defense-counter",
+      "title": "防御反击",
+      "type": "术语",
+      "route": "/glossary#glossary-defense-counter",
+      "tags": [
+        "防御"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-defense",
+      "title": "防御",
+      "type": "术语",
+      "route": "/glossary#glossary-defense",
+      "tags": [
+        "防御反击"
       ],
       "keywords": []
     },
@@ -602,6 +828,16 @@
       "route": "/glossary#glossary-rogue-luck",
       "tags": [
         "强化点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-shield",
+      "title": "护盾",
+      "type": "术语",
+      "route": "/glossary#glossary-shield",
+      "tags": [
+        "强化骰"
       ],
       "keywords": []
     },

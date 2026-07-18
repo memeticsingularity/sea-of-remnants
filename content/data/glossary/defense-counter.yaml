@@ -1,0 +1,6 @@
+id: glossary-defense-counter
+slug: glossary-defense-counter
+term: 防御反击
+definition: "处于[防御]状态下受到伤害后触发的反击机制，可造成额外伤害。"
+related:
+  - 防御

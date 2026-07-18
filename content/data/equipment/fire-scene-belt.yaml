@@ -1,0 +1,11 @@
+id: equip-fire-scene-belt
+slug: huo-chang-yao-dai
+name: 火场腰带
+slot: 奇珍
+rarity: SR
+fixedAffixes:
+  - "每使用1个[强化骰]，[暴击率]额外提升3%。"
+flavor: |
+  艾森迪亚束起烧焦的腰带，从过去的火场投身新的炽热烟花。
+source: 奇珍掉落
+image: /images/equipment/fire-scene-belt.png

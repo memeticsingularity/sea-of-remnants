@@ -1,0 +1,12 @@
+id: equip-unreturned-nest
+slug: wei-gui-chao
+name: 未归巢
+slot: 奇珍
+rarity: SR
+fixedAffixes:
+  - "在[防御]状态下受到伤害后，触发[防御反击]时造成的伤害提升30%，持续1回合。"
+flavor: |
+  奥森头盔上的鸟巢。
+  奥森在世时一直身处前线，但这些鸟从未伤及分毫。奥森离世后，这身铠甲静置在了王宫，但鸟儿再也没有飞回来过。
+source: 奇珍掉落
+image: /images/equipment/unreturned-nest.png

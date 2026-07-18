@@ -1,0 +1,6 @@
+id: glossary-critical-rate
+slug: glossary-critical-rate
+term: 暴击率
+definition: "攻击时触发暴击的概率。暴击通常造成更高伤害。"
+related:
+  - 强化骰

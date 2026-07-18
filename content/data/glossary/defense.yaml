@@ -1,0 +1,6 @@
+id: glossary-defense
+slug: glossary-defense
+term: 防御
+definition: "一种战斗状态。处于[防御]状态下受到伤害后，可触发[防御反击]。"
+related:
+  - 防御反击

@@ -1,0 +1,12 @@
+id: dice-swarm-butterfly
+slug: qun-die-shai
+name: 群蝶骰
+type: 强化骰
+level: 2
+shortDesc: "使用技能后，对所有技能目标造成额外伤害，命中的目标数量越多，额外造成的伤害越多。每掷出6则伤害额外提升。"
+detailedDesc: "使用技能后，对所有技能目标额外造成1次攻击力17.6%的伤害，且该技能每命中1个目标使该伤害提升骰子点数×8.8%，若目标为被召唤的敌方单位，则该伤害再提升20%。每掷出一个6点，造成的伤害再提升22%。"
+relatedGlossary:
+  - 骰子总点数
+  - 强化骰
+image: /images/dice/swarm-butterfly.png
+source: 骰子抽取 / 任务奖励
