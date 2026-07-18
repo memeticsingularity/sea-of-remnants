@@ -1,3 +1,5 @@
+import { formatStatName } from '@/utils/format'
+
 interface StatBlockProps {
   stats?: Record<string, number | string | undefined>
   className?: string
@@ -22,23 +24,6 @@ export function StatBlock({ stats, className = '' }: StatBlockProps) {
       })}
     </dl>
   )
-}
-
-function formatStatName(key: string): string {
-  const names: Record<string, string> = {
-    hp: '生命',
-    atk: '攻击',
-    def: '防御',
-    spd: '速度',
-    int: '智力',
-    per: '感知',
-    dotBoost: '持续伤害提升',
-    hull: '船体',
-    sails: '风帆',
-    cargo: '货舱',
-    crewCapacity: '船员容量',
-  }
-  return names[key] || key
 }
 
 function formatStatValue(value: number | string | undefined): string {

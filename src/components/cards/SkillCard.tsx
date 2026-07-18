@@ -10,24 +10,24 @@ interface SkillCardProps {
 
 export function SkillCard({ skill }: SkillCardProps) {
   return (
-    <Link to={`/skills/${skill.slug}`}>
-      <Card hover className="h-full">
+    <Card hover className="h-full">
+      <Link to={`/skills/${skill.slug}`}>
         <div className="mb-2 flex items-center justify-between">
-          <h3 className="text-lg font-bold text-text">{skill.name}</h3>
+          <h3 className="text-lg font-bold text-text hover:text-accent">{skill.name}</h3>
           {skill.level !== undefined && (
             <span className="text-sm text-text-muted">Lv.{skill.level}</span>
           )}
         </div>
-        <div className="mb-3 flex flex-wrap gap-1">
-          <Tag variant="accent">{skill.type}</Tag>
-          {skill.tags.map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
-          ))}
-        </div>
-        <p className="text-sm text-text-muted">
-          <GlossaryTooltip text={skill.shortDesc} />
-        </p>
-      </Card>
-    </Link>
+      </Link>
+      <div className="mb-3 flex flex-wrap gap-1">
+        <Tag variant="accent">{skill.type}</Tag>
+        {skill.tags.map((tag) => (
+          <Tag key={tag}>{tag}</Tag>
+        ))}
+      </div>
+      <p className="text-sm text-text-muted">
+        <GlossaryTooltip text={skill.shortDesc} />
+      </p>
+    </Card>
   )
 }
