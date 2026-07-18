@@ -2,16 +2,20 @@ import { Link } from 'react-router-dom'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
-import type { Skill } from '@/types'
+import type { Skill, Dice } from '@/types'
 
 interface SkillCardProps {
-  skill: Skill
+  skill: Skill | Dice
 }
 
 export function SkillCard({ skill }: SkillCardProps) {
+  const isSkill = 'tags' in skill
+  const tags = isSkill ? skill.tags : []
+  const to = isSkill ? `/skills/${skill.slug}` : `/dice/${skill.slug}`
+
   return (
     <Card hover className="h-full">
-      <Link to={`/skills/${skill.slug}`}>
+      <Link to={to}>
         <div className="mb-2 flex items-center justify-between">
           <h3 className="text-lg font-bold text-text hover:text-accent">{skill.name}</h3>
           {skill.level !== undefined && (
@@ -21,7 +25,7 @@ export function SkillCard({ skill }: SkillCardProps) {
       </Link>
       <div className="mb-3 flex flex-wrap gap-1">
         <Tag variant="accent">{skill.type}</Tag>
-        {skill.tags.map((tag) => (
+        {tags.map((tag) => (
           <Tag key={tag}>{tag}</Tag>
         ))}
       </div>
