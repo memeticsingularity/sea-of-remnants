@@ -11,7 +11,6 @@ import { HistoryPanel } from '@/components/recruitment/HistoryPanel'
 import { StatsPanel } from '@/components/recruitment/StatsPanel'
 import { useGachaState, useGachaHistory, type GachaResult } from '@/hooks/useGachaState'
 import { useGachaEngine } from '@/hooks/useGachaEngine'
-import { useGachaStats } from '@/hooks/useGachaStats'
 
 export function RecruitmentSimulatorPage() {
   const pools = wikiData.recruitmentPools
@@ -23,7 +22,6 @@ export function RecruitmentSimulatorPage() {
 
   const { state, updateState, resetState } = useGachaState(activePool?.id ?? '')
   const { history, append, clear } = useGachaHistory()
-  const stats = useGachaStats(history)
   const engine = useGachaEngine(activePool)
 
   const [latestResults, setLatestResults] = useState<GachaResult[]>([])
@@ -94,6 +92,7 @@ export function RecruitmentSimulatorPage() {
               currency={activePool.currency}
               singleCost={activePool.singleCost}
               tenCost={activePool.tenCost}
+              roseStoneCost={activePool.roseStoneCost}
               totalSpent={state.totalSpent}
             />
             <div className="flex gap-3">
@@ -114,7 +113,7 @@ export function RecruitmentSimulatorPage() {
 
           {latestResults.length > 0 && <ResultGrid results={latestResults} />}
 
-          <StatsPanel stats={stats} />
+          <StatsPanel history={history} pools={pools} activePoolId={activePool.id} />
 
           <HistoryPanel history={history} onClear={clear} />
         </>
