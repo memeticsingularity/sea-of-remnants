@@ -1,0 +1,17 @@
+id: dice-rock-solid
+slug: pan-shi-shai
+name: 磐石骰
+type: 辅助技
+level: 1
+maxLevel: 10
+shortDesc: "使用技能后，令我方全体获得护盾，且每掷出6则额外提升我方全体的防御力。"
+detailedDesc: "使用技能后，我方全体获得160点护盾，且每1点骰子点数，令我方全体再获得20点+自身体力上限0.6%的护盾，持续2回合。每掷出一个6点，我方全体的防御力提升10%，持续2回合。叠加护盾值不超过赋予者最大体力值100%。"
+relatedGlossary:
+  - 护盾
+  - 骰子总点数
+image: /images/dice/rock-solid.png
+source: 骰子抽取 / 任务奖励
+
+buildNotes: |
+  磐石骰是群体护盾型辅助骰，适合保护全队生存。
+  骰子点数越高护盾越厚，掷出 6 点还能全队加防，适合高压AOE场景。

@@ -1,7 +1,7 @@
 id: dice-butterfall
 slug: die-yun-shai
 name: 蝶陨骰
-type: 强化骰
+type: 辅助技
 level: 1
 maxLevel: 10
 shortDesc: "本次航行中，每次击败敌方单位时都会积攒[蝶陨]。使用该骰子的技能会依据[蝶陨]层数额外造成伤害。每掷出6则额外造成伤害。"

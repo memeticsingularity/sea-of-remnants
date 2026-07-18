@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-18T17:57:07.155Z"
+    "generatedAt": "2026-07-18T18:00:50.858Z"
   },
   "crews": [
     {
@@ -560,7 +560,7 @@
       "id": "dice-butterfall",
       "slug": "die-yun-shai",
       "name": "蝶陨骰",
-      "type": "强化骰",
+      "type": "辅助技",
       "level": 1,
       "maxLevel": 10,
       "shortDesc": "本次航行中，每次击败敌方单位时都会积攒[蝶陨]。使用该骰子的技能会依据[蝶陨]层数额外造成伤害。每掷出6则额外造成伤害。",
@@ -609,7 +609,7 @@
       "id": "dice-heavy-force",
       "slug": "zhong-po-shai",
       "name": "重迫骰",
-      "type": "强化骰",
+      "type": "辅助技",
       "level": 2,
       "maxLevel": 10,
       "shortDesc": "使用技能后，对敌方全体造成伤害，必定暴击，且每掷出6则额外提升暴击伤害。",
@@ -636,7 +636,7 @@
       "id": "dice-meng-meng",
       "slug": "meng-meng-shai",
       "name": "猛猛骰",
-      "type": "强化骰",
+      "type": "辅助技",
       "level": 3,
       "maxLevel": 10,
       "shortDesc": "使用技能后，令此次攻击额外造成一定段数的伤害，且每掷出6则额外增加段数。",
@@ -648,6 +648,23 @@
       "image": "/images/dice/meng-meng.png",
       "source": "骰子抽取 / 任务奖励",
       "buildNotes": "猛猛骰依赖使用强化骰的数量触发额外伤害，适合频繁触发强化骰、多段攻击的输出角色。\n每多使用一个强化骰就多一段 126% 攻击力的伤害，6 点还会追加额外段数，强化骰体系核心输出骰之一。\n"
+    },
+    {
+      "id": "dice-rock-solid",
+      "slug": "pan-shi-shai",
+      "name": "磐石骰",
+      "type": "辅助技",
+      "level": 1,
+      "maxLevel": 10,
+      "shortDesc": "使用技能后，令我方全体获得护盾，且每掷出6则额外提升我方全体的防御力。",
+      "detailedDesc": "使用技能后，我方全体获得160点护盾，且每1点骰子点数，令我方全体再获得20点+自身体力上限0.6%的护盾，持续2回合。每掷出一个6点，我方全体的防御力提升10%，持续2回合。叠加护盾值不超过赋予者最大体力值100%。",
+      "relatedGlossary": [
+        "护盾",
+        "骰子总点数"
+      ],
+      "image": "/images/dice/rock-solid.png",
+      "source": "骰子抽取 / 任务奖励",
+      "buildNotes": "磐石骰是群体护盾型辅助骰，适合保护全队生存。\n骰子点数越高护盾越厚，掷出 6 点还能全队加防，适合高压AOE场景。\n"
     },
     {
       "id": "dice-shatter",
@@ -670,7 +687,7 @@
       "id": "dice-shield-fist",
       "slug": "dun-quan-shai",
       "name": "盾拳骰",
-      "type": "强化骰",
+      "type": "辅助技",
       "level": 3,
       "maxLevel": 10,
       "shortDesc": "使用技能前，获得护盾，并在使用技能后依据护盾值额外造成1次伤害。每掷出6则获得额外护盾。",
@@ -698,7 +715,7 @@
       "id": "dice-swarm-butterfly",
       "slug": "qun-die-shai",
       "name": "群蝶骰",
-      "type": "强化骰",
+      "type": "辅助技",
       "level": 2,
       "shortDesc": "使用技能后，对所有技能目标造成额外伤害，命中的目标数量越多，额外造成的伤害越多。每掷出6则伤害额外提升。",
       "detailedDesc": "使用技能后，对所有技能目标额外造成1次攻击力17.6%的伤害，且该技能每命中1个目标使该伤害提升骰子点数×8.8%，若目标为被召唤的敌方单位，则该伤害再提升20%。每掷出一个6点，造成的伤害再提升22%。",
@@ -3270,7 +3287,7 @@
       "type": "骰子",
       "route": "/dice/die-yun-shai",
       "tags": [
-        "强化骰"
+        "辅助技"
       ],
       "keywords": []
     },
@@ -3290,7 +3307,7 @@
       "type": "骰子",
       "route": "/dice/zhong-po-shai",
       "tags": [
-        "强化骰"
+        "辅助技"
       ],
       "keywords": []
     },
@@ -3300,7 +3317,17 @@
       "type": "骰子",
       "route": "/dice/meng-meng-shai",
       "tags": [
-        "强化骰"
+        "辅助技"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "dice-rock-solid",
+      "title": "磐石骰",
+      "type": "骰子",
+      "route": "/dice/pan-shi-shai",
+      "tags": [
+        "辅助技"
       ],
       "keywords": []
     },
@@ -3320,7 +3347,7 @@
       "type": "骰子",
       "route": "/dice/dun-quan-shai",
       "tags": [
-        "强化骰"
+        "辅助技"
       ],
       "keywords": []
     },
@@ -3330,7 +3357,7 @@
       "type": "骰子",
       "route": "/dice/qun-die-shai",
       "tags": [
-        "强化骰"
+        "辅助技"
       ],
       "keywords": []
     },

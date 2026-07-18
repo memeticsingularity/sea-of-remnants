@@ -1,7 +1,7 @@
 id: dice-meng-meng
 slug: meng-meng-shai
 name: 猛猛骰
-type: 强化骰
+type: 辅助技
 level: 3
 maxLevel: 10
 shortDesc: "使用技能后，令此次攻击额外造成一定段数的伤害，且每掷出6则额外增加段数。"

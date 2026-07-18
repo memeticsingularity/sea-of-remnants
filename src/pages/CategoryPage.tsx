@@ -63,9 +63,7 @@ const filterConfigs: Record<CategoryKey, FilterConfig[]> = {
     { key: 'type', label: '类型', getValue: (i) => (i as Skill).type },
     { key: 'tags', label: '标签', getValue: (i) => (i as Skill).tags },
   ],
-  dice: [
-    { key: 'type', label: '类型', getValue: (i) => (i as Skill).type },
-  ],
+  dice: [],
   songs: [],
   equipment: [
     { key: 'slot', label: '栏位', getValue: (i) => (i as Equipment).slot },
