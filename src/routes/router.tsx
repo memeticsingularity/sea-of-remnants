@@ -4,11 +4,13 @@ import { HomePage } from '@/pages/HomePage'
 import { CategoryPage } from '@/pages/CategoryPage'
 import { CrewDetailPage } from '@/pages/CrewDetailPage'
 import { SkillDetailPage } from '@/pages/SkillDetailPage'
+import { DiceDetailPage } from '@/pages/DiceDetailPage'
 import { EquipmentDetailPage } from '@/pages/EquipmentDetailPage'
 import { GuidePage } from '@/pages/GuidePage'
 import { GlossaryPage } from '@/pages/GlossaryPage'
 import { SymptomDetailPage } from '@/pages/SymptomDetailPage'
 import { RecruitmentSimulatorPage } from '@/pages/RecruitmentSimulatorPage'
+import { CollectionPage } from '@/pages/CollectionPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
 export const router = createBrowserRouter([
@@ -26,7 +28,7 @@ export const router = createBrowserRouter([
       { path: 'skills', element: <CategoryPage category="skills" /> },
       { path: 'skills/:slug', element: <SkillDetailPage /> },
       { path: 'dice', element: <CategoryPage category="dice" /> },
-      { path: 'dice/:slug', element: <SkillDetailPage type="dice" /> },
+      { path: 'dice/:slug', element: <DiceDetailPage /> },
       { path: 'songs', element: <CategoryPage category="songs" /> },
       { path: 'songs/:slug', element: <NotFoundPage /> },
       { path: 'equipment', element: <CategoryPage category="equipment" /> },
@@ -40,6 +42,7 @@ export const router = createBrowserRouter([
       { path: 'symptoms', element: <CategoryPage category="symptoms" /> },
       { path: 'symptoms/:slug', element: <SymptomDetailPage /> },
       { path: 'recruitment', element: <RecruitmentSimulatorPage /> },
+      { path: 'recruitment/collection', element: <CollectionPage /> },
       { path: 'guides/:slug', element: <GuidePage /> },
       { path: 'glossary', element: <GlossaryPage /> },
       { path: 'search', element: <NotFoundPage /> },

@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import { wikiData } from '@/data'
 import { CrewCard } from '@/components/cards/CrewCard'
 import { SkillCard } from '@/components/cards/SkillCard'
+import { DiceCard } from '@/components/cards/DiceCard'
 import { EquipmentCard } from '@/components/cards/EquipmentCard'
 import { Card } from '@/components/ui/Card'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
-import type { Crew, Skill, Equipment, Ship, GameClass, Song, Item, Quest, Location, Symptom } from '@/types'
+import type { Crew, Skill, Dice, Equipment, Ship, GameClass, Song, Item, Quest, Location, Symptom } from '@/types'
 
 type CategoryKey =
   | 'crews'
@@ -210,8 +211,9 @@ function renderItemCard(category: CategoryKey, item: unknown) {
     case 'crews':
       return <CrewCard key={(item as Crew).id} crew={item as Crew} />
     case 'skills':
-    case 'dice':
       return <SkillCard key={(item as Skill).id} skill={item as Skill} />
+    case 'dice':
+      return <DiceCard key={(item as Dice).id} dice={item as Dice} />
     case 'equipment':
       return (
         <EquipmentCard key={(item as Equipment).id} equipment={item as Equipment} />
