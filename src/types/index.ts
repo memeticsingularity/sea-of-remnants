@@ -255,6 +255,7 @@ export interface RecruitmentPool {
   currency: string
   singleCost: number
   tenCost: number
+  roseStoneCost: number
   tiers: RecruitmentTier[]
   upItems: {
     crewIds?: string[]
@@ -263,6 +264,7 @@ export interface RecruitmentPool {
     guaranteeNextOnMiss?: boolean
   }[]
   pityRules: PityRule[]
+  rules?: string
 }
 
 export interface RecruitmentTier {

@@ -158,6 +158,9 @@ async function validateCollection(collection, items, allIds, allSlugs) {
       if (typeof data.tenCost !== 'number') {
         error(`[${collection}/${file}] Missing or invalid field: tenCost`)
       }
+      if (typeof data.roseStoneCost !== 'number') {
+        error(`[${collection}/${file}] Missing or invalid field: roseStoneCost`)
+      }
       if (!VALID_POOL_TYPES.includes(data.type)) {
         error(`[${collection}/${file}] Invalid pool type: ${data.type}`)
       }

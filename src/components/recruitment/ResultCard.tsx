@@ -60,7 +60,7 @@ interface ResultGridProps {
 export function ResultGrid({ results }: ResultGridProps) {
   if (results.length === 0) return null
   return (
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
+    <div className="grid grid-cols-5 gap-3">
       {results.map((result, index) => (
         <ResultCard key={`${result.timestamp}-${index}`} result={result} delay={index * 80} />
       ))}

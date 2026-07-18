@@ -4,8 +4,9 @@ name: 这里不散场
 bannerName: 这里不散场
 type: standard
 currency: 来一杯银币
-singleCost: 180
-tenCost: 1800
+singleCost: 1
+tenCost: 10
+roseStoneCost: 160
 upItems: []
 tiers:
   - key: black
@@ -91,3 +92,15 @@ pityRules:
   - type: purple_guarantee
     threshold: 10
     tier: purple
+rules: |
+  **黑券船员及往日之影**
+  - 基础概率 0.80%（船员 0.40%，往日之影 0.40%），综合概率 1.84%
+  - 最多 80 次招募必定获得 1 个黑券船员或往日之影
+
+  **紫券船员及往日之影**
+  - 基础概率 6.00%（船员 3.00%，往日之影 3.00%），综合概率 13.00%
+  - 最多 10 次招募必定获得紫券及以上船员或往日之影
+
+  **蓝券往日之影**
+  - 基础概率 93.20%，综合概率 84.58%
+

@@ -10,8 +10,9 @@
 - `bannerName`：横幅/活动名
 - `type`：池子类型，`limited`（活动限时）/ `standard`（常驻）/ `weekly`（每周免费）
 - `currency`：消耗货币名称
-- `singleCost`：单抽消耗
-- `tenCost`：十连消耗
+- `singleCost`：单抽消耗的货币数量
+- `tenCost`：十连消耗的货币数量
+- `roseStoneCost`：单抽对应的蔷薇石数量
 - `tiers`：稀有度档位配置
 - `upItems`：UP 对象配置
 - `pityRules`：保底规则

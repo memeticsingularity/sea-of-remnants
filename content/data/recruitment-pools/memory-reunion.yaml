@@ -6,6 +6,13 @@ type: weekly
 currency: 免费
 singleCost: 0
 tenCost: 0
+roseStoneCost: 0
 upItems: []
 tiers: []
 pityRules: []
+rules: |
+  **每周免费招募**
+  - 每周有 50% 概率免费获得黑券船员或往日之影
+  - 每周可重逢次数有限，刷新时间为每周固定时间
+  - 具体规则待补充
+
