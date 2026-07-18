@@ -1,8 +1,9 @@
 id: equip-butterfly-endless
 slug: die-die-bu-xiu
 name: 蝶蝶不休
-slot: 炼金壶
-rarity: SSR
+slot: 手部
+handType: 炼金壶
+rarity: 金
 enhance: 5
 maxEnhanceByFruitLevel:
   - fruitLevel: 5

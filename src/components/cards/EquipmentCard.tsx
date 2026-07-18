@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { StatBlock } from '@/components/ui/StatBlock'
+import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
 import type { Equipment } from '@/types'
 
 interface EquipmentCardProps {
@@ -34,10 +35,26 @@ export function EquipmentCard({ equipment }: EquipmentCardProps) {
             <div className="mt-1 flex flex-wrap gap-1">
               <Tag variant="gold">{equipment.rarity}</Tag>
               <Tag>{equipment.slot}</Tag>
+              {equipment.handType && <Tag variant="cyan">{equipment.handType}</Tag>}
             </div>
           </div>
         </div>
+
         <StatBlock stats={equipment.baseStats} />
+
+        {equipment.fixedAffixes && equipment.fixedAffixes.length > 0 && (
+          <div className="mt-3 border-t border-border pt-3">
+            <div className="mb-1 text-xs text-text-muted">固定词条</div>
+            <ul className="space-y-1">
+              {equipment.fixedAffixes.map((affix, index) => (
+                <li key={index} className="flex gap-2 text-sm text-text">
+                  <span className="text-accent">◆</span>
+                  <GlossaryTooltip text={affix} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </Card>
     </Link>
   )

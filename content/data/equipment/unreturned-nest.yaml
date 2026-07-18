@@ -2,7 +2,7 @@ id: equip-unreturned-nest
 slug: wei-gui-chao
 name: 未归巢
 slot: 奇珍
-rarity: SR
+rarity: 紫
 fixedAffixes:
   - "在[防御]状态下受到伤害后，触发[防御反击]时造成的伤害提升30%，持续1回合。"
 flavor: |

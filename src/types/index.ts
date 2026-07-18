@@ -66,8 +66,13 @@ export interface Equipment {
   id: string
   slug: string
   name: string
-  slot: string
-  rarity: string
+  /** 行装栏位：手部 / 头部 / 躯干 / 腿部 / 奇珍 */
+  slot: '手部' | '头部' | '躯干' | '腿部' | '奇珍'
+  /** 手部装备的职业后缀，如 炼金壶、乐谱、枪械等 */
+  handType?: string
+  rarity: '绿' | '蓝' | '紫' | '金'
+  /** 装备标签，如 攻击力、固定伤害系数 等 */
+  tags?: string[]
   enhance?: number
   maxEnhanceByFruitLevel?: MaxEnhanceEntry[]
   baseStats?: Record<string, number | string>
@@ -186,7 +191,8 @@ export interface Location {
   id: string
   slug: string
   name: string
-  type: string
+  type: '海域' | '区域' | '地点'
+  region?: string
   description?: string
   enemies?: string[]
   drops?: string[]

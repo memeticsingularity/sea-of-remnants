@@ -2,7 +2,7 @@ id: equip-fire-scene-belt
 slug: huo-chang-yao-dai
 name: 火场腰带
 slot: 奇珍
-rarity: SR
+rarity: 紫
 fixedAffixes:
   - "每使用1个[强化骰]，[暴击率]额外提升3%。"
 flavor: |

@@ -2,7 +2,7 @@ id: equip-contract-brooch
 slug: qi-yue-xiong-zhen
 name: 契约胸针
 slot: 奇珍
-rarity: SR
+rarity: 紫
 fixedAffixes:
   - "职业技能伤害提升25%，船员技能伤害降低5%"
 flavor: "由于某种说不清楚的风险过大，黑格尼宣布中止合作，并将曾经的合作伙伴拒之门外。"

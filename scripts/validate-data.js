@@ -31,8 +31,8 @@ const COLLECTIONS = [
   'glossary',
 ]
 
-const VALID_EQUIPMENT_SLOTS = ['炼金壶', '头部', '躯干', '腿部', '奇珍']
-const VALID_RARITIES = ['N', 'R', 'SR', 'SSR', 'UR']
+const VALID_EQUIPMENT_SLOTS = ['手部', '头部', '躯干', '腿部', '奇珍']
+const VALID_RARITIES = ['绿', '蓝', '紫', '金']
 
 const errors = []
 const warnings = []

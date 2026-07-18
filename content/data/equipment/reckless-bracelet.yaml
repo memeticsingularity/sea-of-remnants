@@ -2,7 +2,7 @@ id: equip-reckless-bracelet
 slug: mang-zhuang-shou-huan
 name: 莽撞手环
 slot: 奇珍
-rarity: SR
+rarity: 紫
 fixedAffixes:
   - "船员技能伤害提升30%，职业技能伤害降低5%。"
 flavor: |

@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-18T15:33:24.054Z"
+    "generatedAt": "2026-07-18T15:48:30.317Z"
   },
   "crews": [
     {
@@ -235,8 +235,9 @@
       "id": "equip-butterfly-endless",
       "slug": "die-die-bu-xiu",
       "name": "蝶蝶不休",
-      "slot": "炼金壶",
-      "rarity": "SSR",
+      "slot": "手部",
+      "handType": "炼金壶",
+      "rarity": "金",
       "enhance": 5,
       "maxEnhanceByFruitLevel": [
         {
@@ -288,7 +289,7 @@
       "slug": "qi-yue-xiong-zhen",
       "name": "契约胸针",
       "slot": "奇珍",
-      "rarity": "SR",
+      "rarity": "紫",
       "fixedAffixes": [
         "职业技能伤害提升25%，船员技能伤害降低5%"
       ],
@@ -302,7 +303,7 @@
       "slug": "huo-chang-yao-dai",
       "name": "火场腰带",
       "slot": "奇珍",
-      "rarity": "SR",
+      "rarity": "紫",
       "fixedAffixes": [
         "每使用1个[强化骰]，[暴击率]额外提升3%。"
       ],
@@ -315,7 +316,7 @@
       "slug": "mang-zhuang-shou-huan",
       "name": "莽撞手环",
       "slot": "奇珍",
-      "rarity": "SR",
+      "rarity": "紫",
       "fixedAffixes": [
         "船员技能伤害提升30%，职业技能伤害降低5%。"
       ],
@@ -328,7 +329,7 @@
       "slug": "wei-gui-chao",
       "name": "未归巢",
       "slot": "奇珍",
-      "rarity": "SR",
+      "rarity": "紫",
       "fixedAffixes": [
         "在[防御]状态下受到伤害后，触发[防御反击]时造成的伤害提升30%，持续1回合。"
       ],
@@ -375,7 +376,186 @@
   ],
   "locations": [
     {
-      "id": "location-mist-sea",
+      "id": "loc-asylum",
+      "slug": "feng-ren-yuan",
+      "name": "疯人院",
+      "type": "地点",
+      "region": "暗巷"
+    },
+    {
+      "id": "loc-autopia",
+      "slug": "ao-tuo-pi-ya",
+      "name": "奥托皮亚",
+      "type": "区域",
+      "description": "失落海域中的繁华都市，由商街、船坞与暗巷组成。",
+      "region": "失落海域"
+    },
+    {
+      "id": "loc-back-street",
+      "slug": "hou-jie",
+      "name": "后街",
+      "type": "地点",
+      "region": "暗巷"
+    },
+    {
+      "id": "loc-bankrupt-dockyard",
+      "slug": "po-chan-chuan-wu",
+      "name": "破产船坞",
+      "type": "区域",
+      "description": "奥托皮亚的废弃船坞区域，包含码头与各类车间。",
+      "region": "奥托皮亚"
+    },
+    {
+      "id": "loc-bay-island-cave",
+      "slug": "hai-wan-dao-dong-xue",
+      "name": "海湾岛洞穴",
+      "type": "地点",
+      "region": "白沙海"
+    },
+    {
+      "id": "loc-bay-island-ruins",
+      "slug": "hai-wan-dao-yi-ji",
+      "name": "海湾岛遗迹",
+      "type": "地点",
+      "region": "白沙海"
+    },
+    {
+      "id": "loc-bay-island",
+      "slug": "hai-wan-dao",
+      "name": "海湾岛",
+      "type": "地点",
+      "region": "白沙海"
+    },
+    {
+      "id": "loc-bridge-island-cave",
+      "slug": "du-qiao-dao-dong-xue",
+      "name": "渡桥岛洞穴",
+      "type": "地点",
+      "region": "渡桥海"
+    },
+    {
+      "id": "loc-bridge-island-ruins",
+      "slug": "du-qiao-dao-yi-ji",
+      "name": "渡桥岛遗迹",
+      "type": "地点",
+      "region": "渡桥海"
+    },
+    {
+      "id": "loc-bridge-island",
+      "slug": "du-qiao-dao",
+      "name": "渡桥岛",
+      "type": "地点",
+      "region": "渡桥海"
+    },
+    {
+      "id": "loc-bridge-sea",
+      "slug": "du-qiao-hai",
+      "name": "渡桥海",
+      "type": "海域",
+      "description": "失落海域中以桥梁岛屿为特色的海域。",
+      "region": "失落海域"
+    },
+    {
+      "id": "loc-construction-workshop",
+      "slug": "jian-zao-che-jian",
+      "name": "建造车间",
+      "type": "地点",
+      "region": "破产船坞"
+    },
+    {
+      "id": "loc-crater-plaza",
+      "slug": "dan-kuang-guang-chang",
+      "name": "弹坑广场",
+      "type": "地点",
+      "region": "奥托皮亚"
+    },
+    {
+      "id": "loc-crescent-shoal-cave",
+      "slug": "xin-yue-qian-tan-dong-xue",
+      "name": "新月浅滩洞穴",
+      "type": "地点",
+      "region": "白沙海"
+    },
+    {
+      "id": "loc-crescent-shoal",
+      "slug": "xin-yue-qian-tan",
+      "name": "新月浅滩",
+      "type": "地点",
+      "region": "白沙海"
+    },
+    {
+      "id": "loc-crowded-market",
+      "slug": "yong-ji-ji-shi",
+      "name": "拥挤集市",
+      "type": "地点",
+      "region": "奥托皮亚"
+    },
+    {
+      "id": "loc-dark-alley",
+      "slug": "an-xiang",
+      "name": "暗巷",
+      "type": "区域",
+      "description": "奥托皮亚的地下街区，藏着各种危险与秘密。",
+      "region": "奥托皮亚"
+    },
+    {
+      "id": "loc-departure-pier",
+      "slug": "chu-hang-ma-tou",
+      "name": "出航码头",
+      "type": "地点",
+      "region": "破产船坞"
+    },
+    {
+      "id": "loc-echo-island",
+      "slug": "hui-yin-dao",
+      "name": "回音岛",
+      "type": "地点",
+      "region": "渡桥海"
+    },
+    {
+      "id": "loc-fist-ring",
+      "slug": "quan-li-lei-tai",
+      "name": "拳力擂台",
+      "type": "地点",
+      "region": "暗巷"
+    },
+    {
+      "id": "loc-herb-cavern",
+      "slug": "cao-yao-dong-ku",
+      "name": "草药洞窟",
+      "type": "地点",
+      "region": "渡桥海"
+    },
+    {
+      "id": "loc-hidden-island",
+      "slug": "yin-mi-dao",
+      "name": "隐秘岛",
+      "type": "地点",
+      "region": "白沙海"
+    },
+    {
+      "id": "loc-hope-outpost",
+      "slug": "xi-wang-qian-shao",
+      "name": "希望前哨",
+      "type": "地点",
+      "region": "白沙海"
+    },
+    {
+      "id": "loc-ice-drink-shop",
+      "slug": "bing-yin-dian",
+      "name": "冰饮店",
+      "type": "地点",
+      "region": "奥托皮亚"
+    },
+    {
+      "id": "loc-merchant-street",
+      "slug": "shang-jie",
+      "name": "商街",
+      "type": "地点",
+      "region": "奥托皮亚"
+    },
+    {
+      "id": "loc-mist-sea",
       "slug": "mi-wu-hai-yu",
       "name": "迷雾海域",
       "type": "海域",
@@ -388,6 +568,84 @@
         "海魂结晶",
         "金币"
       ]
+    },
+    {
+      "id": "loc-old-pier-beach",
+      "slug": "jiu-ma-tou-sha-tan",
+      "name": "旧码头沙滩",
+      "type": "地点",
+      "region": "奥托皮亚"
+    },
+    {
+      "id": "loc-pink-beach",
+      "slug": "fen-hong-sha-tan",
+      "name": "粉红沙滩",
+      "type": "地点",
+      "region": "白沙海"
+    },
+    {
+      "id": "loc-rd-workshop",
+      "slug": "yan-fa-che-jian",
+      "name": "研发车间",
+      "type": "地点",
+      "region": "破产船坞"
+    },
+    {
+      "id": "loc-repair-room",
+      "slug": "wei-xiu-shi",
+      "name": "维修室",
+      "type": "地点",
+      "region": "奥托皮亚"
+    },
+    {
+      "id": "loc-scavenger-beach",
+      "slug": "shi-huang-sha-tan",
+      "name": "拾荒沙滩",
+      "type": "地点",
+      "region": "奥托皮亚"
+    },
+    {
+      "id": "loc-silent-house",
+      "slug": "jin-sheng-wu",
+      "name": "噤声屋",
+      "type": "地点",
+      "region": "暗巷"
+    },
+    {
+      "id": "loc-sleepless-pit",
+      "slug": "bu-mian-zhi-keng",
+      "name": "不眠之坑",
+      "type": "地点",
+      "region": "暗巷"
+    },
+    {
+      "id": "loc-welcome-coast-cave",
+      "slug": "huan-ying-hai-an-dong-xue",
+      "name": "欢迎海岸洞穴",
+      "type": "地点",
+      "region": "渡桥海"
+    },
+    {
+      "id": "loc-welcome-coast",
+      "slug": "huan-ying-hai-an",
+      "name": "欢迎海岸",
+      "type": "地点",
+      "region": "渡桥海"
+    },
+    {
+      "id": "loc-whisper-path",
+      "slug": "di-yin-xiao-jing",
+      "name": "低吟小径",
+      "type": "地点",
+      "region": "奥托皮亚"
+    },
+    {
+      "id": "loc-white-sand-sea",
+      "slug": "bai-sha-hai",
+      "name": "白沙海",
+      "type": "海域",
+      "description": "失落海域中的白色沙滩海域，分布着多处岛屿与遗迹。",
+      "region": "失落海域"
     }
   ],
   "glossary": [
@@ -637,8 +895,8 @@
       "type": "行装",
       "route": "/equipment/die-die-bu-xiu",
       "tags": [
-        "炼金壶",
-        "SSR"
+        "手部",
+        "金"
       ],
       "keywords": []
     },
@@ -649,7 +907,7 @@
       "route": "/equipment/qi-yue-xiong-zhen",
       "tags": [
         "奇珍",
-        "SR"
+        "紫"
       ],
       "keywords": []
     },
@@ -660,7 +918,7 @@
       "route": "/equipment/huo-chang-yao-dai",
       "tags": [
         "奇珍",
-        "SR"
+        "紫"
       ],
       "keywords": []
     },
@@ -671,7 +929,7 @@
       "route": "/equipment/mang-zhuang-shou-huan",
       "tags": [
         "奇珍",
-        "SR"
+        "紫"
       ],
       "keywords": []
     },
@@ -682,7 +940,7 @@
       "route": "/equipment/wei-gui-chao",
       "tags": [
         "奇珍",
-        "SR"
+        "紫"
       ],
       "keywords": []
     },
@@ -708,10 +966,370 @@
       "keywords": []
     },
     {
-      "id": "location-mist-sea",
+      "id": "loc-asylum",
+      "title": "疯人院",
+      "type": "地点",
+      "route": "/locations/feng-ren-yuan",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-autopia",
+      "title": "奥托皮亚",
+      "type": "地点",
+      "route": "/locations/ao-tuo-pi-ya",
+      "tags": [
+        "区域"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-back-street",
+      "title": "后街",
+      "type": "地点",
+      "route": "/locations/hou-jie",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-bankrupt-dockyard",
+      "title": "破产船坞",
+      "type": "地点",
+      "route": "/locations/po-chan-chuan-wu",
+      "tags": [
+        "区域"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-bay-island-cave",
+      "title": "海湾岛洞穴",
+      "type": "地点",
+      "route": "/locations/hai-wan-dao-dong-xue",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-bay-island-ruins",
+      "title": "海湾岛遗迹",
+      "type": "地点",
+      "route": "/locations/hai-wan-dao-yi-ji",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-bay-island",
+      "title": "海湾岛",
+      "type": "地点",
+      "route": "/locations/hai-wan-dao",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-bridge-island-cave",
+      "title": "渡桥岛洞穴",
+      "type": "地点",
+      "route": "/locations/du-qiao-dao-dong-xue",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-bridge-island-ruins",
+      "title": "渡桥岛遗迹",
+      "type": "地点",
+      "route": "/locations/du-qiao-dao-yi-ji",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-bridge-island",
+      "title": "渡桥岛",
+      "type": "地点",
+      "route": "/locations/du-qiao-dao",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-bridge-sea",
+      "title": "渡桥海",
+      "type": "地点",
+      "route": "/locations/du-qiao-hai",
+      "tags": [
+        "海域"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-construction-workshop",
+      "title": "建造车间",
+      "type": "地点",
+      "route": "/locations/jian-zao-che-jian",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-crater-plaza",
+      "title": "弹坑广场",
+      "type": "地点",
+      "route": "/locations/dan-kuang-guang-chang",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-crescent-shoal-cave",
+      "title": "新月浅滩洞穴",
+      "type": "地点",
+      "route": "/locations/xin-yue-qian-tan-dong-xue",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-crescent-shoal",
+      "title": "新月浅滩",
+      "type": "地点",
+      "route": "/locations/xin-yue-qian-tan",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-crowded-market",
+      "title": "拥挤集市",
+      "type": "地点",
+      "route": "/locations/yong-ji-ji-shi",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-dark-alley",
+      "title": "暗巷",
+      "type": "地点",
+      "route": "/locations/an-xiang",
+      "tags": [
+        "区域"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-departure-pier",
+      "title": "出航码头",
+      "type": "地点",
+      "route": "/locations/chu-hang-ma-tou",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-echo-island",
+      "title": "回音岛",
+      "type": "地点",
+      "route": "/locations/hui-yin-dao",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-fist-ring",
+      "title": "拳力擂台",
+      "type": "地点",
+      "route": "/locations/quan-li-lei-tai",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-herb-cavern",
+      "title": "草药洞窟",
+      "type": "地点",
+      "route": "/locations/cao-yao-dong-ku",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-hidden-island",
+      "title": "隐秘岛",
+      "type": "地点",
+      "route": "/locations/yin-mi-dao",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-hope-outpost",
+      "title": "希望前哨",
+      "type": "地点",
+      "route": "/locations/xi-wang-qian-shao",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-ice-drink-shop",
+      "title": "冰饮店",
+      "type": "地点",
+      "route": "/locations/bing-yin-dian",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-merchant-street",
+      "title": "商街",
+      "type": "地点",
+      "route": "/locations/shang-jie",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-mist-sea",
       "title": "迷雾海域",
       "type": "地点",
       "route": "/locations/mi-wu-hai-yu",
+      "tags": [
+        "海域"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-old-pier-beach",
+      "title": "旧码头沙滩",
+      "type": "地点",
+      "route": "/locations/jiu-ma-tou-sha-tan",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-pink-beach",
+      "title": "粉红沙滩",
+      "type": "地点",
+      "route": "/locations/fen-hong-sha-tan",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-rd-workshop",
+      "title": "研发车间",
+      "type": "地点",
+      "route": "/locations/yan-fa-che-jian",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-repair-room",
+      "title": "维修室",
+      "type": "地点",
+      "route": "/locations/wei-xiu-shi",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-scavenger-beach",
+      "title": "拾荒沙滩",
+      "type": "地点",
+      "route": "/locations/shi-huang-sha-tan",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-silent-house",
+      "title": "噤声屋",
+      "type": "地点",
+      "route": "/locations/jin-sheng-wu",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-sleepless-pit",
+      "title": "不眠之坑",
+      "type": "地点",
+      "route": "/locations/bu-mian-zhi-keng",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-welcome-coast-cave",
+      "title": "欢迎海岸洞穴",
+      "type": "地点",
+      "route": "/locations/huan-ying-hai-an-dong-xue",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-welcome-coast",
+      "title": "欢迎海岸",
+      "type": "地点",
+      "route": "/locations/huan-ying-hai-an",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-whisper-path",
+      "title": "低吟小径",
+      "type": "地点",
+      "route": "/locations/di-yin-xiao-jing",
+      "tags": [
+        "地点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "loc-white-sand-sea",
+      "title": "白沙海",
+      "type": "地点",
+      "route": "/locations/bai-sha-hai",
       "tags": [
         "海域"
       ],
