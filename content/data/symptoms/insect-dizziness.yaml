@@ -1,0 +1,12 @@
+id: symptom-insect-dizziness
+slug: yun-chong-zheng
+name: 晕虫症
+severity: 中症
+alignment: 负面
+effect: "对昆虫类敌人攻击力降低20%。"
+analysis: "多次击败昆虫时可能患此病。一看到这种生物就浑身发痒，丧失力气，跳到同伴身上大声尖叫可以缓解。"
+pathology:
+  碎心: 24
+trend: "使用药物可治愈"
+treatment: "用药治疗"
+image: /images/symptoms/insect-dizziness.png

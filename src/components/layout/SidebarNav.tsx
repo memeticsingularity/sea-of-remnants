@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import { BookOpen, Anchor, Users, Ship, Sparkles, Music, Shield, Package, Map, Scroll, HelpCircle } from 'lucide-react'
+import { BookOpen, Anchor, Users, Ship, Sparkles, Music, Shield, Package, Map, Scroll, HelpCircle, Activity } from 'lucide-react'
 
 interface NavItem {
   label: string
@@ -27,6 +27,7 @@ const navGroups: NavItem[] = [
   { label: '物品', to: '/items', icon: <Package className="h-4 w-4" /> },
   { label: '任务', to: '/quests', icon: <Scroll className="h-4 w-4" /> },
   { label: '地点', to: '/locations', icon: <Map className="h-4 w-4" /> },
+  { label: '症状', to: '/symptoms', icon: <Activity className="h-4 w-4" /> },
   { label: '指南', to: '/guides/crew-training', icon: <BookOpen className="h-4 w-4" /> },
   { label: '术语表', to: '/glossary', icon: <HelpCircle className="h-4 w-4" /> },
 ]

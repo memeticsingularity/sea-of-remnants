@@ -29,10 +29,16 @@ const COLLECTIONS = [
   'quests',
   'locations',
   'glossary',
+  'symptoms',
+  'shadows',
+  'recruitment-pools',
 ]
 
 const VALID_EQUIPMENT_SLOTS = ['手部', '头部', '躯干', '腿部', '奇珍']
 const VALID_RARITIES = ['绿', '蓝', '紫', '金']
+const VALID_SHADOW_RARITIES = ['黑', '紫', '蓝']
+const VALID_SYMPTOM_SEVERITIES = ['轻症', '中症', '重症']
+const VALID_POOL_TYPES = ['limited', 'standard', 'weekly']
 
 const errors = []
 const warnings = []
@@ -124,6 +130,44 @@ async function validateCollection(collection, items, allIds, allSlugs) {
         error(`[${collection}/${file}] Invalid rarity: ${data.rarity}`)
       }
     }
+
+    if (collection === 'symptoms') {
+      if (!data.severity) {
+        error(`[${collection}/${file}] Missing required field: severity`)
+      }
+      if (data.severity && !VALID_SYMPTOM_SEVERITIES.includes(data.severity)) {
+        error(`[${collection}/${file}] Invalid symptom severity: ${data.severity}`)
+      }
+    }
+
+    if (collection === 'shadows') {
+      if (!data.rarity) {
+        error(`[${collection}/${file}] Missing required field: rarity`)
+      } else if (!VALID_SHADOW_RARITIES.includes(data.rarity)) {
+        error(`[${collection}/${file}] Invalid shadow rarity: ${data.rarity}`)
+      }
+    }
+
+    if (collection === 'recruitment-pools') {
+      if (!data.currency) {
+        error(`[${collection}/${file}] Missing required field: currency`)
+      }
+      if (typeof data.singleCost !== 'number') {
+        error(`[${collection}/${file}] Missing or invalid field: singleCost`)
+      }
+      if (typeof data.tenCost !== 'number') {
+        error(`[${collection}/${file}] Missing or invalid field: tenCost`)
+      }
+      if (!VALID_POOL_TYPES.includes(data.type)) {
+        error(`[${collection}/${file}] Invalid pool type: ${data.type}`)
+      }
+      if (!Array.isArray(data.tiers)) {
+        error(`[${collection}/${file}] Missing or invalid field: tiers`)
+      }
+      if (!Array.isArray(data.pityRules)) {
+        error(`[${collection}/${file}] Missing or invalid field: pityRules`)
+      }
+    }
   }
 }
 
@@ -171,6 +215,36 @@ async function validateReferences(collections) {
     for (const related of data.related || []) {
       if (!glossaryTerms.has(related)) {
         error(`[glossary/${file}] Related term not found: ${related}`)
+      }
+    }
+  }
+
+  // Validate recruitment pool references
+  const crewIds = new Set((collections.crews || []).map(({ data }) => data.id))
+  const shadowIds = new Set((collections.shadows || []).map(({ data }) => data.id))
+  for (const { file, data } of collections['recruitment-pools'] || []) {
+    for (const tier of data.tiers || []) {
+      for (const id of tier.pool?.crewIds || []) {
+        if (!crewIds.has(id)) {
+          error(`[recruitment-pools/${file}] Referenced crew not found: ${id}`)
+        }
+      }
+      for (const id of tier.pool?.shadowIds || []) {
+        if (!shadowIds.has(id)) {
+          error(`[recruitment-pools/${file}] Referenced shadow not found: ${id}`)
+        }
+      }
+    }
+    for (const up of data.upItems || []) {
+      for (const id of up.crewIds || []) {
+        if (!crewIds.has(id)) {
+          error(`[recruitment-pools/${file}] UP crew not found: ${id}`)
+        }
+      }
+      for (const id of up.shadowIds || []) {
+        if (!shadowIds.has(id)) {
+          error(`[recruitment-pools/${file}] UP shadow not found: ${id}`)
+        }
       }
     }
   }

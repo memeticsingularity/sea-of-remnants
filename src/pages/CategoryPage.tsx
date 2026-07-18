@@ -1,11 +1,12 @@
 import { useState, useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import { wikiData } from '@/data'
 import { CrewCard } from '@/components/cards/CrewCard'
 import { SkillCard } from '@/components/cards/SkillCard'
 import { EquipmentCard } from '@/components/cards/EquipmentCard'
 import { Card } from '@/components/ui/Card'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
-import type { Crew, Skill, Equipment, Ship, GameClass, Song, Item, Quest, Location } from '@/types'
+import type { Crew, Skill, Equipment, Ship, GameClass, Song, Item, Quest, Location, Symptom } from '@/types'
 
 type CategoryKey =
   | 'crews'
@@ -18,6 +19,7 @@ type CategoryKey =
   | 'items'
   | 'quests'
   | 'locations'
+  | 'symptoms'
 
 interface CategoryPageProps {
   category: CategoryKey
@@ -34,6 +36,7 @@ const categoryLabels: Record<CategoryKey, string> = {
   items: '物品',
   quests: '任务',
   locations: '地点',
+  symptoms: '症状',
 }
 
 interface FilterConfig {
@@ -78,6 +81,10 @@ const filterConfigs: Record<CategoryKey, FilterConfig[]> = {
   locations: [
     { key: 'type', label: '类型', getValue: (i) => (i as Location).type },
     { key: 'region', label: '所属区域', getValue: (i) => (i as Location).region },
+  ],
+  symptoms: [
+    { key: 'severity', label: '严重程度', getValue: (i) => (i as Symptom).severity },
+    { key: 'alignment', label: '倾向', getValue: (i) => (i as Symptom).alignment },
   ],
 }
 
@@ -251,16 +258,35 @@ function renderItemCard(category: CategoryKey, item: unknown) {
           subtitle={(item as Location).type}
         />
       )
+    case 'symptoms':
+      return (
+        <SimpleCard
+          key={(item as Symptom).id}
+          title={(item as Symptom).name}
+          subtitle={`${(item as Symptom).severity}${(item as Symptom).alignment ? ` · ${(item as Symptom).alignment}` : ''}`}
+          to={`/symptoms/${(item as Symptom).slug}`}
+        />
+      )
     default:
       return null
   }
 }
 
-function SimpleCard({ title, subtitle }: { title: string; subtitle?: string }) {
-  return (
-    <Card>
-      <h3 className="text-lg font-bold text-text">{title}</h3>
+function SimpleCard({ title, subtitle, to }: { title: string; subtitle?: string; to?: string }) {
+  const content = (
+    <Card hover={!!to}>
+      <h3 className={`text-lg font-bold ${to ? 'text-text' : 'text-text'}`}>{title}</h3>
       {subtitle && <p className="text-sm text-text-muted">{subtitle}</p>}
     </Card>
   )
+
+  if (to) {
+    return (
+      <Link to={to}>
+        {content}
+      </Link>
+    )
+  }
+
+  return content
 }

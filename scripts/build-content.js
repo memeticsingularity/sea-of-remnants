@@ -30,6 +30,9 @@ const COLLECTIONS = [
   'quests',
   'locations',
   'glossary',
+  'symptoms',
+  'shadows',
+  'recruitment-pools',
 ]
 
 async function readYamlFiles(dir) {
@@ -115,6 +118,22 @@ function buildSearchIndex(data) {
       keywords: [],
     }),
   )
+  data.symptoms.forEach((s) =>
+    add(s, '症状', `/symptoms/${s.slug}`, [s.severity, s.alignment]),
+  )
+  data.shadows.forEach((s) =>
+    add(s, '往日之影', `/shadows/${s.slug}`, [s.rarity]),
+  )
+  data.recruitmentPools.forEach((p) =>
+    index.push({
+      id: p.id,
+      title: p.name,
+      type: '招募池',
+      route: `/recruitment?pool=${p.slug}`,
+      tags: [p.type, p.currency],
+      keywords: [],
+    }),
+  )
   data.pages.forEach((p) =>
     index.push({
       id: p.id,
@@ -152,7 +171,8 @@ async function main() {
   // Load collection YAML files
   for (const collection of COLLECTIONS) {
     const dir = path.join(DATA_DIR, collection)
-    data[collection] = await readYamlFiles(dir)
+    const key = collection.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
+    data[key] = await readYamlFiles(dir)
   }
 
   // Load Markdown pages referenced by index.yaml
@@ -173,7 +193,10 @@ async function main() {
 
   console.log(`Generated ${OUTPUT_PATH}`)
   console.log(
-    `Summary: ${COLLECTIONS.map((c) => `${c}=${data[c].length}`).join(', ')}, pages=${data.pages.length}, searchIndex=${data.searchIndex.length}`,
+    `Summary: ${COLLECTIONS.map((c) => {
+      const key = c.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
+      return `${c}=${data[key].length}`
+    }).join(', ')}, pages=${data.pages.length}, searchIndex=${data.searchIndex.length}`,
   )
 }
 

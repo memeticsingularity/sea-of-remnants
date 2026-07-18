@@ -189,6 +189,23 @@ export interface Quest {
   description?: string
 }
 
+export interface Symptom {
+  id: string
+  slug: string
+  name: string
+  /** 严重程度：轻症 / 中症 / 重症 */
+  severity: string
+  /** 正向 / 负面 */
+  alignment?: string
+  effect: string
+  source?: string
+  analysis?: string
+  pathology?: Record<string, number>
+  trend?: string
+  treatment?: string
+  image?: string
+}
+
 export interface Location {
   id: string
   slug: string
@@ -217,6 +234,58 @@ export interface SearchIndexEntry {
   keywords?: string[]
 }
 
+export interface Shadow {
+  id: string
+  slug: string
+  name: string
+  type: '往日之影'
+  rarity: '黑' | '紫' | '蓝'
+  description?: string
+  tags?: string[]
+  image?: string
+  source?: string
+}
+
+export interface RecruitmentPool {
+  id: string
+  slug: string
+  name: string
+  bannerName: string
+  type: 'limited' | 'standard' | 'weekly'
+  currency: string
+  singleCost: number
+  tenCost: number
+  tiers: RecruitmentTier[]
+  upItems: {
+    crewIds?: string[]
+    shadowIds?: string[]
+    upRate?: number
+    guaranteeNextOnMiss?: boolean
+  }[]
+  pityRules: PityRule[]
+}
+
+export interface RecruitmentTier {
+  key: 'black' | 'purple' | 'blue'
+  label: string
+  baseRate: number
+  comprehensiveRate: number
+  hardPity?: number
+  pool: {
+    crewIds: string[]
+    shadowIds: string[]
+  }
+  mixed?: boolean
+}
+
+export interface PityRule {
+  type: 'hard_pity' | 'purple_guarantee' | 'up_guarantee'
+  threshold: number
+  tier: 'black' | 'purple'
+  firstUpId?: string
+  guaranteeUpAfterMiss?: boolean
+}
+
 export interface WikiData {
   meta: {
     version: string
@@ -233,6 +302,9 @@ export interface WikiData {
   quests: Quest[]
   locations: Location[]
   glossary: GlossaryEntry[]
+  symptoms: Symptom[]
+  shadows: Shadow[]
+  recruitmentPools: RecruitmentPool[]
   pages: Page[]
   searchIndex: SearchIndexEntry[]
 }

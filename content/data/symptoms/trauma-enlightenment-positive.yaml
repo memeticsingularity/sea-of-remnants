@@ -1,0 +1,13 @@
+id: symptom-trauma-enlightenment-positive
+slug: chuang-shang-qi-di-zheng-xiang
+name: 创伤启迪-正向
+severity: 重症
+alignment: 正向
+effect: "所有检定难度降低5级。"
+source: 假面恶蛛
+analysis: "和霸主战斗可能患此正向疾病。恶战之后，忽然发现世界上没什么难做的事。"
+pathology:
+  碎心: 45
+  盲眼: 45
+trend: "20分钟后自动痊愈"
+image: /images/symptoms/trauma-enlightenment-positive.png
