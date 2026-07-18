@@ -1,0 +1,7 @@
+id: glossary-butterfall
+slug: glossary-butterfall
+term: 蝶陨
+definition: "本次航行中，击败敌方单位时增加计数。每有1层本状态，蝶陨骰会额外造成攻击力3%×掷骰点数的伤害，至多叠加10层。不可被其他技能消除。"
+related:
+  - 强化骰
+  - 骰子总点数

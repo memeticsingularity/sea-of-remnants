@@ -1,0 +1,17 @@
+id: dice-shatter
+slug: sui-sui-shai
+name: 碎碎骰
+type: 辅助技
+level: 1
+maxLevel: 10
+shortDesc: "使用技能后，令技能主目标后续所受的伤害提升。每掷出6则额外增加持续时间。"
+detailedDesc: "使用技能后，目标所受伤害提升6%，且每1点骰子点数，令目标所受伤害再提升1.5%，持续3回合。每掷出1个6点，持续时间增加1回合。"
+relatedGlossary:
+  - 骰子总点数
+  - 强化骰
+image: /images/dice/shatter.png
+source: 骰子抽取 / 任务奖励
+
+buildNotes: |
+  碎碎骰是强力的单体易伤辅助骰，适合搭配高频率多段输出或核心攻坚角色。
+  骰子点数越高、6点越多，目标承受的增伤持续时间越长，对抗 Boss 时收益显著。

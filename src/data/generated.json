@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-18T16:58:48.903Z"
+    "generatedAt": "2026-07-18T17:28:35.363Z"
   },
   "crews": [
     {
@@ -557,14 +557,42 @@
   ],
   "dice": [
     {
+      "id": "dice-butterfall",
+      "slug": "die-yun-shai",
+      "name": "蝶陨骰",
+      "type": "强化骰",
+      "level": 1,
+      "maxLevel": 10,
+      "shortDesc": "本次航行中，每次击败敌方单位时都会积攒[蝶陨]。使用该骰子的技能会依据[蝶陨]层数额外造成伤害。每掷出6则额外造成伤害。",
+      "detailedDesc": "本次航行中，每击败1个敌方单位，积攒1层[蝶陨]，至多获得10层。使用技能时，造成攻击力20%的伤害，且每有1层[蝶陨]再造成攻击力3%×掷骰点数的伤害。每掷出一个6点，额外造成攻击力60%的伤害。",
+      "relatedGlossary": [
+        "蝶陨",
+        "骰子总点数",
+        "强化骰"
+      ],
+      "image": "/images/dice/butterfall.png",
+      "source": "骰子抽取 / 任务奖励",
+      "buildNotes": "蝶陨骰为越战越强的成长型骰子，击败敌人后叠加[蝶陨]层数，层数上限 10 层。\n适合清怪能力强、能快速叠层的队伍；在长线战斗或连续多波敌人中收益最高。\n"
+    },
+    {
       "id": "dice-electric-surge",
       "slug": "dian-yong-shai",
       "name": "电涌骰",
       "type": "辅助技",
-      "level": 1,
+      "level": 2,
       "maxLevel": 10,
       "shortDesc": "使用技能后，对主目标额外造成 1 次伤害。",
-      "detailedDesc": "使用技能后，此次攻击会对主目标额外造成 1 次伤害，伤害值为此次攻击对所有敌人的总伤害×(16%+8%×骰子总点数)。每掷出一个 6 点，此次额外伤害提升 20%。",
+      "detailedDesc": "使用技能后，此次攻击会对主目标额外造成 1 次伤害，伤害值为此次攻击对所有敌人的总伤害×(17.6%+8.8%×骰子总点数)。每掷出一个 6 点，此次额外伤害提升 22%。",
+      "levelDetails": [
+        {
+          "level": 1,
+          "detailedDesc": "使用技能后，此次攻击会对主目标额外造成 1 次伤害，伤害值为此次攻击对所有敌人的总伤害×(16%+8%×骰子总点数)。每掷出一个 6 点，此次额外伤害提升 20%。"
+        },
+        {
+          "level": 2,
+          "detailedDesc": "使用技能后，此次攻击会对主目标额外造成 1 次伤害，伤害值为此次攻击对所有敌人的总伤害×(17.6%+8.8%×骰子总点数)。每掷出一个 6 点，此次额外伤害提升 22%。"
+        }
+      ],
       "relatedGlossary": [
         "骰子总点数",
         "强化骰"
@@ -599,6 +627,23 @@
       ],
       "image": "/images/dice/heavy-force.png",
       "source": "骰子抽取 / 任务奖励"
+    },
+    {
+      "id": "dice-shatter",
+      "slug": "sui-sui-shai",
+      "name": "碎碎骰",
+      "type": "辅助技",
+      "level": 1,
+      "maxLevel": 10,
+      "shortDesc": "使用技能后，令技能主目标后续所受的伤害提升。每掷出6则额外增加持续时间。",
+      "detailedDesc": "使用技能后，目标所受伤害提升6%，且每1点骰子点数，令目标所受伤害再提升1.5%，持续3回合。每掷出1个6点，持续时间增加1回合。",
+      "relatedGlossary": [
+        "骰子总点数",
+        "强化骰"
+      ],
+      "image": "/images/dice/shatter.png",
+      "source": "骰子抽取 / 任务奖励",
+      "buildNotes": "碎碎骰是强力的单体易伤辅助骰，适合搭配高频率多段输出或核心攻坚角色。\n骰子点数越高、6点越多，目标承受的增伤持续时间越长，对抗 Boss 时收益显著。\n"
     },
     {
       "id": "dice-shield-fist",
@@ -1657,6 +1702,16 @@
       ]
     },
     {
+      "id": "glossary-butterfall",
+      "slug": "glossary-butterfall",
+      "term": "蝶陨",
+      "definition": "本次航行中，击败敌方单位时增加计数。每有1层本状态，蝶陨骰会额外造成攻击力3%×掷骰点数的伤害，至多叠加10层。不可被其他技能消除。",
+      "related": [
+        "强化骰",
+        "骰子总点数"
+      ]
+    },
+    {
       "id": "glossary-class-skill",
       "slug": "glossary-class-skill",
       "term": "职业技能",
@@ -2308,9 +2363,11 @@
       "currency": "免费",
       "singleCost": 0,
       "tenCost": 0,
+      "roseStoneCost": 0,
       "upItems": [],
       "tiers": [],
-      "pityRules": []
+      "pityRules": [],
+      "rules": "**每周免费招募**\n- 每周有 50% 概率免费获得黑券船员或往日之影\n- 每周可重逢次数有限，刷新时间为每周固定时间\n- 具体规则待补充\n"
     },
     {
       "id": "pool-never-leave",
@@ -2319,8 +2376,9 @@
       "bannerName": "这里不散场",
       "type": "standard",
       "currency": "来一杯银币",
-      "singleCost": 180,
-      "tenCost": 1800,
+      "singleCost": 1,
+      "tenCost": 10,
+      "roseStoneCost": 160,
       "upItems": [],
       "tiers": [
         {
@@ -2425,7 +2483,8 @@
           "threshold": 10,
           "tier": "purple"
         }
-      ]
+      ],
+      "rules": "**黑券船员及往日之影**\n- 基础概率 0.80%（船员 0.40%，往日之影 0.40%），综合概率 1.84%\n- 最多 80 次招募必定获得 1 个黑券船员或往日之影\n\n**紫券船员及往日之影**\n- 基础概率 6.00%（船员 3.00%，往日之影 3.00%），综合概率 13.00%\n- 最多 10 次招募必定获得紫券及以上船员或往日之影\n\n**蓝券往日之影**\n- 基础概率 93.20%，综合概率 84.58%\n"
     },
     {
       "id": "pool-pilu-secret",
@@ -2434,8 +2493,9 @@
       "bannerName": "噼噜的旧日秘藏",
       "type": "limited",
       "currency": "噼噜的最爱",
-      "singleCost": 180,
-      "tenCost": 1800,
+      "singleCost": 1,
+      "tenCost": 10,
+      "roseStoneCost": 160,
       "upItems": [
         {
           "shadowIds": [
@@ -2547,7 +2607,8 @@
           "tier": "purple",
           "guaranteeUpAfterMiss": true
         }
-      ]
+      ],
+      "rules": "**黑券往日之影**\n- 基础概率 0.80%，综合概率 1.84%\n- 最多 80 次寻找必定获得 1 个黑券往日之影\n- 获得黑券往日之影时 75% 为「安眠人偶」，25% 为其他黑券往日之影\n- 若本次黑券往日之影不是「安眠人偶」，则下次黑券往日之影必定为「安眠人偶」\n\n**紫券往日之影**\n- 基础概率 6.00%，综合概率 13.00%\n- 最多 10 次寻找必定获得紫券及以上往日之影\n- 紫券往日之影 50% 为当期 UP「迷你号鲇鱼的消亡」/「此刻即未来」，50% 为其他紫券往日之影\n- 若本次紫券往日之影非当期 UP，则下次紫券往日之影必定为当期 UP\n\n**蓝券往日之影**\n- 基础概率 93.20%，综合概率 85.15%\n"
     },
     {
       "id": "pool-zhimeng-xianyin",
@@ -2556,8 +2617,9 @@
       "bannerName": "织梦弦音",
       "type": "limited",
       "currency": "来一杯金币",
-      "singleCost": 180,
-      "tenCost": 1800,
+      "singleCost": 1,
+      "tenCost": 10,
+      "roseStoneCost": 160,
       "upItems": [
         {
           "crewIds": [
@@ -2683,7 +2745,8 @@
           "tier": "purple",
           "guaranteeUpAfterMiss": true
         }
-      ]
+      ],
+      "rules": "**黑券船员**\n- 基础概率 0.80%，综合概率 1.84%\n- 最多 80 次招募必定获得 1 个黑券船员\n- 首次获得的黑券船员必定是「茉莉」\n- 除首次外，获得黑券船员时 50% 为「茉莉」，50% 为本卡池其他黑券船员\n- 若本次黑券船员不是「茉莉」，则下次黑券船员必定为「茉莉」\n\n**紫券船员及往日之影**\n- 基础概率 6.00%，综合概率 13.00%（船员 3.00%，往日之影 3.00%）\n- 最多 10 次招募必定获得紫券及以上船员或往日之影\n- 紫券对象 50% 为当期 UP「艾丝」/「预兆之眼」，50% 为其他紫券船员/往日之影\n- 若本次紫券对象非当期 UP，则下次紫券对象必定为当期 UP\n\n**蓝券往日之影**\n- 基础概率 93.20%，综合概率 84.58%\n"
     }
   ],
   "pages": [
@@ -3032,6 +3095,16 @@
       ]
     },
     {
+      "id": "dice-butterfall",
+      "title": "蝶陨骰",
+      "type": "骰子",
+      "route": "/dice/die-yun-shai",
+      "tags": [
+        "强化骰"
+      ],
+      "keywords": []
+    },
+    {
       "id": "dice-electric-surge",
       "title": "电涌骰",
       "type": "骰子",
@@ -3048,6 +3121,16 @@
       "route": "/dice/zhong-po-shai",
       "tags": [
         "强化骰"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "dice-shatter",
+      "title": "碎碎骰",
+      "type": "骰子",
+      "route": "/dice/sui-sui-shai",
+      "tags": [
+        "辅助技"
       ],
       "keywords": []
     },
@@ -3665,6 +3748,17 @@
       "tags": [
         "附加伤害",
         "火星飞溅"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-butterfall",
+      "title": "蝶陨",
+      "type": "术语",
+      "route": "/glossary#glossary-butterfall",
+      "tags": [
+        "强化骰",
+        "骰子总点数"
       ],
       "keywords": []
     },
