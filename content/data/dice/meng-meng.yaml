@@ -1,0 +1,17 @@
+id: dice-meng-meng
+slug: meng-meng-shai
+name: 猛猛骰
+type: 强化骰
+level: 3
+maxLevel: 10
+shortDesc: "使用技能后，令此次攻击额外造成一定段数的伤害，且每掷出6则额外增加段数。"
+detailedDesc: "每使用1个强化骰，令此次攻击额外造成1次攻击力126%的伤害，每掷出一个6点，再额外造成1次伤害。"
+relatedGlossary:
+  - 强化骰
+  - 骰子总点数
+image: /images/dice/meng-meng.png
+source: 骰子抽取 / 任务奖励
+
+buildNotes: |
+  猛猛骰依赖使用强化骰的数量触发额外伤害，适合频繁触发强化骰、多段攻击的输出角色。
+  每多使用一个强化骰就多一段 126% 攻击力的伤害，6 点还会追加额外段数，强化骰体系核心输出骰之一。
