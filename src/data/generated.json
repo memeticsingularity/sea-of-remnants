@@ -1,9 +1,383 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-18T16:38:38.602Z"
+    "generatedAt": "2026-07-18T16:58:48.903Z"
   },
   "crews": [
+    {
+      "id": "crew-as",
+      "slug": "as",
+      "name": "艾丝",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/as.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-clockmaker",
+      "slug": "clockmaker",
+      "name": "钟表匠",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/clockmaker.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-colonel-scorched-face",
+      "slug": "colonel-scorched-face",
+      "name": "焦面上校",
+      "type": "船员",
+      "rarity": "SSR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/colonel-scorched-face.png",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-coward",
+      "slug": "coward",
+      "name": "懦夫",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/coward.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-dad-tonino",
+      "slug": "dad-tonino",
+      "name": "托尼诺老爹",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/dad-tonino.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-follower",
+      "slug": "follower",
+      "name": "跟屁虫",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/follower.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-ghost-hand-shipwright",
+      "slug": "ghost-hand-shipwright",
+      "name": "鬼手船匠",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/ghost-hand-shipwright.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-hai-he",
+      "slug": "hai-he",
+      "name": "海赫",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/hai-he.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-heg",
+      "slug": "heg",
+      "name": "黑格",
+      "type": "船员",
+      "rarity": "SSR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/heg.png",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-hungry-cat",
+      "slug": "hungry-cat",
+      "name": "饿猫",
+      "type": "船员",
+      "rarity": "SSR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/hungry-cat.png",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-iron-fist-commander",
+      "slug": "iron-fist-commander",
+      "name": "铁腕统领",
+      "type": "船员",
+      "rarity": "SSR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/iron-fist-commander.png",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-isabella",
+      "slug": "isabella",
+      "name": "伊莎贝拉",
+      "type": "船员",
+      "rarity": "SSR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/isabella.png",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-miser",
+      "slug": "miser",
+      "name": "吝啬鬼",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/miser.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-molly",
+      "slug": "molly",
+      "name": "茉莉",
+      "type": "船员",
+      "rarity": "SSR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/molly.png",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-nonsense-prophet",
+      "slug": "nonsense-prophet",
+      "name": "胡话先知",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/nonsense-prophet.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-omen-eye",
+      "slug": "omen-eye",
+      "name": "预兆之眼",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/omen-eye.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-puppeteer",
+      "slug": "puppeteer",
+      "name": "人偶师",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/puppeteer.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
     {
       "id": "crew-sea-burial",
       "slug": "sea-burial",
@@ -51,6 +425,50 @@
         }
       ],
       "buildNotes": "海葬的核心机制是通过[灵感]触发[加料]进行额外行动爆发。\n\n**前期优先级：**\n- 效果命中 > 攻击力 > 速度\n- 优先强化炼金壶部位，提升持续伤害\n\n**推荐骰子：**\n- 电涌骰：强化单体爆发\n- 重迫骰：适合需要压血线的场合\n\n**行装建议：**\n- 炼金壶：蝶蝶不休（提升额外行动伤害）\n- 奇珍：契约胸针（强化职业技能伤害）\n"
+    },
+    {
+      "id": "crew-small-axe",
+      "slug": "small-axe",
+      "name": "小斧头",
+      "type": "船员",
+      "rarity": "SSR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/small-axe.png",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-sosia",
+      "slug": "sosia",
+      "name": "索西亚",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "obtain": "招募",
+      "image": "/images/crews/sosia.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
     }
   ],
   "ships": [
@@ -231,6 +649,98 @@
     }
   ],
   "equipment": [
+    {
+      "id": "equip-aged-medicine-bottle",
+      "slug": "chen-niang-yao-ping",
+      "name": "沉酿药瓶",
+      "slot": "手部",
+      "handType": "炼金壶",
+      "rarity": "紫",
+      "enhance": 6,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "atk": 56,
+        "effectHit": "8.1%"
+      },
+      "statsByLevel": {
+        "6": {
+          "atk": 56,
+          "effectHit": "8.1%"
+        }
+      },
+      "requirements": {
+        "int": 85,
+        "per": 45
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "int": 33,
+          "per": 18
+        },
+        {
+          "level": 2,
+          "int": 47,
+          "per": 25
+        },
+        {
+          "level": 3,
+          "int": 51,
+          "per": 27
+        },
+        {
+          "level": 4,
+          "int": 67,
+          "per": 36
+        },
+        {
+          "level": 5,
+          "int": 75,
+          "per": 40
+        },
+        {
+          "level": 6,
+          "int": 85,
+          "per": 45
+        },
+        {
+          "level": 7,
+          "int": 91,
+          "per": 48
+        },
+        {
+          "level": 8,
+          "int": 104,
+          "per": 55
+        },
+        {
+          "level": 9,
+          "int": 114,
+          "per": 61
+        },
+        {
+          "level": 10,
+          "int": 126,
+          "per": 67
+        }
+      ],
+      "fixedAffixes": [
+        "每拥有1层[灵感]使[加料]的概率提升0.5%，伤害提升1%。"
+      ],
+      "randomAffixes": [
+        "攻击力提升3%。",
+        "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合。",
+        "战斗开始时，若自身拥有[疾病]，则攻击力提升2级。"
+      ],
+      "flavor": "老海耗子教育新人，在开战前，先喝五瓶章鱼浓汁。头脑昏昏，准头翻番。",
+      "source": "行装掉落",
+      "image": "/images/equipment/aged-medicine-bottle.png"
+    },
     {
       "id": "equip-butterfly-endless",
       "slug": "die-die-bu-xiu",
@@ -577,6 +1087,97 @@
       "image": "/images/equipment/shark-short-gun.png"
     },
     {
+      "id": "equip-solitary-flower-mask",
+      "slug": "gu-hua-mian-ju",
+      "name": "孤花面具",
+      "slot": "头部",
+      "rarity": "紫",
+      "enhance": 6,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "def": 21,
+        "critDamage": "25%"
+      },
+      "statsByLevel": {
+        "6": {
+          "def": 21,
+          "critDamage": "25%"
+        }
+      },
+      "requirements": {
+        "str": 68,
+        "per": 54
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "str": 26,
+          "per": 22
+        },
+        {
+          "level": 2,
+          "str": 38,
+          "per": 30
+        },
+        {
+          "level": 3,
+          "str": 41,
+          "per": 32
+        },
+        {
+          "level": 4,
+          "str": 54,
+          "per": 43
+        },
+        {
+          "level": 5,
+          "str": 60,
+          "per": 48
+        },
+        {
+          "level": 6,
+          "str": 68,
+          "per": 54
+        },
+        {
+          "level": 7,
+          "str": 73,
+          "per": 58
+        },
+        {
+          "level": 8,
+          "str": 83,
+          "per": 66
+        },
+        {
+          "level": 9,
+          "str": 91,
+          "per": 73
+        },
+        {
+          "level": 10,
+          "str": 101,
+          "per": 80
+        }
+      ],
+      "fixedAffixes": [
+        "造成的伤害提升36%。每回合开始时清空能量。"
+      ],
+      "randomAffixes": [
+        "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合。",
+        "暴击后，暴击率提升6级，持续1回合。",
+        "令其他我方单位行动提前时，使其攻击力提升2级，持续1回合。"
+      ],
+      "flavor": "极致的美只能绽放一次，重复等于亵渎。",
+      "source": "行装掉落",
+      "image": "/images/equipment/solitary-flower-mask.png"
+    },
+    {
       "id": "equip-sturdy-heavy-shield",
       "slug": "jian-qiang-zhong-dun",
       "name": "坚强重盾",
@@ -669,6 +1270,27 @@
       "flavor": "贝壳在伤疤上垒砌更多，永不因为恐惧退缩。",
       "source": "行装掉落",
       "image": "/images/equipment/sturdy-heavy-shield.png"
+    },
+    {
+      "id": "equip-terrifying-mask",
+      "slug": "ke-pa-mian-ju",
+      "name": "可怕面具",
+      "slot": "头部",
+      "rarity": "蓝",
+      "enhance": 6,
+      "baseStats": {
+        "def": 14,
+        "hpGainEfficiency": "6.5%"
+      },
+      "fixedAffixes": [
+        "每拥有1个[正面状态]，造成的[附加伤害]提升3%，至多提升15%。"
+      ],
+      "randomAffixes": [
+        "获得[正面状态]时，恢复5%体力值。"
+      ],
+      "flavor": "恐慌从他脸上消失，转移到了每一个路过的人脸上。",
+      "source": "行装掉落",
+      "image": "/images/equipment/terrifying-mask.png"
     },
     {
       "id": "equip-unreturned-nest",
@@ -1091,6 +1713,16 @@
       ]
     },
     {
+      "id": "glossary-disease",
+      "slug": "glossary-disease",
+      "term": "疾病",
+      "definition": "船员在冒险中可能患上的负面状态，会影响战斗或探索表现，部分行装效果会基于疾病状态触发。",
+      "related": [
+        "负面状态",
+        "症状"
+      ]
+    },
+    {
       "id": "glossary-effect-hit",
       "slug": "glossary-effect-hit",
       "term": "效果命中",
@@ -1235,6 +1867,16 @@
       ]
     },
     {
+      "id": "glossary-signature-skill",
+      "slug": "glossary-signature-skill",
+      "term": "招牌技",
+      "definition": "船员的招牌技能，通常具有较强的效果或特殊的触发机制。",
+      "related": [
+        "职业技能",
+        "个人技"
+      ]
+    },
+    {
       "id": "glossary-splash",
       "slug": "glossary-splash",
       "term": "溅射",
@@ -1242,6 +1884,15 @@
       "related": [
         "火星飞溅",
         "附加伤害"
+      ]
+    },
+    {
+      "id": "glossary-symptom",
+      "slug": "symptom",
+      "term": "症状",
+      "definition": "船员在冒险或战斗中可能获得的临时状态，分为轻症、中症、重症，可能带来正向或负面效果。",
+      "related": [
+        "疾病"
       ]
     }
   ],
@@ -1293,8 +1944,748 @@
       "image": "/images/symptoms/trauma-enlightenment-positive.png"
     }
   ],
-  "shadows": [],
-  "recruitmentPools": [],
+  "shadows": [
+    {
+      "id": "shadow-amber-shell",
+      "slug": "amber-shell",
+      "name": "琥珀壳壁",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/amber-shell.png",
+      "tags": [
+        "蓝券"
+      ]
+    },
+    {
+      "id": "shadow-azure-sigh",
+      "slug": "azure-sigh",
+      "name": "蔚蓝叹息",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/azure-sigh.png",
+      "tags": [
+        "蓝券"
+      ]
+    },
+    {
+      "id": "shadow-beauty-of-ship",
+      "slug": "beauty-of-ship",
+      "name": "船之美",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/beauty-of-ship.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-broken-rhapsody",
+      "slug": "broken-rhapsody",
+      "name": "破碎狂想曲",
+      "type": "往日之影",
+      "rarity": "黑",
+      "image": "/images/shadows/broken-rhapsody.png",
+      "tags": [
+        "黑券"
+      ]
+    },
+    {
+      "id": "shadow-captains-gift",
+      "slug": "captains-gift",
+      "name": "船长的礼物",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/captains-gift.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-death-of-mini-catfish",
+      "slug": "death-of-mini-catfish",
+      "name": "迷你号鲇鱼的消亡",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/death-of-mini-catfish.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-dream-under-daylight",
+      "slug": "dream-under-daylight",
+      "name": "白日下的梦",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/dream-under-daylight.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-emerald-fang",
+      "slug": "emerald-fang",
+      "name": "翠绿利牙",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/emerald-fang.png",
+      "tags": [
+        "蓝券"
+      ]
+    },
+    {
+      "id": "shadow-eye-of-insight",
+      "slug": "eye-of-insight",
+      "name": "洞悉之眼",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/eye-of-insight.png",
+      "tags": [
+        "蓝券"
+      ]
+    },
+    {
+      "id": "shadow-fishbone-string",
+      "slug": "fishbone-string",
+      "name": "鱼骨串",
+      "type": "往日之影",
+      "rarity": "黑",
+      "image": "/images/shadows/fishbone-string.png",
+      "tags": [
+        "黑券"
+      ]
+    },
+    {
+      "id": "shadow-flag-held-high",
+      "slug": "flag-held-high",
+      "name": "昂首之旗",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/flag-held-high.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-floating-compass",
+      "slug": "floating-compass",
+      "name": "沉浮罗盘",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/floating-compass.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-flower-of-mourning",
+      "slug": "flower-of-mourning",
+      "name": "何人致哀之花",
+      "type": "往日之影",
+      "rarity": "黑",
+      "image": "/images/shadows/flower-of-mourning.png",
+      "tags": [
+        "黑券"
+      ]
+    },
+    {
+      "id": "shadow-his-war",
+      "slug": "his-war",
+      "name": "他的战争",
+      "type": "往日之影",
+      "rarity": "黑",
+      "image": "/images/shadows/his-war.png",
+      "tags": [
+        "黑券"
+      ]
+    },
+    {
+      "id": "shadow-law-of-civilization",
+      "slug": "law-of-civilization",
+      "name": "文明法则",
+      "type": "往日之影",
+      "rarity": "黑",
+      "image": "/images/shadows/law-of-civilization.png",
+      "tags": [
+        "黑券"
+      ]
+    },
+    {
+      "id": "shadow-layered-rock-shatter",
+      "slug": "layered-rock-shatter",
+      "name": "层岩俱裂",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/layered-rock-shatter.png",
+      "tags": [
+        "蓝券"
+      ]
+    },
+    {
+      "id": "shadow-lost-gem",
+      "slug": "lost-gem",
+      "name": "遗落宝石",
+      "type": "往日之影",
+      "rarity": "黑",
+      "image": "/images/shadows/lost-gem.png",
+      "tags": [
+        "黑券"
+      ]
+    },
+    {
+      "id": "shadow-mechanical-life",
+      "slug": "mechanical-life",
+      "name": "机械生命",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/mechanical-life.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-moment-leave-barrel",
+      "slug": "moment-leave-barrel",
+      "name": "离膛一瞬",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/moment-leave-barrel.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-now-is-future",
+      "slug": "now-is-future",
+      "name": "此刻即未来",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/now-is-future.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-pink-song",
+      "slug": "pink-song",
+      "name": "粉色歌谣",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/pink-song.png",
+      "tags": [
+        "蓝券"
+      ]
+    },
+    {
+      "id": "shadow-purple-mist-dust",
+      "slug": "purple-mist-dust",
+      "name": "紫霞尘埃",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/purple-mist-dust.png",
+      "tags": [
+        "蓝券"
+      ]
+    },
+    {
+      "id": "shadow-ribbon-tear",
+      "slug": "ribbon-tear",
+      "name": "缎带泪",
+      "type": "往日之影",
+      "rarity": "黑",
+      "image": "/images/shadows/ribbon-tear.png",
+      "tags": [
+        "黑券"
+      ]
+    },
+    {
+      "id": "shadow-sand-armor",
+      "slug": "sand-armor",
+      "name": "沙尘战甲",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/sand-armor.png",
+      "tags": [
+        "蓝券"
+      ]
+    },
+    {
+      "id": "shadow-scratched-page",
+      "slug": "scratched-page",
+      "name": "被划掉的一页",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/scratched-page.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-sleeping-doll",
+      "slug": "sleeping-doll",
+      "name": "安眠人偶",
+      "type": "往日之影",
+      "rarity": "黑",
+      "image": "/images/shadows/sleeping-doll.png",
+      "tags": [
+        "黑券"
+      ]
+    },
+    {
+      "id": "shadow-swift-wind",
+      "slug": "swift-wind",
+      "name": "疾步之风",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/swift-wind.png",
+      "tags": [
+        "蓝券"
+      ]
+    },
+    {
+      "id": "shadow-time-of-deviation",
+      "slug": "time-of-deviation",
+      "name": "偏差之时",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/time-of-deviation.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-tranquil-whisper",
+      "slug": "tranquil-whisper",
+      "name": "安宁絮语",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/tranquil-whisper.png",
+      "tags": [
+        "蓝券"
+      ]
+    },
+    {
+      "id": "shadow-unyielding-flame",
+      "slug": "unyielding-flame",
+      "name": "不屈焰火",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/unyielding-flame.png",
+      "tags": [
+        "蓝券"
+      ]
+    },
+    {
+      "id": "shadow-veterans-bugle",
+      "slug": "veterans-bugle",
+      "name": "老将的军号",
+      "type": "往日之影",
+      "rarity": "紫",
+      "image": "/images/shadows/veterans-bugle.png",
+      "tags": [
+        "紫券"
+      ]
+    },
+    {
+      "id": "shadow-wave-of-thought",
+      "slug": "wave-of-thought",
+      "name": "思维浪潮",
+      "type": "往日之影",
+      "rarity": "蓝",
+      "image": "/images/shadows/wave-of-thought.png",
+      "tags": [
+        "蓝券"
+      ]
+    }
+  ],
+  "recruitmentPools": [
+    {
+      "id": "pool-memory-reunion",
+      "slug": "memory-reunion",
+      "name": "记忆重逢",
+      "bannerName": "记忆重逢",
+      "type": "weekly",
+      "currency": "免费",
+      "singleCost": 0,
+      "tenCost": 0,
+      "upItems": [],
+      "tiers": [],
+      "pityRules": []
+    },
+    {
+      "id": "pool-never-leave",
+      "slug": "never-leave",
+      "name": "这里不散场",
+      "bannerName": "这里不散场",
+      "type": "standard",
+      "currency": "来一杯银币",
+      "singleCost": 180,
+      "tenCost": 1800,
+      "upItems": [],
+      "tiers": [
+        {
+          "key": "black",
+          "label": "黑券",
+          "baseRate": 0.008,
+          "comprehensiveRate": 0.0184,
+          "hardPity": 80,
+          "pool": {
+            "crewIds": [
+              "crew-colonel-scorched-face",
+              "crew-iron-fist-commander",
+              "crew-isabella",
+              "crew-small-axe",
+              "crew-hungry-cat",
+              "crew-sea-burial",
+              "crew-heg"
+            ],
+            "shadowIds": [
+              "shadow-sleeping-doll",
+              "shadow-his-war",
+              "shadow-flower-of-mourning",
+              "shadow-lost-gem",
+              "shadow-law-of-civilization",
+              "shadow-fishbone-string",
+              "shadow-ribbon-tear",
+              "shadow-broken-rhapsody"
+            ]
+          }
+        },
+        {
+          "key": "purple",
+          "label": "紫券",
+          "baseRate": 0.06,
+          "comprehensiveRate": 0.13,
+          "hardPity": 10,
+          "mixed": true,
+          "pool": {
+            "crewIds": [
+              "crew-omen-eye",
+              "crew-as",
+              "crew-hai-he",
+              "crew-sosia",
+              "crew-coward",
+              "crew-nonsense-prophet",
+              "crew-follower",
+              "crew-ghost-hand-shipwright",
+              "crew-clockmaker",
+              "crew-puppeteer",
+              "crew-dad-tonino",
+              "crew-miser"
+            ],
+            "shadowIds": [
+              "shadow-captains-gift",
+              "shadow-floating-compass",
+              "shadow-beauty-of-ship",
+              "shadow-dream-under-daylight",
+              "shadow-flag-held-high",
+              "shadow-veterans-bugle",
+              "shadow-death-of-mini-catfish",
+              "shadow-mechanical-life",
+              "shadow-time-of-deviation",
+              "shadow-moment-leave-barrel",
+              "shadow-now-is-future",
+              "shadow-scratched-page"
+            ]
+          }
+        },
+        {
+          "key": "blue",
+          "label": "蓝券",
+          "baseRate": 0.932,
+          "comprehensiveRate": 0.8458,
+          "pool": {
+            "crewIds": [],
+            "shadowIds": [
+              "shadow-unyielding-flame",
+              "shadow-tranquil-whisper",
+              "shadow-swift-wind",
+              "shadow-eye-of-insight",
+              "shadow-wave-of-thought",
+              "shadow-sand-armor",
+              "shadow-layered-rock-shatter",
+              "shadow-emerald-fang",
+              "shadow-amber-shell",
+              "shadow-azure-sigh",
+              "shadow-purple-mist-dust",
+              "shadow-pink-song"
+            ]
+          }
+        }
+      ],
+      "pityRules": [
+        {
+          "type": "hard_pity",
+          "threshold": 80,
+          "tier": "black",
+          "guaranteeUpAfterMiss": false
+        },
+        {
+          "type": "purple_guarantee",
+          "threshold": 10,
+          "tier": "purple"
+        }
+      ]
+    },
+    {
+      "id": "pool-pilu-secret",
+      "slug": "pilu-secret",
+      "name": "噼噜的旧日秘藏",
+      "bannerName": "噼噜的旧日秘藏",
+      "type": "limited",
+      "currency": "噼噜的最爱",
+      "singleCost": 180,
+      "tenCost": 1800,
+      "upItems": [
+        {
+          "shadowIds": [
+            "shadow-sleeping-doll"
+          ],
+          "upRate": 0.75,
+          "guaranteeNextOnMiss": true
+        },
+        {
+          "shadowIds": [
+            "shadow-death-of-mini-catfish",
+            "shadow-now-is-future"
+          ],
+          "upRate": 0.5,
+          "guaranteeNextOnMiss": true
+        }
+      ],
+      "tiers": [
+        {
+          "key": "black",
+          "label": "黑券",
+          "baseRate": 0.008,
+          "comprehensiveRate": 0.0184,
+          "hardPity": 80,
+          "pool": {
+            "crewIds": [],
+            "shadowIds": [
+              "shadow-sleeping-doll",
+              "shadow-his-war",
+              "shadow-flower-of-mourning",
+              "shadow-lost-gem",
+              "shadow-law-of-civilization",
+              "shadow-fishbone-string",
+              "shadow-ribbon-tear",
+              "shadow-broken-rhapsody"
+            ]
+          }
+        },
+        {
+          "key": "purple",
+          "label": "紫券",
+          "baseRate": 0.06,
+          "comprehensiveRate": 0.13,
+          "hardPity": 10,
+          "pool": {
+            "crewIds": [],
+            "shadowIds": [
+              "shadow-captains-gift",
+              "shadow-floating-compass",
+              "shadow-beauty-of-ship",
+              "shadow-dream-under-daylight",
+              "shadow-flag-held-high",
+              "shadow-veterans-bugle",
+              "shadow-death-of-mini-catfish",
+              "shadow-mechanical-life",
+              "shadow-time-of-deviation",
+              "shadow-moment-leave-barrel",
+              "shadow-now-is-future",
+              "shadow-scratched-page"
+            ]
+          }
+        },
+        {
+          "key": "blue",
+          "label": "蓝券",
+          "baseRate": 0.932,
+          "comprehensiveRate": 0.8515,
+          "pool": {
+            "crewIds": [],
+            "shadowIds": [
+              "shadow-unyielding-flame",
+              "shadow-tranquil-whisper",
+              "shadow-swift-wind",
+              "shadow-eye-of-insight",
+              "shadow-wave-of-thought",
+              "shadow-sand-armor",
+              "shadow-layered-rock-shatter",
+              "shadow-emerald-fang",
+              "shadow-amber-shell",
+              "shadow-azure-sigh",
+              "shadow-purple-mist-dust",
+              "shadow-pink-song"
+            ]
+          }
+        }
+      ],
+      "pityRules": [
+        {
+          "type": "hard_pity",
+          "threshold": 80,
+          "tier": "black",
+          "firstUpId": "shadow-sleeping-doll",
+          "guaranteeUpAfterMiss": true
+        },
+        {
+          "type": "purple_guarantee",
+          "threshold": 10,
+          "tier": "purple"
+        },
+        {
+          "type": "up_guarantee",
+          "threshold": 1,
+          "tier": "black",
+          "guaranteeUpAfterMiss": true
+        },
+        {
+          "type": "up_guarantee",
+          "threshold": 1,
+          "tier": "purple",
+          "guaranteeUpAfterMiss": true
+        }
+      ]
+    },
+    {
+      "id": "pool-zhimeng-xianyin",
+      "slug": "zhimeng-xianyin",
+      "name": "织梦弦音",
+      "bannerName": "织梦弦音",
+      "type": "limited",
+      "currency": "来一杯金币",
+      "singleCost": 180,
+      "tenCost": 1800,
+      "upItems": [
+        {
+          "crewIds": [
+            "crew-molly"
+          ],
+          "upRate": 0.5,
+          "guaranteeNextOnMiss": true
+        },
+        {
+          "crewIds": [
+            "crew-omen-eye",
+            "crew-as"
+          ],
+          "upRate": 0.5,
+          "guaranteeNextOnMiss": true
+        }
+      ],
+      "tiers": [
+        {
+          "key": "black",
+          "label": "黑券",
+          "baseRate": 0.008,
+          "comprehensiveRate": 0.0184,
+          "hardPity": 80,
+          "pool": {
+            "crewIds": [
+              "crew-molly",
+              "crew-colonel-scorched-face",
+              "crew-iron-fist-commander",
+              "crew-isabella",
+              "crew-small-axe",
+              "crew-hungry-cat",
+              "crew-sea-burial",
+              "crew-heg"
+            ],
+            "shadowIds": []
+          }
+        },
+        {
+          "key": "purple",
+          "label": "紫券",
+          "baseRate": 0.06,
+          "comprehensiveRate": 0.13,
+          "hardPity": 10,
+          "mixed": true,
+          "pool": {
+            "crewIds": [
+              "crew-omen-eye",
+              "crew-as",
+              "crew-hai-he",
+              "crew-sosia",
+              "crew-coward",
+              "crew-nonsense-prophet",
+              "crew-follower",
+              "crew-ghost-hand-shipwright",
+              "crew-clockmaker",
+              "crew-puppeteer",
+              "crew-dad-tonino",
+              "crew-miser"
+            ],
+            "shadowIds": [
+              "shadow-captains-gift",
+              "shadow-floating-compass",
+              "shadow-beauty-of-ship",
+              "shadow-dream-under-daylight",
+              "shadow-flag-held-high",
+              "shadow-veterans-bugle",
+              "shadow-death-of-mini-catfish",
+              "shadow-mechanical-life",
+              "shadow-time-of-deviation",
+              "shadow-moment-leave-barrel",
+              "shadow-now-is-future",
+              "shadow-scratched-page"
+            ]
+          }
+        },
+        {
+          "key": "blue",
+          "label": "蓝券",
+          "baseRate": 0.932,
+          "comprehensiveRate": 0.8458,
+          "pool": {
+            "crewIds": [],
+            "shadowIds": [
+              "shadow-unyielding-flame",
+              "shadow-tranquil-whisper",
+              "shadow-swift-wind",
+              "shadow-eye-of-insight",
+              "shadow-wave-of-thought",
+              "shadow-sand-armor",
+              "shadow-layered-rock-shatter",
+              "shadow-emerald-fang",
+              "shadow-amber-shell",
+              "shadow-azure-sigh",
+              "shadow-purple-mist-dust",
+              "shadow-pink-song"
+            ]
+          }
+        }
+      ],
+      "pityRules": [
+        {
+          "type": "hard_pity",
+          "threshold": 80,
+          "tier": "black",
+          "firstUpId": "crew-molly",
+          "guaranteeUpAfterMiss": true
+        },
+        {
+          "type": "purple_guarantee",
+          "threshold": 10,
+          "tier": "purple"
+        },
+        {
+          "type": "up_guarantee",
+          "threshold": 1,
+          "tier": "black",
+          "guaranteeUpAfterMiss": true
+        },
+        {
+          "type": "up_guarantee",
+          "threshold": 1,
+          "tier": "purple",
+          "guaranteeUpAfterMiss": true
+        }
+      ]
+    }
+  ],
   "pages": [
     {
       "id": "guide-crew-training",
@@ -1327,6 +2718,244 @@
   ],
   "searchIndex": [
     {
+      "id": "crew-as",
+      "title": "艾丝",
+      "type": "船员",
+      "route": "/crews/as",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-clockmaker",
+      "title": "钟表匠",
+      "type": "船员",
+      "route": "/crews/clockmaker",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-colonel-scorched-face",
+      "title": "焦面上校",
+      "type": "船员",
+      "route": "/crews/colonel-scorched-face",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-coward",
+      "title": "懦夫",
+      "type": "船员",
+      "route": "/crews/coward",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-dad-tonino",
+      "title": "托尼诺老爹",
+      "type": "船员",
+      "route": "/crews/dad-tonino",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-follower",
+      "title": "跟屁虫",
+      "type": "船员",
+      "route": "/crews/follower",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-ghost-hand-shipwright",
+      "title": "鬼手船匠",
+      "type": "船员",
+      "route": "/crews/ghost-hand-shipwright",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-hai-he",
+      "title": "海赫",
+      "type": "船员",
+      "route": "/crews/hai-he",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-heg",
+      "title": "黑格",
+      "type": "船员",
+      "route": "/crews/heg",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-hungry-cat",
+      "title": "饿猫",
+      "type": "船员",
+      "route": "/crews/hungry-cat",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-iron-fist-commander",
+      "title": "铁腕统领",
+      "type": "船员",
+      "route": "/crews/iron-fist-commander",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-isabella",
+      "title": "伊莎贝拉",
+      "type": "船员",
+      "route": "/crews/isabella",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-miser",
+      "title": "吝啬鬼",
+      "type": "船员",
+      "route": "/crews/miser",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-molly",
+      "title": "茉莉",
+      "type": "船员",
+      "route": "/crews/molly",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-nonsense-prophet",
+      "title": "胡话先知",
+      "type": "船员",
+      "route": "/crews/nonsense-prophet",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-omen-eye",
+      "title": "预兆之眼",
+      "type": "船员",
+      "route": "/crews/omen-eye",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-puppeteer",
+      "title": "人偶师",
+      "type": "船员",
+      "route": "/crews/puppeteer",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
       "id": "crew-sea-burial",
       "title": "海葬",
       "type": "船员",
@@ -1340,6 +2969,34 @@
       "keywords": [
         "输出",
         "水"
+      ]
+    },
+    {
+      "id": "crew-small-axe",
+      "title": "小斧头",
+      "type": "船员",
+      "route": "/crews/small-axe",
+      "tags": [
+        "SSR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-sosia",
+      "title": "索西亚",
+      "type": "船员",
+      "route": "/crews/sosia",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
       ]
     },
     {
@@ -1420,6 +3077,17 @@
       "type": "船歌",
       "route": "/songs/he-cai-he-cai",
       "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "equip-aged-medicine-bottle",
+      "title": "沉酿药瓶",
+      "type": "行装",
+      "route": "/equipment/chen-niang-yao-ping",
+      "tags": [
+        "手部",
+        "紫"
+      ],
       "keywords": []
     },
     {
@@ -1523,6 +3191,17 @@
       "keywords": []
     },
     {
+      "id": "equip-solitary-flower-mask",
+      "title": "孤花面具",
+      "type": "行装",
+      "route": "/equipment/gu-hua-mian-ju",
+      "tags": [
+        "头部",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-sturdy-heavy-shield",
       "title": "坚强重盾",
       "type": "行装",
@@ -1530,6 +3209,17 @@
       "tags": [
         "手部",
         "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-terrifying-mask",
+      "title": "可怕面具",
+      "type": "行装",
+      "route": "/equipment/ke-pa-mian-ju",
+      "tags": [
+        "头部",
+        "蓝"
       ],
       "keywords": []
     },
@@ -2041,6 +3731,17 @@
       "keywords": []
     },
     {
+      "id": "glossary-disease",
+      "title": "疾病",
+      "type": "术语",
+      "route": "/glossary#glossary-disease",
+      "tags": [
+        "负面状态",
+        "症状"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-effect-hit",
       "title": "效果命中",
       "type": "术语",
@@ -2200,6 +3901,17 @@
       "keywords": []
     },
     {
+      "id": "glossary-signature-skill",
+      "title": "招牌技",
+      "type": "术语",
+      "route": "/glossary#glossary-signature-skill",
+      "tags": [
+        "职业技能",
+        "个人技"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-splash",
       "title": "溅射",
       "type": "术语",
@@ -2207,6 +3919,16 @@
       "tags": [
         "火星飞溅",
         "附加伤害"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-symptom",
+      "title": "症状",
+      "type": "术语",
+      "route": "/glossary#glossary-symptom",
+      "tags": [
+        "疾病"
       ],
       "keywords": []
     },
@@ -2240,6 +3962,402 @@
       "tags": [
         "重症",
         "正向"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-amber-shell",
+      "title": "琥珀壳壁",
+      "type": "往日之影",
+      "route": "/shadows/amber-shell",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-azure-sigh",
+      "title": "蔚蓝叹息",
+      "type": "往日之影",
+      "route": "/shadows/azure-sigh",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-beauty-of-ship",
+      "title": "船之美",
+      "type": "往日之影",
+      "route": "/shadows/beauty-of-ship",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-broken-rhapsody",
+      "title": "破碎狂想曲",
+      "type": "往日之影",
+      "route": "/shadows/broken-rhapsody",
+      "tags": [
+        "黑券",
+        "黑"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-captains-gift",
+      "title": "船长的礼物",
+      "type": "往日之影",
+      "route": "/shadows/captains-gift",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-death-of-mini-catfish",
+      "title": "迷你号鲇鱼的消亡",
+      "type": "往日之影",
+      "route": "/shadows/death-of-mini-catfish",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-dream-under-daylight",
+      "title": "白日下的梦",
+      "type": "往日之影",
+      "route": "/shadows/dream-under-daylight",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-emerald-fang",
+      "title": "翠绿利牙",
+      "type": "往日之影",
+      "route": "/shadows/emerald-fang",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-eye-of-insight",
+      "title": "洞悉之眼",
+      "type": "往日之影",
+      "route": "/shadows/eye-of-insight",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-fishbone-string",
+      "title": "鱼骨串",
+      "type": "往日之影",
+      "route": "/shadows/fishbone-string",
+      "tags": [
+        "黑券",
+        "黑"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-flag-held-high",
+      "title": "昂首之旗",
+      "type": "往日之影",
+      "route": "/shadows/flag-held-high",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-floating-compass",
+      "title": "沉浮罗盘",
+      "type": "往日之影",
+      "route": "/shadows/floating-compass",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-flower-of-mourning",
+      "title": "何人致哀之花",
+      "type": "往日之影",
+      "route": "/shadows/flower-of-mourning",
+      "tags": [
+        "黑券",
+        "黑"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-his-war",
+      "title": "他的战争",
+      "type": "往日之影",
+      "route": "/shadows/his-war",
+      "tags": [
+        "黑券",
+        "黑"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-law-of-civilization",
+      "title": "文明法则",
+      "type": "往日之影",
+      "route": "/shadows/law-of-civilization",
+      "tags": [
+        "黑券",
+        "黑"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-layered-rock-shatter",
+      "title": "层岩俱裂",
+      "type": "往日之影",
+      "route": "/shadows/layered-rock-shatter",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-lost-gem",
+      "title": "遗落宝石",
+      "type": "往日之影",
+      "route": "/shadows/lost-gem",
+      "tags": [
+        "黑券",
+        "黑"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-mechanical-life",
+      "title": "机械生命",
+      "type": "往日之影",
+      "route": "/shadows/mechanical-life",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-moment-leave-barrel",
+      "title": "离膛一瞬",
+      "type": "往日之影",
+      "route": "/shadows/moment-leave-barrel",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-now-is-future",
+      "title": "此刻即未来",
+      "type": "往日之影",
+      "route": "/shadows/now-is-future",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-pink-song",
+      "title": "粉色歌谣",
+      "type": "往日之影",
+      "route": "/shadows/pink-song",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-purple-mist-dust",
+      "title": "紫霞尘埃",
+      "type": "往日之影",
+      "route": "/shadows/purple-mist-dust",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-ribbon-tear",
+      "title": "缎带泪",
+      "type": "往日之影",
+      "route": "/shadows/ribbon-tear",
+      "tags": [
+        "黑券",
+        "黑"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-sand-armor",
+      "title": "沙尘战甲",
+      "type": "往日之影",
+      "route": "/shadows/sand-armor",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-scratched-page",
+      "title": "被划掉的一页",
+      "type": "往日之影",
+      "route": "/shadows/scratched-page",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-sleeping-doll",
+      "title": "安眠人偶",
+      "type": "往日之影",
+      "route": "/shadows/sleeping-doll",
+      "tags": [
+        "黑券",
+        "黑"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-swift-wind",
+      "title": "疾步之风",
+      "type": "往日之影",
+      "route": "/shadows/swift-wind",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-time-of-deviation",
+      "title": "偏差之时",
+      "type": "往日之影",
+      "route": "/shadows/time-of-deviation",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-tranquil-whisper",
+      "title": "安宁絮语",
+      "type": "往日之影",
+      "route": "/shadows/tranquil-whisper",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-unyielding-flame",
+      "title": "不屈焰火",
+      "type": "往日之影",
+      "route": "/shadows/unyielding-flame",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-veterans-bugle",
+      "title": "老将的军号",
+      "type": "往日之影",
+      "route": "/shadows/veterans-bugle",
+      "tags": [
+        "紫券",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "shadow-wave-of-thought",
+      "title": "思维浪潮",
+      "type": "往日之影",
+      "route": "/shadows/wave-of-thought",
+      "tags": [
+        "蓝券",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "pool-memory-reunion",
+      "title": "记忆重逢",
+      "type": "招募池",
+      "route": "/recruitment?pool=memory-reunion",
+      "tags": [
+        "weekly",
+        "免费"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "pool-never-leave",
+      "title": "这里不散场",
+      "type": "招募池",
+      "route": "/recruitment?pool=never-leave",
+      "tags": [
+        "standard",
+        "来一杯银币"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "pool-pilu-secret",
+      "title": "噼噜的旧日秘藏",
+      "type": "招募池",
+      "route": "/recruitment?pool=pilu-secret",
+      "tags": [
+        "limited",
+        "噼噜的最爱"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "pool-zhimeng-xianyin",
+      "title": "织梦弦音",
+      "type": "招募池",
+      "route": "/recruitment?pool=zhimeng-xianyin",
+      "tags": [
+        "limited",
+        "来一杯金币"
       ],
       "keywords": []
     },

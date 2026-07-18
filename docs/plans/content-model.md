@@ -81,6 +81,23 @@
 - `definition`：解释，支持 `[关联术语]` 链接
 - `related`：关联术语列表
 
+### 往日之影 Shadow
+
+招募系统中的「影子」奖励，独立于船员与行装。
+
+- `rarity`：黑 / 紫 / 蓝（招募券颜色）
+- `description`：效果描述
+
+### 招募池 RecruitmentPool
+
+招募模拟器的规则来源。
+
+- `type`：`limited`（活动限时）/ `standard`（常驻）/ `weekly`（每周免费）
+- `currency` / `singleCost` / `tenCost`：货币与消耗
+- `tiers`：黑 / 紫 / 蓝 三档概率与池子
+- `upItems`：UP 对象与 UP 率
+- `pityRules`：硬保底、UP 歪保底等规则
+
 ## 晶骸
 
 晶骸是技能的一种特殊类型，统一归入 `content/data/skills/`，使用 `type: 晶骸` 区分。

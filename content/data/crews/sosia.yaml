@@ -1,0 +1,19 @@
+id: crew-sosia
+slug: sosia
+name: 索西亚
+type: 船员
+rarity: SR
+role: 待补充
+element: 待补充
+obtain: 招募
+image: /images/crews/sosia.png
+tags:
+  - SR
+  - 待补充
+baseStats:
+  hp: 0
+  atk: 0
+  def: 0
+  spd: 0
+buildNotes: |
+  待补充。

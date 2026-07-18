@@ -9,6 +9,7 @@ const quickLinks = [
   { label: '行装', to: '/equipment', count: wikiData.equipment.length },
   { label: '船歌', to: '/songs', count: wikiData.songs.length },
   { label: '任务', to: '/quests', count: wikiData.quests.length },
+  { label: '招募模拟器', to: '/recruitment', count: wikiData.recruitmentPools.length },
   { label: '术语表', to: '/glossary', count: wikiData.glossary.length },
 ]
 

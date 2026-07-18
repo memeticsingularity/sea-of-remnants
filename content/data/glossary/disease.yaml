@@ -1,0 +1,7 @@
+id: glossary-disease
+slug: glossary-disease
+term: 疾病
+definition: "船员在冒险中可能患上的负面状态，会影响战斗或探索表现，部分行装效果会基于疾病状态触发。"
+related:
+  - 负面状态
+  - 症状

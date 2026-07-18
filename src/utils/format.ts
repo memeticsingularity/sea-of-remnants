@@ -38,6 +38,7 @@ const statNameMap: Record<string, string> = {
   healBoost: '治疗效果',
   // 能量/资源
   energy: '能量',
+  hpGainEfficiency: '体力获取效率',
   // 船只属性
   hull: '船体',
   sails: '风帆',

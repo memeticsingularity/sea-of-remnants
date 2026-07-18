@@ -1,0 +1,6 @@
+id: glossary-symptom
+slug: symptom
+term: 症状
+definition: "船员在冒险或战斗中可能获得的临时状态，分为轻症、中症、重症，可能带来正向或负面效果。"
+related:
+  - 疾病

@@ -8,6 +8,7 @@ import { EquipmentDetailPage } from '@/pages/EquipmentDetailPage'
 import { GuidePage } from '@/pages/GuidePage'
 import { GlossaryPage } from '@/pages/GlossaryPage'
 import { SymptomDetailPage } from '@/pages/SymptomDetailPage'
+import { RecruitmentSimulatorPage } from '@/pages/RecruitmentSimulatorPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
 export const router = createBrowserRouter([
@@ -38,6 +39,7 @@ export const router = createBrowserRouter([
       { path: 'locations/:slug', element: <NotFoundPage /> },
       { path: 'symptoms', element: <CategoryPage category="symptoms" /> },
       { path: 'symptoms/:slug', element: <SymptomDetailPage /> },
+      { path: 'recruitment', element: <RecruitmentSimulatorPage /> },
       { path: 'guides/:slug', element: <GuidePage /> },
       { path: 'glossary', element: <GlossaryPage /> },
       { path: 'search', element: <NotFoundPage /> },

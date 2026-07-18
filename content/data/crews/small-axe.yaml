@@ -1,0 +1,19 @@
+id: crew-small-axe
+slug: small-axe
+name: 小斧头
+type: 船员
+rarity: SSR
+role: 待补充
+element: 待补充
+obtain: 招募
+image: /images/crews/small-axe.png
+tags:
+  - SSR
+  - 待补充
+baseStats:
+  hp: 0
+  atk: 0
+  def: 0
+  spd: 0
+buildNotes: |
+  待补充。
