@@ -1,0 +1,16 @@
+id: equip-terrifying-mask
+slug: ke-pa-mian-ju
+name: 可怕面具
+slot: 头部
+rarity: 蓝
+enhance: 6
+baseStats:
+  def: 14
+  hpGainEfficiency: "6.5%"
+fixedAffixes:
+  - "每拥有1个[正面状态]，造成的[附加伤害]提升3%，至多提升15%。"
+randomAffixes:
+  - "获得[正面状态]时，恢复5%体力值。"
+flavor: "恐慌从他脸上消失，转移到了每一个路过的人脸上。"
+source: 行装掉落
+image: /images/equipment/terrifying-mask.png

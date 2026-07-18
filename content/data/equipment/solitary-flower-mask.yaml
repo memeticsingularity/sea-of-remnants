@@ -1,0 +1,59 @@
+id: equip-solitary-flower-mask
+slug: gu-hua-mian-ju
+name: 孤花面具
+slot: 头部
+rarity: 紫
+enhance: 6
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+baseStats:
+  def: 21
+  critDamage: "25%"
+statsByLevel:
+  6:
+    def: 21
+    critDamage: "25%"
+requirements:
+  str: 68
+  per: 54
+enhanceRequirements:
+  - level: 1
+    str: 26
+    per: 22
+  - level: 2
+    str: 38
+    per: 30
+  - level: 3
+    str: 41
+    per: 32
+  - level: 4
+    str: 54
+    per: 43
+  - level: 5
+    str: 60
+    per: 48
+  - level: 6
+    str: 68
+    per: 54
+  - level: 7
+    str: 73
+    per: 58
+  - level: 8
+    str: 83
+    per: 66
+  - level: 9
+    str: 91
+    per: 73
+  - level: 10
+    str: 101
+    per: 80
+fixedAffixes:
+  - "造成的伤害提升36%。每回合开始时清空能量。"
+randomAffixes:
+  - "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合。"
+  - "暴击后，暴击率提升6级，持续1回合。"
+  - "令其他我方单位行动提前时，使其攻击力提升2级，持续1回合。"
+flavor: "极致的美只能绽放一次，重复等于亵渎。"
+source: 行装掉落
+image: /images/equipment/solitary-flower-mask.png

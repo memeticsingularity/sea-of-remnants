@@ -1,0 +1,60 @@
+id: equip-aged-medicine-bottle
+slug: chen-niang-yao-ping
+name: 沉酿药瓶
+slot: 手部
+handType: 炼金壶
+rarity: 紫
+enhance: 6
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+baseStats:
+  atk: 56
+  effectHit: "8.1%"
+statsByLevel:
+  6:
+    atk: 56
+    effectHit: "8.1%"
+requirements:
+  int: 85
+  per: 45
+enhanceRequirements:
+  - level: 1
+    int: 33
+    per: 18
+  - level: 2
+    int: 47
+    per: 25
+  - level: 3
+    int: 51
+    per: 27
+  - level: 4
+    int: 67
+    per: 36
+  - level: 5
+    int: 75
+    per: 40
+  - level: 6
+    int: 85
+    per: 45
+  - level: 7
+    int: 91
+    per: 48
+  - level: 8
+    int: 104
+    per: 55
+  - level: 9
+    int: 114
+    per: 61
+  - level: 10
+    int: 126
+    per: 67
+fixedAffixes:
+  - "每拥有1层[灵感]使[加料]的概率提升0.5%，伤害提升1%。"
+randomAffixes:
+  - "攻击力提升3%。"
+  - "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合。"
+  - "战斗开始时，若自身拥有[疾病]，则攻击力提升2级。"
+flavor: "老海耗子教育新人，在开战前，先喝五瓶章鱼浓汁。头脑昏昏，准头翻番。"
+source: 行装掉落
+image: /images/equipment/aged-medicine-bottle.png
