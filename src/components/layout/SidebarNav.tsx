@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import { BookOpen, Anchor, Users, Ship, Sparkles, Music, Shield, Package, Map, Scroll, HelpCircle, Activity, Ticket } from 'lucide-react'
+import { BookOpen, Anchor, Users, Ship, Sparkles, Music, Shield, Package, Map, Scroll, HelpCircle, Activity, Ticket, Dices } from 'lucide-react'
 
 interface NavItem {
   label: string
@@ -22,13 +22,21 @@ const navGroups: NavItem[] = [
   { label: '船只', to: '/ships', icon: <Ship className="h-4 w-4" /> },
   { label: '职业', to: '/classes', icon: <Anchor className="h-4 w-4" /> },
   { label: '技能', to: '/skills', icon: <Sparkles className="h-4 w-4" /> },
+  { label: '骰子', to: '/dice', icon: <Dices className="h-4 w-4" /> },
   { label: '船歌', to: '/songs', icon: <Music className="h-4 w-4" /> },
   { label: '行装', to: '/equipment', icon: <Shield className="h-4 w-4" /> },
   { label: '物品', to: '/items', icon: <Package className="h-4 w-4" /> },
   { label: '任务', to: '/quests', icon: <Scroll className="h-4 w-4" /> },
   { label: '地点', to: '/locations', icon: <Map className="h-4 w-4" /> },
   { label: '症状', to: '/symptoms', icon: <Activity className="h-4 w-4" /> },
-  { label: '招募模拟器', to: '/recruitment', icon: <Ticket className="h-4 w-4" /> },
+  {
+    label: '招募',
+    icon: <Ticket className="h-4 w-4" />,
+    children: [
+      { label: '招募模拟器', to: '/recruitment' },
+      { label: '招募图鉴', to: '/recruitment/collection' },
+    ],
+  },
   { label: '指南', to: '/guides/crew-training', icon: <BookOpen className="h-4 w-4" /> },
   { label: '术语表', to: '/glossary', icon: <HelpCircle className="h-4 w-4" /> },
 ]
