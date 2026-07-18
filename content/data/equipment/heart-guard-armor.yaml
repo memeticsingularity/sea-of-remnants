@@ -1,0 +1,23 @@
+id: equip-heart-guard-armor
+slug: shou-xin-kui-jia
+name: 守心盔甲
+slot: 躯干
+rarity: 蓝
+enhance: 6
+baseStats:
+  hp: 963
+  damageBoost: "8.7%"
+  aggro: -25
+requirements:
+  str: 85
+  con: 45
+fixedAffixes:
+  - "每消耗1层[灵感]，防御力提升2点，至多提升至20点。可继承到下一场战斗。"
+randomAffixes:
+  - "敌方单位每有1种持续伤害，本装备拥有者施加的持续伤害提升1.2%。"
+flavor: "当一颗心被爱击中，心便长出了盔甲。"
+source: 行装掉落
+image: /images/equipment/heart-guard-armor.png
+
+buildNotes: |
+  守心盔甲偏向生存与持续伤害辅助，固定词条提供可继承的防御叠加，适合需要跨战斗保留增益的坦克或半肉角色。

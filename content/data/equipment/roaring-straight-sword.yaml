@@ -1,0 +1,61 @@
+id: equip-roaring-straight-sword
+slug: pao-xiao-zhi-jian
+name: 咆哮直剑
+slot: 手部
+handType: 单手剑
+rarity: 紫
+enhance: 6
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+baseStats:
+  atk: 56
+  shieldEffect: "6.2%"
+  hpRegenEfficiency: "3.1%"
+requirements:
+  str: 85
+  con: 45
+enhanceRequirements:
+  - level: 1
+    str: 33
+    con: 18
+  - level: 2
+    str: 47
+    con: 25
+  - level: 3
+    str: 51
+    con: 27
+  - level: 4
+    str: 67
+    con: 36
+  - level: 5
+    str: 75
+    con: 40
+  - level: 6
+    str: 85
+    con: 45
+  - level: 7
+    str: 91
+    con: 48
+  - level: 8
+    str: 104
+    con: 55
+  - level: 9
+    str: 114
+    con: 61
+  - level: 10
+    str: 126
+    con: 67
+fixedAffixes:
+  - "体力值低于80%时，自身每拥有1层[战意]，造成的伤害提升6%。"
+randomAffixes:
+  - "魅力提升6点。"
+  - "使用强化骰技能时，每使用一个强化骰，造成的架势伤害提升6%。"
+  - "触发破绽点数检定时，造成伤害提升3级，持续1回合。"
+flavor: "当喉咙里的怒吼比剑刃更锋利时，绝境不过是新生的序章。"
+source: 行装掉落
+image: /images/equipment/roaring-straight-sword.png
+
+buildNotes: |
+  咆哮直剑是紫色单手剑，低体力时配合[战意]层数提供高额增伤。
+  注意紫色品质以上装备必须满足穿戴属性要求，否则攻击力、护盾效果等自带属性会下降。

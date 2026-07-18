@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-18T17:28:35.363Z"
+    "generatedAt": "2026-07-18T17:50:52.941Z"
   },
   "crews": [
     {
@@ -787,6 +787,32 @@
       "image": "/images/equipment/aged-medicine-bottle.png"
     },
     {
+      "id": "equip-black-iron-hood",
+      "slug": "hei-tie-tou-zhao",
+      "name": "黑铁头罩",
+      "slot": "头部",
+      "rarity": "蓝",
+      "enhance": 6,
+      "baseStats": {
+        "shieldEffect": "17.5%",
+        "def": 14
+      },
+      "requirements": {
+        "str": 85,
+        "con": 45
+      },
+      "fixedAffixes": [
+        "给予和获得的护盾效果提升5%。"
+      ],
+      "randomAffixes": [
+        "固定伤害提升1%。每次造成固定伤害后，固定伤害额外提升1级，持续2回合，至多提升至2级。"
+      ],
+      "flavor": "坚强的眼睛盯紧了难过的日子。",
+      "source": "行装掉落",
+      "image": "/images/equipment/black-iron-hood.png",
+      "buildNotes": "黑铁头罩是偏向护盾流派的头部防具，固定词条直接提升护盾获取与给予效率，适合护盾体系前排或辅助。\n"
+    },
+    {
       "id": "equip-butterfly-endless",
       "slug": "die-die-bu-xiu",
       "name": "蝶蝶不休",
@@ -982,6 +1008,33 @@
       "image": "/images/equipment/harbor-hippie.png"
     },
     {
+      "id": "equip-heart-guard-armor",
+      "slug": "shou-xin-kui-jia",
+      "name": "守心盔甲",
+      "slot": "躯干",
+      "rarity": "蓝",
+      "enhance": 6,
+      "baseStats": {
+        "hp": 963,
+        "damageBoost": "8.7%",
+        "aggro": -25
+      },
+      "requirements": {
+        "str": 85,
+        "con": 45
+      },
+      "fixedAffixes": [
+        "每消耗1层[灵感]，防御力提升2点，至多提升至20点。可继承到下一场战斗。"
+      ],
+      "randomAffixes": [
+        "敌方单位每有1种持续伤害，本装备拥有者施加的持续伤害提升1.2%。"
+      ],
+      "flavor": "当一颗心被爱击中，心便长出了盔甲。",
+      "source": "行装掉落",
+      "image": "/images/equipment/heart-guard-armor.png",
+      "buildNotes": "守心盔甲偏向生存与持续伤害辅助，固定词条提供可继承的防御叠加，适合需要跨战斗保留增益的坦克或半肉角色。\n"
+    },
+    {
       "id": "equip-pointed-iron-shoes",
       "slug": "jian-tou-tie-xie",
       "name": "尖头铁鞋",
@@ -1014,6 +1067,94 @@
       "flavor": "愤怒的雄狮没有理智，它的利爪会撕碎一切——哪怕是黑格尼的货船。\n",
       "source": "奇珍掉落",
       "image": "/images/equipment/reckless-bracelet.png"
+    },
+    {
+      "id": "equip-roaring-straight-sword",
+      "slug": "pao-xiao-zhi-jian",
+      "name": "咆哮直剑",
+      "slot": "手部",
+      "handType": "单手剑",
+      "rarity": "紫",
+      "enhance": 6,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "atk": 56,
+        "shieldEffect": "6.2%",
+        "hpRegenEfficiency": "3.1%"
+      },
+      "requirements": {
+        "str": 85,
+        "con": 45
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "str": 33,
+          "con": 18
+        },
+        {
+          "level": 2,
+          "str": 47,
+          "con": 25
+        },
+        {
+          "level": 3,
+          "str": 51,
+          "con": 27
+        },
+        {
+          "level": 4,
+          "str": 67,
+          "con": 36
+        },
+        {
+          "level": 5,
+          "str": 75,
+          "con": 40
+        },
+        {
+          "level": 6,
+          "str": 85,
+          "con": 45
+        },
+        {
+          "level": 7,
+          "str": 91,
+          "con": 48
+        },
+        {
+          "level": 8,
+          "str": 104,
+          "con": 55
+        },
+        {
+          "level": 9,
+          "str": 114,
+          "con": 61
+        },
+        {
+          "level": 10,
+          "str": 126,
+          "con": 67
+        }
+      ],
+      "fixedAffixes": [
+        "体力值低于80%时，自身每拥有1层[战意]，造成的伤害提升6%。"
+      ],
+      "randomAffixes": [
+        "魅力提升6点。",
+        "使用强化骰技能时，每使用一个强化骰，造成的架势伤害提升6%。",
+        "触发破绽点数检定时，造成伤害提升3级，持续1回合。"
+      ],
+      "flavor": "当喉咙里的怒吼比剑刃更锋利时，绝境不过是新生的序章。",
+      "source": "行装掉落",
+      "image": "/images/equipment/roaring-straight-sword.png",
+      "buildNotes": "咆哮直剑是紫色单手剑，低体力时配合[战意]层数提供高额增伤。\n注意紫色品质以上装备必须满足穿戴属性要求，否则攻击力、护盾效果等自带属性会下降。\n"
     },
     {
       "id": "equip-secret-of-gorgeous-fantasy",
@@ -3174,6 +3315,17 @@
       "keywords": []
     },
     {
+      "id": "equip-black-iron-hood",
+      "title": "黑铁头罩",
+      "type": "行装",
+      "route": "/equipment/hei-tie-tou-zhao",
+      "tags": [
+        "头部",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-butterfly-endless",
       "title": "蝶蝶不休",
       "type": "行装",
@@ -3230,6 +3382,17 @@
       "keywords": []
     },
     {
+      "id": "equip-heart-guard-armor",
+      "title": "守心盔甲",
+      "type": "行装",
+      "route": "/equipment/shou-xin-kui-jia",
+      "tags": [
+        "躯干",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-pointed-iron-shoes",
       "title": "尖头铁鞋",
       "type": "行装",
@@ -3247,6 +3410,17 @@
       "route": "/equipment/mang-zhuang-shou-huan",
       "tags": [
         "奇珍",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-roaring-straight-sword",
+      "title": "咆哮直剑",
+      "type": "行装",
+      "route": "/equipment/pao-xiao-zhi-jian",
+      "tags": [
+        "手部",
         "紫"
       ],
       "keywords": []
