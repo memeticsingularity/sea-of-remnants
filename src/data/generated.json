@@ -1,0 +1,641 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "generatedAt": "2026-07-18T15:27:17.325Z"
+  },
+  "crews": [
+    {
+      "id": "crew-sea-burial",
+      "slug": "sea-burial",
+      "name": "海葬",
+      "type": "船员",
+      "rarity": "SSR",
+      "role": "输出",
+      "element": "水",
+      "obtain": "招募 / 活动",
+      "image": "/images/crews/sea-burial.png",
+      "tags": [
+        "水属性",
+        "输出",
+        "毒伤",
+        "额外行动"
+      ],
+      "baseStats": {
+        "hp": 2400,
+        "atk": 185,
+        "def": 72,
+        "spd": 101
+      },
+      "skills": [
+        "skill-swarm-hunt"
+      ],
+      "songs": [
+        "song-applause"
+      ],
+      "recommendedEquipment": [
+        "equip-butterfly-endless",
+        "equip-contract-brooch"
+      ],
+      "training": [
+        {
+          "phase": "一阶",
+          "materials": [
+            {
+              "item": "海魂结晶",
+              "count": 20
+            }
+          ],
+          "bonuses": {
+            "atk": "+10%"
+          }
+        }
+      ],
+      "buildNotes": "海葬的核心机制是通过[灵感]触发[加料]进行额外行动爆发。\n\n**前期优先级：**\n- 效果命中 > 攻击力 > 速度\n- 优先强化炼金壶部位，提升持续伤害\n\n**推荐骰子：**\n- 电涌骰：强化单体爆发\n- 重迫骰：适合需要压血线的场合\n\n**行装建议：**\n- 炼金壶：蝶蝶不休（提升额外行动伤害）\n- 奇珍：契约胸针（强化职业技能伤害）\n"
+    }
+  ],
+  "ships": [
+    {
+      "id": "ship-whisper",
+      "slug": "whisper",
+      "name": "低语号",
+      "type": "战舰",
+      "tier": "A",
+      "stats": {
+        "hull": 3200,
+        "sails": 75,
+        "cargo": 120,
+        "crewCapacity": 6
+      },
+      "upgrades": [
+        {
+          "level": 1,
+          "cost": {
+            "gold": 5000,
+            "wood": 200
+          },
+          "effects": {
+            "hull": 200
+          }
+        }
+      ],
+      "buildNotes": "前期综合性能优秀的战舰，优先升级船体提高生存能力。\n"
+    }
+  ],
+  "classes": [
+    {
+      "id": "class-poison-master",
+      "slug": "du-shi",
+      "name": "毒士",
+      "type": "职业",
+      "role": "持续输出 / 控制",
+      "description": "擅长通过毒伤和持续伤害削弱敌人，拥有较强的额外行动能力。",
+      "unlockCondition": "初始职业",
+      "skills": [
+        "skill-swarm-hunt"
+      ],
+      "buildNotes": "毒士适合堆效果命中和持续伤害加成，配合海葬等角色可打出高额毒伤。\n"
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-swarm-hunt",
+      "slug": "chong-qun-wei-lie",
+      "name": "虫群围猎",
+      "type": "职业技能",
+      "class": "某职业",
+      "level": 2,
+      "maxLevel": 10,
+      "shortDesc": "对主目标及其两侧敌方单位造成攻击力 45% 的伤害。每命中 1 个敌方单位，获得 1 层[灵感]。",
+      "detailedDesc": "对主目标及其两侧敌方单位造成攻击力 11.25%×强化骰数量+45% 的伤害。每命中 1 个敌方单位，获得 1 层[灵感]。",
+      "tags": [
+        "额外行动",
+        "职业技能"
+      ],
+      "extraActions": 2,
+      "diceSlots": [
+        {
+          "default": "电涌骰",
+          "alternatives": [
+            "电涌骰",
+            "重迫骰"
+          ]
+        },
+        {
+          "default": "骤然升温",
+          "alternatives": [
+            "骤然升温"
+          ]
+        }
+      ],
+      "relatedGlossary": [
+        "灵感",
+        "强化骰",
+        "额外行动"
+      ],
+      "image": "/images/skills/swarm-hunt.png",
+      "source": "职业初始技能",
+      "buildNotes": "虫群围猎是海葬的核心输出技能，额外的[额外行动]次数配合[灵感]机制可以打出多轮爆发。\n\n**升级建议：**\n- 优先升满，提升基础倍率\n- 配合高效果命中装备，提高[加料]触发率\n"
+    }
+  ],
+  "dice": [
+    {
+      "id": "dice-electric-surge",
+      "slug": "dian-yong-shai",
+      "name": "电涌骰",
+      "type": "辅助技",
+      "level": 1,
+      "maxLevel": 10,
+      "shortDesc": "使用技能后，对主目标额外造成 1 次伤害。",
+      "detailedDesc": "使用技能后，此次攻击会对主目标额外造成 1 次伤害，伤害值为此次攻击对所有敌人的总伤害×(16%+8%×骰子总点数)。每掷出一个 6 点，此次额外伤害提升 20%。",
+      "relatedGlossary": [
+        "骰子总点数",
+        "强化骰"
+      ],
+      "image": "/images/dice/electric-surge.png",
+      "source": "骰子抽取 / 任务奖励",
+      "buildNotes": "电涌骰适合搭配高总伤害技能使用，骰子总点数越高，额外伤害越高。\n建议优先给海葬等依赖单体爆发的输出角色装备。\n"
+    }
+  ],
+  "songs": [
+    {
+      "id": "song-applause",
+      "slug": "he-cai-he-cai",
+      "name": "喝彩，喝彩",
+      "type": "船歌",
+      "effect": "触发 RogueLuck（捣蛋时刻）时，若强化点少于 2 点，则获得 1 个强化点。",
+      "relatedGlossary": [
+        "RogueLuck",
+        "强化点"
+      ],
+      "image": "/images/songs/applause.png",
+      "source": "船歌解锁",
+      "buildNotes": "适合依赖强化点爆发的队伍。触发捣蛋时刻时稳定补充强化点，续航能力强。\n"
+    }
+  ],
+  "equipment": [
+    {
+      "id": "equip-butterfly-endless",
+      "slug": "die-die-bu-xiu",
+      "name": "蝶蝶不休",
+      "slot": "炼金壶",
+      "rarity": "SSR",
+      "enhance": 5,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "atk": 106,
+        "dotBoost": "7.2%",
+        "def": -8
+      },
+      "requirements": {
+        "int": 104,
+        "per": 55
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "int": 51,
+          "per": 27
+        },
+        {
+          "level": 5,
+          "int": 104,
+          "per": 55
+        },
+        {
+          "level": 10,
+          "int": 142,
+          "per": 76
+        }
+      ],
+      "fixedAffixes": [
+        "效果命中中越高，额外行动伤害越高，每有1%的效果命中，自身额外行动伤害提升0.6%。"
+      ],
+      "randomAffixes": [
+        "当有其他我方单位体力值低于30%时，自身受击权重提升3级，持续1回合。",
+        "位于战斗小队2号位时，攻击力提升3%，暴击率提升4%。",
+        "有敌方单位力竭时，场上其他敌方单位所受伤害提升3级，持续1回合。"
+      ],
+      "flavor": "有些美丽的物件，只可远观，不可亵玩。",
+      "source": "失落海域·金果子等级 5 掉落",
+      "image": "/images/equipment/butterfly-endless.png",
+      "buildNotes": "海葬核心毕业装之一。固定词条与额外行动机制高度契合，优先强化。\n注意穿戴要求：紫色品质以上行装不满足属性要求时，自带属性会下降。\n"
+    },
+    {
+      "id": "equip-contract-brooch",
+      "slug": "qi-yue-xiong-zhen",
+      "name": "契约胸针",
+      "slot": "奇珍",
+      "rarity": "SR",
+      "fixedAffixes": [
+        "职业技能伤害提升25%，船员技能伤害降低5%"
+      ],
+      "flavor": "由于某种说不清楚的风险过大，黑格尼宣布中止合作，并将曾经的合作伙伴拒之门外。",
+      "source": "奇珍抽取 / 任务奖励",
+      "image": "/images/equipment/contract-brooch.png",
+      "buildNotes": "纯职业技能输出流的优质散件。 downside 是降低船员技能伤害，适合不怎么依赖船员技能的角色。\n"
+    }
+  ],
+  "items": [
+    {
+      "id": "item-sea-soul-crystal",
+      "slug": "hai-hun-jie-jing",
+      "name": "海魂结晶",
+      "type": "材料",
+      "rarity": "R",
+      "description": "用于船员培养的常见材料，可在海域探索中获得。",
+      "source": "海域探索 / 任务奖励"
+    }
+  ],
+  "quests": [
+    {
+      "id": "quest-mist-first-voyage",
+      "slug": "mi-wu-chu-hang",
+      "name": "迷雾初航",
+      "category": "主线",
+      "chapter": 1,
+      "objectives": [
+        "抵达迷雾港",
+        "击败潮汐海妖"
+      ],
+      "rewards": [
+        {
+          "item": "金币",
+          "count": 2000
+        },
+        {
+          "item": "海魂结晶",
+          "count": 10
+        }
+      ],
+      "location": "迷雾海域",
+      "description": "航海团第一次驶入迷雾海域，遭遇潮汐海妖的袭击。"
+    }
+  ],
+  "locations": [
+    {
+      "id": "location-mist-sea",
+      "slug": "mi-wu-hai-yu",
+      "name": "迷雾海域",
+      "type": "海域",
+      "description": "常年被浓雾笼罩的海域，传说中隐藏着古老的宝藏。",
+      "enemies": [
+        "潮汐海妖",
+        "迷雾海盗"
+      ],
+      "drops": [
+        "海魂结晶",
+        "金币"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "id": "glossary-additive",
+      "slug": "glossary-additive",
+      "term": "加料",
+      "definition": "战斗开始时，获得10层灵感。使用职业技能时，有概率触发加料，追加1/2/3次技能伤害，并消耗对应层数灵感。",
+      "related": [
+        "灵感"
+      ]
+    },
+    {
+      "id": "glossary-dice-total",
+      "slug": "glossary-dice-total",
+      "term": "骰子总点数",
+      "definition": "一次掷骰中所有骰子点数之和，部分技能效果会根据总点数提升。",
+      "related": [
+        "强化骰"
+      ]
+    },
+    {
+      "id": "glossary-effect-hit",
+      "slug": "glossary-effect-hit",
+      "term": "效果命中",
+      "definition": "影响负面效果、触发类效果成功概率的属性。",
+      "related": [
+        "灵感",
+        "加料"
+      ]
+    },
+    {
+      "id": "glossary-enhanced-dice",
+      "slug": "glossary-enhanced-dice",
+      "term": "强化骰",
+      "definition": "带有强化标记的骰子，掷出后可提供额外效果或强化技能伤害。",
+      "related": [
+        "强化点"
+      ]
+    },
+    {
+      "id": "glossary-enhanced-point",
+      "slug": "glossary-enhanced-point",
+      "term": "强化点",
+      "definition": "战斗中可用于强化技能或触发特殊效果的资源点。",
+      "related": [
+        "强化骰",
+        "RogueLuck"
+      ]
+    },
+    {
+      "id": "glossary-extra-action",
+      "slug": "glossary-extra-action",
+      "term": "额外行动",
+      "definition": "在常规行动之外追加的一次行动机会，通常不消耗行动点。",
+      "related": [
+        "灵感",
+        "加料"
+      ]
+    },
+    {
+      "id": "glossary-inspiration",
+      "slug": "glossary-inspiration",
+      "term": "灵感",
+      "definition": "使用职业技能时，可消耗本状态触发[加料]。不可被其他技能消除。",
+      "related": [
+        "加料",
+        "额外行动"
+      ]
+    },
+    {
+      "id": "glossary-rogue-luck",
+      "slug": "glossary-rogue-luck",
+      "term": "RogueLuck",
+      "definition": "捣蛋时刻，战斗中随机触发的特殊机制，通常伴随额外收益或效果。",
+      "related": [
+        "强化点"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "id": "guide-crew-training",
+      "title": "船员培养指南",
+      "route": "/guides/crew-training",
+      "markdown": "markdown/guides/crew-training.md",
+      "content": "# 船员培养指南\n\n船员培养主要分为两个场景：海域探索和奥普港。\n\n## 海域培养\n\n在海域探索中，船员可以通过战斗获得经验，提升等级。等级上限需要通过习得新职业来突破。\n\n## 奥普港培养\n\n在奥普港，你可以通过以下方式强化船员：\n\n- **强化头脑**：提升船员基础属性\n- **通用训练**：提升通用技能效果\n- **往日之影**：解锁过往记忆带来的特殊能力\n- **职业技能**：强化职业专属技能\n\n## 培养建议\n\n1. 优先提升主输出船员的职业技能等级\n2. 根据船员定位选择强化方向（输出堆攻击/效果命中，坦克堆防御/生命）\n3. 注意培养进度评价基于失落海域·金果子等级\n"
+    },
+    {
+      "id": "guide-ship-training",
+      "title": "船只培养指南",
+      "route": "/guides/ship-training",
+      "markdown": "markdown/guides/ship-training.md",
+      "content": "# 船只培养指南\n\n船只是航海团在海域探索中的重要载体，提升船只属性可以提高航行效率和战斗能力。\n\n## 升级材料\n\n船只升级通常需要：\n\n- 金币\n- 木材\n- 特殊海域材料\n\n## 属性说明\n\n- **船体**：影响船只耐久和生存能力\n- **风帆**：影响航行速度\n- **货舱**：影响可携带物资数量\n- **船员容量**：影响可上阵船员数量\n"
+    },
+    {
+      "id": "guide-equipment",
+      "title": "行装系统详解",
+      "route": "/guides/equipment",
+      "markdown": "markdown/guides/equipment.md",
+      "content": "# 行装系统详解\n\n行装是船员装备系统，分为多个部位：炼金壶、头部、躯干、腿部、奇珍。\n\n## 稀有度\n\n行装稀有度从低到高：N、R、SR、SSR。紫色品质（SR）及以上的行装穿戴时需要满足属性要求，否则行装自带属性会下降。\n\n## 强化\n\n行装可以强化提升属性，强化等级受金果子等级限制。强化后会提高穿戴属性要求。\n\n## 词条\n\n- **固定词条**：每件行装自带的固定效果\n- **随机词条**：行装掉落时随机生成的效果\n\n## 套装\n\n部分行装属于同一套装，凑齐指定件数可触发套装效果。\n"
+    },
+    {
+      "id": "guide-dice",
+      "title": "骰子与技能搭配",
+      "route": "/guides/dice",
+      "markdown": "markdown/guides/dice.md",
+      "content": "# 骰子与技能搭配\n\n每个职业技能可以配置不同的骰子，合理搭配可以大幅提升战斗效率。\n\n## 骰子类型\n\n- **电涌骰**：根据总伤害追加额外伤害，适合高爆发技能\n- **重迫骰**：适合压血线和收割\n- **骤然升温**：持续伤害加成\n\n## 搭配思路\n\n1. 先确定船员的输出机制（单体爆发 / 持续伤害 / 控制）\n2. 选择能放大核心机制的骰子\n3. 考虑船歌和行装的协同效果\n"
+    }
+  ],
+  "searchIndex": [
+    {
+      "id": "crew-sea-burial",
+      "title": "海葬",
+      "type": "船员",
+      "route": "/crews/sea-burial",
+      "tags": [
+        "水属性",
+        "输出",
+        "毒伤",
+        "额外行动"
+      ],
+      "keywords": [
+        "输出",
+        "水"
+      ]
+    },
+    {
+      "id": "ship-whisper",
+      "title": "低语号",
+      "type": "船只",
+      "route": "/ships/whisper",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-poison-master",
+      "title": "毒士",
+      "type": "职业",
+      "route": "/classes/du-shi",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "skill-swarm-hunt",
+      "title": "虫群围猎",
+      "type": "技能",
+      "route": "/skills/chong-qun-wei-lie",
+      "tags": [
+        "额外行动",
+        "职业技能",
+        "额外行动",
+        "职业技能"
+      ],
+      "keywords": [
+        "某职业",
+        "职业技能"
+      ]
+    },
+    {
+      "id": "dice-electric-surge",
+      "title": "电涌骰",
+      "type": "骰子",
+      "route": "/dice/dian-yong-shai",
+      "tags": [
+        "辅助技"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-applause",
+      "title": "喝彩，喝彩",
+      "type": "船歌",
+      "route": "/songs/he-cai-he-cai",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "equip-butterfly-endless",
+      "title": "蝶蝶不休",
+      "type": "行装",
+      "route": "/equipment/die-die-bu-xiu",
+      "tags": [
+        "炼金壶",
+        "SSR"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-contract-brooch",
+      "title": "契约胸针",
+      "type": "行装",
+      "route": "/equipment/qi-yue-xiong-zhen",
+      "tags": [
+        "奇珍",
+        "SR"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "item-sea-soul-crystal",
+      "title": "海魂结晶",
+      "type": "物品",
+      "route": "/items/hai-hun-jie-jing",
+      "tags": [
+        "材料",
+        "R"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "quest-mist-first-voyage",
+      "title": "迷雾初航",
+      "type": "任务",
+      "route": "/quests/mi-wu-chu-hang",
+      "tags": [
+        "主线"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "location-mist-sea",
+      "title": "迷雾海域",
+      "type": "地点",
+      "route": "/locations/mi-wu-hai-yu",
+      "tags": [
+        "海域"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-additive",
+      "title": "加料",
+      "type": "术语",
+      "route": "/glossary#glossary-additive",
+      "tags": [
+        "灵感"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-dice-total",
+      "title": "骰子总点数",
+      "type": "术语",
+      "route": "/glossary#glossary-dice-total",
+      "tags": [
+        "强化骰"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-effect-hit",
+      "title": "效果命中",
+      "type": "术语",
+      "route": "/glossary#glossary-effect-hit",
+      "tags": [
+        "灵感",
+        "加料"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-enhanced-dice",
+      "title": "强化骰",
+      "type": "术语",
+      "route": "/glossary#glossary-enhanced-dice",
+      "tags": [
+        "强化点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-enhanced-point",
+      "title": "强化点",
+      "type": "术语",
+      "route": "/glossary#glossary-enhanced-point",
+      "tags": [
+        "强化骰",
+        "RogueLuck"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-extra-action",
+      "title": "额外行动",
+      "type": "术语",
+      "route": "/glossary#glossary-extra-action",
+      "tags": [
+        "灵感",
+        "加料"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-inspiration",
+      "title": "灵感",
+      "type": "术语",
+      "route": "/glossary#glossary-inspiration",
+      "tags": [
+        "加料",
+        "额外行动"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-rogue-luck",
+      "title": "RogueLuck",
+      "type": "术语",
+      "route": "/glossary#glossary-rogue-luck",
+      "tags": [
+        "强化点"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guide-crew-training",
+      "title": "船员培养指南",
+      "type": "指南",
+      "route": "/guides/crew-training",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "guide-ship-training",
+      "title": "船只培养指南",
+      "type": "指南",
+      "route": "/guides/ship-training",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "guide-equipment",
+      "title": "行装系统详解",
+      "type": "指南",
+      "route": "/guides/equipment",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "guide-dice",
+      "title": "骰子与技能搭配",
+      "type": "指南",
+      "route": "/guides/dice",
+      "tags": [],
+      "keywords": []
+    }
+  ]
+}

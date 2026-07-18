@@ -1,0 +1,31 @@
+id: skill-swarm-hunt
+slug: chong-qun-wei-lie
+name: 虫群围猎
+type: 职业技能
+class: 某职业
+level: 2
+maxLevel: 10
+shortDesc: "对主目标及其两侧敌方单位造成攻击力 45% 的伤害。每命中 1 个敌方单位，获得 1 层[灵感]。"
+detailedDesc: "对主目标及其两侧敌方单位造成攻击力 11.25%×强化骰数量+45% 的伤害。每命中 1 个敌方单位，获得 1 层[灵感]。"
+tags:
+  - 额外行动
+  - 职业技能
+extraActions: 2
+diceSlots:
+  - default: 电涌骰
+    alternatives: [电涌骰, 重迫骰]
+  - default: 骤然升温
+    alternatives: [骤然升温]
+relatedGlossary:
+  - 灵感
+  - 强化骰
+  - 额外行动
+image: /images/skills/swarm-hunt.png
+source: 职业初始技能
+
+buildNotes: |
+  虫群围猎是海葬的核心输出技能，额外的[额外行动]次数配合[灵感]机制可以打出多轮爆发。
+
+  **升级建议：**
+  - 优先升满，提升基础倍率
+  - 配合高效果命中装备，提高[加料]触发率

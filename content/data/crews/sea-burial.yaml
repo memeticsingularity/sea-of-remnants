@@ -1,0 +1,53 @@
+id: crew-sea-burial
+slug: sea-burial
+name: 海葬
+type: 船员
+rarity: SSR
+role: 输出
+element: 水
+obtain: 招募 / 活动
+image: /images/crews/sea-burial.png
+tags:
+  - 水属性
+  - 输出
+  - 毒伤
+  - 额外行动
+
+baseStats:
+  hp: 2400
+  atk: 185
+  def: 72
+  spd: 101
+
+skills:
+  - skill-swarm-hunt
+
+songs:
+  - song-applause
+
+recommendedEquipment:
+  - equip-butterfly-endless
+  - equip-contract-brooch
+
+training:
+  - phase: 一阶
+    materials:
+      - item: 海魂结晶
+        count: 20
+    bonuses:
+      atk: "+10%"
+
+buildNotes: |
+  海葬的核心机制是通过[灵感]触发[加料]进行额外行动爆发。
+
+  **前期优先级：**
+  - 效果命中 > 攻击力 > 速度
+  - 优先强化炼金壶部位，提升持续伤害
+
+  **推荐骰子：**
+  - 电涌骰：强化单体爆发
+  - 重迫骰：适合需要压血线的场合
+
+  **行装建议：**
+  - 炼金壶：蝶蝶不休（提升额外行动伤害）
+  - 奇珍：契约胸针（强化职业技能伤害）

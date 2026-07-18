@@ -1,0 +1,6 @@
+id: glossary-additive
+slug: glossary-additive
+term: 加料
+definition: "战斗开始时，获得10层灵感。使用职业技能时，有概率触发加料，追加1/2/3次技能伤害，并消耗对应层数灵感。"
+related:
+  - 灵感

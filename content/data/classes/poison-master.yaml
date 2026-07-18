@@ -1,0 +1,12 @@
+id: class-poison-master
+slug: du-shi
+name: 毒士
+type: 职业
+role: 持续输出 / 控制
+description: "擅长通过毒伤和持续伤害削弱敌人，拥有较强的额外行动能力。"
+unlockCondition: 初始职业
+skills:
+  - skill-swarm-hunt
+
+buildNotes: |
+  毒士适合堆效果命中和持续伤害加成，配合海葬等角色可打出高额毒伤。

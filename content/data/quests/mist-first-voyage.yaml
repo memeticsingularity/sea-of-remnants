@@ -1,0 +1,15 @@
+id: quest-mist-first-voyage
+slug: mi-wu-chu-hang
+name: 迷雾初航
+category: 主线
+chapter: 1
+objectives:
+  - 抵达迷雾港
+  - 击败潮汐海妖
+rewards:
+  - item: 金币
+    count: 2000
+  - item: 海魂结晶
+    count: 10
+location: 迷雾海域
+description: "航海团第一次驶入迷雾海域，遭遇潮汐海妖的袭击。"

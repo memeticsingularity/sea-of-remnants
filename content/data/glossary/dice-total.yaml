@@ -1,0 +1,6 @@
+id: glossary-dice-total
+slug: glossary-dice-total
+term: 骰子总点数
+definition: "一次掷骰中所有骰子点数之和，部分技能效果会根据总点数提升。"
+related:
+  - 强化骰

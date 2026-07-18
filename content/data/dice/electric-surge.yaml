@@ -1,0 +1,17 @@
+id: dice-electric-surge
+slug: dian-yong-shai
+name: 电涌骰
+type: 辅助技
+level: 1
+maxLevel: 10
+shortDesc: "使用技能后，对主目标额外造成 1 次伤害。"
+detailedDesc: "使用技能后，此次攻击会对主目标额外造成 1 次伤害，伤害值为此次攻击对所有敌人的总伤害×(16%+8%×骰子总点数)。每掷出一个 6 点，此次额外伤害提升 20%。"
+relatedGlossary:
+  - 骰子总点数
+  - 强化骰
+image: /images/dice/electric-surge.png
+source: 骰子抽取 / 任务奖励
+
+buildNotes: |
+  电涌骰适合搭配高总伤害技能使用，骰子总点数越高，额外伤害越高。
+  建议优先给海葬等依赖单体爆发的输出角色装备。

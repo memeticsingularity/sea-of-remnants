@@ -1,0 +1,19 @@
+version: "1.0.0"
+
+pages:
+  - id: guide-crew-training
+    title: 船员培养指南
+    route: /guides/crew-training
+    markdown: markdown/guides/crew-training.md
+  - id: guide-ship-training
+    title: 船只培养指南
+    route: /guides/ship-training
+    markdown: markdown/guides/ship-training.md
+  - id: guide-equipment
+    title: 行装系统详解
+    route: /guides/equipment
+    markdown: markdown/guides/equipment.md
+  - id: guide-dice
+    title: 骰子与技能搭配
+    route: /guides/dice
+    markdown: markdown/guides/dice.md

@@ -1,0 +1,7 @@
+id: glossary-inspiration
+slug: glossary-inspiration
+term: 灵感
+definition: "使用职业技能时，可消耗本状态触发[加料]。不可被其他技能消除。"
+related:
+  - 加料
+  - 额外行动

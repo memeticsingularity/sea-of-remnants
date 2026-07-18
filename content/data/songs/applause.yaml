@@ -1,0 +1,13 @@
+id: song-applause
+slug: he-cai-he-cai
+name: 喝彩，喝彩
+type: 船歌
+effect: "触发 RogueLuck（捣蛋时刻）时，若强化点少于 2 点，则获得 1 个强化点。"
+relatedGlossary:
+  - RogueLuck
+  - 强化点
+image: /images/songs/applause.png
+source: 船歌解锁
+
+buildNotes: |
+  适合依赖强化点爆发的队伍。触发捣蛋时刻时稳定补充强化点，续航能力强。

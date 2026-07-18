@@ -1,0 +1,11 @@
+id: location-mist-sea
+slug: mi-wu-hai-yu
+name: 迷雾海域
+type: 海域
+description: "常年被浓雾笼罩的海域，传说中隐藏着古老的宝藏。"
+enemies:
+  - 潮汐海妖
+  - 迷雾海盗
+drops:
+  - 海魂结晶
+  - 金币

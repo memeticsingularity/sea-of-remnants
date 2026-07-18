@@ -1,0 +1,13 @@
+id: equip-contract-brooch
+slug: qi-yue-xiong-zhen
+name: 契约胸针
+slot: 奇珍
+rarity: SR
+fixedAffixes:
+  - "职业技能伤害提升25%，船员技能伤害降低5%"
+flavor: "由于某种说不清楚的风险过大，黑格尼宣布中止合作，并将曾经的合作伙伴拒之门外。"
+source: 奇珍抽取 / 任务奖励
+image: /images/equipment/contract-brooch.png
+
+buildNotes: |
+  纯职业技能输出流的优质散件。 downside 是降低船员技能伤害，适合不怎么依赖船员技能的角色。
