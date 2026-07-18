@@ -1,10 +1,11 @@
-import { useState, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useMemo, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { wikiData } from '@/data'
 import { Card } from '@/components/ui/Card'
 import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
 
 export function GlossaryPage() {
+  const location = useLocation()
   const [query, setQuery] = useState('')
 
   const filteredEntries = useMemo(() => {
@@ -17,6 +18,26 @@ export function GlossaryPage() {
         entry.related?.some((term) => term.toLowerCase().includes(q)),
     )
   }, [query])
+
+  // 根据 URL hash 滚动到对应术语；若当前搜索筛选导致目标不可见，则清空搜索
+  useEffect(() => {
+    const hash = location.hash.replace('#', '')
+    if (!hash) return
+
+    const target = wikiData.glossary.find((g) => g.id === hash)
+    if (!target) return
+
+    const isVisible = filteredEntries.some((entry) => entry.id === hash)
+    if (!isVisible) {
+      setQuery('')
+      return
+    }
+
+    const el = document.getElementById(hash)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [location.hash, filteredEntries])
 
   return (
     <div className="mx-auto max-w-4xl">

@@ -2,6 +2,4 @@ id: glossary-additional-damage
 slug: glossary-additional-damage
 term: 附加伤害
 definition: "伴随技能的特殊伤害类型，附加伤害不会产生暴击。"
-related:
-  - 战意
-  - 暴击率
+related: []

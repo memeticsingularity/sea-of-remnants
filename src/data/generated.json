@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-18T17:50:52.941Z"
+    "generatedAt": "2026-07-18T17:53:56.531Z"
   },
   "crews": [
     {
@@ -1808,10 +1808,7 @@
       "slug": "glossary-additional-damage",
       "term": "附加伤害",
       "definition": "伴随技能的特殊伤害类型，附加伤害不会产生暴击。",
-      "related": [
-        "战意",
-        "暴击率"
-      ]
+      "related": []
     },
     {
       "id": "glossary-additive",
@@ -2003,8 +2000,7 @@
       "term": "火星飞溅",
       "definition": "下次使用技能时，若技能不具有[溅射]效果则使其获得36%的[溅射]，若具有[溅射]效果则使其[溅射]目标数+2，且溅射伤害提升40%。不可被其他技能消除。",
       "related": [
-        "溅射",
-        "战意"
+        "溅射"
       ]
     },
     {
@@ -3887,10 +3883,7 @@
       "title": "附加伤害",
       "type": "术语",
       "route": "/glossary#glossary-additional-damage",
-      "tags": [
-        "战意",
-        "暴击率"
-      ],
+      "tags": [],
       "keywords": []
     },
     {
@@ -4102,8 +4095,7 @@
       "type": "术语",
       "route": "/glossary#glossary-mars-splash",
       "tags": [
-        "溅射",
-        "战意"
+        "溅射"
       ],
       "keywords": []
     },
