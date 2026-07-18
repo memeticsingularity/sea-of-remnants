@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-18T15:48:30.317Z"
+    "generatedAt": "2026-07-18T15:53:44.728Z"
   },
   "crews": [
     {
@@ -299,6 +299,27 @@
       "buildNotes": "纯职业技能输出流的优质散件。 downside 是降低船员技能伤害，适合不怎么依赖船员技能的角色。\n"
     },
     {
+      "id": "equip-dense-hood",
+      "slug": "mi-shi-tou-tao",
+      "name": "密实头套",
+      "slot": "头部",
+      "rarity": "蓝",
+      "enhance": 6,
+      "baseStats": {
+        "shieldEffect": "17.5%",
+        "threat": 49
+      },
+      "fixedAffixes": [
+        "分摊伤害时，有100%概率获得体力值9%的护盾。1回合生效1次。叠加护盾值不超过本来源的3倍。"
+      ],
+      "randomAffixes": [
+        "为我方单位恢复体力后，治疗效果提升1级，持续1回合。"
+      ],
+      "flavor": "黑暗给人盲目的安全感。",
+      "source": "行装掉落",
+      "image": "/images/equipment/dense-hood.png"
+    },
+    {
       "id": "equip-fire-scene-belt",
       "slug": "huo-chang-yao-dai",
       "name": "火场腰带",
@@ -312,6 +333,27 @@
       "image": "/images/equipment/fire-scene-belt.png"
     },
     {
+      "id": "equip-pointed-iron-shoes",
+      "slug": "jian-tou-tie-xie",
+      "name": "尖头铁鞋",
+      "slot": "腿部",
+      "rarity": "蓝",
+      "enhance": 6,
+      "baseStats": {
+        "spd": 9,
+        "critRate": "8.7%"
+      },
+      "fixedAffixes": [
+        "每击败1个敌方单位，恢复1点能量，每回合至多恢复3点。"
+      ],
+      "randomAffixes": [
+        "固定伤害提升1%。每次造成固定伤害后，固定伤害额外提升1级，持续2回合，至多提升至2级。"
+      ],
+      "flavor": "调饮师不会靠个人魅力让客人付钱就只能靠这种鞋子了。",
+      "source": "行装掉落",
+      "image": "/images/equipment/pointed-iron-shoes.png"
+    },
+    {
       "id": "equip-reckless-bracelet",
       "slug": "mang-zhuang-shou-huan",
       "name": "莽撞手环",
@@ -323,6 +365,28 @@
       "flavor": "愤怒的雄狮没有理智，它的利爪会撕碎一切——哪怕是黑格尼的货船。\n",
       "source": "奇珍掉落",
       "image": "/images/equipment/reckless-bracelet.png"
+    },
+    {
+      "id": "equip-shark-short-gun",
+      "slug": "sha-yu-duan-qiang",
+      "name": "鲨鱼短枪",
+      "slot": "手部",
+      "handType": "火枪",
+      "rarity": "蓝",
+      "enhance": 6,
+      "baseStats": {
+        "atk": 42,
+        "effectHit": "5.6%"
+      },
+      "fixedAffixes": [
+        "有敌方单位架势被击破时，自身获得固定伤害提升3级，持续2回合。"
+      ],
+      "randomAffixes": [
+        "使用招牌技时，造成的伤害提升2级，治疗效果提升2级，持续1回合。"
+      ],
+      "flavor": "鲨鱼咬中猎物的瞬间，兴奋令其浑身发烫，如同炙热的枪管，为击破敌人而欢呼。",
+      "source": "行装掉落",
+      "image": "/images/equipment/shark-short-gun.png"
     },
     {
       "id": "equip-unreturned-nest",
@@ -912,6 +976,17 @@
       "keywords": []
     },
     {
+      "id": "equip-dense-hood",
+      "title": "密实头套",
+      "type": "行装",
+      "route": "/equipment/mi-shi-tou-tao",
+      "tags": [
+        "头部",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-fire-scene-belt",
       "title": "火场腰带",
       "type": "行装",
@@ -923,6 +998,17 @@
       "keywords": []
     },
     {
+      "id": "equip-pointed-iron-shoes",
+      "title": "尖头铁鞋",
+      "type": "行装",
+      "route": "/equipment/jian-tou-tie-xie",
+      "tags": [
+        "腿部",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-reckless-bracelet",
       "title": "莽撞手环",
       "type": "行装",
@@ -930,6 +1016,17 @@
       "tags": [
         "奇珍",
         "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-shark-short-gun",
+      "title": "鲨鱼短枪",
+      "type": "行装",
+      "route": "/equipment/sha-yu-duan-qiang",
+      "tags": [
+        "手部",
+        "蓝"
       ],
       "keywords": []
     },

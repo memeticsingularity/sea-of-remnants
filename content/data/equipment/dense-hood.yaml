@@ -1,0 +1,16 @@
+id: equip-dense-hood
+slug: mi-shi-tou-tao
+name: 密实头套
+slot: 头部
+rarity: 蓝
+enhance: 6
+baseStats:
+  shieldEffect: "17.5%"
+  threat: 49
+fixedAffixes:
+  - "分摊伤害时，有100%概率获得体力值9%的护盾。1回合生效1次。叠加护盾值不超过本来源的3倍。"
+randomAffixes:
+  - "为我方单位恢复体力后，治疗效果提升1级，持续1回合。"
+flavor: "黑暗给人盲目的安全感。"
+source: 行装掉落
+image: /images/equipment/dense-hood.png

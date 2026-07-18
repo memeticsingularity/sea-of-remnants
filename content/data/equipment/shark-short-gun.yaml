@@ -1,0 +1,17 @@
+id: equip-shark-short-gun
+slug: sha-yu-duan-qiang
+name: 鲨鱼短枪
+slot: 手部
+handType: 火枪
+rarity: 蓝
+enhance: 6
+baseStats:
+  atk: 42
+  effectHit: "5.6%"
+fixedAffixes:
+  - "有敌方单位架势被击破时，自身获得固定伤害提升3级，持续2回合。"
+randomAffixes:
+  - "使用招牌技时，造成的伤害提升2级，治疗效果提升2级，持续1回合。"
+flavor: "鲨鱼咬中猎物的瞬间，兴奋令其浑身发烫，如同炙热的枪管，为击破敌人而欢呼。"
+source: 行装掉落
+image: /images/equipment/shark-short-gun.png
