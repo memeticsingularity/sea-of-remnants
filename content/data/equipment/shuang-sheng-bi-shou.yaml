@@ -1,0 +1,65 @@
+id: equip-shuang-sheng-bi-shou
+slug: shuang-sheng-bi-shou
+name: 双生匕首
+slot: 手部
+handType: 匕首
+rarity: 紫
+enhance: 6
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+baseStats:
+  atk: 56
+  critRate: "4.1%"
+  threat: -32
+statsByLevel:
+  6:
+    atk: 56
+    critRate: "4.1%"
+    threat: -32
+requirements:
+  agi: 85
+  int: 45
+enhanceRequirements:
+  - level: 1
+    agi: 33
+    int: 18
+  - level: 2
+    agi: 47
+    int: 25
+  - level: 3
+    agi: 51
+    int: 27
+  - level: 4
+    agi: 67
+    int: 36
+  - level: 5
+    agi: 75
+    int: 40
+  - level: 6
+    agi: 85
+    int: 45
+  - level: 7
+    agi: 91
+    int: 48
+  - level: 8
+    agi: 104
+    int: 55
+  - level: 9
+    agi: 114
+    int: 61
+  - level: 10
+    agi: 126
+    int: 67
+fixedAffixes:
+  - "将要消耗敌方单位的[暗影]时，有50%概率免于消耗并依旧触发相关效果。每需消耗1层[暗影]，伤害提升6%。"
+randomAffixes:
+  - "攻击后，造成的伤害提升1级，持续1回合。"
+  - "体力值大于50%时，造成的伤害提升4%，治疗效果提升4%。"
+  - "当有其他我方单位体力值低于30%时，自身受击权重提升3级，持续1回合。"
+flavor: "分开的双刃，阋墙的兄弟——那一瞬间，两处的心脏发出同一种哀鸣。"
+source: 行装掉落
+image: /images/equipment/shuang-sheng-bi-shou.png
+
+buildNotes: |
+  双生匕首是紫色匕首，围绕[暗影]消耗机制提供免消耗触发与增伤，适合暗影体系输出角色。

@@ -1,0 +1,13 @@
+id: equip-shen-hai-huan-meng
+slug: shen-hai-huan-meng
+name: 深海幻梦
+slot: 奇珍
+rarity: 金
+fixedAffixes:
+  - "每场战斗中首次有我方单位受到致命伤害时，此次伤害降低100%。"
+flavor: "触感温凉，戴上它仿佛沐浴在夏日的海洋中，让人舒适得想入睡。可每每醒来，总会感到阵阵头痛。"
+source: 奇珍掉落
+image: /images/equipment/shen-hai-huan-meng.png
+
+buildNotes: |
+  深海幻梦是金色奇珍，可在每场战斗中免疫一次致命伤害，是保护核心输出或脆皮辅助的强力生存件。

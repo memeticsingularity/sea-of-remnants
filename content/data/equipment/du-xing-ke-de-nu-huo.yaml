@@ -1,0 +1,64 @@
+id: equip-du-xing-ke-de-nu-huo
+slug: du-xing-ke-de-nu-huo
+name: 独行客的怒火
+slot: 手部
+handType: 匕首
+rarity: 金
+enhance: 6
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+baseStats:
+  atk: 116
+  threat: -42
+statsByLevel:
+  6:
+    atk: 116
+    threat: -42
+requirements:
+  agi: 110
+  int: 58
+enhanceRequirements:
+  - level: 1
+    agi: 51
+    int: 27
+  - level: 2
+    agi: 55
+    int: 29
+  - level: 3
+    agi: 75
+    int: 40
+  - level: 4
+    agi: 81
+    int: 43
+  - level: 5
+    agi: 104
+    int: 55
+  - level: 6
+    agi: 110
+    int: 58
+  - level: 7
+    agi: 114
+    int: 61
+  - level: 8
+    agi: 119
+    int: 64
+  - level: 9
+    agi: 136
+    int: 72
+  - level: 10
+    agi: 142
+    int: 76
+fixedAffixes:
+  - "攻击时，若目标拥有的[暗影]少于8层，则令其获得8层[暗影]。若目标拥有的[暗影]层数高于8层，则每多1层[暗影]此次攻击造成的伤害额外提升2%，至多提升20%。"
+randomAffixes:
+  - "感知提升6点。"
+  - "战斗中主属性提升1点。每有1点主属性，效果命中提升0.06%。"
+  - "战斗开始时，若处在日间则攻击力提升2级，若处在夜间则暴击率提升2级，持续3回合。"
+flavor: "她对着月光不断地丢着这柄匕首，一下又一下，直到那个仇人的身影在白刃上映出，夜晚的死寂终究被打破。"
+source: 行装掉落
+image: /images/equipment/du-xing-ke-de-nu-huo.png
+
+buildNotes: |
+  独行客的怒火是金色匕首，固定词条可快速为敌人叠加[暗影]，并在高[暗影]层数时提供显著增伤。
+  适合围绕[暗影]体系构建的敏捷/智力输出角色。

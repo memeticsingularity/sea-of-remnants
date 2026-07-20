@@ -1,0 +1,6 @@
+id: glossary-shadow
+slug: shadow
+term: 暗影
+definition: "受到敏捷系船员攻击时，每层此状态使自身所受伤害提升1.4%，最多叠加20层。不可被其他技能消除。"
+related:
+  - 负面状态

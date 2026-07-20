@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-18T18:08:36.213Z"
+    "generatedAt": "2026-07-20T11:59:06.237Z"
   },
   "crews": [
     {
@@ -1009,6 +1009,194 @@
       "image": "/images/equipment/dense-hood.png"
     },
     {
+      "id": "equip-du-xing-ke-de-nu-huo",
+      "slug": "du-xing-ke-de-nu-huo",
+      "name": "独行客的怒火",
+      "slot": "手部",
+      "handType": "匕首",
+      "rarity": "金",
+      "enhance": 6,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "atk": 116,
+        "threat": -42
+      },
+      "statsByLevel": {
+        "6": {
+          "atk": 116,
+          "threat": -42
+        }
+      },
+      "requirements": {
+        "agi": 110,
+        "int": 58
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "agi": 51,
+          "int": 27
+        },
+        {
+          "level": 2,
+          "agi": 55,
+          "int": 29
+        },
+        {
+          "level": 3,
+          "agi": 75,
+          "int": 40
+        },
+        {
+          "level": 4,
+          "agi": 81,
+          "int": 43
+        },
+        {
+          "level": 5,
+          "agi": 104,
+          "int": 55
+        },
+        {
+          "level": 6,
+          "agi": 110,
+          "int": 58
+        },
+        {
+          "level": 7,
+          "agi": 114,
+          "int": 61
+        },
+        {
+          "level": 8,
+          "agi": 119,
+          "int": 64
+        },
+        {
+          "level": 9,
+          "agi": 136,
+          "int": 72
+        },
+        {
+          "level": 10,
+          "agi": 142,
+          "int": 76
+        }
+      ],
+      "fixedAffixes": [
+        "攻击时，若目标拥有的[暗影]少于8层，则令其获得8层[暗影]。若目标拥有的[暗影]层数高于8层，则每多1层[暗影]此次攻击造成的伤害额外提升2%，至多提升20%。"
+      ],
+      "randomAffixes": [
+        "感知提升6点。",
+        "战斗中主属性提升1点。每有1点主属性，效果命中提升0.06%。",
+        "战斗开始时，若处在日间则攻击力提升2级，若处在夜间则暴击率提升2级，持续3回合。"
+      ],
+      "flavor": "她对着月光不断地丢着这柄匕首，一下又一下，直到那个仇人的身影在白刃上映出，夜晚的死寂终究被打破。",
+      "source": "行装掉落",
+      "image": "/images/equipment/du-xing-ke-de-nu-huo.png",
+      "buildNotes": "独行客的怒火是金色匕首，固定词条可快速为敌人叠加[暗影]，并在高[暗影]层数时提供显著增伤。\n适合围绕[暗影]体系构建的敏捷/智力输出角色。\n"
+    },
+    {
+      "id": "equip-e-meng-rong-guang",
+      "slug": "e-meng-rong-guang",
+      "name": "噩梦荣光",
+      "slot": "手部",
+      "handType": "盾牌",
+      "rarity": "金",
+      "enhance": 6,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "atk": 39,
+        "damageReduce": "12.5%",
+        "threat": 84
+      },
+      "statsByLevel": {
+        "6": {
+          "atk": 39,
+          "damageReduce": "12.5%",
+          "threat": 84
+        }
+      },
+      "requirements": {
+        "con": 110,
+        "str": 58
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "con": 51,
+          "str": 27
+        },
+        {
+          "level": 2,
+          "con": 55,
+          "str": 29
+        },
+        {
+          "level": 3,
+          "con": 75,
+          "str": 40
+        },
+        {
+          "level": 4,
+          "con": 81,
+          "str": 43
+        },
+        {
+          "level": 5,
+          "con": 104,
+          "str": 55
+        },
+        {
+          "level": 6,
+          "con": 110,
+          "str": 58
+        },
+        {
+          "level": 7,
+          "con": 114,
+          "str": 61
+        },
+        {
+          "level": 8,
+          "con": 119,
+          "str": 64
+        },
+        {
+          "level": 9,
+          "con": 136,
+          "str": 72
+        },
+        {
+          "level": 10,
+          "con": 142,
+          "str": 76
+        }
+      ],
+      "fixedAffixes": [
+        "攻击时有50%概率获得1层[铠甲]，且每有1层[铠甲]，额外造成防御力5%伤害。"
+      ],
+      "randomAffixes": [
+        "造成的持续伤害提升4%。",
+        "治疗其他我方单位后，自身[附加伤害]提升3级，持续1回合。",
+        "对暴露破绽的敌方单位，检定难度降低1点。"
+      ],
+      "flavor": "即使手中没有武器，也要奋力反击。刺钉知道，在战场上，只有前进一条路可以选择。",
+      "source": "行装掉落",
+      "image": "/images/equipment/e-meng-rong-guang.png",
+      "buildNotes": "噩梦荣光是金色盾牌，固定词条叠加[铠甲]并将防御转化为额外伤害，适合坦度与输出兼顾的体质/力量前排。\n"
+    },
+    {
       "id": "equip-fire-scene-belt",
       "slug": "huo-chang-yao-dai",
       "name": "火场腰带",
@@ -1141,6 +1329,98 @@
       "source": "行装掉落",
       "image": "/images/equipment/heart-guard-armor.png",
       "buildNotes": "守心盔甲偏向生存与持续伤害辅助，固定词条提供可继承的防御叠加，适合需要跨战斗保留增益的坦克或半肉角色。\n"
+    },
+    {
+      "id": "equip-ku-tong-zhong-ri",
+      "slug": "ku-tong-zhong-ri",
+      "name": "苦痛终日",
+      "slot": "腿部",
+      "rarity": "金",
+      "enhance": 6,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "spd": 15,
+        "critDamage": "30%"
+      },
+      "statsByLevel": {
+        "6": {
+          "spd": 15,
+          "critDamage": "30%"
+        }
+      },
+      "requirements": {
+        "str": 110,
+        "con": 58
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "str": 51,
+          "con": 27
+        },
+        {
+          "level": 2,
+          "str": 55,
+          "con": 29
+        },
+        {
+          "level": 3,
+          "str": 75,
+          "con": 40
+        },
+        {
+          "level": 4,
+          "str": 81,
+          "con": 43
+        },
+        {
+          "level": 5,
+          "str": 104,
+          "con": 55
+        },
+        {
+          "level": 6,
+          "str": 110,
+          "con": 58
+        },
+        {
+          "level": 7,
+          "str": 114,
+          "con": 61
+        },
+        {
+          "level": 8,
+          "str": 119,
+          "con": 64
+        },
+        {
+          "level": 9,
+          "str": 136,
+          "con": 72
+        },
+        {
+          "level": 10,
+          "str": 142,
+          "con": 76
+        }
+      ],
+      "fixedAffixes": [
+        "回合开始时，自身每损失1%的体力值，所受伤害降低0.3%，至多降低15%。"
+      ],
+      "randomAffixes": [
+        "每受到5次攻击，自身额外行动伤害提升4级，持续2回合。",
+        "连续使用同一技能时，造成的伤害提升5%。",
+        "每使用10个强化骰，则获得1个强化点。"
+      ],
+      "flavor": "第一根荆棘，感到疼痛。第二根荆棘，发出一声叹息。第三根荆棘，也许是四根。洁鲁夏不知道。",
+      "source": "行装掉落",
+      "image": "/images/equipment/ku-tong-zhong-ri.png",
+      "buildNotes": "苦痛终日是金色腿部行装，低体力时提供高额减伤，配合自残或压血玩法收益较高。\n随机词条兼顾额外行动伤害、技能连发增伤与强化点续航，适合战士/坦克定位。\n"
     },
     {
       "id": "equip-pointed-iron-shoes",
@@ -1381,6 +1661,115 @@
       "image": "/images/equipment/shark-short-gun.png"
     },
     {
+      "id": "equip-shen-hai-huan-meng",
+      "slug": "shen-hai-huan-meng",
+      "name": "深海幻梦",
+      "slot": "奇珍",
+      "rarity": "金",
+      "fixedAffixes": [
+        "每场战斗中首次有我方单位受到致命伤害时，此次伤害降低100%。"
+      ],
+      "flavor": "触感温凉，戴上它仿佛沐浴在夏日的海洋中，让人舒适得想入睡。可每每醒来，总会感到阵阵头痛。",
+      "source": "奇珍掉落",
+      "image": "/images/equipment/shen-hai-huan-meng.png",
+      "buildNotes": "深海幻梦是金色奇珍，可在每场战斗中免疫一次致命伤害，是保护核心输出或脆皮辅助的强力生存件。\n"
+    },
+    {
+      "id": "equip-shuang-sheng-bi-shou",
+      "slug": "shuang-sheng-bi-shou",
+      "name": "双生匕首",
+      "slot": "手部",
+      "handType": "匕首",
+      "rarity": "紫",
+      "enhance": 6,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "atk": 56,
+        "critRate": "4.1%",
+        "threat": -32
+      },
+      "statsByLevel": {
+        "6": {
+          "atk": 56,
+          "critRate": "4.1%",
+          "threat": -32
+        }
+      },
+      "requirements": {
+        "agi": 85,
+        "int": 45
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "agi": 33,
+          "int": 18
+        },
+        {
+          "level": 2,
+          "agi": 47,
+          "int": 25
+        },
+        {
+          "level": 3,
+          "agi": 51,
+          "int": 27
+        },
+        {
+          "level": 4,
+          "agi": 67,
+          "int": 36
+        },
+        {
+          "level": 5,
+          "agi": 75,
+          "int": 40
+        },
+        {
+          "level": 6,
+          "agi": 85,
+          "int": 45
+        },
+        {
+          "level": 7,
+          "agi": 91,
+          "int": 48
+        },
+        {
+          "level": 8,
+          "agi": 104,
+          "int": 55
+        },
+        {
+          "level": 9,
+          "agi": 114,
+          "int": 61
+        },
+        {
+          "level": 10,
+          "agi": 126,
+          "int": 67
+        }
+      ],
+      "fixedAffixes": [
+        "将要消耗敌方单位的[暗影]时，有50%概率免于消耗并依旧触发相关效果。每需消耗1层[暗影]，伤害提升6%。"
+      ],
+      "randomAffixes": [
+        "攻击后，造成的伤害提升1级，持续1回合。",
+        "体力值大于50%时，造成的伤害提升4%，治疗效果提升4%。",
+        "当有其他我方单位体力值低于30%时，自身受击权重提升3级，持续1回合。"
+      ],
+      "flavor": "分开的双刃，阋墙的兄弟——那一瞬间，两处的心脏发出同一种哀鸣。",
+      "source": "行装掉落",
+      "image": "/images/equipment/shuang-sheng-bi-shou.png",
+      "buildNotes": "双生匕首是紫色匕首，围绕[暗影]消耗机制提供免消耗触发与增伤，适合暗影体系输出角色。\n"
+    },
+    {
       "id": "equip-solitary-flower-mask",
       "slug": "gu-hua-mian-ju",
       "name": "孤花面具",
@@ -1564,6 +1953,98 @@
       "flavor": "贝壳在伤疤上垒砌更多，永不因为恐惧退缩。",
       "source": "行装掉落",
       "image": "/images/equipment/sturdy-heavy-shield.png"
+    },
+    {
+      "id": "equip-tao-qiao-chang-xue",
+      "slug": "tao-qiao-chang-xue",
+      "name": "讨巧长靴",
+      "slot": "腿部",
+      "rarity": "紫",
+      "enhance": 6,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "spd": 13,
+        "critRate": "6.6%"
+      },
+      "statsByLevel": {
+        "6": {
+          "spd": 13,
+          "critRate": "6.6%"
+        }
+      },
+      "requirements": {
+        "agi": 68,
+        "per": 54
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "agi": 26,
+          "per": 22
+        },
+        {
+          "level": 2,
+          "agi": 38,
+          "per": 30
+        },
+        {
+          "level": 3,
+          "agi": 41,
+          "per": 32
+        },
+        {
+          "level": 4,
+          "agi": 54,
+          "per": 43
+        },
+        {
+          "level": 5,
+          "agi": 60,
+          "per": 48
+        },
+        {
+          "level": 6,
+          "agi": 68,
+          "per": 54
+        },
+        {
+          "level": 7,
+          "agi": 73,
+          "per": 58
+        },
+        {
+          "level": 8,
+          "agi": 83,
+          "per": 66
+        },
+        {
+          "level": 9,
+          "agi": 91,
+          "per": 73
+        },
+        {
+          "level": 10,
+          "agi": 101,
+          "per": 80
+        }
+      ],
+      "fixedAffixes": [
+        "位于战斗小队1/2/3/4号位时，分别获得获得护盾效果提升12%/暴击率提升4%/能量恢复效率提升6%/速度提升12%。"
+      ],
+      "randomAffixes": [
+        "暴击后，暴击率提升6级，持续1回合。",
+        "额外行动时，造成的伤害提升3级。",
+        "每场战斗首个回合造成的伤害提升20%。"
+      ],
+      "flavor": "决定展示什么取决于你的财富，决定掩饰什么取决于你的智慧。",
+      "source": "行装掉落",
+      "image": "/images/equipment/tao-qiao-chang-xue.png",
+      "buildNotes": "讨巧长靴是紫色腿部行装，固定词条根据站位提供不同增益，适合需要灵活站位调整的敏捷/感知角色。\n"
     },
     {
       "id": "equip-terrifying-mask",
@@ -2148,6 +2629,15 @@
       ]
     },
     {
+      "id": "glossary-shadow",
+      "slug": "shadow",
+      "term": "暗影",
+      "definition": "受到敏捷系船员攻击时，每层此状态使自身所受伤害提升1.4%，最多叠加20层。不可被其他技能消除。",
+      "related": [
+        "负面状态"
+      ]
+    },
+    {
       "id": "glossary-shield-effect",
       "slug": "glossary-shield-effect",
       "term": "护盾效果",
@@ -2600,19 +3090,205 @@
   ],
   "recruitmentPools": [
     {
-      "id": "pool-memory-reunion",
-      "slug": "memory-reunion",
-      "name": "记忆重逢",
-      "bannerName": "记忆重逢",
+      "id": "pool-deep-memory",
+      "slug": "deep-memory",
+      "name": "深层记忆",
+      "bannerName": "深层记忆",
+      "type": "weekly",
+      "currency": "免费",
+      "singleCost": 0,
+      "tenCost": 0,
+      "roseStoneCost": 0,
+      "upItems": [
+        {
+          "crewIds": [
+            "crew-heg",
+            "crew-molly"
+          ],
+          "upRate": 0.5,
+          "guaranteeNextOnMiss": false
+        },
+        {
+          "shadowIds": [
+            "shadow-broken-rhapsody",
+            "shadow-sleeping-doll"
+          ],
+          "upRate": 0.5,
+          "guaranteeNextOnMiss": false
+        }
+      ],
+      "tiers": [
+        {
+          "key": "black",
+          "label": "黑券",
+          "baseRate": 0.5,
+          "comprehensiveRate": 0.576,
+          "hardPity": 3,
+          "mixed": true,
+          "pool": {
+            "crewIds": [
+              "crew-heg",
+              "crew-molly",
+              "crew-colonel-scorched-face",
+              "crew-iron-fist-commander",
+              "crew-isabella",
+              "crew-small-axe",
+              "crew-hungry-cat",
+              "crew-sea-burial"
+            ],
+            "shadowIds": [
+              "shadow-broken-rhapsody",
+              "shadow-sleeping-doll",
+              "shadow-his-war",
+              "shadow-flower-of-mourning",
+              "shadow-lost-gem",
+              "shadow-law-of-civilization",
+              "shadow-fishbone-string",
+              "shadow-ribbon-tear"
+            ]
+          }
+        },
+        {
+          "key": "purple",
+          "label": "紫券",
+          "baseRate": 0.5,
+          "comprehensiveRate": 0.424,
+          "mixed": true,
+          "pool": {
+            "crewIds": [
+              "crew-as",
+              "crew-hai-he",
+              "crew-sosia",
+              "crew-coward",
+              "crew-omen-eye",
+              "crew-nonsense-prophet",
+              "crew-follower",
+              "crew-ghost-hand-shipwright",
+              "crew-clockmaker",
+              "crew-puppeteer",
+              "crew-dad-tonino",
+              "crew-miser"
+            ],
+            "shadowIds": [
+              "shadow-floating-compass",
+              "shadow-captains-gift",
+              "shadow-death-of-mini-catfish",
+              "shadow-mechanical-life",
+              "shadow-dream-under-daylight",
+              "shadow-beauty-of-ship",
+              "shadow-flag-held-high",
+              "shadow-veterans-bugle",
+              "shadow-moment-leave-barrel",
+              "shadow-time-of-deviation",
+              "shadow-now-is-future",
+              "shadow-scratched-page"
+            ]
+          }
+        }
+      ],
+      "pityRules": [
+        {
+          "type": "hard_pity",
+          "threshold": 3,
+          "tier": "black"
+        },
+        {
+          "type": "hard_pity",
+          "threshold": 9,
+          "tier": "black"
+        }
+      ],
+      "rules": "**解锁条件**\n- 每周完成浅表梦境第 3 层，可解锁深层记忆。\n\n**周常次数**\n- 每周完成浅表梦境的任意 1 层，可获得 1 次进入记忆的机会。\n- 进入浅层、中层、深层记忆完成重逢将消耗该周常机会，三种记忆深度共享周常次数。\n\n**限时轮换与目标记忆**\n- 每期深层记忆将有 1 或 2 组黑券船员及往日之影限时轮换出现（1 个船员及 1 个往日之影为 1 组），作为可重逢目标加入记忆。\n- “目标黑券船员”或“目标黑券往日之影”指在深层记忆池手动选择入池的目标。\n- 首次获得目标黑券船员或黑券往日之影之前，其获得概率占所有同池黑券船员或黑券往日之影获得概率的 50%。\n\n**概率详情**\n- 黑券船员及往日之影：基础概率 50%，含保底综合概率 57.6%；最多 3 次必定获得 1 个黑券船员或黑券往日之影。\n- 黑券船员：基础概率 25%，含保底综合概率 29.7%，最多 9 次必定获得 1 个黑券船员；首次获得目标黑券船员前，目标占同池黑券船员获得概率的 50%，之后所有黑券船员概率均等。\n- 黑券往日之影：基础概率 25%，含保底综合概率 27.9%，所有黑券往日之影概率均等；首次获得目标黑券往日之影前，目标占同池黑券往日之影获得概率的 50%，之后所有黑券往日之影概率均等。\n- 紫券船员：基础概率 25%，综合概率 21.2%，所有紫券船员概率均等。\n- 紫券往日之影：基础概率 25%，综合概率 21.2%，所有紫券往日之影概率均等。\n- 注：深层记忆属于特殊记忆，与其他记忆的保底相互独立计算，互不影响。\n\n**重复转化**\n- 获得黑券船员时：第 2 次到第 7 次重复，转化为该船员的船员秘闻；第 8 次及以后重复，转化为专属羽毛票据 ×30。\n- 获得紫券船员时：第 2 次到第 7 次重复，转化为该船员的船员秘闻；第 8 次及以后重复，转化为专属羽毛票据 ×6。\n"
+    },
+    {
+      "id": "pool-middle-memory",
+      "slug": "middle-memory",
+      "name": "中层记忆",
+      "bannerName": "中层记忆",
       "type": "weekly",
       "currency": "免费",
       "singleCost": 0,
       "tenCost": 0,
       "roseStoneCost": 0,
       "upItems": [],
-      "tiers": [],
-      "pityRules": [],
-      "rules": "**每周免费招募**\n- 每周有 50% 概率免费获得黑券船员或往日之影\n- 每周可重逢次数有限，刷新时间为每周固定时间\n- 具体规则待补充\n"
+      "tiers": [
+        {
+          "key": "black",
+          "label": "黑券",
+          "baseRate": 0.5,
+          "comprehensiveRate": 0.571,
+          "hardPity": 3,
+          "mixed": true,
+          "pool": {
+            "crewIds": [
+              "crew-colonel-scorched-face",
+              "crew-iron-fist-commander",
+              "crew-isabella",
+              "crew-small-axe",
+              "crew-hungry-cat",
+              "crew-sea-burial"
+            ],
+            "shadowIds": [
+              "shadow-his-war",
+              "shadow-flower-of-mourning",
+              "shadow-lost-gem",
+              "shadow-law-of-civilization",
+              "shadow-fishbone-string",
+              "shadow-ribbon-tear"
+            ]
+          }
+        },
+        {
+          "key": "purple",
+          "label": "紫券",
+          "baseRate": 0.5,
+          "comprehensiveRate": 0.429,
+          "mixed": true,
+          "pool": {
+            "crewIds": [
+              "crew-as",
+              "crew-hai-he",
+              "crew-sosia",
+              "crew-coward",
+              "crew-omen-eye",
+              "crew-nonsense-prophet",
+              "crew-follower",
+              "crew-ghost-hand-shipwright",
+              "crew-clockmaker",
+              "crew-puppeteer",
+              "crew-dad-tonino",
+              "crew-miser"
+            ],
+            "shadowIds": [
+              "shadow-floating-compass",
+              "shadow-captains-gift",
+              "shadow-death-of-mini-catfish",
+              "shadow-mechanical-life",
+              "shadow-dream-under-daylight",
+              "shadow-beauty-of-ship",
+              "shadow-flag-held-high",
+              "shadow-veterans-bugle",
+              "shadow-moment-leave-barrel",
+              "shadow-time-of-deviation",
+              "shadow-now-is-future",
+              "shadow-scratched-page"
+            ]
+          }
+        }
+      ],
+      "pityRules": [
+        {
+          "type": "hard_pity",
+          "threshold": 3,
+          "tier": "black"
+        },
+        {
+          "type": "hard_pity",
+          "threshold": 9,
+          "tier": "black"
+        }
+      ],
+      "rules": "**解锁条件**\n- 每周完成浅表梦境第 2 层，可解锁中层记忆。\n\n**周常次数**\n- 每周完成浅表梦境的任意 1 层，可获得 1 次进入记忆的机会。\n- 进入浅层、中层、深层记忆完成重逢将消耗该周常机会，三种记忆深度共享周常次数。\n\n**概率详情**\n- 黑券船员及往日之影：基础概率 50%，含保底综合概率 57.1%；最多 3 次必定获得 1 个黑券船员或黑券往日之影。\n- 黑券船员：基础概率 25%，含保底综合概率 32.7%，所有黑券船员概率均等；最多 9 次必定获得 1 个黑券船员。\n- 黑券往日之影：基础概率 25%，含保底综合概率 24.5%，所有黑券往日之影概率均等。\n- 紫券船员及往日之影：基础概率 50%，综合概率 42.9%。\n- 紫券船员：基础概率 25%，综合概率 21.4%，所有紫券船员概率均等。\n- 紫券往日之影：基础概率 25%，综合概率 21.4%，所有紫券往日之影概率均等。\n- 注：中层记忆属于特殊记忆，与其他记忆的保底相互独立计算，互不影响。\n\n**重复转化**\n- 获得黑券船员时：第 2 次到第 7 次重复，转化为该船员的船员秘闻；第 8 次及以后重复，转化为专属羽毛票据 ×30。\n- 获得紫券船员时：第 2 次到第 7 次重复，转化为该船员的船员秘闻；第 8 次及以后重复，转化为专属羽毛票据 ×6。\n"
     },
     {
       "id": "pool-never-leave",
@@ -2856,6 +3532,59 @@
       "rules": "**黑券往日之影**\n- 基础概率 0.80%，综合概率 1.84%\n- 最多 80 次寻找必定获得 1 个黑券往日之影\n- 获得黑券往日之影时 75% 为「安眠人偶」，25% 为其他黑券往日之影\n- 若本次黑券往日之影不是「安眠人偶」，则下次黑券往日之影必定为「安眠人偶」\n\n**紫券往日之影**\n- 基础概率 6.00%，综合概率 13.00%\n- 最多 10 次寻找必定获得紫券及以上往日之影\n- 紫券往日之影 50% 为当期 UP「迷你号鲇鱼的消亡」/「此刻即未来」，50% 为其他紫券往日之影\n- 若本次紫券往日之影非当期 UP，则下次紫券往日之影必定为当期 UP\n\n**蓝券往日之影**\n- 基础概率 93.20%，综合概率 85.15%\n"
     },
     {
+      "id": "pool-shallow-memory",
+      "slug": "shallow-memory",
+      "name": "浅层记忆",
+      "bannerName": "浅层记忆",
+      "type": "weekly",
+      "currency": "免费",
+      "singleCost": 0,
+      "tenCost": 0,
+      "roseStoneCost": 0,
+      "upItems": [],
+      "tiers": [
+        {
+          "key": "purple",
+          "label": "紫券",
+          "baseRate": 1,
+          "comprehensiveRate": 1,
+          "mixed": true,
+          "pool": {
+            "crewIds": [
+              "crew-as",
+              "crew-hai-he",
+              "crew-sosia",
+              "crew-coward",
+              "crew-omen-eye",
+              "crew-nonsense-prophet",
+              "crew-follower",
+              "crew-ghost-hand-shipwright",
+              "crew-clockmaker",
+              "crew-puppeteer",
+              "crew-dad-tonino",
+              "crew-miser"
+            ],
+            "shadowIds": [
+              "shadow-floating-compass",
+              "shadow-captains-gift",
+              "shadow-death-of-mini-catfish",
+              "shadow-mechanical-life",
+              "shadow-dream-under-daylight",
+              "shadow-beauty-of-ship",
+              "shadow-flag-held-high",
+              "shadow-veterans-bugle",
+              "shadow-moment-leave-barrel",
+              "shadow-time-of-deviation",
+              "shadow-now-is-future",
+              "shadow-scratched-page"
+            ]
+          }
+        }
+      ],
+      "pityRules": [],
+      "rules": "**解锁条件**\n- 每周完成浅表梦境第 1 层，可解锁浅层记忆。\n\n**周常次数**\n- 每周完成浅表梦境的任意 1 层，可获得 1 次进入记忆的机会。\n- 进入浅层、中层、深层记忆完成重逢将消耗该周常机会，三种记忆深度共享周常次数。\n\n**概率详情**\n- 紫券船员：50%，所有紫券船员概率均等。\n- 紫券往日之影：50%，所有紫券往日之影概率均等。\n\n**重复转化**\n- 获得紫券船员时：第 2 次到第 7 次重复，转化为该船员的船员秘闻；第 8 次及以后重复，转化为专属羽毛票据 ×6。\n"
+    },
+    {
       "id": "pool-zhimeng-xianyin",
       "slug": "zhimeng-xianyin",
       "name": "织梦弦音",
@@ -3022,6 +3751,13 @@
       "route": "/guides/dice",
       "markdown": "markdown/guides/dice.md",
       "content": "# 骰子与技能搭配\n\n每个职业技能可以配置不同的骰子，合理搭配可以大幅提升战斗效率。\n\n## 骰子类型\n\n- **电涌骰**：根据总伤害追加额外伤害，适合高爆发技能\n- **重迫骰**：适合压血线和收割\n- **骤然升温**：持续伤害加成\n\n## 搭配思路\n\n1. 先确定船员的输出机制（单体爆发 / 持续伤害 / 控制）\n2. 选择能放大核心机制的骰子\n3. 考虑船歌和行装的协同效果\n"
+    },
+    {
+      "id": "guide-memory-reunion",
+      "title": "记忆重逢指南",
+      "route": "/guides/memory-reunion",
+      "markdown": "markdown/guides/memory-reunion.md",
+      "content": "# 记忆重逢指南\n\n记忆重逢是每周通过「浅表梦境」解锁的免费招募玩法，分为浅层、中层、深层三种记忆深度。三种深度共享每周的进入次数，但保底相互独立计算。\n\n## 基础规则\n\n### 解锁条件\n\n| 记忆深度 | 解锁要求 |\n|---|---|\n| 浅层记忆 | 每周完成浅表梦境第 1 层 |\n| 中层记忆 | 每周完成浅表梦境第 2 层 |\n| 深层记忆 | 每周完成浅表梦境第 3 层 |\n\n### 周常次数\n\n- 每周完成浅表梦境的任意 1 层，可获得 **1 次**进入记忆的机会。\n- 浅层、中层、深层记忆**共享**该周常机会，进入任意一种记忆并完成重逢都会消耗 1 次。\n\n## 浅层记忆\n\n浅层记忆只产出紫券船员与往日之影。\n\n### 概率\n\n- 紫券船员：50%，所有紫券船员概率均等\n- 紫券往日之影：50%，所有紫券往日之影概率均等\n\n### 重复转化\n\n- 获得紫券船员时：第 2~7 次重复转化为该船员的**船员秘闻**；第 8 次及以后转化为**专属羽毛票据 ×6**。\n\n## 中层记忆\n\n中层记忆开始产出黑券船员与往日之影，同时保留紫券奖励。\n\n### 概率\n\n- 黑券船员及往日之影：基础 50%，含保底综合 57.1%；最多 3 次必得 1 个黑券船员或黑券往日之影\n- 黑券船员：基础 25%，含保底综合 32.7%，所有黑券船员概率均等；最多 9 次必得 1 个黑券船员\n- 黑券往日之影：基础 25%，含保底综合 24.5%，所有黑券往日之影概率均等\n- 紫券船员及往日之影：基础 50%，综合 42.9%\n- 紫券船员：基础 25%，综合 21.4%，所有紫券船员概率均等\n- 紫券往日之影：基础 25%，综合 21.4%，所有紫券往日之影概率均等\n\n中层记忆的保底与其他记忆**独立计算**。\n\n### 重复转化\n\n- 获得黑券船员时：第 2~7 次重复转化为该船员的**船员秘闻**；第 8 次及以后转化为**专属羽毛票据 ×30**。\n- 获得紫券船员时：第 2~7 次重复转化为**船员秘闻**；第 8 次及以后转化为**专属羽毛票据 ×6**。\n\n## 深层记忆\n\n深层记忆拥有限时轮换的「目标记忆」机制，可手动选择入池目标，首次获得目标前概率提升。\n\n### 限时轮换与目标记忆\n\n- 每期深层记忆将有 1~2 组黑券船员及往日之影限时轮换出现（1 个船员 + 1 个往日之影为 1 组）。\n- 玩家可在深层记忆池中手动选择入池的「目标黑券船员」和「目标黑券往日之影」。\n- **首次获得目标之前**，目标的获得概率占所有同池黑券船员/往日之影获得概率的 **50%**；首次获得后，同池概率恢复均等。\n\n### 概率\n\n- 黑券船员及往日之影：基础 50%，含保底综合 57.6%；最多 3 次必得 1 个黑券船员或黑券往日之影\n- 黑券船员：基础 25%，含保底综合 29.7%，最多 9 次必得 1 个黑券船员\n- 黑券往日之影：基础 25%，含保底综合 27.9%\n- 紫券船员：基础 25%，综合 21.2%，所有紫券船员概率均等\n- 紫券往日之影：基础 25%，综合 21.2%，所有紫券往日之影概率均等\n\n深层记忆的保底与其他记忆**独立计算**。\n\n### 重复转化\n\n- 获得黑券船员时：第 2~7 次重复转化为**船员秘闻**；第 8 次及以后转化为**专属羽毛票据 ×30**。\n- 获得紫券船员时：第 2~7 次重复转化为**船员秘闻**；第 8 次及以后转化为**专属羽毛票据 ×6**。\n\n## 奖励清单\n\n### 紫券船员（浅/中/深层共享）\n\n艾丝、海赫、索西亚、懦夫、预兆之眼、胡话先知、跟屁虫、鬼手船匠、钟表匠、人偶师、托尼诺老爹、吝啬鬼。\n\n### 紫券往日之影（浅/中/深层共享）\n\n沉浮罗盘、船长的礼物、迷你号鲇鱼的消亡、机械生命、白日下的梦、船之美、昂首之旗、老将的军号、离膛一瞬、偏差之时、此刻即未来、被划掉的一页。\n\n### 黑券船员（中/深层）\n\n焦面上校、铁腕统领、伊莎贝拉、小斧头、饿猫、海葬；深层额外加入轮换目标船员。\n\n### 黑券往日之影（中/深层）\n\n他的战争、何人致哀之花、遗落宝石、文明法则、鱼骨串、缎带泪；深层额外加入轮换目标往日之影。\n\n## 策略建议\n\n1. **优先打满浅表梦境第 3 层**，解锁深层记忆以获取最高价值的黑券目标。\n2. **三种记忆共享周常次数**，优先选择自己最缺的记忆深度。\n3. **深层记忆首次目标概率提升**，可以先集中抽取拿到目标黑券船员/往日之影，再考虑其他深度。\n4. **重复转化票据数量差异大**：黑券船员第 8 次及以后给 30 张羽毛票据，紫券只给 6 张，抽前可结合已有船员规划。\n"
     }
   ],
   "searchIndex": [
@@ -3503,6 +4239,28 @@
       "keywords": []
     },
     {
+      "id": "equip-du-xing-ke-de-nu-huo",
+      "title": "独行客的怒火",
+      "type": "行装",
+      "route": "/equipment/du-xing-ke-de-nu-huo",
+      "tags": [
+        "手部",
+        "金"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-e-meng-rong-guang",
+      "title": "噩梦荣光",
+      "type": "行装",
+      "route": "/equipment/e-meng-rong-guang",
+      "tags": [
+        "手部",
+        "金"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-fire-scene-belt",
       "title": "火场腰带",
       "type": "行装",
@@ -3533,6 +4291,17 @@
       "tags": [
         "躯干",
         "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-ku-tong-zhong-ri",
+      "title": "苦痛终日",
+      "type": "行装",
+      "route": "/equipment/ku-tong-zhong-ri",
+      "tags": [
+        "腿部",
+        "金"
       ],
       "keywords": []
     },
@@ -3592,6 +4361,28 @@
       "keywords": []
     },
     {
+      "id": "equip-shen-hai-huan-meng",
+      "title": "深海幻梦",
+      "type": "行装",
+      "route": "/equipment/shen-hai-huan-meng",
+      "tags": [
+        "奇珍",
+        "金"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-shuang-sheng-bi-shou",
+      "title": "双生匕首",
+      "type": "行装",
+      "route": "/equipment/shuang-sheng-bi-shou",
+      "tags": [
+        "手部",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-solitary-flower-mask",
       "title": "孤花面具",
       "type": "行装",
@@ -3609,6 +4400,17 @@
       "route": "/equipment/jian-qiang-zhong-dun",
       "tags": [
         "手部",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-tao-qiao-chang-xue",
+      "title": "讨巧长靴",
+      "type": "行装",
+      "route": "/equipment/tao-qiao-chang-xue",
+      "tags": [
+        "腿部",
         "紫"
       ],
       "keywords": []
@@ -4288,6 +5090,16 @@
       "keywords": []
     },
     {
+      "id": "glossary-shadow",
+      "title": "暗影",
+      "type": "术语",
+      "route": "/glossary#glossary-shadow",
+      "tags": [
+        "负面状态"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-shield-effect",
       "title": "护盾效果",
       "type": "术语",
@@ -4726,10 +5538,21 @@
       "keywords": []
     },
     {
-      "id": "pool-memory-reunion",
-      "title": "记忆重逢",
+      "id": "pool-deep-memory",
+      "title": "深层记忆",
       "type": "招募池",
-      "route": "/recruitment?pool=memory-reunion",
+      "route": "/recruitment?pool=deep-memory",
+      "tags": [
+        "weekly",
+        "免费"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "pool-middle-memory",
+      "title": "中层记忆",
+      "type": "招募池",
+      "route": "/recruitment?pool=middle-memory",
       "tags": [
         "weekly",
         "免费"
@@ -4755,6 +5578,17 @@
       "tags": [
         "limited",
         "噼噜的最爱"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "pool-shallow-memory",
+      "title": "浅层记忆",
+      "type": "招募池",
+      "route": "/recruitment?pool=shallow-memory",
+      "tags": [
+        "weekly",
+        "免费"
       ],
       "keywords": []
     },
@@ -4798,6 +5632,14 @@
       "title": "骰子与技能搭配",
       "type": "指南",
       "route": "/guides/dice",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "guide-memory-reunion",
+      "title": "记忆重逢指南",
+      "type": "指南",
+      "route": "/guides/memory-reunion",
       "tags": [],
       "keywords": []
     }

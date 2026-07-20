@@ -1,0 +1,62 @@
+id: equip-tao-qiao-chang-xue
+slug: tao-qiao-chang-xue
+name: 讨巧长靴
+slot: 腿部
+rarity: 紫
+enhance: 6
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+baseStats:
+  spd: 13
+  critRate: "6.6%"
+statsByLevel:
+  6:
+    spd: 13
+    critRate: "6.6%"
+requirements:
+  agi: 68
+  per: 54
+enhanceRequirements:
+  - level: 1
+    agi: 26
+    per: 22
+  - level: 2
+    agi: 38
+    per: 30
+  - level: 3
+    agi: 41
+    per: 32
+  - level: 4
+    agi: 54
+    per: 43
+  - level: 5
+    agi: 60
+    per: 48
+  - level: 6
+    agi: 68
+    per: 54
+  - level: 7
+    agi: 73
+    per: 58
+  - level: 8
+    agi: 83
+    per: 66
+  - level: 9
+    agi: 91
+    per: 73
+  - level: 10
+    agi: 101
+    per: 80
+fixedAffixes:
+  - "位于战斗小队1/2/3/4号位时，分别获得获得护盾效果提升12%/暴击率提升4%/能量恢复效率提升6%/速度提升12%。"
+randomAffixes:
+  - "暴击后，暴击率提升6级，持续1回合。"
+  - "额外行动时，造成的伤害提升3级。"
+  - "每场战斗首个回合造成的伤害提升20%。"
+flavor: "决定展示什么取决于你的财富，决定掩饰什么取决于你的智慧。"
+source: 行装掉落
+image: /images/equipment/tao-qiao-chang-xue.png
+
+buildNotes: |
+  讨巧长靴是紫色腿部行装，固定词条根据站位提供不同增益，适合需要灵活站位调整的敏捷/感知角色。
