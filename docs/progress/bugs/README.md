@@ -18,3 +18,5 @@
 
 - [`bug-001`](bug-001.md) — 术语 tooltip 中二级术语无法 hover / 遮挡父 tooltip
 - [`bug-002`](bug-002.md) — 技能卡片中术语 tooltip 无法显示
+- [`bug-003`](bug-003.md) — 术语表 hash 锚点跳转无滚动 + related 关联缺乏依据
+- [`bug-004`](bug-004.md) — 守护图鉴左右分栏布局错误

@@ -6,20 +6,14 @@ import { Card } from '@/components/ui/Card'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { GuardianCollectionGrid } from '@/components/guardians/GuardianCollectionGrid'
 import { GuardianCategoryTabs } from '@/components/guardians/GuardianCategoryTabs'
-import { ShipTagStatsPanel } from '@/components/guardians/ShipTagStatsPanel'
 import { LoadoutPanel } from '@/components/guardians/LoadoutPanel'
+import { ShipTagStatsPanel } from '@/components/guardians/ShipTagStatsPanel'
 import {
   useGuardianState,
   GUARDIAN_CATEGORIES,
   type GuardianCategory,
 } from '@/hooks/useGuardianState'
 import { usePartyConfig } from '@/hooks/usePartyConfig'
-
-const categoryLabels: Record<GuardianCategory, string> = {
-  战技特化: '战技特化',
-  潜能特化: '潜能特化',
-  船员培养: '船员培养',
-}
 
 export function FigureheadPrayerPage() {
   const guardians = wikiData.guardians
@@ -119,8 +113,9 @@ export function FigureheadPrayerPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
-        <div className="space-y-4 lg:col-span-4">
+      <div className="grid gap-6 grid-cols-[repeat(24,minmax(0,1fr))]">
+        {/* 左侧：已配置 */}
+        <div className="col-span-8">
           <Card className="space-y-2 p-3">
             <div className="flex items-center justify-between">
               <p className="text-xs font-medium text-text-muted">选择分支</p>
@@ -170,7 +165,7 @@ export function FigureheadPrayerPage() {
                         : 'bg-surface-light text-text-muted hover:text-text'
                     }`}
                   >
-                    <span>{categoryLabels[category]}</span>
+                    <span>{category}</span>
                     <span
                       className={`rounded-full px-2 py-0.5 text-xs ${
                         isActive ? 'bg-white/20' : 'bg-surface text-text-dim'
@@ -193,7 +188,8 @@ export function FigureheadPrayerPage() {
           />
         </div>
 
-        <div className="space-y-4 lg:col-span-8">
+        {/* 右侧：图鉴 */}
+        <div className="space-y-4 col-span-[16]">
           <ShipTagStatsPanel
             ownedIds={state.ownedIds}
             allGuardians={guardians}
