@@ -21,6 +21,15 @@ export function hasDistinctAttributes(
   return { required: parseInt(match[1], 10) }
 }
 
+/** 解析「每有N名X系」人数门槛，如「每有2名敏捷系」→ { count: 2, attribute: '敏捷' } */
+export function hasPerNAttribute(
+  effect: string,
+): { count: number; attribute: string } | null {
+  const match = effect.match(/每有(\d+)名(.+?)系/)
+  if (!match) return null
+  return { count: parseInt(match[1], 10), attribute: match[2] }
+}
+
 export interface TriggerResult {
   trigger: boolean
   reason: string
@@ -37,6 +46,17 @@ export function evaluateGuardianTrigger(
     return {
       trigger: required.length === 0,
       reason: '未配置队伍',
+      required,
+    }
+  }
+
+  // 优先处理「每有N名X系」人数门槛
+  const perN = hasPerNAttribute(effect)
+  if (perN) {
+    const actual = partyAttrs.filter((a) => a === perN.attribute).length
+    return {
+      trigger: actual >= perN.count,
+      reason: `${perN.attribute}系 ${actual}/${perN.count} 名`,
       required,
     }
   }

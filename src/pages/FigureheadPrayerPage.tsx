@@ -4,7 +4,11 @@ import { HelpCircle, Trash2, Link2, Link2Off } from 'lucide-react'
 import { wikiData } from '@/data'
 import { Card } from '@/components/ui/Card'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
-import { GuardianCollectionGrid } from '@/components/guardians/GuardianCollectionGrid'
+import {
+  GuardianCollectionGrid,
+  computeFilteredIds,
+  type GalleryFilters,
+} from '@/components/guardians/GuardianCollectionGrid'
 import { GuardianCategoryTabs } from '@/components/guardians/GuardianCategoryTabs'
 import { LoadoutPanel } from '@/components/guardians/LoadoutPanel'
 import { ShipTagStatsPanel } from '@/components/guardians/ShipTagStatsPanel'
@@ -33,12 +37,12 @@ export function FigureheadPrayerPage() {
   const [loadoutCategory, setLoadoutCategory] = useState<GuardianCategory>('战技特化')
   const [galleryCategory, setGalleryCategory] = useState<GuardianCategory>('战技特化')
   const [linked, setLinked] = useState(true)
-
-  const equippedCount = GUARDIAN_CATEGORIES.reduce(
-    (sum, category) =>
-      sum + state.loadouts[category].filter((id): id is string => id !== null).length,
-    0,
-  )
+  const [galleryFilters, setGalleryFilters] = useState<GalleryFilters>({
+    filterMode: 'all',
+    rarityFilter: 'all',
+    onlyTrigger: false,
+    searchQuery: '',
+  })
 
   const partyAttrs = useMemo(
     () =>
@@ -46,6 +50,18 @@ export function FigureheadPrayerPage() {
         .map((s) => crews.find((c) => c.id === s.crewId)?.primaryStat)
         .filter((a): a is string => !!a && a !== '待补充'),
     [config, crews],
+  )
+
+  const galleryFilteredIds = useMemo(
+    () =>
+      computeFilteredIds(guardians, galleryCategory, state.ownedIds, galleryFilters, partyAttrs),
+    [guardians, galleryCategory, state.ownedIds, galleryFilters, partyAttrs],
+  )
+
+  const equippedCount = GUARDIAN_CATEGORIES.reduce(
+    (sum, category) =>
+      sum + state.loadouts[category].filter((id): id is string => id !== null).length,
+    0,
   )
 
   const categoryCounts = useMemo(() => {
@@ -185,6 +201,7 @@ export function FigureheadPrayerPage() {
             onEquip={equipGuardian}
             onUnequip={unequipGuardian}
             activeCategory={loadoutCategory}
+            galleryFilteredIds={galleryFilteredIds}
           />
         </div>
 
@@ -214,6 +231,8 @@ export function FigureheadPrayerPage() {
             onToggleOwned={toggleOwned}
             partyAttrs={partyAttrs}
             activeCategory={galleryCategory}
+            filters={galleryFilters}
+            onFiltersChange={setGalleryFilters}
           />
         </div>
       </div>

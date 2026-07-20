@@ -14,6 +14,8 @@ interface LoadoutPanelProps {
   onEquip: (category: GuardianCategory, slotIndex: number, id: string | null) => void
   onUnequip: (category: GuardianCategory, slotIndex: number) => void
   activeCategory?: GuardianCategory
+  /** 右侧图鉴筛选后的 ID 集合，用于限制左侧候选池 */
+  galleryFilteredIds?: Set<string>
 }
 
 const categoryLabels: Record<GuardianCategory, string> = {
@@ -128,6 +130,7 @@ export function LoadoutPanel({
   onEquip,
   onUnequip,
   activeCategory,
+  galleryFilteredIds,
 }: LoadoutPanelProps) {
   const categories = activeCategory ? [activeCategory] : GUARDIAN_CATEGORIES
 
@@ -152,7 +155,8 @@ export function LoadoutPanel({
         g.category === category &&
         g.set === requiredSet &&
         (!equippedIds.has(g.id) ||
-          getEquippedId(category, index) === g.id),
+          getEquippedId(category, index) === g.id) &&
+        (!galleryFilteredIds || galleryFilteredIds.has(g.id)),
     )
   }
 

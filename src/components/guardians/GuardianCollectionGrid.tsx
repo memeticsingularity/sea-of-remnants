@@ -1,13 +1,20 @@
+import { useMemo } from 'react'
 import { Search } from 'lucide-react'
-import { useMemo, useState } from 'react'
 import { Card } from '@/components/ui/Card'
 import { evaluateGuardianTrigger } from '@/utils/partyMatch'
 import { GuardianCard } from './GuardianCard'
 import type { Guardian } from '@/types'
 
-type FilterMode = 'all' | 'owned' | 'missing'
+export type FilterMode = 'all' | 'owned' | 'missing'
+export type RarityFilter = 'all' | '金' | '紫' | '蓝'
 type GuardianCategory = '战技特化' | '潜能特化' | '船员培养'
-type RarityFilter = 'all' | '金' | '紫' | '蓝'
+
+export interface GalleryFilters {
+  filterMode: FilterMode
+  rarityFilter: RarityFilter
+  onlyTrigger: boolean
+  searchQuery: string
+}
 
 interface GuardianCollectionGridProps {
   guardians: Guardian[]
@@ -15,6 +22,8 @@ interface GuardianCollectionGridProps {
   onToggleOwned: (id: string) => void
   partyAttrs?: string[]
   activeCategory: GuardianCategory
+  filters: GalleryFilters
+  onFiltersChange: (filters: GalleryFilters) => void
 }
 
 const RARITY_OPTIONS: { key: RarityFilter; label: string }[] = [
@@ -24,17 +33,43 @@ const RARITY_OPTIONS: { key: RarityFilter; label: string }[] = [
   { key: '蓝', label: '蓝' },
 ]
 
+export type { GuardianCategory }
+
+/** 计算图鉴筛选后的守护 ID 集合，供左侧候选池复用 */
+export function computeFilteredIds(
+  guardians: Guardian[],
+  activeCategory: GuardianCategory,
+  ownedIds: string[],
+  filters: GalleryFilters,
+  partyAttrs?: string[],
+): Set<string> {
+  const query = filters.searchQuery.trim().toLowerCase()
+  const ids = new Set<string>()
+  for (const g of guardians) {
+    if (g.category !== activeCategory) continue
+    if (filters.filterMode === 'owned' && !ownedIds.includes(g.id)) continue
+    if (filters.filterMode === 'missing' && ownedIds.includes(g.id)) continue
+    if (filters.rarityFilter !== 'all' && g.rarity !== filters.rarityFilter) continue
+    if (query && !g.name.toLowerCase().includes(query)) continue
+    if (filters.onlyTrigger && partyAttrs) {
+      const { trigger } = evaluateGuardianTrigger(g.effect, partyAttrs)
+      if (!trigger) continue
+    }
+    ids.add(g.id)
+  }
+  return ids
+}
+
 export function GuardianCollectionGrid({
   guardians,
   ownedIds,
   onToggleOwned,
   partyAttrs,
   activeCategory,
+  filters,
+  onFiltersChange,
 }: GuardianCollectionGridProps) {
-  const [filterMode, setFilterMode] = useState<FilterMode>('all')
-  const [rarityFilter, setRarityFilter] = useState<RarityFilter>('all')
-  const [onlyTrigger, setOnlyTrigger] = useState(false)
-  const [searchQuery, setSearchQuery] = useState('')
+  const { filterMode, rarityFilter, onlyTrigger, searchQuery } = filters
 
   const filtered = useMemo(() => {
     const query = searchQuery.trim().toLowerCase()
@@ -63,6 +98,10 @@ export function GuardianCollectionGrid({
 
   const ownedInCategory = filtered.filter((g) => ownedIds.includes(g.id)).length
 
+  function setFilter<K extends keyof GalleryFilters>(key: K, value: GalleryFilters[K]) {
+    onFiltersChange({ ...filters, [key]: value })
+  }
+
   return (
     <Card className="space-y-4">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -73,7 +112,7 @@ export function GuardianCollectionGrid({
             <button
               key={key}
               type="button"
-              onClick={() => setFilterMode(key)}
+              onClick={() => setFilter('filterMode', key)}
               className={`rounded-md px-3 py-1.5 text-sm transition-colors ${
                 filterMode === key
                   ? 'bg-accent text-white'
@@ -86,7 +125,7 @@ export function GuardianCollectionGrid({
           {partyAttrs && (
             <button
               type="button"
-              onClick={() => setOnlyTrigger((prev) => !prev)}
+              onClick={() => setFilter('onlyTrigger', !onlyTrigger)}
               className={`rounded-md px-3 py-1.5 text-sm transition-colors ${
                 onlyTrigger
                   ? 'bg-positive text-white'
@@ -104,7 +143,7 @@ export function GuardianCollectionGrid({
           <button
             key={opt.key}
             type="button"
-            onClick={() => setRarityFilter(opt.key)}
+            onClick={() => setFilter('rarityFilter', opt.key)}
             className={`rounded-md px-3 py-1.5 text-sm transition-colors ${
               rarityFilter === opt.key
                 ? 'bg-surface-light text-accent'
@@ -121,7 +160,7 @@ export function GuardianCollectionGrid({
         <input
           type="text"
           value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          onChange={(e) => setFilter('searchQuery', e.target.value)}
           placeholder="搜索守护名称…"
           className="w-full rounded-md border border-border bg-surface py-2 pl-9 pr-3 text-sm text-text placeholder:text-text-dim focus:border-accent focus:outline-none"
         />

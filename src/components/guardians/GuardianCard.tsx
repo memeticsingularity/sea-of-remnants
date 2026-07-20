@@ -2,7 +2,12 @@ import { Check } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
-import { evaluateGuardianTrigger, getRequiredAttributes } from '@/utils/partyMatch'
+import {
+  evaluateGuardianTrigger,
+  getRequiredAttributes,
+  hasDistinctAttributes,
+  hasPerNAttribute,
+} from '@/utils/partyMatch'
 import type { Guardian } from '@/types'
 
 interface GuardianCardProps {
@@ -30,8 +35,11 @@ export function GuardianCard({
   onToggleOwned,
   partyAttrs,
 }: GuardianCardProps) {
-  const requiredAttrs = getRequiredAttributes(guardian.effect)
   const showTrigger = partyAttrs !== undefined
+  const hasAnyCondition =
+    getRequiredAttributes(guardian.effect).length > 0 ||
+    hasDistinctAttributes(guardian.effect) !== null ||
+    hasPerNAttribute(guardian.effect) !== null
   const { trigger, reason } = showTrigger
     ? evaluateGuardianTrigger(guardian.effect, partyAttrs)
     : { trigger: false, reason: '' }
@@ -83,7 +91,7 @@ export function GuardianCard({
         <GlossaryTooltip text={guardian.effect} partyAttrs={partyAttrs} />
       </div>
 
-      {showTrigger && requiredAttrs.length > 0 && (
+      {showTrigger && hasAnyCondition && (
         <div
           className={`text-xs ${
             trigger ? 'text-positive' : 'text-negative'
