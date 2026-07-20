@@ -1,0 +1,14 @@
+id: ship-tag-heavy-fire
+slug: heavy-fire
+name: 重火力
+description: |
+  牺牲一定射击频率与弹药容量，大幅强化火炮威力并特化单次射击造成的伤害。
+levels:
+  - count: 3
+    effect: 火炮威力提高5%
+  - count: 6
+    effect: 火炮威力提高6%
+  - count: 10
+    effect: 火炮威力提高9%
+  - count: 15
+    effect: 火炮威力提高15%

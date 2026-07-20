@@ -1,0 +1,13 @@
+id: guardian-fish-swarm-hunt
+slug: fish-swarm-hunt
+name: 群鱼猎袭
+category: 战技特化
+set: 一锤定音的守护
+tags:
+  - name: 洞察
+    count: 3
+effect: |
+  待补充。
+buildNotes: |
+  待补充。
+rarity: 金

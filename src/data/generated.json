@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-20T13:29:40.513Z"
+    "generatedAt": "2026-07-20T14:12:13.045Z"
   },
   "crews": [
     {
@@ -2584,6 +2584,15 @@
       ]
     },
     {
+      "id": "glossary-lian-xu-xing-dong",
+      "slug": "lian-xu-xing-dong",
+      "term": "连续行动",
+      "definition": "同一船员的行动间不插入其他单位的回合。",
+      "related": [
+        "额外行动"
+      ]
+    },
+    {
       "id": "glossary-mars-splash",
       "slug": "glossary-mars-splash",
       "term": "火星飞溅",
@@ -2596,7 +2605,7 @@
       "id": "glossary-negative-state",
       "slug": "glossary-negative-state",
       "term": "负面状态",
-      "definition": "对目标产生不利影响的异常状态，如中毒、燃烧、眩晕等。部分技能或行装会根据负面状态层数触发额外效果。",
+      "definition": "表示减益效果的状态，包括【持续伤害】。",
       "related": [
         "正面状态"
       ]
@@ -2683,6 +2692,15 @@
       "definition": "船员在冒险或战斗中可能获得的临时状态，分为轻症、中症、重症，可能带来正向或负面效果。",
       "related": [
         "疾病"
+      ]
+    },
+    {
+      "id": "glossary-xie-zhan",
+      "slug": "xie-zhan",
+      "term": "协战",
+      "definition": "友方单位攻击触发的自身额外行动。",
+      "related": [
+        "额外行动"
       ]
     }
   ],
@@ -3721,6 +3739,544 @@
         }
       ],
       "rules": "**黑券船员**\n- 基础概率 0.80%，综合概率 1.84%\n- 最多 80 次招募必定获得 1 个黑券船员\n- 首次获得的黑券船员必定是「茉莉」\n- 除首次外，获得黑券船员时 50% 为「茉莉」，50% 为本卡池其他黑券船员\n- 若本次黑券船员不是「茉莉」，则下次黑券船员必定为「茉莉」\n\n**紫券船员及往日之影**\n- 基础概率 6.00%，综合概率 13.00%（船员 3.00%，往日之影 3.00%）\n- 最多 10 次招募必定获得紫券及以上船员或往日之影\n- 紫券对象 50% 为当期 UP「艾丝」/「预兆之眼」，50% 为其他紫券船员/往日之影\n- 若本次紫券对象非当期 UP，则下次紫券对象必定为当期 UP\n\n**蓝券往日之影**\n- 基础概率 93.20%，综合概率 84.58%\n"
+    }
+  ],
+  "guardians": [
+    {
+      "id": "guardian-chou-dong-xi-lan-de-kuai",
+      "slug": "chou-dong-xi-lan-de-kuai",
+      "name": "臭东西烂得快",
+      "category": "船员培养",
+      "set": "一锤定音的守护",
+      "tags": [],
+      "effect": "敌方单位所受持续伤害提升5%×全场持续伤害总层数，最高为25%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-da-ba-shou",
+      "slug": "da-ba-shou",
+      "name": "搭把手",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "队伍中每有2名敏捷系船员，我方全体[协战]伤害提升15%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "蓝"
+    },
+    {
+      "id": "guardian-di-ren-yue-duo-za-yue-hen",
+      "slug": "di-ren-yue-duo-za-yue-hen",
+      "name": "敌人越多砸越狠",
+      "category": "船员培养",
+      "set": "一锤定音的守护",
+      "tags": [],
+      "effect": "技能每命中1个敌方单位，伤害提升5%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-fang-gua-ceng-tu-liang-ceng-shuang",
+      "slug": "fang-gua-ceng-tu-liang-ceng-shuang",
+      "name": "防刮蹭涂两层霜",
+      "category": "船员培养",
+      "set": "一锤定音的守护",
+      "tags": [],
+      "effect": "战斗开始时，我方全体获得1次免伤，可抵消1次伤害。我方单位体力值低于35%时，再获得1次免伤。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-fire-fishing-synergy",
+      "slug": "fire-fishing-synergy",
+      "name": "渔火协同",
+      "category": "战技特化",
+      "set": "一锤定音的守护",
+      "tags": [
+        {
+          "name": "待补充",
+          "count": 0
+        }
+      ],
+      "effect": "待补充。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-fish-swarm-hunt",
+      "slug": "fish-swarm-hunt",
+      "name": "群鱼猎袭",
+      "category": "战技特化",
+      "set": "一锤定音的守护",
+      "tags": [
+        {
+          "name": "洞察",
+          "count": 3
+        }
+      ],
+      "effect": "待补充。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-fishing-master",
+      "slug": "fishing-master",
+      "name": "渔猎宗师",
+      "category": "战技特化",
+      "set": "一锤定音的守护",
+      "tags": [
+        {
+          "name": "待补充",
+          "count": 0
+        }
+      ],
+      "effect": "待补充。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-gao-zhi-ren-cai-mei-li-gao",
+      "slug": "gao-zhi-ren-cai-mei-li-gao",
+      "name": "高智人才魅力高",
+      "category": "船员培养",
+      "set": "一锤定音的守护",
+      "tags": [],
+      "effect": "当队伍中存在智力系和魅力系船员时，我方全体攻击力提升15%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-gen-zhe-shu-shu-chong",
+      "slug": "gen-zhe-shu-shu-chong",
+      "name": "跟着鼠鼠冲",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "入战检定成功后，我方全体攻击力提升6级，持续4回合。",
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-guai-guai-yang-shang",
+      "slug": "guai-guai-yang-shang",
+      "name": "乖乖养伤",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "体力每低于上限5%，所受治疗效果提升1%，至多提升15%。",
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-hao-ti-zhi-chao-you-mei-li",
+      "slug": "hao-ti-zhi-chao-you-mei-li",
+      "name": "好体质超有魅力",
+      "category": "船员培养",
+      "set": "一锤定音的守护",
+      "tags": [],
+      "effect": "当队伍中存在魅力系与体质系船员时，我方全体所受伤害降低15%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-hen-kuai-hui-lai",
+      "slug": "hen-kuai-hui-lai",
+      "name": "很快回来",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "每当我方单位进行额外行动后，其行动提前2%，此效果每回合触发2次。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "蓝"
+    },
+    {
+      "id": "guardian-huo-li-man-man",
+      "slug": "huo-li-man-man",
+      "name": "活力满满",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "魅力系船员的能量恢复效率提升5%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "蓝"
+    },
+    {
+      "id": "guardian-huo-yue-tian-yue-wang",
+      "slug": "huo-yue-tian-yue-wang",
+      "name": "火越添越旺",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "每触发1次额外行动，下次招牌技伤害提升5%，至多提升25%。",
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-ji-rou-qiang-yan",
+      "slug": "ji-rou-qiang-yan",
+      "name": "肌肉抢眼",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "体质系船员受击权重提升30%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "蓝"
+    },
+    {
+      "id": "guardian-jiang-li-dian-ling-zui",
+      "slug": "jiang-li-dian-ling-zui",
+      "name": "奖励点零嘴",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "战斗结束后，我方全体恢复10%的体力值。",
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-jiu-zhe-gao-ge-da",
+      "slug": "jiu-zhe-gao-ge-da",
+      "name": "揪着高个打",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "群攻技能对体力高于50%的敌方单位的伤害提升20%。",
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-ju-jue-huai-zhuang-tai",
+      "slug": "ju-jue-huai-zhuang-tai",
+      "name": "拒绝坏状态",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "当船员将要被施加[负面状态]时，有35%概率不被施加。\n",
+      "relatedGlossary": [
+        "负面状态"
+      ],
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-kai-kai-ren",
+      "slug": "kai-kai-ren",
+      "name": "开开刃",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "直接击败敌人，下一场战斗中所有伤害提升10%。",
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-kuai-kuai-meng-qiao",
+      "slug": "kuai-kuai-meng-qiao",
+      "name": "快快猛敲",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "我方单位对拥有护盾的霸主类敌方单位造成的额外行动伤害提升30%。",
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-kuang-ye-da-fa",
+      "slug": "kuang-ye-da-fa",
+      "name": "狂野打法",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "船员每损失10%体力值，下次攻击伤害提升6%。",
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-li-liang-ti-zhi-jian-bing-jian",
+      "slug": "li-liang-ti-zhi-jian-bing-jian",
+      "name": "力量体质肩并肩",
+      "category": "船员培养",
+      "set": "一锤定音的守护",
+      "tags": [],
+      "effect": "当队伍中存在力量系与体质系船员时，我方全体体力上限提升20%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-piercing-wave-strike",
+      "slug": "piercing-wave-strike",
+      "name": "穿浪重击",
+      "category": "战技特化",
+      "set": "一锤定音的守护",
+      "tags": [
+        {
+          "name": "重火力",
+          "count": 3
+        }
+      ],
+      "effect": "船只处于[潮涌]状态时，全船火炮造成的伤害提高20%。\n",
+      "relatedGlossary": [
+        "潮涌"
+      ],
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-quan-du-shi-you-xiao-xing-dong",
+      "slug": "quan-du-shi-you-xiao-xing-dong",
+      "name": "全都是有效行动",
+      "category": "船员培养",
+      "set": "一锤定音的守护",
+      "tags": [],
+      "effect": "每当我方单位进行额外行动后，其招牌技暴击率提升3%、暴击伤害提升5%，最高累加至20%，持续至使用招牌技后。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-quan-ti-qi-li",
+      "slug": "quan-ti-qi-li",
+      "name": "全体起立！",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "我方全体主属性提升8%。",
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-quan-yuan-ji-su-chong-feng-zhong",
+      "slug": "quan-yuan-ji-su-chong-feng-zhong",
+      "name": "全员急速冲锋中",
+      "category": "船员培养",
+      "set": "一锤定音的守护",
+      "tags": [],
+      "effect": "当队伍中有3个船员主属性互不相同时，我方全体速度提升12%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-shen-ban-ying",
+      "slug": "shen-ban-ying",
+      "name": "身板硬",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "未拥有护盾时，所受伤害降低6%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "蓝"
+    },
+    {
+      "id": "guardian-shi-qu-de-du-hui-gui-lai",
+      "slug": "shi-qu-de-du-hui-gui-lai",
+      "name": "失去的都会归来",
+      "category": "船员培养",
+      "set": "一锤定音的守护",
+      "tags": [],
+      "effect": "自身主动消耗自身体力值时，获得所消耗体力值30%的护盾。叠加护盾值不超过赋予者最大体力值的50%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-strong-ship-cannon",
+      "slug": "strong-ship-cannon",
+      "name": "坚船利炮",
+      "category": "战技特化",
+      "set": "一锤定音的守护",
+      "tags": [
+        {
+          "name": "待补充",
+          "count": 0
+        }
+      ],
+      "effect": "待补充。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-tian-ba-huo",
+      "slug": "tian-ba-huo",
+      "name": "添把火",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "力量系船员造成的溅射伤害提升10%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "蓝"
+    },
+    {
+      "id": "guardian-tide-coming",
+      "slug": "tide-coming",
+      "name": "狂潮将至",
+      "category": "战技特化",
+      "set": "一锤定音的守护",
+      "tags": [
+        {
+          "name": "重火力",
+          "count": 3
+        }
+      ],
+      "effect": "待补充。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-tou-nao-hen-qing-xing",
+      "slug": "tou-nao-hen-qing-xing",
+      "name": "头脑很清醒",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "队伍中每有1名智力系船员，我方全体的效果命中便提升6%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "蓝"
+    },
+    {
+      "id": "guardian-water-course",
+      "slug": "water-course",
+      "name": "水到渠成",
+      "category": "战技特化",
+      "set": "一锤定音的守护",
+      "tags": [
+        {
+          "name": "待补充",
+          "count": 0
+        }
+      ],
+      "effect": "待补充。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-wave-chasing",
+      "slug": "wave-chasing",
+      "name": "破浪追袭",
+      "category": "战技特化",
+      "set": "一锤定音的守护",
+      "tags": [
+        {
+          "name": "洞察",
+          "count": 3
+        }
+      ],
+      "effect": "待补充。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    },
+    {
+      "id": "guardian-wen-zhong-xie",
+      "slug": "wen-zhong-xie",
+      "name": "稳重些",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "战斗开始时，我方全体获得体力上限10%的护盾。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "蓝"
+    },
+    {
+      "id": "guardian-xing-dong-shang-tou",
+      "slug": "xing-dong-shang-tou",
+      "name": "行动上头",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "[连续行动]时，伤害提升4%，至多提升12%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "蓝"
+    },
+    {
+      "id": "guardian-yue-da-yue-lai-jin",
+      "slug": "yue-da-yue-lai-jin",
+      "name": "越打越来劲",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "我方单位导致敌方单位力竭时，伤害提升2%，至多提升12%。下一场战斗可继承该伤害提升的20%。",
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-zhu-li-fan-pan",
+      "slug": "zhu-li-fan-pan",
+      "name": "助力翻盘",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "我方单位的体力值越低，造成的伤害越高，受队伍中力量系船员的数量影响，最高不超过25%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "蓝"
+    },
+    {
+      "id": "guardian-zhui-zhe-da",
+      "slug": "zhui-zhe-da",
+      "name": "追着打",
+      "category": "船员培养",
+      "set": "未来可期的守护",
+      "tags": [],
+      "effect": "对破绽暴露的目标造成的架势伤害提升30%。",
+      "buildNotes": "待补充。\n",
+      "rarity": "紫"
+    },
+    {
+      "id": "guardian-zi-xi-gan-shou-zhe-mei-li",
+      "slug": "zi-xi-gan-shou-zhe-mei-li",
+      "name": "仔细感受这魅力",
+      "category": "船员培养",
+      "set": "一锤定音的守护",
+      "tags": [],
+      "effect": "当队伍中存在魅力系与感知系船员时，我方全体造成伤害提升20%。\n",
+      "buildNotes": "待补充。\n",
+      "rarity": "金"
+    }
+  ],
+  "shipTags": [
+    {
+      "id": "ship-tag-heavy-fire",
+      "slug": "heavy-fire",
+      "name": "重火力",
+      "description": "牺牲一定射击频率与弹药容量，大幅强化火炮威力并特化单次射击造成的伤害。\n",
+      "levels": [
+        {
+          "count": 3,
+          "effect": "火炮威力提高5%"
+        },
+        {
+          "count": 6,
+          "effect": "火炮威力提高6%"
+        },
+        {
+          "count": 10,
+          "effect": "火炮威力提高9%"
+        },
+        {
+          "count": 15,
+          "effect": "火炮威力提高15%"
+        }
+      ]
+    },
+    {
+      "id": "ship-tag-insight",
+      "slug": "insight",
+      "name": "洞察",
+      "description": "待补充。\n",
+      "levels": [
+        {
+          "count": 3,
+          "effect": "待补充"
+        },
+        {
+          "count": 6,
+          "effect": "待补充"
+        },
+        {
+          "count": 10,
+          "effect": "待补充"
+        },
+        {
+          "count": 15,
+          "effect": "待补充"
+        }
+      ]
     }
   ],
   "pages": [
@@ -5040,6 +5596,16 @@
       "keywords": []
     },
     {
+      "id": "glossary-lian-xu-xing-dong",
+      "title": "连续行动",
+      "type": "术语",
+      "route": "/glossary#glossary-lian-xu-xing-dong",
+      "tags": [
+        "额外行动"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-mars-splash",
       "title": "火星飞溅",
       "type": "术语",
@@ -5149,6 +5715,16 @@
       "route": "/glossary#glossary-symptom",
       "tags": [
         "疾病"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-xie-zhan",
+      "title": "协战",
+      "type": "术语",
+      "route": "/glossary#glossary-xie-zhan",
+      "tags": [
+        "额外行动"
       ],
       "keywords": []
     },
@@ -5536,6 +6112,514 @@
         "蓝"
       ],
       "keywords": []
+    },
+    {
+      "id": "guardian-chou-dong-xi-lan-de-kuai",
+      "title": "臭东西烂得快",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "一锤定音的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-da-ba-shou",
+      "title": "搭把手",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-di-ren-yue-duo-za-yue-hen",
+      "title": "敌人越多砸越狠",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "一锤定音的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-fang-gua-ceng-tu-liang-ceng-shuang",
+      "title": "防刮蹭涂两层霜",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "一锤定音的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-fire-fishing-synergy",
+      "title": "渔火协同",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        {
+          "name": "待补充",
+          "count": 0
+        },
+        "战技特化",
+        "一锤定音的守护"
+      ],
+      "keywords": [
+        "待补充"
+      ]
+    },
+    {
+      "id": "guardian-fish-swarm-hunt",
+      "title": "群鱼猎袭",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        {
+          "name": "洞察",
+          "count": 3
+        },
+        "战技特化",
+        "一锤定音的守护"
+      ],
+      "keywords": [
+        "洞察"
+      ]
+    },
+    {
+      "id": "guardian-fishing-master",
+      "title": "渔猎宗师",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        {
+          "name": "待补充",
+          "count": 0
+        },
+        "战技特化",
+        "一锤定音的守护"
+      ],
+      "keywords": [
+        "待补充"
+      ]
+    },
+    {
+      "id": "guardian-gao-zhi-ren-cai-mei-li-gao",
+      "title": "高智人才魅力高",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "一锤定音的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-gen-zhe-shu-shu-chong",
+      "title": "跟着鼠鼠冲",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-guai-guai-yang-shang",
+      "title": "乖乖养伤",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-hao-ti-zhi-chao-you-mei-li",
+      "title": "好体质超有魅力",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "一锤定音的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-hen-kuai-hui-lai",
+      "title": "很快回来",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-huo-li-man-man",
+      "title": "活力满满",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-huo-yue-tian-yue-wang",
+      "title": "火越添越旺",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-ji-rou-qiang-yan",
+      "title": "肌肉抢眼",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-jiang-li-dian-ling-zui",
+      "title": "奖励点零嘴",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-jiu-zhe-gao-ge-da",
+      "title": "揪着高个打",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-ju-jue-huai-zhuang-tai",
+      "title": "拒绝坏状态",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-kai-kai-ren",
+      "title": "开开刃",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-kuai-kuai-meng-qiao",
+      "title": "快快猛敲",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-kuang-ye-da-fa",
+      "title": "狂野打法",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-li-liang-ti-zhi-jian-bing-jian",
+      "title": "力量体质肩并肩",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "一锤定音的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-piercing-wave-strike",
+      "title": "穿浪重击",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        {
+          "name": "重火力",
+          "count": 3
+        },
+        "战技特化",
+        "一锤定音的守护"
+      ],
+      "keywords": [
+        "重火力"
+      ]
+    },
+    {
+      "id": "guardian-quan-du-shi-you-xiao-xing-dong",
+      "title": "全都是有效行动",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "一锤定音的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-quan-ti-qi-li",
+      "title": "全体起立！",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-quan-yuan-ji-su-chong-feng-zhong",
+      "title": "全员急速冲锋中",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "一锤定音的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-shen-ban-ying",
+      "title": "身板硬",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-shi-qu-de-du-hui-gui-lai",
+      "title": "失去的都会归来",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "一锤定音的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-strong-ship-cannon",
+      "title": "坚船利炮",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        {
+          "name": "待补充",
+          "count": 0
+        },
+        "战技特化",
+        "一锤定音的守护"
+      ],
+      "keywords": [
+        "待补充"
+      ]
+    },
+    {
+      "id": "guardian-tian-ba-huo",
+      "title": "添把火",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-tide-coming",
+      "title": "狂潮将至",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        {
+          "name": "重火力",
+          "count": 3
+        },
+        "战技特化",
+        "一锤定音的守护"
+      ],
+      "keywords": [
+        "重火力"
+      ]
+    },
+    {
+      "id": "guardian-tou-nao-hen-qing-xing",
+      "title": "头脑很清醒",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-water-course",
+      "title": "水到渠成",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        {
+          "name": "待补充",
+          "count": 0
+        },
+        "战技特化",
+        "一锤定音的守护"
+      ],
+      "keywords": [
+        "待补充"
+      ]
+    },
+    {
+      "id": "guardian-wave-chasing",
+      "title": "破浪追袭",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        {
+          "name": "洞察",
+          "count": 3
+        },
+        "战技特化",
+        "一锤定音的守护"
+      ],
+      "keywords": [
+        "洞察"
+      ]
+    },
+    {
+      "id": "guardian-wen-zhong-xie",
+      "title": "稳重些",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-xing-dong-shang-tou",
+      "title": "行动上头",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-yue-da-yue-lai-jin",
+      "title": "越打越来劲",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-zhu-li-fan-pan",
+      "title": "助力翻盘",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-zhui-zhe-da",
+      "title": "追着打",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "未来可期的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "guardian-zi-xi-gan-shou-zhe-mei-li",
+      "title": "仔细感受这魅力",
+      "type": "守护",
+      "route": "/crews/figurehead-prayer",
+      "tags": [
+        "船员培养",
+        "一锤定音的守护"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "ship-tag-heavy-fire",
+      "title": "重火力",
+      "type": "船只标签",
+      "route": "/crews/figurehead-prayer",
+      "tags": [],
+      "keywords": [
+        "重火力"
+      ]
+    },
+    {
+      "id": "ship-tag-insight",
+      "title": "洞察",
+      "type": "船只标签",
+      "route": "/crews/figurehead-prayer",
+      "tags": [],
+      "keywords": [
+        "洞察"
+      ]
     },
     {
       "id": "pool-deep-memory",

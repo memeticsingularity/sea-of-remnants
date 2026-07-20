@@ -1,0 +1,11 @@
+id: guardian-tian-ba-huo
+slug: tian-ba-huo
+name: 添把火
+category: 船员培养
+set: 未来可期的守护
+tags: []
+effect: |
+  力量系船员造成的溅射伤害提升10%。
+buildNotes: |
+  待补充。
+rarity: 蓝

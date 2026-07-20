@@ -1,0 +1,11 @@
+id: guardian-chou-dong-xi-lan-de-kuai
+slug: chou-dong-xi-lan-de-kuai
+name: 臭东西烂得快
+category: 船员培养
+set: 一锤定音的守护
+tags: []
+effect: |
+  敌方单位所受持续伤害提升5%×全场持续伤害总层数，最高为25%。
+buildNotes: |
+  待补充。
+rarity: 金

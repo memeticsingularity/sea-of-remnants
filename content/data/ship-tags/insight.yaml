@@ -1,0 +1,14 @@
+id: ship-tag-insight
+slug: insight
+name: 洞察
+description: |
+  待补充。
+levels:
+  - count: 3
+    effect: 待补充
+  - count: 6
+    effect: 待补充
+  - count: 10
+    effect: 待补充
+  - count: 15
+    effect: 待补充

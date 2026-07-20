@@ -1,0 +1,11 @@
+id: guardian-shen-ban-ying
+slug: shen-ban-ying
+name: 身板硬
+category: 船员培养
+set: 未来可期的守护
+tags: []
+effect: |
+  未拥有护盾时，所受伤害降低6%。
+buildNotes: |
+  待补充。
+rarity: 蓝

@@ -1,0 +1,10 @@
+id: guardian-guai-guai-yang-shang
+slug: guai-guai-yang-shang
+name: 乖乖养伤
+category: 船员培养
+set: 未来可期的守护
+tags: []
+effect: 体力每低于上限5%，所受治疗效果提升1%，至多提升15%。
+buildNotes: |
+  待补充。
+rarity: 紫

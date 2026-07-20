@@ -33,6 +33,8 @@ const COLLECTIONS = [
   'symptoms',
   'shadows',
   'recruitment-pools',
+  'guardians',
+  'ship-tags',
 ]
 
 async function readYamlFiles(dir) {
@@ -123,6 +125,12 @@ function buildSearchIndex(data) {
   )
   data.shadows.forEach((s) =>
     add(s, '往日之影', `/shadows/${s.slug}`, [s.rarity]),
+  )
+  data.guardians.forEach((g) =>
+    add(g, '守护', `/crews/figurehead-prayer`, [g.category, ...(g.set ? [g.set] : [])], g.tags.map((t) => t.name)),
+  )
+  data.shipTags.forEach((t) =>
+    add(t, '船只标签', `/crews/figurehead-prayer`, [], [t.name]),
   )
   data.recruitmentPools.forEach((p) =>
     index.push({

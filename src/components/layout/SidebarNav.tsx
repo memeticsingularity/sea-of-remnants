@@ -14,6 +14,7 @@ const navGroups: NavItem[] = [
     icon: <Sparkles className="h-4 w-4" />,
     children: [
       { label: '船员培养', to: '/crews' },
+      { label: '船首像祈祷', to: '/crews/figurehead-prayer' },
       { label: '船只培养', to: '/ships' },
       { label: '全域培养', to: '/guides/crew-training' },
     ],

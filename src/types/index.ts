@@ -246,6 +246,38 @@ export interface Shadow {
   source?: string
 }
 
+export interface Guardian {
+  id: string
+  slug: string
+  name: string
+  category: '战技特化' | '潜能特化' | '船员培养'
+  rarity: '金' | '紫' | '蓝'
+  set?: string
+  tags: GuardianTag[]
+  effect: string
+  relatedGlossary?: string[]
+  image?: string
+  buildNotes?: string
+}
+
+export interface GuardianTag {
+  name: string
+  count: number
+}
+
+export interface ShipTag {
+  id: string
+  slug: string
+  name: string
+  description?: string
+  levels: ShipTagLevel[]
+}
+
+export interface ShipTagLevel {
+  count: number
+  effect: string
+}
+
 export interface RecruitmentPool {
   id: string
   slug: string
@@ -307,6 +339,8 @@ export interface WikiData {
   symptoms: Symptom[]
   shadows: Shadow[]
   recruitmentPools: RecruitmentPool[]
+  guardians: Guardian[]
+  shipTags: ShipTag[]
   pages: Page[]
   searchIndex: SearchIndexEntry[]
 }

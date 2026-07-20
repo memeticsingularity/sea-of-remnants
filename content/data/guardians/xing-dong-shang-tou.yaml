@@ -1,0 +1,11 @@
+id: guardian-xing-dong-shang-tou
+slug: xing-dong-shang-tou
+name: 行动上头
+category: 船员培养
+set: 未来可期的守护
+tags: []
+effect: |
+  [连续行动]时，伤害提升4%，至多提升12%。
+buildNotes: |
+  待补充。
+rarity: 蓝

@@ -1,0 +1,11 @@
+id: guardian-di-ren-yue-duo-za-yue-hen
+slug: di-ren-yue-duo-za-yue-hen
+name: 敌人越多砸越狠
+category: 船员培养
+set: 一锤定音的守护
+tags: []
+effect: |
+  技能每命中1个敌方单位，伤害提升5%。
+buildNotes: |
+  待补充。
+rarity: 金

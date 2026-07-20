@@ -1,0 +1,11 @@
+id: guardian-wen-zhong-xie
+slug: wen-zhong-xie
+name: 稳重些
+category: 船员培养
+set: 未来可期的守护
+tags: []
+effect: |
+  战斗开始时，我方全体获得体力上限10%的护盾。
+buildNotes: |
+  待补充。
+rarity: 蓝

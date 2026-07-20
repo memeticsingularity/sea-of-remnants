@@ -1,0 +1,11 @@
+id: guardian-quan-du-shi-you-xiao-xing-dong
+slug: quan-du-shi-you-xiao-xing-dong
+name: 全都是有效行动
+category: 船员培养
+set: 一锤定音的守护
+tags: []
+effect: |
+  每当我方单位进行额外行动后，其招牌技暴击率提升3%、暴击伤害提升5%，最高累加至20%，持续至使用招牌技后。
+buildNotes: |
+  待补充。
+rarity: 金

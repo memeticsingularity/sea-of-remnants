@@ -39,6 +39,8 @@ const VALID_RARITIES = ['绿', '蓝', '紫', '金']
 const VALID_SHADOW_RARITIES = ['黑', '紫', '蓝']
 const VALID_SYMPTOM_SEVERITIES = ['轻症', '中症', '重症']
 const VALID_POOL_TYPES = ['limited', 'standard', 'weekly']
+const VALID_GUARDIAN_CATEGORIES = ['战技特化', '潜能特化', '船员培养']
+const VALID_GUARDIAN_RARITIES = ['金', '紫', '蓝']
 
 const errors = []
 const warnings = []
@@ -169,6 +171,31 @@ async function validateCollection(collection, items, allIds, allSlugs) {
       }
       if (!Array.isArray(data.pityRules)) {
         error(`[${collection}/${file}] Missing or invalid field: pityRules`)
+      }
+    }
+
+    if (collection === 'guardians') {
+      if (!data.category) {
+        error(`[${collection}/${file}] Missing required field: category`)
+      } else if (!VALID_GUARDIAN_CATEGORIES.includes(data.category)) {
+        error(`[${collection}/${file}] Invalid guardian category: ${data.category}`)
+      }
+      if (!data.rarity) {
+        error(`[${collection}/${file}] Missing required field: rarity`)
+      } else if (!VALID_GUARDIAN_RARITIES.includes(data.rarity)) {
+        error(`[${collection}/${file}] Invalid guardian rarity: ${data.rarity}`)
+      }
+      if (!Array.isArray(data.tags)) {
+        error(`[${collection}/${file}] Missing or invalid field: tags`)
+      }
+      if (!data.effect) {
+        warn(`[${collection}/${file}] Missing effect (placeholder allowed)`)
+      }
+    }
+
+    if (collection === 'ship-tags') {
+      if (!Array.isArray(data.levels)) {
+        error(`[${collection}/${file}] Missing or invalid field: levels`)
       }
     }
   }

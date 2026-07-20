@@ -1,0 +1,10 @@
+id: guardian-yue-da-yue-lai-jin
+slug: yue-da-yue-lai-jin
+name: 越打越来劲
+category: 船员培养
+set: 未来可期的守护
+tags: []
+effect: 我方单位导致敌方单位力竭时，伤害提升2%，至多提升12%。下一场战斗可继承该伤害提升的20%。
+buildNotes: |
+  待补充。
+rarity: 紫

@@ -1,0 +1,15 @@
+id: guardian-piercing-wave-strike
+slug: piercing-wave-strike
+name: 穿浪重击
+category: 战技特化
+set: 一锤定音的守护
+tags:
+  - name: 重火力
+    count: 3
+effect: |
+  船只处于[潮涌]状态时，全船火炮造成的伤害提高20%。
+relatedGlossary:
+  - 潮涌
+buildNotes: |
+  待补充。
+rarity: 金

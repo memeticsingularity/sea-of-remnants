@@ -1,0 +1,11 @@
+id: guardian-fang-gua-ceng-tu-liang-ceng-shuang
+slug: fang-gua-ceng-tu-liang-ceng-shuang
+name: 防刮蹭涂两层霜
+category: 船员培养
+set: 一锤定音的守护
+tags: []
+effect: |
+  战斗开始时，我方全体获得1次免伤，可抵消1次伤害。我方单位体力值低于35%时，再获得1次免伤。
+buildNotes: |
+  待补充。
+rarity: 金

@@ -1,6 +1,6 @@
 id: glossary-negative-state
 slug: glossary-negative-state
 term: 负面状态
-definition: "对目标产生不利影响的异常状态，如中毒、燃烧、眩晕等。部分技能或行装会根据负面状态层数触发额外效果。"
+definition: "表示减益效果的状态，包括【持续伤害】。"
 related:
   - 正面状态

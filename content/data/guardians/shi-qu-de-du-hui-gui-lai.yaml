@@ -1,0 +1,11 @@
+id: guardian-shi-qu-de-du-hui-gui-lai
+slug: shi-qu-de-du-hui-gui-lai
+name: 失去的都会归来
+category: 船员培养
+set: 一锤定音的守护
+tags: []
+effect: |
+  自身主动消耗自身体力值时，获得所消耗体力值30%的护盾。叠加护盾值不超过赋予者最大体力值的50%。
+buildNotes: |
+  待补充。
+rarity: 金

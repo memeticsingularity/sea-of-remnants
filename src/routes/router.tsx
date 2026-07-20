@@ -11,6 +11,8 @@ import { GlossaryPage } from '@/pages/GlossaryPage'
 import { SymptomDetailPage } from '@/pages/SymptomDetailPage'
 import { RecruitmentSimulatorPage } from '@/pages/RecruitmentSimulatorPage'
 import { CollectionPage } from '@/pages/CollectionPage'
+import { FigureheadPrayerPage } from '@/pages/FigureheadPrayerPage'
+import { FigureheadPrayerRecommendPage } from '@/pages/FigureheadPrayerRecommendPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
 export const router = createBrowserRouter([
@@ -21,6 +23,8 @@ export const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: 'crews', element: <CategoryPage category="crews" /> },
       { path: 'crews/:slug', element: <CrewDetailPage /> },
+      { path: 'crews/figurehead-prayer', element: <FigureheadPrayerPage /> },
+      { path: 'crews/figurehead-prayer/recommend', element: <FigureheadPrayerRecommendPage /> },
       { path: 'ships', element: <CategoryPage category="ships" /> },
       { path: 'ships/:slug', element: <NotFoundPage /> },
       { path: 'classes', element: <CategoryPage category="classes" /> },

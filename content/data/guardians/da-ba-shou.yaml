@@ -1,0 +1,11 @@
+id: guardian-da-ba-shou
+slug: da-ba-shou
+name: 搭把手
+category: 船员培养
+set: 未来可期的守护
+tags: []
+effect: |
+  队伍中每有2名敏捷系船员，我方全体[协战]伤害提升15%。
+buildNotes: |
+  待补充。
+rarity: 蓝

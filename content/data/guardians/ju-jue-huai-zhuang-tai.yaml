@@ -1,0 +1,13 @@
+id: guardian-ju-jue-huai-zhuang-tai
+slug: ju-jue-huai-zhuang-tai
+name: 拒绝坏状态
+category: 船员培养
+set: 未来可期的守护
+tags: []
+effect: |
+  当船员将要被施加[负面状态]时，有35%概率不被施加。
+relatedGlossary:
+  - 负面状态
+buildNotes: |
+  待补充。
+rarity: 紫

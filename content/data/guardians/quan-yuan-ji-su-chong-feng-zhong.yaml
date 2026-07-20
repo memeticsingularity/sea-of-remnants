@@ -1,0 +1,11 @@
+id: guardian-quan-yuan-ji-su-chong-feng-zhong
+slug: quan-yuan-ji-su-chong-feng-zhong
+name: 全员急速冲锋中
+category: 船员培养
+set: 一锤定音的守护
+tags: []
+effect: |
+  当队伍中有3个船员主属性互不相同时，我方全体速度提升12%。
+buildNotes: |
+  待补充。
+rarity: 金

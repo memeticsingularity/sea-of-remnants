@@ -1,0 +1,10 @@
+id: guardian-kuang-ye-da-fa
+slug: kuang-ye-da-fa
+name: 狂野打法
+category: 船员培养
+set: 未来可期的守护
+tags: []
+effect: 船员每损失10%体力值，下次攻击伤害提升6%。
+buildNotes: |
+  待补充。
+rarity: 紫

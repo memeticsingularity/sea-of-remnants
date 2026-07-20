@@ -1,0 +1,11 @@
+id: guardian-zhu-li-fan-pan
+slug: zhu-li-fan-pan
+name: 助力翻盘
+category: 船员培养
+set: 未来可期的守护
+tags: []
+effect: |
+  我方单位的体力值越低，造成的伤害越高，受队伍中力量系船员的数量影响，最高不超过25%。
+buildNotes: |
+  待补充。
+rarity: 蓝

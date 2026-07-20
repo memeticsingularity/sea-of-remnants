@@ -1,0 +1,11 @@
+id: guardian-hen-kuai-hui-lai
+slug: hen-kuai-hui-lai
+name: 很快回来
+category: 船员培养
+set: 未来可期的守护
+tags: []
+effect: |
+  每当我方单位进行额外行动后，其行动提前2%，此效果每回合触发2次。
+buildNotes: |
+  待补充。
+rarity: 蓝
