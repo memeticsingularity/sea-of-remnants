@@ -55,6 +55,7 @@ export function MemoryReunionLogPanel({
   pools: RecruitmentPool[]
 }) {
   const { entries, add, remove, clear } = useMemoryReunionLog()
+  const sortedEntries = useSortedEntries(entries)
 
   const [depth, setDepth] = useState<Depth>('deep')
   const [rarity, setRarity] = useState<Rarity>('black')
@@ -196,28 +197,86 @@ export function MemoryReunionLogPanel({
         {entries.length === 0 ? (
           <p className="text-sm text-text-muted">暂无记忆重逢记录。</p>
         ) : (
-          <div className="space-y-3">
-            {entries.map((entry) => (
-              <MemoryReunionLogItem
-                key={entry.id}
-                entry={entry}
-                onDelete={() => remove(entry.id)}
-                formatTime={formatTime}
-              />
-            ))}
-          </div>
+          <>
+            <MemoryReunionStats entries={entries} />
+            <div className="mt-4 space-y-3">
+              {sortedEntries.map(({ entry, weekNumber }) => (
+                <MemoryReunionLogItem
+                  key={entry.id}
+                  entry={entry}
+                  weekNumber={weekNumber}
+                  onDelete={() => remove(entry.id)}
+                  formatTime={formatTime}
+                />
+              ))}
+            </div>
+          </>
         )}
       </Card>
     </div>
   )
 }
 
+function useSortedEntries(entries: MemoryReunionLogEntry[]) {
+  return useMemo(() => {
+    const sorted = [...entries].sort((a, b) => a.timestamp - b.timestamp)
+    return sorted.map((entry, index) => ({ entry, weekNumber: index + 1 }))
+  }, [entries])
+}
+
+function MemoryReunionStats({ entries }: { entries: MemoryReunionLogEntry[] }) {
+  const stats = useMemo(() => {
+    const totalWeeks = entries.length
+    const blackCount = entries.filter((e) => e.rarity === 'black').length
+    const purpleCount = entries.filter((e) => e.rarity === 'purple').length
+    const crewCount = entries.filter((e) => e.type === 'crew').length
+    const shadowCount = entries.filter((e) => e.type === 'shadow').length
+    return { totalWeeks, blackCount, purpleCount, crewCount, shadowCount }
+  }, [entries])
+
+  return (
+    <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
+      <StatTile label="已过去周数" value={`${stats.totalWeeks} 周`} />
+      <StatTile label="黑券" value={stats.blackCount} highlight="gold" />
+      <StatTile label="紫券" value={stats.purpleCount} highlight="purple" />
+      <StatTile label="船员" value={stats.crewCount} />
+      <StatTile label="往日之影" value={stats.shadowCount} />
+    </div>
+  )
+}
+
+function StatTile({
+  label,
+  value,
+  highlight,
+}: {
+  label: string
+  value: string | number
+  highlight?: 'gold' | 'purple'
+}) {
+  const valueClass =
+    highlight === 'gold'
+      ? 'text-gold'
+      : highlight === 'purple'
+        ? 'text-purple'
+        : 'text-text'
+
+  return (
+    <div className="rounded-lg border border-border bg-surface p-3 text-center">
+      <div className={`text-xl font-bold ${valueClass}`}>{value}</div>
+      <div className="mt-1 text-xs text-text-muted">{label}</div>
+    </div>
+  )
+}
+
 function MemoryReunionLogItem({
   entry,
+  weekNumber,
   onDelete,
   formatTime,
 }: {
   entry: MemoryReunionLogEntry
+  weekNumber: number
   onDelete: () => void
   formatTime: (timestamp: number) => string
 }) {
@@ -227,8 +286,9 @@ function MemoryReunionLogItem({
   return (
     <div className="flex items-center justify-between rounded-lg border border-border bg-surface p-3">
       <div className="space-y-1">
-        <div className="text-sm text-text-muted">
-          {entry.depthLabel} · {formatTime(entry.timestamp)}
+        <div className="flex items-center gap-2 text-sm text-text-muted">
+          <span className="rounded-full bg-surface-light px-2 py-0.5 text-xs">第 {weekNumber} 周</span>
+          <span>{entry.depthLabel} · {formatTime(entry.timestamp)}</span>
         </div>
         <div className="text-base font-medium text-text">
           本次重逢的记忆为

@@ -162,7 +162,7 @@ export function RecruitmentSimulatorPage() {
         }}
       />
 
-      {isMemoryGroup ? (
+      {isMemoryGroup && (
         <>
           <MemoryDepthSelector
             activeDepth={memoryDepth}
@@ -176,13 +176,16 @@ export function RecruitmentSimulatorPage() {
               pool={deepPool}
               crewTargetId={deepCrewTarget}
               shadowTargetId={deepShadowTarget}
-              onChangeCrewTarget={setDeepCrewTarget}
-              onChangeShadowTarget={setDeepShadowTarget}
+              onChangeGroup={(crewId, shadowId) => {
+                setDeepCrewTarget(crewId)
+                setDeepShadowTarget(shadowId)
+              }}
             />
           )}
-          <MemoryReunionLogPanel pools={memoryPools} />
         </>
-      ) : isPlaceholder ? (
+      )}
+
+      {isPlaceholder ? (
         <Card>
           <h2 className="text-xl font-bold text-text">{activePool.name}</h2>
           <p className="mt-2 text-text-muted">该招募池规则待补充，暂不支持模拟。</p>
@@ -204,6 +207,7 @@ export function RecruitmentSimulatorPage() {
                 onPullOne={handlePullOne}
                 onPullTen={handlePullTen}
                 disabled={isAnimating}
+                showTen={!isMemoryGroup}
               />
               <button
                 type="button"
@@ -222,6 +226,8 @@ export function RecruitmentSimulatorPage() {
           <HistoryPanel history={history} onClear={clear} />
         </>
       )}
+
+      {isMemoryGroup && <MemoryReunionLogPanel pools={memoryPools} />}
     </div>
   )
 }

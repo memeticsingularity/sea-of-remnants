@@ -24,6 +24,12 @@ const rarityText: Record<GachaResult['rarity'], string> = {
   blue: 'text-accent-cyan',
 }
 
+const flashClasses: Record<GachaResult['rarity'], string> = {
+  black: 'animate-gold-flash',
+  purple: 'animate-purple-flash',
+  blue: '',
+}
+
 export function ResultCard({ result, delay = 0 }: ResultCardProps) {
   const [revealed, setRevealed] = useState(delay === 0)
 
@@ -35,7 +41,7 @@ export function ResultCard({ result, delay = 0 }: ResultCardProps) {
     <div
       className={`relative flex flex-col items-center rounded-lg border p-3 text-center transition-all duration-300 ${
         revealed ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-      } ${rarityClasses[result.rarity]}`}
+      } ${rarityClasses[result.rarity]} ${revealed ? flashClasses[result.rarity] : ''}`}
     >
       {result.isUp && (
         <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-full bg-accent px-2 py-0.5 text-xs text-white">

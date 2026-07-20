@@ -7,11 +7,17 @@ interface DeepMemoryTargetSelectorProps {
   pool: RecruitmentPool
   crewTargetId: string
   shadowTargetId: string
-  onChangeCrewTarget: (id: string) => void
-  onChangeShadowTarget: (id: string) => void
+  onChangeGroup: (crewId: string, shadowId: string) => void
 }
 
-function useTargetOptions(pool: RecruitmentPool) {
+interface TargetGroup {
+  crewId: string
+  crewName: string
+  shadowId: string
+  shadowName: string
+}
+
+function useTargetGroups(pool: RecruitmentPool): TargetGroup[] {
   return useMemo(() => {
     const crewIds = pool.upItems.flatMap((u) => u.crewIds || [])
     const shadowIds = pool.upItems.flatMap((u) => u.shadowIds || [])
@@ -26,10 +32,17 @@ function useTargetOptions(pool: RecruitmentPool) {
       return id
     }
 
-    return {
-      crews: crewIds.map((id) => ({ id, name: getName(id) })),
-      shadows: shadowIds.map((id) => ({ id, name: getName(id) })),
+    const length = Math.min(crewIds.length, shadowIds.length)
+    const groups: TargetGroup[] = []
+    for (let i = 0; i < length; i++) {
+      groups.push({
+        crewId: crewIds[i],
+        crewName: getName(crewIds[i]),
+        shadowId: shadowIds[i],
+        shadowName: getName(shadowIds[i]),
+      })
     }
+    return groups
   }, [pool])
 }
 
@@ -37,67 +50,37 @@ export function DeepMemoryTargetSelector({
   pool,
   crewTargetId,
   shadowTargetId,
-  onChangeCrewTarget,
-  onChangeShadowTarget,
+  onChangeGroup,
 }: DeepMemoryTargetSelectorProps) {
-  const { crews, shadows } = useTargetOptions(pool)
+  const groups = useTargetGroups(pool)
+
+  if (groups.length === 0) return null
 
   return (
     <Card>
       <h3 className="mb-3 text-sm font-medium text-text-muted">选择目标记忆</h3>
-      <div className="space-y-4">
-        <TargetGroup
-          label="目标黑券船员"
-          options={crews}
-          activeId={crewTargetId}
-          onSelect={onChangeCrewTarget}
-        />
-        <TargetGroup
-          label="目标黑券往日之影"
-          options={shadows}
-          activeId={shadowTargetId}
-          onSelect={onChangeShadowTarget}
-        />
-      </div>
-    </Card>
-  )
-}
-
-function TargetGroup({
-  label,
-  options,
-  activeId,
-  onSelect,
-}: {
-  label: string
-  options: { id: string; name: string }[]
-  activeId: string
-  onSelect: (id: string) => void
-}) {
-  if (options.length === 0) return null
-
-  return (
-    <div>
-      <div className="mb-2 text-xs text-text-muted">{label}</div>
-      <div className="flex flex-wrap gap-2">
-        {options.map((option) => {
-          const isActive = option.id === activeId
+      <div className="flex flex-wrap gap-3">
+        {groups.map((group) => {
+          const isActive = group.crewId === crewTargetId && group.shadowId === shadowTargetId
           return (
             <button
-              key={option.id}
+              key={`${group.crewId}-${group.shadowId}`}
               type="button"
-              onClick={() => onSelect(option.id)}
-              className={`rounded-full border px-3 py-1.5 text-sm transition-colors ${
+              onClick={() => onChangeGroup(group.crewId, group.shadowId)}
+              className={`rounded-lg border px-4 py-3 text-left transition-colors ${
                 isActive
-                  ? 'border-accent bg-surface-light text-accent'
-                  : 'border-border text-text-muted hover:border-accent/50 hover:text-text'
+                  ? 'border-accent bg-surface-light text-text'
+                  : 'border-border bg-surface text-text-muted hover:border-accent/50 hover:text-text'
               }`}
             >
-              {option.name}
+              <div className="font-bold">
+                {group.crewName} · {group.shadowName}
+              </div>
+              <div className="mt-1 text-xs opacity-80">目标黑券船员 + 目标黑券往日之影</div>
             </button>
           )
         })}
       </div>
-    </div>
+    </Card>
   )
 }

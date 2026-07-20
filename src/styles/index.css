@@ -58,7 +58,33 @@ body {
   background: var(--color-border);
 }
 
-/* Markdown content overrides */
+/* Gacha result flash animations */
+@keyframes gold-flash {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 48px rgba(245, 158, 11, 0.9);
+  }
+}
+
+@keyframes purple-flash {
+  0%, 100% {
+    box-shadow: 0 0 16px rgba(139, 92, 246, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.85);
+  }
+}
+
+.animate-gold-flash {
+  animation: gold-flash 1.2s ease-in-out 3;
+}
+
+.animate-purple-flash {
+  animation: purple-flash 1.2s ease-in-out 3;
+}
+
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3,
