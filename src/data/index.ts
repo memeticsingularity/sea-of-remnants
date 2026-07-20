@@ -7,7 +7,7 @@ import generated from './generated.json'
  * 由 scripts/build-content.js 从 content/ 目录生成，
  * 包含船员、技能、行装、术语等所有内容。
  */
-export const wikiData = generated as WikiData
+export const wikiData = generated as unknown as WikiData
 
 /**
  * 根据 slug 在集合中查找实体

@@ -192,7 +192,7 @@ export function RecruitmentSimulatorPage() {
         </Card>
       ) : (
         <>
-          <PityCounter state={state} />
+          <PityCounter state={state} pool={activePool} />
 
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <CurrencyDisplay
@@ -201,6 +201,7 @@ export function RecruitmentSimulatorPage() {
               tenCost={activePool.tenCost}
               roseStoneCost={activePool.roseStoneCost}
               totalSpent={state.totalSpent}
+              isMemoryGroup={isMemoryGroup}
             />
             <div className="flex gap-3">
               <GachaControls

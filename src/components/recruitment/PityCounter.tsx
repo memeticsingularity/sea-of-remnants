@@ -1,11 +1,31 @@
 import { Card } from '@/components/ui/Card'
 import type { GachaState } from '@/hooks/useGachaState'
+import type { RecruitmentPool } from '@/types'
 
 interface PityCounterProps {
   state: GachaState
+  pool?: RecruitmentPool
 }
 
-export function PityCounter({ state }: PityCounterProps) {
+export function PityCounter({ state, pool }: PityCounterProps) {
+  const isMemory = pool?.slug.endsWith('-memory') ?? false
+
+  if (isMemory) {
+    return (
+      <Card className="flex flex-wrap gap-6">
+        <Counter label="黑券保底" current={state.blackPity} max={3} color="gold" />
+        <Counter label="黑券船员保底" current={state.blackCrewPity} max={9} color="gold" />
+        <div className="flex items-center gap-4">
+          {state.blackUpGuarantee && (
+            <span className="rounded-full border border-gold bg-gold/10 px-3 py-1 text-xs text-gold">
+              下次黑券目标概率提升
+            </span>
+          )}
+        </div>
+      </Card>
+    )
+  }
+
   return (
     <Card className="flex flex-wrap gap-6">
       <Counter label="黑券保底" current={state.blackPity} max={80} color="gold" />

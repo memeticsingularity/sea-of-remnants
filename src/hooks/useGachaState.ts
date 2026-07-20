@@ -1,9 +1,10 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
 export interface GachaState {
   poolId: string
   blackPity: number
   purplePity: number
+  blackCrewPity: number
   blackUpGuarantee: boolean
   purpleUpGuarantee: boolean
   firstBlackPulled: boolean
@@ -17,6 +18,7 @@ function getDefaultState(poolId: string): GachaState {
     poolId,
     blackPity: 0,
     purplePity: 0,
+    blackCrewPity: 0,
     blackUpGuarantee: false,
     purpleUpGuarantee: false,
     firstBlackPulled: false,
@@ -45,7 +47,15 @@ function saveState(states: Record<string, GachaState>) {
 export function useGachaState(poolId: string) {
   const [states, setStates] = useState<Record<string, GachaState>>(() => loadState())
 
-  const state = states[poolId] ?? getDefaultState(poolId)
+  const state = useMemo<GachaState>(() => {
+    const raw = states[poolId]
+    if (!raw) return getDefaultState(poolId)
+    return {
+      ...getDefaultState(poolId),
+      ...raw,
+      blackCrewPity: raw.blackCrewPity ?? 0,
+    }
+  }, [states, poolId])
 
   useEffect(() => {
     setStates((prev) => {

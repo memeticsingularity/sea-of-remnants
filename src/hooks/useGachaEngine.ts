@@ -9,6 +9,10 @@ export interface PullOutcome {
   cost: number
 }
 
+function isMemoryPool(pool: RecruitmentPool) {
+  return pool.slug.endsWith('-memory')
+}
+
 export function useGachaEngine(pool: RecruitmentPool | undefined) {
   const data = wikiData
 
@@ -71,6 +75,21 @@ export function useGachaEngine(pool: RecruitmentPool | undefined) {
     [pool, getName],
   )
 
+  const pickBlackCrew = useCallback(
+    (
+      tierConfig: RecruitmentTier,
+      upGuarantee: boolean,
+    ): { type: 'crew' | 'shadow'; id: string; name: string; isUp: boolean } => {
+      const ids = tierConfig.pool.crewIds
+      if (ids.length === 0) {
+        throw new Error('No black crew in memory pool')
+      }
+      const pick = pickFromList(ids, 'crew', upGuarantee, 'black')
+      return { type: 'crew', ...pick }
+    },
+    [pickFromList],
+  )
+
   const pickFromTier = useCallback(
     (
       tierConfig: RecruitmentTier,
@@ -113,12 +132,82 @@ export function useGachaEngine(pool: RecruitmentPool | undefined) {
     [pool, data, pickFromList, getName],
   )
 
+  const resolveMemoryPull = useCallback(
+    (
+      currentState: GachaState,
+      pullIndex: number,
+    ): { result: GachaResult; nextState: GachaState } => {
+      if (!pool) throw new Error('No pool selected')
+
+      const nextState: GachaState = {
+        ...currentState,
+        blackPity: currentState.blackPity + 1,
+        blackCrewPity: currentState.blackCrewPity + 1,
+      }
+
+      const blackTier = pool.tiers.find((t) => t.key === 'black')
+      const purpleTier = pool.tiers.find((t) => t.key === 'purple')
+
+      if (!blackTier || !purpleTier) {
+        throw new Error('Memory pool requires black and purple tiers')
+      }
+
+      // 9-week black crew guarantee
+      if (nextState.blackCrewPity >= 9) {
+        const pick = pickBlackCrew(blackTier, nextState.blackUpGuarantee)
+        nextState.blackPity = 0
+        nextState.blackCrewPity = 0
+        nextState.firstBlackPulled = true
+        return {
+          result: wrapResult(pick, pool, pullIndex),
+          nextState,
+        }
+      }
+
+      // 3-week black guarantee
+      if (nextState.blackPity >= 3) {
+        const pick = pickFromTier(blackTier, nextState.blackUpGuarantee, !nextState.firstBlackPulled)
+        nextState.blackPity = 0
+        if (pick.type === 'crew') nextState.blackCrewPity = 0
+        nextState.firstBlackPulled = true
+        return {
+          result: wrapResult(pick, pool, pullIndex),
+          nextState,
+        }
+      }
+
+      const roll = Math.random()
+      if (roll < blackTier.baseRate) {
+        const pick = pickFromTier(blackTier, nextState.blackUpGuarantee, !nextState.firstBlackPulled)
+        nextState.blackPity = 0
+        if (pick.type === 'crew') nextState.blackCrewPity = 0
+        nextState.firstBlackPulled = true
+        return {
+          result: wrapResult(pick, pool, pullIndex),
+          nextState,
+        }
+      }
+
+      // Purple result
+      const pick = pickFromTier(purpleTier, false, false)
+      return {
+        result: wrapResult(pick, pool, pullIndex),
+        nextState,
+      }
+    },
+    [pool, pickFromTier, pickBlackCrew],
+  )
+
   const pullSingle = useCallback(
     (
       currentState: GachaState,
       pullIndex: number,
     ): { result: GachaResult; nextState: GachaState } => {
       if (!pool) throw new Error('No pool selected')
+
+      if (isMemoryPool(pool)) {
+        return resolveMemoryPull(currentState, pullIndex)
+      }
 
       const nextState: GachaState = {
         ...currentState,
@@ -198,7 +287,7 @@ export function useGachaEngine(pool: RecruitmentPool | undefined) {
       // Should not reach here if pool is well-formed
       throw new Error('Unable to resolve pull')
     },
-    [pool, pickFromTier],
+    [pool, pickFromTier, resolveMemoryPull],
   )
 
   const pullTen = useCallback(

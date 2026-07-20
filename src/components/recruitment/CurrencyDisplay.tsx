@@ -4,6 +4,7 @@ interface CurrencyDisplayProps {
   tenCost: number
   roseStoneCost: number
   totalSpent: number
+  isMemoryGroup?: boolean
 }
 
 export function CurrencyDisplay({
@@ -12,7 +13,23 @@ export function CurrencyDisplay({
   tenCost,
   roseStoneCost,
   totalSpent,
+  isMemoryGroup = false,
 }: CurrencyDisplayProps) {
+  if (isMemoryGroup) {
+    return (
+      <div className="flex flex-wrap items-center gap-4 text-sm text-text-muted">
+        <span>
+          每次重逢消耗：
+          <span className="text-text">1 周机会</span>
+        </span>
+        <span>
+          已累计过去：
+          <span className="text-text">{totalSpent} 周</span>
+        </span>
+      </div>
+    )
+  }
+
   const totalRoseStone = totalSpent * roseStoneCost
   return (
     <div className="flex flex-wrap items-center gap-4 text-sm text-text-muted">
