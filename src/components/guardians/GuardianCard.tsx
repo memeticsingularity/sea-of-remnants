@@ -2,12 +2,14 @@ import { Check } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
+import { evaluateGuardianTrigger, getRequiredAttributes } from '@/utils/partyMatch'
 import type { Guardian } from '@/types'
 
 interface GuardianCardProps {
   guardian: Guardian
   owned: boolean
   onToggleOwned: (id: string) => void
+  partyAttrs?: string[]
 }
 
 const rarityClasses: Record<Guardian['rarity'], string> = {
@@ -22,7 +24,18 @@ const rarityBadgeClasses: Record<Guardian['rarity'], string> = {
   蓝: 'bg-accent-cyan/20 text-accent-cyan border-accent-cyan/50 shadow-[0_0_8px_rgba(6,182,212,0.2)]',
 }
 
-export function GuardianCard({ guardian, owned, onToggleOwned }: GuardianCardProps) {
+export function GuardianCard({
+  guardian,
+  owned,
+  onToggleOwned,
+  partyAttrs,
+}: GuardianCardProps) {
+  const requiredAttrs = getRequiredAttributes(guardian.effect)
+  const showTrigger = partyAttrs !== undefined
+  const { trigger, reason } = showTrigger
+    ? evaluateGuardianTrigger(guardian.effect, partyAttrs)
+    : { trigger: false, reason: '' }
+
   return (
     <Card
       className={`relative flex h-full flex-col gap-2 transition-all ${
@@ -67,8 +80,21 @@ export function GuardianCard({ guardian, owned, onToggleOwned }: GuardianCardPro
       )}
 
       <div className="mt-auto text-sm leading-relaxed text-text-muted">
-        <GlossaryTooltip text={guardian.effect} />
+        <GlossaryTooltip text={guardian.effect} partyAttrs={partyAttrs} />
       </div>
+
+      {showTrigger && requiredAttrs.length > 0 && (
+        <div
+          className={`text-xs ${
+            trigger ? 'text-positive' : 'text-negative'
+          }`}
+        >
+          <span className="font-medium">
+            {trigger ? '✓ 可触发' : '✗ 无法触发'}
+          </span>
+          <span className="ml-1 text-text-muted">· {reason}</span>
+        </div>
+      )}
     </Card>
   )
 }

@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { HelpCircle, Trash2 } from 'lucide-react'
 import { wikiData } from '@/data'
@@ -7,17 +8,28 @@ import { GuardianCollectionGrid } from '@/components/guardians/GuardianCollectio
 import { ShipTagStatsPanel } from '@/components/guardians/ShipTagStatsPanel'
 import { LoadoutPanel } from '@/components/guardians/LoadoutPanel'
 import { useGuardianState, GUARDIAN_CATEGORIES } from '@/hooks/useGuardianState'
+import { usePartyConfig } from '@/hooks/usePartyConfig'
 
 export function FigureheadPrayerPage() {
   const guardians = wikiData.guardians
   const shipTags = wikiData.shipTags
+  const crews = wikiData.crews
 
   const { state, toggleOwned, toggleFocusTag, clearOwned, equipGuardian, unequipGuardian, clearLoadouts } = useGuardianState()
+  const { config } = usePartyConfig()
 
   const equippedCount = GUARDIAN_CATEGORIES.reduce(
     (sum, category) =>
       sum + state.loadouts[category].filter((id): id is string => id !== null).length,
     0,
+  )
+
+  const partyAttrs = useMemo(
+    () =>
+      config.slots
+        .map((s) => crews.find((c) => c.id === s.crewId)?.primaryStat)
+        .filter((a): a is string => !!a && a !== '待补充'),
+    [config, crews],
   )
 
   return (
@@ -86,6 +98,7 @@ export function FigureheadPrayerPage() {
         guardians={guardians}
         ownedIds={state.ownedIds}
         onToggleOwned={toggleOwned}
+        partyAttrs={partyAttrs}
       />
     </div>
   )

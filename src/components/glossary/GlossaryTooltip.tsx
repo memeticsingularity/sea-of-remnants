@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react'
 import { wikiData } from '@/data'
+import { MAIN_ATTRIBUTES } from '@/utils/partyMatch'
 
 interface GlossaryTooltipProps {
   /** 原始文本，其中 [术语名] 会被解析为高亮术语 */
@@ -11,6 +12,8 @@ interface GlossaryTooltipProps {
    * - 'bottom': 在术语下方弹出（用于 tooltip 内部的术语，形成链条）
    */
   placement?: 'top' | 'bottom'
+  /** 队伍主属性，用于高亮效果中的属性系要求 */
+  partyAttrs?: string[]
 }
 
 /**
@@ -24,6 +27,7 @@ export function GlossaryTooltip({
   text,
   className = '',
   placement = 'top',
+  partyAttrs,
 }: GlossaryTooltipProps) {
   const segments = useMemo(() => parseText(text), [text])
 
@@ -35,10 +39,76 @@ export function GlossaryTooltip({
           const termPlacement = placement === 'top' ? 'bottom' : 'bottom'
           return <Term key={index} term={segment.content} placement={termPlacement} />
         }
-        return <span key={index}>{segment.content}</span>
+        return (
+          <HighlightedText
+            key={index}
+            text={segment.content}
+            partyAttrs={partyAttrs}
+          />
+        )
       })}
     </span>
   )
+}
+
+function HighlightedText({
+  text,
+  partyAttrs,
+}: {
+  text: string
+  partyAttrs?: string[]
+}) {
+  if (!partyAttrs || partyAttrs.length === 0) {
+    return <>{text}</>
+  }
+
+  const attrPatterns = MAIN_ATTRIBUTES.map((attr) => `${attr}系`).join('|')
+  const regex = new RegExp(`(\\d个船员主属性互不相同)|(${attrPatterns})`, 'g')
+
+  const parts: React.ReactNode[] = []
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index))
+    }
+
+    const matched = match[0]
+
+    if (/^(\\d)个船员主属性互不相同$/.test(matched)) {
+      const need = parseInt(matched[0], 10)
+      const distinct = new Set(partyAttrs).size
+      const active = distinct >= need
+      parts.push(
+        <span
+          key={match.index}
+          className={active ? 'text-positive' : 'text-text-dim'}
+        >
+          {matched}
+        </span>,
+      )
+    } else {
+      const attr = matched.replace('系', '')
+      const active = partyAttrs.includes(attr)
+      parts.push(
+        <span
+          key={match.index}
+          className={active ? 'text-positive font-medium' : 'text-text-dim'}
+        >
+          {matched}
+        </span>,
+      )
+    }
+
+    lastIndex = match.index + matched.length
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex))
+  }
+
+  return <>{parts}</>
 }
 
 interface TermProps {

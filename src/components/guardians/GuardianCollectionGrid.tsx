@@ -1,6 +1,7 @@
 import { Search } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { Card } from '@/components/ui/Card'
+import { evaluateGuardianTrigger } from '@/utils/partyMatch'
 import { GuardianCard } from './GuardianCard'
 import { GuardianCategoryTabs } from './GuardianCategoryTabs'
 import type { Guardian } from '@/types'
@@ -13,6 +14,7 @@ interface GuardianCollectionGridProps {
   guardians: Guardian[]
   ownedIds: string[]
   onToggleOwned: (id: string) => void
+  partyAttrs?: string[]
 }
 
 const RARITY_OPTIONS: { key: RarityFilter; label: string }[] = [
@@ -26,10 +28,12 @@ export function GuardianCollectionGrid({
   guardians,
   ownedIds,
   onToggleOwned,
+  partyAttrs,
 }: GuardianCollectionGridProps) {
   const [activeCategory, setActiveCategory] = useState<GuardianCategory>('战技特化')
   const [filterMode, setFilterMode] = useState<FilterMode>('all')
   const [rarityFilter, setRarityFilter] = useState<RarityFilter>('all')
+  const [onlyTrigger, setOnlyTrigger] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
 
   const counts = useMemo(() => {
@@ -52,9 +56,22 @@ export function GuardianCollectionGrid({
       if (filterMode === 'missing' && ownedIds.includes(g.id)) return false
       if (rarityFilter !== 'all' && g.rarity !== rarityFilter) return false
       if (query && !g.name.toLowerCase().includes(query)) return false
+      if (onlyTrigger && partyAttrs) {
+        const { trigger } = evaluateGuardianTrigger(g.effect, partyAttrs)
+        if (!trigger) return false
+      }
       return true
     })
-  }, [guardians, activeCategory, filterMode, rarityFilter, searchQuery, ownedIds])
+  }, [
+    guardians,
+    activeCategory,
+    filterMode,
+    rarityFilter,
+    searchQuery,
+    ownedIds,
+    onlyTrigger,
+    partyAttrs,
+  ])
 
   const ownedInCategory = filtered.filter((g) => ownedIds.includes(g.id)).length
 
@@ -82,6 +99,19 @@ export function GuardianCollectionGrid({
               {key === 'all' ? '全部' : key === 'owned' ? '已拥有' : '未拥有'}
             </button>
           ))}
+          {partyAttrs && (
+            <button
+              type="button"
+              onClick={() => setOnlyTrigger((prev) => !prev)}
+              className={`rounded-md px-3 py-1.5 text-sm transition-colors ${
+                onlyTrigger
+                  ? 'bg-positive text-white'
+                  : 'bg-surface-light text-text-muted hover:text-text'
+              }`}
+            >
+              {onlyTrigger ? '仅看可触发' : '只看可触发'}
+            </button>
+          )}
         </div>
       </div>
 
@@ -125,6 +155,7 @@ export function GuardianCollectionGrid({
               guardian={g}
               owned={ownedIds.includes(g.id)}
               onToggleOwned={onToggleOwned}
+              partyAttrs={partyAttrs}
             />
           ))}
         </div>
