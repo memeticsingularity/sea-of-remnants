@@ -51,9 +51,11 @@ export function CrewDetailPage() {
         <div>
           <h1 className="text-3xl font-bold text-text">{crew.name}</h1>
           <div className="mt-2 flex flex-wrap gap-2">
-            <Tag variant="gold">{crew.rarity}</Tag>
-            {crew.role && <Tag>{crew.role}</Tag>}
-            {crew.element && <Tag variant="cyan">{crew.element}</Tag>}
+            <Tag variant={crew.rarity === 'SSR' ? 'gold' : 'accent'}>
+              {crew.rarity === 'SSR' ? '黑券' : crew.rarity === 'SR' ? '紫券' : crew.rarity}
+            </Tag>
+            {crew.primaryStat && <Tag>{crew.primaryStat}</Tag>}
+            {crew.faction && <Tag variant="cyan">{crew.faction}</Tag>}
             {crew.obtain && <Tag variant="accent">{crew.obtain}</Tag>}
           </div>
         </div>

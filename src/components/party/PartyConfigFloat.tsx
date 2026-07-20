@@ -1,13 +1,22 @@
 import { useState } from 'react'
 import { Users, X } from 'lucide-react'
+import { wikiData } from '@/data'
 import { Card } from '@/components/ui/Card'
-import { usePartyConfig, MAIN_ATTRIBUTES } from '@/hooks/usePartyConfig'
+import { usePartyConfig } from '@/hooks/usePartyConfig'
+import type { Crew } from '@/types'
 
 export function PartyConfigFloat() {
   const [open, setOpen] = useState(false)
-  const { config, setMainAttr, clearSlot, resetConfig } = usePartyConfig()
+  const { config, setCrew, clearSlot, resetConfig } = usePartyConfig()
+  const crews = wikiData.crews
 
-  const filledCount = config.slots.filter((s) => s.mainAttr !== '').length
+  const filledCount = config.slots.filter((s) => s.crewId !== '').length
+
+  function getCrew(crewId: string): Crew | undefined {
+    return crews.find((c) => c.id === crewId)
+  }
+
+  const availableCrews = crews.slice().sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'))
 
   return (
     <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-3">
@@ -16,7 +25,7 @@ export function PartyConfigFloat() {
           <div className="mb-3 flex items-center justify-between">
             <div>
               <h3 className="font-bold text-text">当前队伍</h3>
-              <p className="text-xs text-text-muted">用于判断守护/行装/技能加成是否触发</p>
+              <p className="text-xs text-text-muted">选择 4 名船员，用于判断加成触发</p>
             </div>
             <button
               type="button"
@@ -28,38 +37,55 @@ export function PartyConfigFloat() {
           </div>
 
           <div className="space-y-2">
-            {config.slots.map((slot, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <span className="w-12 text-xs text-text-muted">船员 {index + 1}</span>
-                <select
-                  value={slot.mainAttr}
-                  onChange={(e) =>
-                    setMainAttr(
-                      index,
-                      e.target.value === '' ? '' : (e.target.value as typeof MAIN_ATTRIBUTES[number]),
-                    )
-                  }
-                  className="flex-1 rounded-md border border-border bg-surface px-2 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
-                >
-                  <option value="">未设置</option>
-                  {MAIN_ATTRIBUTES.map((attr) => (
-                    <option key={attr} value={attr}>
-                      {attr}系
-                    </option>
-                  ))}
-                </select>
-                {slot.mainAttr && (
-                  <button
-                    type="button"
-                    onClick={() => clearSlot(index)}
-                    className="text-xs text-text-muted hover:text-negative"
+            {config.slots.map((slot, index) => {
+              const crew = getCrew(slot.crewId)
+              return (
+                <div key={index} className="flex items-center gap-2">
+                  <span className="w-12 text-xs text-text-muted">船员 {index + 1}</span>
+                  <select
+                    value={slot.crewId}
+                    onChange={(e) => setCrew(index, e.target.value)}
+                    className="flex-1 rounded-md border border-border bg-surface px-2 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
                   >
-                    清除
-                  </button>
-                )}
-              </div>
-            ))}
+                    <option value="">未选择</option>
+                    {availableCrews.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.name} {c.primaryStat ? `（${c.primaryStat}）` : ''}
+                      </option>
+                    ))}
+                  </select>
+                  {crew ? (
+                    <button
+                      type="button"
+                      onClick={() => clearSlot(index)}
+                      className="text-xs text-text-muted hover:text-negative"
+                    >
+                      清除
+                    </button>
+                  ) : null}
+                </div>
+              )
+            })}
           </div>
+
+          {filledCount > 0 && (
+            <div className="mt-3 flex flex-wrap gap-1">
+              {config.slots
+                .map((s) => getCrew(s.crewId))
+                .filter((c): c is Crew => c !== undefined)
+                .map((c) => (
+                  <span
+                    key={c.id}
+                    className="rounded-md bg-surface-light px-2 py-1 text-xs text-text"
+                  >
+                    {c.name}
+                    {c.primaryStat && c.primaryStat !== '待补充' ? (
+                      <span className="ml-1 text-accent">· {c.primaryStat}</span>
+                    ) : null}
+                  </span>
+                ))}
+            </div>
+          )}
 
           <button
             type="button"

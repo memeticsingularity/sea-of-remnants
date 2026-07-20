@@ -1,20 +1,9 @@
 import { useCallback, useEffect, useState } from 'react'
 
-const STORAGE_KEY = 'sea-of-remnants:party-config'
-
-export const MAIN_ATTRIBUTES = [
-  '力量',
-  '体质',
-  '敏捷',
-  '智力',
-  '魅力',
-  '感知',
-] as const
-
-export type MainAttribute = (typeof MAIN_ATTRIBUTES)[number]
+const STORAGE_KEY = 'sea-of-remnants:party-crew-config'
 
 export interface PartySlot {
-  mainAttr: MainAttribute | ''
+  crewId: string
 }
 
 export interface PartyConfig {
@@ -23,7 +12,7 @@ export interface PartyConfig {
 
 function getDefaultConfig(): PartyConfig {
   return {
-    slots: Array.from({ length: 4 }, () => ({ mainAttr: '' })),
+    slots: Array.from({ length: 4 }, () => ({ crewId: '' })),
   }
 }
 
@@ -34,9 +23,10 @@ function loadConfig(): PartyConfig {
     const parsed = JSON.parse(raw)
     return {
       slots: Array.from({ length: 4 }, (_, i) => ({
-        mainAttr: MAIN_ATTRIBUTES.includes(parsed.slots?.[i]?.mainAttr)
-          ? (parsed.slots[i].mainAttr as MainAttribute)
-          : '',
+        crewId:
+          typeof parsed.slots?.[i]?.crewId === 'string'
+            ? parsed.slots[i].crewId
+            : '',
       })),
     }
   } catch {
@@ -59,10 +49,10 @@ export function usePartyConfig() {
     saveConfig(config)
   }, [config])
 
-  const setMainAttr = useCallback((index: number, mainAttr: MainAttribute | '') => {
+  const setCrew = useCallback((index: number, crewId: string) => {
     setConfig((prev) => {
       const slots = prev.slots.map((s, i) =>
-        i === index ? { ...s, mainAttr } : s,
+        i === index ? { ...s, crewId } : s,
       )
       return { ...prev, slots }
     })
@@ -70,8 +60,8 @@ export function usePartyConfig() {
 
   const clearSlot = useCallback((index: number) => {
     setConfig((prev) => {
-      const slots: PartySlot[] = prev.slots.map((s, i) =>
-        i === index ? { ...s, mainAttr: '' } : s,
+      const slots = prev.slots.map((s, i) =>
+        i === index ? { ...s, crewId: '' } : s,
       )
       return { ...prev, slots }
     })
@@ -83,7 +73,7 @@ export function usePartyConfig() {
 
   return {
     config,
-    setMainAttr,
+    setCrew,
     clearSlot,
     resetConfig,
   }

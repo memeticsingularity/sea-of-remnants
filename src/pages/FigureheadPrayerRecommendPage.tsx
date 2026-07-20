@@ -56,17 +56,43 @@ const rarityClasses: Record<Guardian['rarity'], string> = {
   蓝: 'border-accent-cyan bg-accent-cyan/10 shadow-[0_0_16px_rgba(6,182,212,0.12)] text-accent-cyan',
 }
 
-function TriggerBadge({ effect }: { effect: string }) {
-  const { config } = usePartyConfig()
-  const { trigger, reason } = useMemo(
-    () => evaluateGuardianTrigger(effect, config),
-    [effect, config],
+function TriggerBadge({
+  effect,
+  partyAttrs,
+}: {
+  effect: string
+  partyAttrs: string[]
+}) {
+  const { trigger, reason, required } = useMemo(
+    () => evaluateGuardianTrigger(effect, partyAttrs),
+    [effect, partyAttrs],
   )
 
   return (
-    <div className={`mt-2 text-xs ${trigger ? 'text-positive' : 'text-negative'}`}>
-      <span className="font-medium">{trigger ? '✓ 可触发' : '✗ 无法触发'}</span>
-      <span className="ml-1 text-text-muted">· {reason}</span>
+    <div className="mt-2">
+      {required.length > 0 && (
+        <div className="mb-1.5 flex flex-wrap gap-1">
+          {required.map((attr) => {
+            const active = partyAttrs.includes(attr)
+            return (
+              <span
+                key={attr}
+                className={`rounded-full border px-2 py-0.5 text-xs ${
+                  active
+                    ? 'border-positive/50 bg-positive/10 text-positive'
+                    : 'border-border bg-surface-light text-text-dim'
+                }`}
+              >
+                {attr}系
+              </span>
+            )
+          })}
+        </div>
+      )}
+      <div className={`text-xs ${trigger ? 'text-positive' : 'text-negative'}`}>
+        <span className="font-medium">{trigger ? '✓ 可触发' : '✗ 无法触发'}</span>
+        <span className="ml-1 text-text-muted">· {reason}</span>
+      </div>
     </div>
   )
 }
@@ -74,13 +100,23 @@ function TriggerBadge({ effect }: { effect: string }) {
 export function FigureheadPrayerRecommendPage() {
   const guardians = wikiData.guardians
   const shipTags = wikiData.shipTags
+  const crews = wikiData.crews
 
   const { state, toggleFocusTag, clearOwned } = useGuardianState()
+  const { config } = usePartyConfig()
   const [pickerValue, setPickerValue] = useState<(Guardian | undefined)[]>([
     undefined,
     undefined,
     undefined,
   ])
+
+  const partyAttrs = useMemo(
+    () =>
+      config.slots
+        .map((s) => crews.find((c) => c.id === s.crewId)?.primaryStat)
+        .filter((a): a is string => !!a && a !== '待补充'),
+    [config, crews],
+  )
 
   const ownedGuardians = useMemo(
     () => guardians.filter((g) => state.ownedIds.includes(g.id)),
@@ -172,7 +208,7 @@ export function FigureheadPrayerRecommendPage() {
                   )}
                   <div className="mb-3 text-sm text-text-muted">
                     <GlossaryTooltip text={g.effect} />
-                    <TriggerBadge effect={g.effect} />
+                    <TriggerBadge effect={g.effect} partyAttrs={partyAttrs} />
                   </div>
                   <div className="rounded-md bg-surface-light p-2">
                     <p className="mb-1 text-xs font-medium text-text-muted">标签变化</p>
