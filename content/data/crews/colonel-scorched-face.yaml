@@ -5,6 +5,8 @@ type: 船员
 rarity: SSR
 role: 待补充
 element: 待补充
+primaryStat: 力量
+faction: 破晓者
 obtain: 招募
 image: /images/crews/colonel-scorched-face.png
 tags:

@@ -5,6 +5,8 @@ type: 船员
 rarity: SR
 role: 待补充
 element: 待补充
+primaryStat: 敏捷
+faction: 流浪号
 obtain: 招募
 image: /images/crews/ghost-hand-shipwright.png
 tags:

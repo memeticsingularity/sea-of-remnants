@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-20T14:30:05.870Z"
+    "generatedAt": "2026-07-20T14:53:12.654Z"
   },
   "crews": [
     {
@@ -12,6 +12,8 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "智力",
+      "faction": "漂流瓶号",
       "obtain": "招募",
       "image": "/images/crews/as.png",
       "tags": [
@@ -34,6 +36,8 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "感知",
+      "faction": "黑男爵",
       "obtain": "招募",
       "image": "/images/crews/clockmaker.png",
       "tags": [
@@ -56,6 +60,8 @@
       "rarity": "SSR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "力量",
+      "faction": "破晓者",
       "obtain": "招募",
       "image": "/images/crews/colonel-scorched-face.png",
       "tags": [
@@ -78,6 +84,8 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "体质",
+      "faction": "破晓者",
       "obtain": "招募",
       "image": "/images/crews/coward.png",
       "tags": [
@@ -100,6 +108,8 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "力量",
+      "faction": "妄想剧团",
       "obtain": "招募",
       "image": "/images/crews/dad-tonino.png",
       "tags": [
@@ -122,6 +132,8 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "敏捷",
+      "faction": "流浪号",
       "obtain": "招募",
       "image": "/images/crews/follower.png",
       "tags": [
@@ -144,6 +156,8 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "敏捷",
+      "faction": "流浪号",
       "obtain": "招募",
       "image": "/images/crews/ghost-hand-shipwright.png",
       "tags": [
@@ -166,6 +180,8 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "感知",
+      "faction": "破晓者",
       "obtain": "招募",
       "image": "/images/crews/hai-he.png",
       "tags": [
@@ -188,6 +204,8 @@
       "rarity": "SSR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "智力",
+      "faction": "蓝波乐队",
       "obtain": "招募",
       "image": "/images/crews/heg.png",
       "tags": [
@@ -210,6 +228,8 @@
       "rarity": "SSR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "感知",
+      "faction": "流浪号",
       "obtain": "招募",
       "image": "/images/crews/hungry-cat.png",
       "tags": [
@@ -232,6 +252,8 @@
       "rarity": "SSR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "体质",
+      "faction": "破晓者",
       "obtain": "招募",
       "image": "/images/crews/iron-fist-commander.png",
       "tags": [
@@ -254,6 +276,8 @@
       "rarity": "SSR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "魅力",
+      "faction": "流浪号",
       "obtain": "招募",
       "image": "/images/crews/isabella.png",
       "tags": [
@@ -276,6 +300,8 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "智力",
+      "faction": "妄想剧团",
       "obtain": "招募",
       "image": "/images/crews/miser.png",
       "tags": [
@@ -298,6 +324,8 @@
       "rarity": "SSR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "敏捷",
+      "faction": "蓝波乐队",
       "obtain": "招募",
       "image": "/images/crews/molly.png",
       "tags": [
@@ -320,6 +348,8 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "魅力",
+      "faction": "流浪号",
       "obtain": "招募",
       "image": "/images/crews/nonsense-prophet.png",
       "tags": [
@@ -342,6 +372,8 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "魅力",
+      "faction": "破晓者",
       "obtain": "招募",
       "image": "/images/crews/omen-eye.png",
       "tags": [
@@ -364,6 +396,8 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "力量",
+      "faction": "妄想剧团",
       "obtain": "招募",
       "image": "/images/crews/puppeteer.png",
       "tags": [
@@ -386,6 +420,8 @@
       "rarity": "SSR",
       "role": "输出",
       "element": "水",
+      "primaryStat": "智力",
+      "faction": "妄想剧团",
       "obtain": "招募 / 活动",
       "image": "/images/crews/sea-burial.png",
       "tags": [
@@ -434,6 +470,8 @@
       "rarity": "SSR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "敏捷",
+      "faction": "黑男爵",
       "obtain": "招募",
       "image": "/images/crews/small-axe.png",
       "tags": [
@@ -456,8 +494,34 @@
       "rarity": "SR",
       "role": "待补充",
       "element": "待补充",
+      "primaryStat": "智力",
+      "faction": "破晓者",
       "obtain": "招募",
       "image": "/images/crews/sosia.png",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "baseStats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spd": 0
+      },
+      "buildNotes": "待补充。\n"
+    },
+    {
+      "id": "crew-traveler",
+      "slug": "traveler",
+      "name": "旅人",
+      "type": "船员",
+      "rarity": "SR",
+      "role": "待补充",
+      "element": "待补充",
+      "primaryStat": "力量",
+      "faction": "漂流瓶号",
+      "obtain": "非招募",
+      "image": "/images/crews/traveler.png",
       "tags": [
         "SR",
         "待补充"
@@ -4590,6 +4654,20 @@
       "title": "索西亚",
       "type": "船员",
       "route": "/crews/sosia",
+      "tags": [
+        "SR",
+        "待补充"
+      ],
+      "keywords": [
+        "待补充",
+        "待补充"
+      ]
+    },
+    {
+      "id": "crew-traveler",
+      "title": "旅人",
+      "type": "船员",
+      "route": "/crews/traveler",
       "tags": [
         "SR",
         "待补充"

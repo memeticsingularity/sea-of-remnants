@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { SidebarNav } from './SidebarNav'
 import { TopBar } from './TopBar'
+import { PartyConfigFloat } from '@/components/party/PartyConfigFloat'
 
 export function AppShell() {
   return (
@@ -12,6 +13,7 @@ export function AppShell() {
           <Outlet />
         </main>
       </div>
+      <PartyConfigFloat />
     </div>
   )
 }

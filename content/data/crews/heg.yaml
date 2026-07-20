@@ -5,6 +5,8 @@ type: 船员
 rarity: SSR
 role: 待补充
 element: 待补充
+primaryStat: 智力
+faction: 蓝波乐队
 obtain: 招募
 image: /images/crews/heg.png
 tags:

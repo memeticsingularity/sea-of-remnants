@@ -9,7 +9,9 @@ import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
 import { GuardianPicker } from '@/components/guardians/GuardianPicker'
 import { ShipTagStatsPanel } from '@/components/guardians/ShipTagStatsPanel'
 import { useGuardianState } from '@/hooks/useGuardianState'
+import { usePartyConfig } from '@/hooks/usePartyConfig'
 import { getTagCounts, getTagSummary } from '@/utils/guardianRecommend'
+import { evaluateGuardianTrigger } from '@/utils/partyMatch'
 import type { Guardian, ShipTag } from '@/types'
 
 function TagDelta({ guardian, baseCounts, shipTags }: {
@@ -52,6 +54,21 @@ const rarityClasses: Record<Guardian['rarity'], string> = {
   金: 'border-gold bg-gold/15 shadow-[0_0_20px_rgba(245,158,11,0.18)] text-gold',
   紫: 'border-purple bg-purple/10 shadow-[0_0_16px_rgba(139,92,246,0.12)] text-purple',
   蓝: 'border-accent-cyan bg-accent-cyan/10 shadow-[0_0_16px_rgba(6,182,212,0.12)] text-accent-cyan',
+}
+
+function TriggerBadge({ effect }: { effect: string }) {
+  const { config } = usePartyConfig()
+  const { trigger, reason } = useMemo(
+    () => evaluateGuardianTrigger(effect, config),
+    [effect, config],
+  )
+
+  return (
+    <div className={`mt-2 text-xs ${trigger ? 'text-positive' : 'text-negative'}`}>
+      <span className="font-medium">{trigger ? '✓ 可触发' : '✗ 无法触发'}</span>
+      <span className="ml-1 text-text-muted">· {reason}</span>
+    </div>
+  )
 }
 
 export function FigureheadPrayerRecommendPage() {
@@ -155,6 +172,7 @@ export function FigureheadPrayerRecommendPage() {
                   )}
                   <div className="mb-3 text-sm text-text-muted">
                     <GlossaryTooltip text={g.effect} />
+                    <TriggerBadge effect={g.effect} />
                   </div>
                   <div className="rounded-md bg-surface-light p-2">
                     <p className="mb-1 text-xs font-medium text-text-muted">标签变化</p>

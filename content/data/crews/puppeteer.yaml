@@ -5,6 +5,8 @@ type: 船员
 rarity: SR
 role: 待补充
 element: 待补充
+primaryStat: 力量
+faction: 妄想剧团
 obtain: 招募
 image: /images/crews/puppeteer.png
 tags:

@@ -5,6 +5,8 @@ type: 船员
 rarity: SR
 role: 待补充
 element: 待补充
+primaryStat: 魅力
+faction: 流浪号
 obtain: 招募
 image: /images/crews/nonsense-prophet.png
 tags:

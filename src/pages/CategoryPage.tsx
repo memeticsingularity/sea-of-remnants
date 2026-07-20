@@ -48,9 +48,18 @@ interface FilterConfig {
 
 const filterConfigs: Record<CategoryKey, FilterConfig[]> = {
   crews: [
-    { key: 'rarity', label: '稀有度', getValue: (i) => (i as Crew).rarity },
-    { key: 'role', label: '定位', getValue: (i) => (i as Crew).role },
-    { key: 'element', label: '元素', getValue: (i) => (i as Crew).element },
+    {
+      key: 'rarity',
+      label: '稀有度',
+      getValue: (i) => {
+        const rarity = (i as Crew).rarity
+        if (rarity === 'SSR') return '黑券'
+        if (rarity === 'SR') return '紫券'
+        return rarity
+      },
+    },
+    { key: 'primaryStat', label: '主属性', getValue: (i) => (i as Crew).primaryStat },
+    { key: 'faction', label: '船队', getValue: (i) => (i as Crew).faction },
   ],
   ships: [
     { key: 'type', label: '类型', getValue: (i) => (i as Ship).type },

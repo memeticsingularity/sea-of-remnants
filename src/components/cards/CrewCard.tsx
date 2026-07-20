@@ -47,10 +47,12 @@ export function CrewCard({ crew, pulledCount = 0, rarity }: CrewCardProps) {
               {rarity ? (
                 <Tag variant={rarityVariants[rarity]}>{rarityLabels[rarity]}</Tag>
               ) : (
-                <Tag variant="gold">{crew.rarity}</Tag>
+                <Tag variant={crew.rarity === 'SSR' ? 'gold' : 'accent'}>
+                  {crew.rarity === 'SSR' ? '黑券' : crew.rarity === 'SR' ? '紫券' : crew.rarity}
+                </Tag>
               )}
-              {crew.role && <Tag>{crew.role}</Tag>}
-              {crew.element && <Tag variant="cyan">{crew.element}</Tag>}
+              {crew.primaryStat && <Tag>{crew.primaryStat}</Tag>}
+              {crew.faction && <Tag variant="cyan">{crew.faction}</Tag>}
             </div>
           </div>
         </div>

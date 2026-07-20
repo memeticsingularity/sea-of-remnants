@@ -113,6 +113,10 @@ export interface Crew {
   rarity: string
   role?: string
   element?: string
+  /** 主属性：力量 / 敏捷 / 体质 / 智力 / 感知 / 魅力 */
+  primaryStat?: string
+  /** 船队/阵营 */
+  faction?: string
   obtain?: string
   image?: string
   tags: string[]

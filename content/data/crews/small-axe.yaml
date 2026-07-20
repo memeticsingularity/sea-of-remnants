@@ -5,6 +5,8 @@ type: 船员
 rarity: SSR
 role: 待补充
 element: 待补充
+primaryStat: 敏捷
+faction: 黑男爵
 obtain: 招募
 image: /images/crews/small-axe.png
 tags:

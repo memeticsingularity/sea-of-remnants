@@ -5,6 +5,8 @@ type: 船员
 rarity: SR
 role: 待补充
 element: 待补充
+primaryStat: 感知
+faction: 黑男爵
 obtain: 招募
 image: /images/crews/clockmaker.png
 tags:

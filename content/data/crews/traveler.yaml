@@ -1,14 +1,14 @@
-id: crew-dad-tonino
-slug: dad-tonino
-name: 托尼诺老爹
+id: crew-traveler
+slug: traveler
+name: 旅人
 type: 船员
 rarity: SR
 role: 待补充
 element: 待补充
 primaryStat: 力量
-faction: 妄想剧团
-obtain: 招募
-image: /images/crews/dad-tonino.png
+faction: 漂流瓶号
+obtain: 非招募
+image: /images/crews/traveler.png
 tags:
   - SR
   - 待补充

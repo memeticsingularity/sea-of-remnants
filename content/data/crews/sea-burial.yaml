@@ -5,6 +5,8 @@ type: 船员
 rarity: SSR
 role: 输出
 element: 水
+primaryStat: 智力
+faction: 妄想剧团
 obtain: 招募 / 活动
 image: /images/crews/sea-burial.png
 tags:
