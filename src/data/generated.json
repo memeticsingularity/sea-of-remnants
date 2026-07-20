@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-20T14:12:13.045Z"
+    "generatedAt": "2026-07-20T14:30:05.870Z"
   },
   "crews": [
     {
@@ -6117,7 +6117,7 @@
       "id": "guardian-chou-dong-xi-lan-de-kuai",
       "title": "臭东西烂得快",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "一锤定音的守护"
@@ -6128,7 +6128,7 @@
       "id": "guardian-da-ba-shou",
       "title": "搭把手",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6139,7 +6139,7 @@
       "id": "guardian-di-ren-yue-duo-za-yue-hen",
       "title": "敌人越多砸越狠",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "一锤定音的守护"
@@ -6150,7 +6150,7 @@
       "id": "guardian-fang-gua-ceng-tu-liang-ceng-shuang",
       "title": "防刮蹭涂两层霜",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "一锤定音的守护"
@@ -6161,7 +6161,7 @@
       "id": "guardian-fire-fishing-synergy",
       "title": "渔火协同",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         {
           "name": "待补充",
@@ -6178,7 +6178,7 @@
       "id": "guardian-fish-swarm-hunt",
       "title": "群鱼猎袭",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         {
           "name": "洞察",
@@ -6195,7 +6195,7 @@
       "id": "guardian-fishing-master",
       "title": "渔猎宗师",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         {
           "name": "待补充",
@@ -6212,7 +6212,7 @@
       "id": "guardian-gao-zhi-ren-cai-mei-li-gao",
       "title": "高智人才魅力高",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "一锤定音的守护"
@@ -6223,7 +6223,7 @@
       "id": "guardian-gen-zhe-shu-shu-chong",
       "title": "跟着鼠鼠冲",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6234,7 +6234,7 @@
       "id": "guardian-guai-guai-yang-shang",
       "title": "乖乖养伤",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6245,7 +6245,7 @@
       "id": "guardian-hao-ti-zhi-chao-you-mei-li",
       "title": "好体质超有魅力",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "一锤定音的守护"
@@ -6256,7 +6256,7 @@
       "id": "guardian-hen-kuai-hui-lai",
       "title": "很快回来",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6267,7 +6267,7 @@
       "id": "guardian-huo-li-man-man",
       "title": "活力满满",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6278,7 +6278,7 @@
       "id": "guardian-huo-yue-tian-yue-wang",
       "title": "火越添越旺",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6289,7 +6289,7 @@
       "id": "guardian-ji-rou-qiang-yan",
       "title": "肌肉抢眼",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6300,7 +6300,7 @@
       "id": "guardian-jiang-li-dian-ling-zui",
       "title": "奖励点零嘴",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6311,7 +6311,7 @@
       "id": "guardian-jiu-zhe-gao-ge-da",
       "title": "揪着高个打",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6322,7 +6322,7 @@
       "id": "guardian-ju-jue-huai-zhuang-tai",
       "title": "拒绝坏状态",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6333,7 +6333,7 @@
       "id": "guardian-kai-kai-ren",
       "title": "开开刃",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6344,7 +6344,7 @@
       "id": "guardian-kuai-kuai-meng-qiao",
       "title": "快快猛敲",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6355,7 +6355,7 @@
       "id": "guardian-kuang-ye-da-fa",
       "title": "狂野打法",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6366,7 +6366,7 @@
       "id": "guardian-li-liang-ti-zhi-jian-bing-jian",
       "title": "力量体质肩并肩",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "一锤定音的守护"
@@ -6377,7 +6377,7 @@
       "id": "guardian-piercing-wave-strike",
       "title": "穿浪重击",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         {
           "name": "重火力",
@@ -6394,7 +6394,7 @@
       "id": "guardian-quan-du-shi-you-xiao-xing-dong",
       "title": "全都是有效行动",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "一锤定音的守护"
@@ -6405,7 +6405,7 @@
       "id": "guardian-quan-ti-qi-li",
       "title": "全体起立！",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6416,7 +6416,7 @@
       "id": "guardian-quan-yuan-ji-su-chong-feng-zhong",
       "title": "全员急速冲锋中",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "一锤定音的守护"
@@ -6427,7 +6427,7 @@
       "id": "guardian-shen-ban-ying",
       "title": "身板硬",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6438,7 +6438,7 @@
       "id": "guardian-shi-qu-de-du-hui-gui-lai",
       "title": "失去的都会归来",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "一锤定音的守护"
@@ -6449,7 +6449,7 @@
       "id": "guardian-strong-ship-cannon",
       "title": "坚船利炮",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         {
           "name": "待补充",
@@ -6466,7 +6466,7 @@
       "id": "guardian-tian-ba-huo",
       "title": "添把火",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6477,7 +6477,7 @@
       "id": "guardian-tide-coming",
       "title": "狂潮将至",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         {
           "name": "重火力",
@@ -6494,7 +6494,7 @@
       "id": "guardian-tou-nao-hen-qing-xing",
       "title": "头脑很清醒",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6505,7 +6505,7 @@
       "id": "guardian-water-course",
       "title": "水到渠成",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         {
           "name": "待补充",
@@ -6522,7 +6522,7 @@
       "id": "guardian-wave-chasing",
       "title": "破浪追袭",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         {
           "name": "洞察",
@@ -6539,7 +6539,7 @@
       "id": "guardian-wen-zhong-xie",
       "title": "稳重些",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6550,7 +6550,7 @@
       "id": "guardian-xing-dong-shang-tou",
       "title": "行动上头",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6561,7 +6561,7 @@
       "id": "guardian-yue-da-yue-lai-jin",
       "title": "越打越来劲",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6572,7 +6572,7 @@
       "id": "guardian-zhu-li-fan-pan",
       "title": "助力翻盘",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6583,7 +6583,7 @@
       "id": "guardian-zhui-zhe-da",
       "title": "追着打",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "未来可期的守护"
@@ -6594,7 +6594,7 @@
       "id": "guardian-zi-xi-gan-shou-zhe-mei-li",
       "title": "仔细感受这魅力",
       "type": "守护",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [
         "船员培养",
         "一锤定音的守护"
@@ -6605,7 +6605,7 @@
       "id": "ship-tag-heavy-fire",
       "title": "重火力",
       "type": "船只标签",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [],
       "keywords": [
         "重火力"
@@ -6615,7 +6615,7 @@
       "id": "ship-tag-insight",
       "title": "洞察",
       "type": "船只标签",
-      "route": "/crews/figurehead-prayer",
+      "route": "/figurehead-prayer",
       "tags": [],
       "keywords": [
         "洞察"

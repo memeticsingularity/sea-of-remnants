@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, Navigate } from 'react-router-dom'
 import { AppShell } from '@/components/layout/AppShell'
 import { HomePage } from '@/pages/HomePage'
 import { CategoryPage } from '@/pages/CategoryPage'
@@ -23,8 +23,10 @@ export const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: 'crews', element: <CategoryPage category="crews" /> },
       { path: 'crews/:slug', element: <CrewDetailPage /> },
-      { path: 'crews/figurehead-prayer', element: <FigureheadPrayerPage /> },
-      { path: 'crews/figurehead-prayer/recommend', element: <FigureheadPrayerRecommendPage /> },
+      { path: 'figurehead-prayer', element: <FigureheadPrayerPage /> },
+      { path: 'figurehead-prayer/recommend', element: <FigureheadPrayerRecommendPage /> },
+      { path: 'crews/figurehead-prayer', element: <Navigate to="/figurehead-prayer" replace /> },
+      { path: 'crews/figurehead-prayer/recommend', element: <Navigate to="/figurehead-prayer/recommend" replace /> },
       { path: 'ships', element: <CategoryPage category="ships" /> },
       { path: 'ships/:slug', element: <NotFoundPage /> },
       { path: 'classes', element: <CategoryPage category="classes" /> },

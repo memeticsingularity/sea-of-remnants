@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import { BookOpen, Anchor, Users, Ship, Sparkles, Music, Shield, Package, Map, Scroll, HelpCircle, Activity, Ticket, Dices } from 'lucide-react'
+import { BookOpen, Anchor, Users, Ship, Sparkles, Music, Shield, Package, Map, Scroll, HelpCircle, Activity, Ticket, Dices, Gem } from 'lucide-react'
 
 interface NavItem {
   label: string
@@ -14,7 +14,6 @@ const navGroups: NavItem[] = [
     icon: <Sparkles className="h-4 w-4" />,
     children: [
       { label: '船员培养', to: '/crews' },
-      { label: '船首像祈祷', to: '/crews/figurehead-prayer' },
       { label: '船只培养', to: '/ships' },
       { label: '全域培养', to: '/guides/crew-training' },
     ],
@@ -37,6 +36,14 @@ const navGroups: NavItem[] = [
       { label: '招募模拟器', to: '/recruitment' },
       { label: '招募图鉴', to: '/recruitment/collection' },
       { label: '记忆重逢', to: '/guides/memory-reunion' },
+    ],
+  },
+  {
+    label: '船首像祈祷',
+    icon: <Gem className="h-4 w-4" />,
+    children: [
+      { label: '守护图鉴', to: '/figurehead-prayer' },
+      { label: '三选一求助', to: '/figurehead-prayer/recommend' },
     ],
   },
   { label: '指南', to: '/guides/crew-training', icon: <BookOpen className="h-4 w-4" /> },

@@ -82,8 +82,7 @@ export function FigureheadPrayerRecommendPage() {
       <Breadcrumb
         items={[
           { label: '首页', to: '/' },
-          { label: '船员培养', to: '/crews' },
-          { label: '船首像祈祷', to: '/crews/figurehead-prayer' },
+          { label: '船首像祈祷', to: '/figurehead-prayer' },
           { label: '三选一求助' },
         ]}
       />
@@ -91,7 +90,7 @@ export function FigureheadPrayerRecommendPage() {
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center gap-3">
           <Link
-            to="/crews/figurehead-prayer"
+            to="/figurehead-prayer"
             className="rounded-lg border border-border p-2 text-text-muted transition-colors hover:border-accent hover:text-accent"
           >
             <ArrowLeft className="h-5 w-5" />
