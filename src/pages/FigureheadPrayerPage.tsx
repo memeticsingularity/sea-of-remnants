@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { HelpCircle, Trash2 } from 'lucide-react'
 import { wikiData } from '@/data'
@@ -7,16 +7,35 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { GuardianCollectionGrid } from '@/components/guardians/GuardianCollectionGrid'
 import { ShipTagStatsPanel } from '@/components/guardians/ShipTagStatsPanel'
 import { LoadoutPanel } from '@/components/guardians/LoadoutPanel'
-import { useGuardianState, GUARDIAN_CATEGORIES } from '@/hooks/useGuardianState'
+import {
+  useGuardianState,
+  GUARDIAN_CATEGORIES,
+  type GuardianCategory,
+} from '@/hooks/useGuardianState'
 import { usePartyConfig } from '@/hooks/usePartyConfig'
+
+const categoryLabels: Record<GuardianCategory, string> = {
+  战技特化: '战技特化',
+  潜能特化: '潜能特化',
+  船员培养: '船员培养',
+}
 
 export function FigureheadPrayerPage() {
   const guardians = wikiData.guardians
   const shipTags = wikiData.shipTags
   const crews = wikiData.crews
 
-  const { state, toggleOwned, toggleFocusTag, clearOwned, equipGuardian, unequipGuardian, clearLoadouts } = useGuardianState()
+  const {
+    state,
+    toggleOwned,
+    toggleFocusTag,
+    clearOwned,
+    equipGuardian,
+    unequipGuardian,
+    clearLoadouts,
+  } = useGuardianState()
   const { config } = usePartyConfig()
+  const [activeCategory, setActiveCategory] = useState<GuardianCategory>('战技特化')
 
   const equippedCount = GUARDIAN_CATEGORIES.reduce(
     (sum, category) =>
@@ -78,28 +97,68 @@ export function FigureheadPrayerPage() {
         </div>
       </div>
 
-      <LoadoutPanel
-        guardians={guardians}
-        ownedIds={state.ownedIds}
-        loadouts={state.loadouts}
-        onEquip={equipGuardian}
-        onUnequip={unequipGuardian}
-      />
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+        <div className="space-y-4 lg:col-span-4">
+          <Card className="space-y-2 p-3">
+            <p className="text-xs font-medium text-text-muted">选择分支</p>
+            <div className="flex flex-col gap-1">
+              {GUARDIAN_CATEGORIES.map((category) => {
+                const equipped = state.loadouts[category].filter(
+                  (id): id is string => id !== null,
+                ).length
+                const isActive = category === activeCategory
+                return (
+                  <button
+                    key={category}
+                    type="button"
+                    onClick={() => setActiveCategory(category)}
+                    className={`flex items-center justify-between rounded-md px-3 py-2 text-sm transition-colors ${
+                      isActive
+                        ? 'bg-accent text-white'
+                        : 'bg-surface-light text-text-muted hover:text-text'
+                    }`}
+                  >
+                    <span>{categoryLabels[category]}</span>
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-xs ${
+                        isActive ? 'bg-white/20' : 'bg-surface text-text-dim'
+                      }`}
+                    >
+                      {equipped} / 7
+                    </span>
+                  </button>
+                )
+              })}
+            </div>
+          </Card>
 
-      <ShipTagStatsPanel
-        ownedIds={state.ownedIds}
-        allGuardians={guardians}
-        shipTags={shipTags}
-        focusTags={state.focusTags}
-        onToggleFocusTag={toggleFocusTag}
-      />
+          <LoadoutPanel
+            guardians={guardians}
+            loadouts={state.loadouts}
+            onEquip={equipGuardian}
+            onUnequip={unequipGuardian}
+            activeCategory={activeCategory}
+          />
+        </div>
 
-      <GuardianCollectionGrid
-        guardians={guardians}
-        ownedIds={state.ownedIds}
-        onToggleOwned={toggleOwned}
-        partyAttrs={partyAttrs}
-      />
+        <div className="space-y-4 lg:col-span-8">
+          <ShipTagStatsPanel
+            ownedIds={state.ownedIds}
+            allGuardians={guardians}
+            shipTags={shipTags}
+            focusTags={state.focusTags}
+            onToggleFocusTag={toggleFocusTag}
+          />
+
+          <GuardianCollectionGrid
+            guardians={guardians}
+            ownedIds={state.ownedIds}
+            onToggleOwned={toggleOwned}
+            partyAttrs={partyAttrs}
+            activeCategory={activeCategory}
+          />
+        </div>
+      </div>
     </div>
   )
 }

@@ -3,7 +3,6 @@ import { useMemo, useState } from 'react'
 import { Card } from '@/components/ui/Card'
 import { evaluateGuardianTrigger } from '@/utils/partyMatch'
 import { GuardianCard } from './GuardianCard'
-import { GuardianCategoryTabs } from './GuardianCategoryTabs'
 import type { Guardian } from '@/types'
 
 type FilterMode = 'all' | 'owned' | 'missing'
@@ -15,6 +14,7 @@ interface GuardianCollectionGridProps {
   ownedIds: string[]
   onToggleOwned: (id: string) => void
   partyAttrs?: string[]
+  activeCategory: GuardianCategory
 }
 
 const RARITY_OPTIONS: { key: RarityFilter; label: string }[] = [
@@ -29,24 +29,12 @@ export function GuardianCollectionGrid({
   ownedIds,
   onToggleOwned,
   partyAttrs,
+  activeCategory,
 }: GuardianCollectionGridProps) {
-  const [activeCategory, setActiveCategory] = useState<GuardianCategory>('战技特化')
   const [filterMode, setFilterMode] = useState<FilterMode>('all')
   const [rarityFilter, setRarityFilter] = useState<RarityFilter>('all')
   const [onlyTrigger, setOnlyTrigger] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
-
-  const counts = useMemo(() => {
-    const result: Record<GuardianCategory, number> = {
-      战技特化: 0,
-      潜能特化: 0,
-      船员培养: 0,
-    }
-    for (const g of guardians) {
-      result[g.category] = (result[g.category] || 0) + 1
-    }
-    return result
-  }, [guardians])
 
   const filtered = useMemo(() => {
     const query = searchQuery.trim().toLowerCase()
@@ -78,11 +66,7 @@ export function GuardianCollectionGrid({
   return (
     <Card className="space-y-4">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <GuardianCategoryTabs
-          active={activeCategory}
-          onSelect={setActiveCategory}
-          counts={counts}
-        />
+        <h2 className="text-lg font-bold text-text">{activeCategory} 图鉴</h2>
 
         <div className="flex flex-wrap items-center gap-2">
           {(['all', 'owned', 'missing'] as FilterMode[]).map((key) => (

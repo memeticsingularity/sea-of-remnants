@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import {
@@ -9,10 +10,10 @@ import type { Guardian } from '@/types'
 
 interface LoadoutPanelProps {
   guardians: Guardian[]
-  ownedIds: string[]
   loadouts: Record<GuardianCategory, (string | null)[]>
   onEquip: (category: GuardianCategory, slotIndex: number, id: string | null) => void
   onUnequip: (category: GuardianCategory, slotIndex: number) => void
+  activeCategory?: GuardianCategory
 }
 
 const categoryLabels: Record<GuardianCategory, string> = {
@@ -27,14 +28,108 @@ const rarityColors: Record<Guardian['rarity'], string> = {
   蓝: 'text-accent-cyan',
 }
 
+function SearchableSelect({
+  options,
+  selected,
+  onSelect,
+  placeholder,
+}: {
+  options: Guardian[]
+  selected?: Guardian
+  onSelect: (id: string | null) => void
+  placeholder: string
+}) {
+  const [open, setOpen] = useState(false)
+  const [query, setQuery] = useState('')
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setOpen(false)
+      }
+    }
+    if (open) {
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [open])
+
+  const filtered = options.filter((g) => g.name.toLowerCase().includes(query.toLowerCase()))
+
+  return (
+    <div ref={containerRef} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((prev) => !prev)}
+        className="w-full rounded-md border border-border bg-surface px-2 py-1.5 text-left text-sm text-text transition-colors hover:border-accent focus:border-accent focus:outline-none"
+      >
+        {selected ? (
+          <span className={rarityColors[selected.rarity]}>{selected.name}</span>
+        ) : (
+          <span className="text-text-dim">{placeholder}</span>
+        )}
+      </button>
+
+      {open && (
+        <div className="absolute z-20 mt-1 w-full max-h-64 overflow-auto rounded-md border border-border bg-surface shadow-xl">
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="输入守护名称…"
+            className="sticky top-0 w-full border-b border-border bg-surface px-2 py-1.5 text-sm text-text placeholder:text-text-dim focus:outline-none"
+            onClick={(e) => e.stopPropagation()}
+          />
+          {selected && (
+            <button
+              type="button"
+              onClick={() => {
+                onSelect(null)
+                setOpen(false)
+                setQuery('')
+              }}
+              className="block w-full px-2 py-1.5 text-left text-xs text-negative hover:bg-surface-light"
+            >
+              卸下
+            </button>
+          )}
+          {filtered.length === 0 ? (
+            <p className="px-2 py-1.5 text-xs text-text-dim">无匹配守护</p>
+          ) : (
+            filtered.map((g) => (
+              <button
+                key={g.id}
+                type="button"
+                onClick={() => {
+                  onSelect(g.id)
+                  setOpen(false)
+                  setQuery('')
+                }}
+                className="block w-full px-2 py-1.5 text-left text-sm hover:bg-surface-light"
+              >
+                <span className={`${rarityColors[g.rarity]} mr-1`}>[{g.rarity}]</span>
+                <span className="text-text">{g.name}</span>
+              </button>
+            ))
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export function LoadoutPanel({
   guardians,
-  ownedIds,
   loadouts,
   onEquip,
   onUnequip,
+  activeCategory,
 }: LoadoutPanelProps) {
-  const ownedGuardians = guardians.filter((g) => ownedIds.includes(g.id))
+  const categories = activeCategory ? [activeCategory] : GUARDIAN_CATEGORIES
 
   function getEquippedId(category: GuardianCategory, index: number) {
     return loadouts[category][index]
@@ -52,7 +147,7 @@ export function LoadoutPanel({
         loadouts[cat].filter((id): id is string => id !== null),
       ),
     )
-    return ownedGuardians.filter(
+    return guardians.filter(
       (g) =>
         g.category === category &&
         g.set === requiredSet &&
@@ -62,8 +157,8 @@ export function LoadoutPanel({
   }
 
   return (
-    <div className="space-y-6">
-      {GUARDIAN_CATEGORIES.map((category) => (
+    <div className={activeCategory ? '' : 'space-y-6'}>
+      {categories.map((category) => (
         <Card key={category} className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-bold text-text">{categoryLabels[category]}</h2>
@@ -76,7 +171,7 @@ export function LoadoutPanel({
             </Tag>
           </div>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {Array.from({ length: 7 }, (_, index) => {
               const equipped = getEquippedGuardian(category, index)
               const requiredSet = getSlotSet(index)
@@ -113,25 +208,18 @@ export function LoadoutPanel({
                     <p className="mb-2 text-sm text-text-dim">空槽</p>
                   )}
 
-                  <select
-                    value={equipped?.id ?? ''}
-                    onChange={(e) => {
-                      const value = e.target.value
-                      if (value === '') {
+                  <SearchableSelect
+                    options={candidates}
+                    selected={equipped}
+                    onSelect={(id) => {
+                      if (id === null) {
                         onUnequip(category, index)
                       } else {
-                        onEquip(category, index, value)
+                        onEquip(category, index, id)
                       }
                     }}
-                    className="w-full rounded-md border border-border bg-surface px-2 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
-                  >
-                    <option value="">{equipped ? '卸下' : '选择守护...'}</option>
-                    {candidates.map((g) => (
-                      <option key={g.id} value={g.id}>
-                        [{g.rarity}] {g.name}
-                      </option>
-                    ))}
-                  </select>
+                    placeholder="选择守护..."
+                  />
                 </div>
               )
             })}
