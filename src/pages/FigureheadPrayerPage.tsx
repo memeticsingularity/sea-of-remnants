@@ -1,10 +1,11 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { HelpCircle, Trash2 } from 'lucide-react'
+import { HelpCircle, Trash2, Link2, Link2Off } from 'lucide-react'
 import { wikiData } from '@/data'
 import { Card } from '@/components/ui/Card'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { GuardianCollectionGrid } from '@/components/guardians/GuardianCollectionGrid'
+import { GuardianCategoryTabs } from '@/components/guardians/GuardianCategoryTabs'
 import { ShipTagStatsPanel } from '@/components/guardians/ShipTagStatsPanel'
 import { LoadoutPanel } from '@/components/guardians/LoadoutPanel'
 import {
@@ -35,7 +36,9 @@ export function FigureheadPrayerPage() {
     clearLoadouts,
   } = useGuardianState()
   const { config } = usePartyConfig()
-  const [activeCategory, setActiveCategory] = useState<GuardianCategory>('战技特化')
+  const [loadoutCategory, setLoadoutCategory] = useState<GuardianCategory>('战技特化')
+  const [galleryCategory, setGalleryCategory] = useState<GuardianCategory>('战技特化')
+  const [linked, setLinked] = useState(true)
 
   const equippedCount = GUARDIAN_CATEGORIES.reduce(
     (sum, category) =>
@@ -50,6 +53,25 @@ export function FigureheadPrayerPage() {
         .filter((a): a is string => !!a && a !== '待补充'),
     [config, crews],
   )
+
+  const categoryCounts = useMemo(() => {
+    const result: Record<GuardianCategory, number> = {
+      战技特化: 0,
+      潜能特化: 0,
+      船员培养: 0,
+    }
+    for (const g of guardians) {
+      result[g.category] = (result[g.category] || 0) + 1
+    }
+    return result
+  }, [guardians])
+
+  function handleSelectBranch(category: GuardianCategory) {
+    setLoadoutCategory(category)
+    if (linked) {
+      setGalleryCategory(category)
+    }
+  }
 
   return (
     <div className="space-y-6">
@@ -100,18 +122,48 @@ export function FigureheadPrayerPage() {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
         <div className="space-y-4 lg:col-span-4">
           <Card className="space-y-2 p-3">
-            <p className="text-xs font-medium text-text-muted">选择分支</p>
+            <div className="flex items-center justify-between">
+              <p className="text-xs font-medium text-text-muted">选择分支</p>
+              <button
+                type="button"
+                onClick={() => {
+                  setLinked((prev) => {
+                    const next = !prev
+                    if (next) {
+                      setGalleryCategory(loadoutCategory)
+                    }
+                    return next
+                  })
+                }}
+                className={`flex items-center gap-1 rounded-md px-2 py-1 text-xs transition-colors ${
+                  linked
+                    ? 'bg-positive/10 text-positive'
+                    : 'bg-surface-light text-text-muted'
+                }`}
+                title={linked ? '联动中：左切右跟' : '未联动：左右独立'}
+              >
+                {linked ? (
+                  <>
+                    <Link2 className="h-3 w-3" /> 联动
+                  </>
+                ) : (
+                  <>
+                    <Link2Off className="h-3 w-3" /> 独立
+                  </>
+                )}
+              </button>
+            </div>
             <div className="flex flex-col gap-1">
               {GUARDIAN_CATEGORIES.map((category) => {
                 const equipped = state.loadouts[category].filter(
                   (id): id is string => id !== null,
                 ).length
-                const isActive = category === activeCategory
+                const isActive = category === loadoutCategory
                 return (
                   <button
                     key={category}
                     type="button"
-                    onClick={() => setActiveCategory(category)}
+                    onClick={() => handleSelectBranch(category)}
                     className={`flex items-center justify-between rounded-md px-3 py-2 text-sm transition-colors ${
                       isActive
                         ? 'bg-accent text-white'
@@ -137,7 +189,7 @@ export function FigureheadPrayerPage() {
             loadouts={state.loadouts}
             onEquip={equipGuardian}
             onUnequip={unequipGuardian}
-            activeCategory={activeCategory}
+            activeCategory={loadoutCategory}
           />
         </div>
 
@@ -150,12 +202,22 @@ export function FigureheadPrayerPage() {
             onToggleFocusTag={toggleFocusTag}
           />
 
+          {!linked && (
+            <Card className="p-2">
+              <GuardianCategoryTabs
+                active={galleryCategory}
+                onSelect={setGalleryCategory}
+                counts={categoryCounts}
+              />
+            </Card>
+          )}
+
           <GuardianCollectionGrid
             guardians={guardians}
             ownedIds={state.ownedIds}
             onToggleOwned={toggleOwned}
             partyAttrs={partyAttrs}
-            activeCategory={activeCategory}
+            activeCategory={galleryCategory}
           />
         </div>
       </div>
