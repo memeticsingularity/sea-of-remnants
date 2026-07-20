@@ -80,6 +80,8 @@ export function RecruitmentSimulatorPage() {
   const [deepShadowTarget, setDeepShadowTarget] = useState(() =>
     deepPool ? getDefaultShadowTarget(deepPool) : '',
   )
+  const [crewTargetAcquired, setCrewTargetAcquired] = useState(false)
+  const [shadowTargetAcquired, setShadowTargetAcquired] = useState(false)
 
   const activePool = useMemo<RecruitmentPool | undefined>(() => {
     if (!isMemoryGroup) {
@@ -90,10 +92,10 @@ export function RecruitmentSimulatorPage() {
     return {
       ...baseMemoryPool,
       upItems: [
-        ...(deepCrewTarget
+        ...(deepCrewTarget && !crewTargetAcquired
           ? [{ crewIds: [deepCrewTarget], upRate: 0.5, guaranteeNextOnMiss: false }]
           : []),
-        ...(deepShadowTarget
+        ...(deepShadowTarget && !shadowTargetAcquired
           ? [{ shadowIds: [deepShadowTarget], upRate: 0.5, guaranteeNextOnMiss: false }]
           : []),
       ],
@@ -106,6 +108,8 @@ export function RecruitmentSimulatorPage() {
     memoryDepth,
     deepCrewTarget,
     deepShadowTarget,
+    crewTargetAcquired,
+    shadowTargetAcquired,
   ])
 
   const { state, updateState, resetState } = useGachaState(activePool?.id ?? '')
@@ -114,6 +118,11 @@ export function RecruitmentSimulatorPage() {
 
   const [latestResults, setLatestResults] = useState<GachaResult[]>([])
   const [isAnimating, setIsAnimating] = useState(false)
+
+  const resetTargetAcquired = () => {
+    setCrewTargetAcquired(false)
+    setShadowTargetAcquired(false)
+  }
 
   if (!activePool) {
     return (
@@ -129,6 +138,11 @@ export function RecruitmentSimulatorPage() {
   const handlePullOne = () => {
     if (!engine.canPull || isAnimating) return
     const { results, nextState } = engine.pullOne(state)
+    const result = results[0]
+    if (result?.isUp) {
+      if (result.type === 'crew') setCrewTargetAcquired(true)
+      if (result.type === 'shadow') setShadowTargetAcquired(true)
+    }
     updateState(() => nextState)
     append(results)
     setLatestResults(results)
@@ -159,6 +173,7 @@ export function RecruitmentSimulatorPage() {
         onSelect={(id) => {
           setActiveGroupId(id)
           setLatestResults([])
+          resetTargetAcquired()
         }}
       />
 
@@ -169,6 +184,7 @@ export function RecruitmentSimulatorPage() {
             onSelect={(depth) => {
               setMemoryDepth(depth)
               setLatestResults([])
+              resetTargetAcquired()
             }}
           />
           {memoryDepth === 'deep' && deepPool && (
@@ -179,6 +195,7 @@ export function RecruitmentSimulatorPage() {
               onChangeGroup={(crewId, shadowId) => {
                 setDeepCrewTarget(crewId)
                 setDeepShadowTarget(shadowId)
+                resetTargetAcquired()
               }}
             />
           )}
@@ -212,7 +229,10 @@ export function RecruitmentSimulatorPage() {
               />
               <button
                 type="button"
-                onClick={resetState}
+                onClick={() => {
+                  resetState()
+                  resetTargetAcquired()
+                }}
                 className="rounded-lg border border-border px-4 py-3 text-sm text-text-muted transition-colors hover:border-accent hover:text-accent"
               >
                 重置保底

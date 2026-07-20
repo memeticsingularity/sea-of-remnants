@@ -312,8 +312,9 @@ export function useGachaEngine(pool: RecruitmentPool | undefined) {
       if (!pool) return { results: [], nextState: currentState, cost: 0 }
 
       const { result, nextState } = pullSingle(currentState, 1)
-      const state = { ...nextState, totalSpent: nextState.totalSpent + pool.singleCost }
-      return { results: [result], nextState: state, cost: pool.singleCost }
+      const cost = isMemoryPool(pool) ? 1 : pool.singleCost
+      const state = { ...nextState, totalSpent: nextState.totalSpent + cost }
+      return { results: [result], nextState: state, cost }
     },
     [pool, pullSingle],
   )
