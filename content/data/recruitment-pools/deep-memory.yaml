@@ -1,0 +1,109 @@
+id: pool-deep-memory
+slug: deep-memory
+name: 深层记忆
+bannerName: 深层记忆
+type: weekly
+currency: 免费
+singleCost: 0
+tenCost: 0
+roseStoneCost: 0
+upItems:
+  - crewIds:
+      - crew-heg
+      - crew-molly
+    upRate: 0.5
+    guaranteeNextOnMiss: false
+  - shadowIds:
+      - shadow-broken-rhapsody
+      - shadow-sleeping-doll
+    upRate: 0.5
+    guaranteeNextOnMiss: false
+tiers:
+  - key: black
+    label: 黑券
+    baseRate: 0.5
+    comprehensiveRate: 0.576
+    hardPity: 3
+    mixed: true
+    pool:
+      crewIds:
+        - crew-heg
+        - crew-molly
+        - crew-colonel-scorched-face
+        - crew-iron-fist-commander
+        - crew-isabella
+        - crew-small-axe
+        - crew-hungry-cat
+        - crew-sea-burial
+      shadowIds:
+        - shadow-broken-rhapsody
+        - shadow-sleeping-doll
+        - shadow-his-war
+        - shadow-flower-of-mourning
+        - shadow-lost-gem
+        - shadow-law-of-civilization
+        - shadow-fishbone-string
+        - shadow-ribbon-tear
+  - key: purple
+    label: 紫券
+    baseRate: 0.5
+    comprehensiveRate: 0.424
+    mixed: true
+    pool:
+      crewIds:
+        - crew-as
+        - crew-hai-he
+        - crew-sosia
+        - crew-coward
+        - crew-omen-eye
+        - crew-nonsense-prophet
+        - crew-follower
+        - crew-ghost-hand-shipwright
+        - crew-clockmaker
+        - crew-puppeteer
+        - crew-dad-tonino
+        - crew-miser
+      shadowIds:
+        - shadow-floating-compass
+        - shadow-captains-gift
+        - shadow-death-of-mini-catfish
+        - shadow-mechanical-life
+        - shadow-dream-under-daylight
+        - shadow-beauty-of-ship
+        - shadow-flag-held-high
+        - shadow-veterans-bugle
+        - shadow-moment-leave-barrel
+        - shadow-time-of-deviation
+        - shadow-now-is-future
+        - shadow-scratched-page
+pityRules:
+  - type: hard_pity
+    threshold: 3
+    tier: black
+  - type: hard_pity
+    threshold: 9
+    tier: black
+rules: |
+  **解锁条件**
+  - 每周完成浅表梦境第 3 层，可解锁深层记忆。
+
+  **周常次数**
+  - 每周完成浅表梦境的任意 1 层，可获得 1 次进入记忆的机会。
+  - 进入浅层、中层、深层记忆完成重逢将消耗该周常机会，三种记忆深度共享周常次数。
+
+  **限时轮换与目标记忆**
+  - 每期深层记忆将有 1 或 2 组黑券船员及往日之影限时轮换出现（1 个船员及 1 个往日之影为 1 组），作为可重逢目标加入记忆。
+  - “目标黑券船员”或“目标黑券往日之影”指在深层记忆池手动选择入池的目标。
+  - 首次获得目标黑券船员或黑券往日之影之前，其获得概率占所有同池黑券船员或黑券往日之影获得概率的 50%。
+
+  **概率详情**
+  - 黑券船员及往日之影：基础概率 50%，含保底综合概率 57.6%；最多 3 次必定获得 1 个黑券船员或黑券往日之影。
+  - 黑券船员：基础概率 25%，含保底综合概率 29.7%，最多 9 次必定获得 1 个黑券船员；首次获得目标黑券船员前，目标占同池黑券船员获得概率的 50%，之后所有黑券船员概率均等。
+  - 黑券往日之影：基础概率 25%，含保底综合概率 27.9%，所有黑券往日之影概率均等；首次获得目标黑券往日之影前，目标占同池黑券往日之影获得概率的 50%，之后所有黑券往日之影概率均等。
+  - 紫券船员：基础概率 25%，综合概率 21.2%，所有紫券船员概率均等。
+  - 紫券往日之影：基础概率 25%，综合概率 21.2%，所有紫券往日之影概率均等。
+  - 注：深层记忆属于特殊记忆，与其他记忆的保底相互独立计算，互不影响。
+
+  **重复转化**
+  - 获得黑券船员时：第 2 次到第 7 次重复，转化为该船员的船员秘闻；第 8 次及以后重复，转化为专属羽毛票据 ×30。
+  - 获得紫券船员时：第 2 次到第 7 次重复，转化为该船员的船员秘闻；第 8 次及以后重复，转化为专属羽毛票据 ×6。

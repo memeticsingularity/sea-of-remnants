@@ -17,3 +17,7 @@ pages:
     title: 骰子与技能搭配
     route: /guides/dice
     markdown: markdown/guides/dice.md
+  - id: guide-memory-reunion
+    title: 记忆重逢指南
+    route: /guides/memory-reunion
+    markdown: markdown/guides/memory-reunion.md

@@ -35,6 +35,7 @@ const navGroups: NavItem[] = [
     children: [
       { label: '招募模拟器', to: '/recruitment' },
       { label: '招募图鉴', to: '/recruitment/collection' },
+      { label: '记忆重逢', to: '/guides/memory-reunion' },
     ],
   },
   { label: '指南', to: '/guides/crew-training', icon: <BookOpen className="h-4 w-4" /> },

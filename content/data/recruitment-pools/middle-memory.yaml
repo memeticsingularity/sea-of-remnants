@@ -1,0 +1,91 @@
+id: pool-middle-memory
+slug: middle-memory
+name: 中层记忆
+bannerName: 中层记忆
+type: weekly
+currency: 免费
+singleCost: 0
+tenCost: 0
+roseStoneCost: 0
+upItems: []
+tiers:
+  - key: black
+    label: 黑券
+    baseRate: 0.5
+    comprehensiveRate: 0.571
+    hardPity: 3
+    mixed: true
+    pool:
+      crewIds:
+        - crew-colonel-scorched-face
+        - crew-iron-fist-commander
+        - crew-isabella
+        - crew-small-axe
+        - crew-hungry-cat
+        - crew-sea-burial
+      shadowIds:
+        - shadow-his-war
+        - shadow-flower-of-mourning
+        - shadow-lost-gem
+        - shadow-law-of-civilization
+        - shadow-fishbone-string
+        - shadow-ribbon-tear
+  - key: purple
+    label: 紫券
+    baseRate: 0.5
+    comprehensiveRate: 0.429
+    mixed: true
+    pool:
+      crewIds:
+        - crew-as
+        - crew-hai-he
+        - crew-sosia
+        - crew-coward
+        - crew-omen-eye
+        - crew-nonsense-prophet
+        - crew-follower
+        - crew-ghost-hand-shipwright
+        - crew-clockmaker
+        - crew-puppeteer
+        - crew-dad-tonino
+        - crew-miser
+      shadowIds:
+        - shadow-floating-compass
+        - shadow-captains-gift
+        - shadow-death-of-mini-catfish
+        - shadow-mechanical-life
+        - shadow-dream-under-daylight
+        - shadow-beauty-of-ship
+        - shadow-flag-held-high
+        - shadow-veterans-bugle
+        - shadow-moment-leave-barrel
+        - shadow-time-of-deviation
+        - shadow-now-is-future
+        - shadow-scratched-page
+pityRules:
+  - type: hard_pity
+    threshold: 3
+    tier: black
+  - type: hard_pity
+    threshold: 9
+    tier: black
+rules: |
+  **解锁条件**
+  - 每周完成浅表梦境第 2 层，可解锁中层记忆。
+
+  **周常次数**
+  - 每周完成浅表梦境的任意 1 层，可获得 1 次进入记忆的机会。
+  - 进入浅层、中层、深层记忆完成重逢将消耗该周常机会，三种记忆深度共享周常次数。
+
+  **概率详情**
+  - 黑券船员及往日之影：基础概率 50%，含保底综合概率 57.1%；最多 3 次必定获得 1 个黑券船员或黑券往日之影。
+  - 黑券船员：基础概率 25%，含保底综合概率 32.7%，所有黑券船员概率均等；最多 9 次必定获得 1 个黑券船员。
+  - 黑券往日之影：基础概率 25%，含保底综合概率 24.5%，所有黑券往日之影概率均等。
+  - 紫券船员及往日之影：基础概率 50%，综合概率 42.9%。
+  - 紫券船员：基础概率 25%，综合概率 21.4%，所有紫券船员概率均等。
+  - 紫券往日之影：基础概率 25%，综合概率 21.4%，所有紫券往日之影概率均等。
+  - 注：中层记忆属于特殊记忆，与其他记忆的保底相互独立计算，互不影响。
+
+  **重复转化**
+  - 获得黑券船员时：第 2 次到第 7 次重复，转化为该船员的船员秘闻；第 8 次及以后重复，转化为专属羽毛票据 ×30。
+  - 获得紫券船员时：第 2 次到第 7 次重复，转化为该船员的船员秘闻；第 8 次及以后重复，转化为专属羽毛票据 ×6。
