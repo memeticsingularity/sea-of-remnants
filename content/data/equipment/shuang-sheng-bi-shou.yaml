@@ -10,12 +10,12 @@ maxEnhanceByFruitLevel:
     maxEnhance: 10
 baseStats:
   atk: 56
-  critRate: "4.1%"
+  critRate: 4.1%
   threat: -32
 statsByLevel:
-  6:
+  "6":
     atk: 56
-    critRate: "4.1%"
+    critRate: 4.1%
     threat: -32
 requirements:
   agi: 85
@@ -52,14 +52,13 @@ enhanceRequirements:
     agi: 126
     int: 67
 fixedAffixes:
-  - "将要消耗敌方单位的[暗影]时，有50%概率免于消耗并依旧触发相关效果。每需消耗1层[暗影]，伤害提升6%。"
-randomAffixes:
-  - "攻击后，造成的伤害提升1级，持续1回合。"
-  - "体力值大于50%时，造成的伤害提升4%，治疗效果提升4%。"
-  - "当有其他我方单位体力值低于30%时，自身受击权重提升3级，持续1回合。"
-flavor: "分开的双刃，阋墙的兄弟——那一瞬间，两处的心脏发出同一种哀鸣。"
+  - 将要消耗敌方单位的[暗影]时，有50%概率免于消耗并依旧触发相关效果。每需消耗1层[暗影]，伤害提升6%。
+flavor: 分开的双刃，阋墙的兄弟——那一瞬间，两处的心脏发出同一种哀鸣。
 source: 行装掉落
 image: /images/equipment/shuang-sheng-bi-shou.png
-
 buildNotes: |
   双生匕首是紫色匕首，围绕[暗影]消耗机制提供免消耗触发与增伤，适合暗影体系输出角色。
+randomAffixIds:
+  - rand-942a3801
+  - rand-cecc4f66
+  - rand-1926abb5

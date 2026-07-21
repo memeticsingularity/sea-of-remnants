@@ -25,8 +25,14 @@ export function EquipmentCard({ equipment }: EquipmentCardProps) {
 
   const displayStats =
     maxLevel > 0 && level > 0
-      ? equipment.statsByLevel?.[level] || equipment.baseStats
+      ? (equipment.statsByLevel && Object.keys(equipment.statsByLevel).length > 0
+          ? equipment.statsByLevel[level]
+          : equipment.baseStats)
       : equipment.baseStats
+
+  const randomAffixCount =
+    (equipment.randomAffixIds?.length || 0) +
+    (equipment.randomAffixes?.length || 0)
 
   return (
     <Card hover className="h-full">
@@ -100,6 +106,13 @@ export function EquipmentCard({ equipment }: EquipmentCardProps) {
               </li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {randomAffixCount > 0 && (
+        <div className="mt-2 flex items-center gap-1 text-xs text-text-muted">
+          <span>•</span>
+          <span>随机词条 {randomAffixCount} 条</span>
         </div>
       )}
     </Card>

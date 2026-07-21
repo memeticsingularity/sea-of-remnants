@@ -9,11 +9,11 @@ maxEnhanceByFruitLevel:
     maxEnhance: 10
 baseStats:
   def: 21
-  critDamage: "25%"
+  critDamage: 25%
 statsByLevel:
-  6:
+  "6":
     def: 21
-    critDamage: "25%"
+    critDamage: 25%
 requirements:
   str: 68
   per: 54
@@ -49,11 +49,11 @@ enhanceRequirements:
     str: 101
     per: 80
 fixedAffixes:
-  - "造成的伤害提升36%。每回合开始时清空能量。"
-randomAffixes:
-  - "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合。"
-  - "暴击后，暴击率提升6级，持续1回合。"
-  - "令其他我方单位行动提前时，使其攻击力提升2级，持续1回合。"
-flavor: "极致的美只能绽放一次，重复等于亵渎。"
+  - 造成的伤害提升36%。每回合开始时清空能量。
+flavor: 极致的美只能绽放一次，重复等于亵渎。
 source: 行装掉落
 image: /images/equipment/solitary-flower-mask.png
+randomAffixIds:
+  - rand-5a0371ac
+  - rand-510ebc5d
+  - rand-3f68ff3e

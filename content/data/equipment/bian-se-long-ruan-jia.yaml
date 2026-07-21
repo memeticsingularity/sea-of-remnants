@@ -1,0 +1,61 @@
+id: equip-bian-se-long-ruan-jia
+slug: bian-se-long-ruan-jia
+name: 变色龙软甲
+slot: 躯干
+rarity: 紫
+enhance: 2
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+baseStats:
+  hp: 881
+  damageReduce: 13.6%
+statsByLevel:
+  "2":
+    hp: 881
+    damageReduce: 13.6%
+requirements:
+  con: 38
+  per: 30
+enhanceRequirements:
+  - level: 1
+    con: 26
+    per: 22
+  - level: 2
+    con: 38
+    per: 30
+  - level: 3
+    con: 41
+    per: 32
+  - level: 4
+    con: 54
+    per: 43
+  - level: 5
+    con: 60
+    per: 48
+  - level: 6
+    con: 68
+    per: 54
+  - level: 7
+    con: 73
+    per: 58
+  - level: 8
+    con: 83
+    per: 66
+  - level: 9
+    con: 91
+    per: 73
+  - level: 10
+    con: 101
+    per: 80
+fixedAffixes:
+  - 位于战斗小队1号位时，所受伤害降低10%。
+flavor: 最好的护甲不是铁板，是让对方永远猜错站位。
+source: 行装掉落
+image: /images/equipment/bian-se-long-ruan-jia.png
+buildNotes: |
+  变色龙软甲是紫色躯干行装，固定词条在1号位提供减伤，适合站前排的体质/感知坦克或辅助。
+randomAffixIds:
+  - rand-56fc737c
+  - rand-964d0868
+  - rand-5c96b2ab

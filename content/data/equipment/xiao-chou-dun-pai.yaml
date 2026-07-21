@@ -1,0 +1,22 @@
+id: equip-xiao-chou-dun-pai
+slug: xiao-chou-dun-pai
+name: 小丑盾牌
+slot: 手部
+handType: 盾牌
+rarity: 蓝
+enhance: 2
+statsByLevel:
+  2:
+    atk: 14
+    hp: 633
+    critRate: "-2.3%"
+fixedAffixes:
+  - "自身拥有的护盾每达体力上限的10%，受击权重提升1级，最高提升5级。"
+randomAffixIds:
+  - rand-09381335
+flavor: "敌人越是愤怒，它的笑容就越灿烂。"
+source: 行装掉落
+image: /images/equipment/xiao-chou-dun-pai.png
+
+buildNotes: |
+  小丑盾牌是蓝色盾牌，护盾越高受击权重越高，适合需要主动吸引火力的坦克。

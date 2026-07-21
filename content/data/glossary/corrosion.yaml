@@ -1,0 +1,6 @@
+id: glossary-corrosion
+slug: glossary-corrosion
+term: 腐蚀
+definition: "防御力降低此状态层数×1%。自身回合开始时，受到此状态层数×给予此状态者攻击力10%的伤害，最多叠加10层。无视防御。"
+related:
+  - 负面状态

@@ -10,12 +10,12 @@ maxEnhanceByFruitLevel:
     maxEnhance: 10
 baseStats:
   atk: 39
-  damageReduce: "12.5%"
+  damageReduce: 12.5%
   threat: 84
 statsByLevel:
-  6:
+  "6":
     atk: 39
-    damageReduce: "12.5%"
+    damageReduce: 12.5%
     threat: 84
 requirements:
   con: 110
@@ -52,14 +52,13 @@ enhanceRequirements:
     con: 142
     str: 76
 fixedAffixes:
-  - "攻击时有50%概率获得1层[铠甲]，且每有1层[铠甲]，额外造成防御力5%伤害。"
-randomAffixes:
-  - "造成的持续伤害提升4%。"
-  - "治疗其他我方单位后，自身[附加伤害]提升3级，持续1回合。"
-  - "对暴露破绽的敌方单位，检定难度降低1点。"
-flavor: "即使手中没有武器，也要奋力反击。刺钉知道，在战场上，只有前进一条路可以选择。"
+  - 攻击时有50%概率获得1层[铠甲]，且每有1层[铠甲]，额外造成防御力5%伤害。
+flavor: 即使手中没有武器，也要奋力反击。刺钉知道，在战场上，只有前进一条路可以选择。
 source: 行装掉落
 image: /images/equipment/e-meng-rong-guang.png
-
 buildNotes: |
   噩梦荣光是金色盾牌，固定词条叠加[铠甲]并将防御转化为额外伤害，适合坦度与输出兼顾的体质/力量前排。
+randomAffixIds:
+  - rand-018cf302
+  - rand-cbf58165
+  - rand-7813f0a9

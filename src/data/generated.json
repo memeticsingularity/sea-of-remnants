@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-20T15:58:52.515Z"
+    "generatedAt": "2026-07-21T12:50:29.064Z"
   },
   "crews": [
     {
@@ -949,14 +949,106 @@
       "fixedAffixes": [
         "每拥有1层[灵感]使[加料]的概率提升0.5%，伤害提升1%。"
       ],
-      "randomAffixes": [
-        "攻击力提升3%。",
-        "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合。",
-        "战斗开始时，若自身拥有[疾病]，则攻击力提升2级。"
-      ],
       "flavor": "老海耗子教育新人，在开战前，先喝五瓶章鱼浓汁。头脑昏昏，准头翻番。",
       "source": "行装掉落",
-      "image": "/images/equipment/aged-medicine-bottle.png"
+      "image": "/images/equipment/aged-medicine-bottle.png",
+      "randomAffixIds": [
+        "rand-2feb4d3b",
+        "rand-5a0371ac",
+        "rand-495c1bd1"
+      ]
+    },
+    {
+      "id": "equip-bian-se-long-ruan-jia",
+      "slug": "bian-se-long-ruan-jia",
+      "name": "变色龙软甲",
+      "slot": "躯干",
+      "rarity": "紫",
+      "enhance": 2,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "hp": 881,
+        "damageReduce": "13.6%"
+      },
+      "statsByLevel": {
+        "2": {
+          "hp": 881,
+          "damageReduce": "13.6%"
+        }
+      },
+      "requirements": {
+        "con": 38,
+        "per": 30
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "con": 26,
+          "per": 22
+        },
+        {
+          "level": 2,
+          "con": 38,
+          "per": 30
+        },
+        {
+          "level": 3,
+          "con": 41,
+          "per": 32
+        },
+        {
+          "level": 4,
+          "con": 54,
+          "per": 43
+        },
+        {
+          "level": 5,
+          "con": 60,
+          "per": 48
+        },
+        {
+          "level": 6,
+          "con": 68,
+          "per": 54
+        },
+        {
+          "level": 7,
+          "con": 73,
+          "per": 58
+        },
+        {
+          "level": 8,
+          "con": 83,
+          "per": 66
+        },
+        {
+          "level": 9,
+          "con": 91,
+          "per": 73
+        },
+        {
+          "level": 10,
+          "con": 101,
+          "per": 80
+        }
+      ],
+      "fixedAffixes": [
+        "位于战斗小队1号位时，所受伤害降低10%。"
+      ],
+      "flavor": "最好的护甲不是铁板，是让对方永远猜错站位。",
+      "source": "行装掉落",
+      "image": "/images/equipment/bian-se-long-ruan-jia.png",
+      "buildNotes": "变色龙软甲是紫色躯干行装，固定词条在1号位提供减伤，适合站前排的体质/感知坦克或辅助。\n",
+      "randomAffixIds": [
+        "rand-56fc737c",
+        "rand-964d0868",
+        "rand-5c96b2ab"
+      ]
     },
     {
       "id": "equip-black-iron-hood",
@@ -976,13 +1068,13 @@
       "fixedAffixes": [
         "给予和获得的护盾效果提升5%。"
       ],
-      "randomAffixes": [
-        "固定伤害提升1%。每次造成固定伤害后，固定伤害额外提升1级，持续2回合，至多提升至2级。"
-      ],
       "flavor": "坚强的眼睛盯紧了难过的日子。",
       "source": "行装掉落",
       "image": "/images/equipment/black-iron-hood.png",
-      "buildNotes": "黑铁头罩是偏向护盾流派的头部防具，固定词条直接提升护盾获取与给予效率，适合护盾体系前排或辅助。\n"
+      "buildNotes": "黑铁头罩是偏向护盾流派的头部防具，固定词条直接提升护盾获取与给予效率，适合护盾体系前排或辅助。\n",
+      "randomAffixIds": [
+        "rand-5ff64242"
+      ]
     },
     {
       "id": "equip-butterfly-endless",
@@ -1027,15 +1119,15 @@
       "fixedAffixes": [
         "效果命中中越高，额外行动伤害越高，每有1%的效果命中，自身额外行动伤害提升0.6%。"
       ],
-      "randomAffixes": [
-        "当有其他我方单位体力值低于30%时，自身受击权重提升3级，持续1回合。",
-        "位于战斗小队2号位时，攻击力提升3%，暴击率提升4%。",
-        "有敌方单位力竭时，场上其他敌方单位所受伤害提升3级，持续1回合。"
-      ],
       "flavor": "有些美丽的物件，只可远观，不可亵玩。",
       "source": "失落海域·金果子等级 5 掉落",
       "image": "/images/equipment/butterfly-endless.png",
-      "buildNotes": "海葬核心毕业装之一。固定词条与额外行动机制高度契合，优先强化。\n注意穿戴要求：紫色品质以上行装不满足属性要求时，自带属性会下降。\n"
+      "buildNotes": "海葬核心毕业装之一。固定词条与额外行动机制高度契合，优先强化。\n注意穿戴要求：紫色品质以上行装不满足属性要求时，自带属性会下降。\n",
+      "randomAffixIds": [
+        "rand-1926abb5",
+        "rand-09f7a2d6",
+        "rand-325f4e35"
+      ]
     },
     {
       "id": "equip-contract-brooch",
@@ -1065,12 +1157,12 @@
       "fixedAffixes": [
         "分摊伤害时，有100%概率获得体力值9%的护盾。1回合生效1次。叠加护盾值不超过本来源的3倍。"
       ],
-      "randomAffixes": [
-        "为我方单位恢复体力后，治疗效果提升1级，持续1回合。"
-      ],
       "flavor": "黑暗给人盲目的安全感。",
       "source": "行装掉落",
-      "image": "/images/equipment/dense-hood.png"
+      "image": "/images/equipment/dense-hood.png",
+      "randomAffixIds": [
+        "rand-8505491e"
+      ]
     },
     {
       "id": "equip-du-xing-ke-de-nu-huo",
@@ -1155,15 +1247,15 @@
       "fixedAffixes": [
         "攻击时，若目标拥有的[暗影]少于8层，则令其获得8层[暗影]。若目标拥有的[暗影]层数高于8层，则每多1层[暗影]此次攻击造成的伤害额外提升2%，至多提升20%。"
       ],
-      "randomAffixes": [
-        "感知提升6点。",
-        "战斗中主属性提升1点。每有1点主属性，效果命中提升0.06%。",
-        "战斗开始时，若处在日间则攻击力提升2级，若处在夜间则暴击率提升2级，持续3回合。"
-      ],
       "flavor": "她对着月光不断地丢着这柄匕首，一下又一下，直到那个仇人的身影在白刃上映出，夜晚的死寂终究被打破。",
       "source": "行装掉落",
       "image": "/images/equipment/du-xing-ke-de-nu-huo.png",
-      "buildNotes": "独行客的怒火是金色匕首，固定词条可快速为敌人叠加[暗影]，并在高[暗影]层数时提供显著增伤。\n适合围绕[暗影]体系构建的敏捷/智力输出角色。\n"
+      "buildNotes": "独行客的怒火是金色匕首，固定词条可快速为敌人叠加[暗影]，并在高[暗影]层数时提供显著增伤。\n适合围绕[暗影]体系构建的敏捷/智力输出角色。\n",
+      "randomAffixIds": [
+        "rand-2d4a4d54",
+        "rand-ae91bb5d",
+        "rand-29e2c2c2"
+      ]
     },
     {
       "id": "equip-e-meng-rong-guang",
@@ -1250,15 +1342,107 @@
       "fixedAffixes": [
         "攻击时有50%概率获得1层[铠甲]，且每有1层[铠甲]，额外造成防御力5%伤害。"
       ],
-      "randomAffixes": [
-        "造成的持续伤害提升4%。",
-        "治疗其他我方单位后，自身[附加伤害]提升3级，持续1回合。",
-        "对暴露破绽的敌方单位，检定难度降低1点。"
-      ],
       "flavor": "即使手中没有武器，也要奋力反击。刺钉知道，在战场上，只有前进一条路可以选择。",
       "source": "行装掉落",
       "image": "/images/equipment/e-meng-rong-guang.png",
-      "buildNotes": "噩梦荣光是金色盾牌，固定词条叠加[铠甲]并将防御转化为额外伤害，适合坦度与输出兼顾的体质/力量前排。\n"
+      "buildNotes": "噩梦荣光是金色盾牌，固定词条叠加[铠甲]并将防御转化为额外伤害，适合坦度与输出兼顾的体质/力量前排。\n",
+      "randomAffixIds": [
+        "rand-018cf302",
+        "rand-cbf58165",
+        "rand-7813f0a9"
+      ]
+    },
+    {
+      "id": "equip-fang-zhi-mian-zhao",
+      "slug": "fang-zhi-mian-zhao",
+      "name": "防治面罩",
+      "slot": "头部",
+      "rarity": "紫",
+      "enhance": 2,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "baseStats": {
+        "def": 14,
+        "healBoost": "21%"
+      },
+      "statsByLevel": {
+        "2": {
+          "def": 14,
+          "healBoost": "21%"
+        }
+      },
+      "requirements": {
+        "str": 38,
+        "con": 30
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "str": 26,
+          "con": 22
+        },
+        {
+          "level": 2,
+          "str": 38,
+          "con": 30
+        },
+        {
+          "level": 3,
+          "str": 41,
+          "con": 32
+        },
+        {
+          "level": 4,
+          "str": 54,
+          "con": 43
+        },
+        {
+          "level": 5,
+          "str": 60,
+          "con": 48
+        },
+        {
+          "level": 6,
+          "str": 68,
+          "con": 54
+        },
+        {
+          "level": 7,
+          "str": 73,
+          "con": 58
+        },
+        {
+          "level": 8,
+          "str": 83,
+          "con": 66
+        },
+        {
+          "level": 9,
+          "str": 91,
+          "con": 73
+        },
+        {
+          "level": 10,
+          "str": 101,
+          "con": 80
+        }
+      ],
+      "fixedAffixes": [
+        "每拥有1种[疫病]，攻击力提升1.5%。"
+      ],
+      "flavor": "身染恶疾的水手接过船医递来的面罩——它能让人站着战斗，而非躺着咽气。",
+      "source": "行装掉落",
+      "image": "/images/equipment/fang-zhi-mian-zhao.png",
+      "buildNotes": "防治面罩是紫色头部行装，固定词条根据自身携带的[疫病]种类提升攻击力，适合能稳定挂满疫病的输出或半肉角色。\n",
+      "randomAffixIds": [
+        "rand-1ba0de0f",
+        "rand-4e6280bb",
+        "rand-5ff64242"
+      ]
     },
     {
       "id": "equip-fire-scene-belt",
@@ -1355,17 +1539,17 @@
       "fixedAffixes": [
         "所受伤害降低16%，当场上来源为自身的[负面状态]合计达10层时，所受伤害再额外降低8%。"
       ],
-      "randomAffixes": [
-        "暴击伤害提升8%。",
-        "每场战斗首个回合造成的伤害提升20%。",
-        "首次触发[RogueLuck]（捣蛋时刻）时，刷新自身[个人技]的冷却时间。"
-      ],
       "tags": [
         "负面状态"
       ],
       "flavor": "糟糕的名声就像身上的虱子一样多。更多的揶揄和嘲笑已并不值得库西感到困扰。就是这样。",
       "source": "行装掉落",
-      "image": "/images/equipment/harbor-hippie.png"
+      "image": "/images/equipment/harbor-hippie.png",
+      "randomAffixIds": [
+        "rand-efbbb6dc",
+        "rand-436428a2",
+        "rand-18016727"
+      ]
     },
     {
       "id": "equip-heart-guard-armor",
@@ -1386,13 +1570,38 @@
       "fixedAffixes": [
         "每消耗1层[灵感]，防御力提升2点，至多提升至20点。可继承到下一场战斗。"
       ],
-      "randomAffixes": [
-        "敌方单位每有1种持续伤害，本装备拥有者施加的持续伤害提升1.2%。"
-      ],
       "flavor": "当一颗心被爱击中，心便长出了盔甲。",
       "source": "行装掉落",
       "image": "/images/equipment/heart-guard-armor.png",
-      "buildNotes": "守心盔甲偏向生存与持续伤害辅助，固定词条提供可继承的防御叠加，适合需要跨战斗保留增益的坦克或半肉角色。\n"
+      "buildNotes": "守心盔甲偏向生存与持续伤害辅助，固定词条提供可继承的防御叠加，适合需要跨战斗保留增益的坦克或半肉角色。\n",
+      "randomAffixIds": [
+        "rand-56fc737c"
+      ]
+    },
+    {
+      "id": "equip-ji-tui-chen-shan",
+      "slug": "ji-tui-chen-shan",
+      "name": "鸡腿衬衫",
+      "slot": "躯干",
+      "rarity": "蓝",
+      "enhance": 2,
+      "statsByLevel": {
+        "2": {
+          "hp": 949,
+          "def": 5,
+          "threat": -16
+        }
+      },
+      "fixedAffixes": [
+        "受到攻击后，有60%概率恢复5%的体力值。1回合生效1次。"
+      ],
+      "randomAffixIds": [
+        "rand-c40ac0b6"
+      ],
+      "flavor": "别亏待自己，把敌袭当做餐铃，连伤口都能蘸着油水吃成开胃菜。",
+      "source": "行装掉落",
+      "image": "/images/equipment/ji-tui-chen-shan.png",
+      "buildNotes": "鸡腿衬衫是蓝色躯干行装，受击概率回血，适合前排坦克过渡使用。\n"
     },
     {
       "id": "equip-ku-tong-zhong-ri",
@@ -1476,15 +1685,39 @@
       "fixedAffixes": [
         "回合开始时，自身每损失1%的体力值，所受伤害降低0.3%，至多降低15%。"
       ],
-      "randomAffixes": [
-        "每受到5次攻击，自身额外行动伤害提升4级，持续2回合。",
-        "连续使用同一技能时，造成的伤害提升5%。",
-        "每使用10个强化骰，则获得1个强化点。"
-      ],
       "flavor": "第一根荆棘，感到疼痛。第二根荆棘，发出一声叹息。第三根荆棘，也许是四根。洁鲁夏不知道。",
       "source": "行装掉落",
       "image": "/images/equipment/ku-tong-zhong-ri.png",
-      "buildNotes": "苦痛终日是金色腿部行装，低体力时提供高额减伤，配合自残或压血玩法收益较高。\n随机词条兼顾额外行动伤害、技能连发增伤与强化点续航，适合战士/坦克定位。\n"
+      "buildNotes": "苦痛终日是金色腿部行装，低体力时提供高额减伤，配合自残或压血玩法收益较高。\n随机词条兼顾额外行动伤害、技能连发增伤与强化点续航，适合战士/坦克定位。\n",
+      "randomAffixIds": [
+        "rand-e25d491f",
+        "rand-e7665505",
+        "rand-8085eec9"
+      ]
+    },
+    {
+      "id": "equip-lian-dao-mian-kui",
+      "slug": "lian-dao-mian-kui",
+      "name": "镰刀面盔",
+      "slot": "头部",
+      "rarity": "蓝",
+      "enhance": 2,
+      "statsByLevel": {
+        "2": {
+          "effectHit": "14.3%",
+          "dotBoost": "22%"
+        }
+      },
+      "fixedAffixes": [
+        "攻击时，目标每拥有1个持续伤害，造成的伤害提升3%，至多提升9%。"
+      ],
+      "randomAffixIds": [
+        "rand-510ebc5d"
+      ],
+      "flavor": "伤口撒盐，火上浇油，快乐加倍。",
+      "source": "行装掉落",
+      "image": "/images/equipment/lian-dao-mian-kui.png",
+      "buildNotes": "镰刀面盔是蓝色头部行装，固定词条对持续伤害目标增伤，适合 dot 队使用。\n"
     },
     {
       "id": "equip-pointed-iron-shoes",
@@ -1500,12 +1733,12 @@
       "fixedAffixes": [
         "每击败1个敌方单位，恢复1点能量，每回合至多恢复3点。"
       ],
-      "randomAffixes": [
-        "固定伤害提升1%。每次造成固定伤害后，固定伤害额外提升1级，持续2回合，至多提升至2级。"
-      ],
       "flavor": "调饮师不会靠个人魅力让客人付钱就只能靠这种鞋子了。",
       "source": "行装掉落",
-      "image": "/images/equipment/pointed-iron-shoes.png"
+      "image": "/images/equipment/pointed-iron-shoes.png",
+      "randomAffixIds": [
+        "rand-5ff64242"
+      ]
     },
     {
       "id": "equip-reckless-bracelet",
@@ -1598,15 +1831,15 @@
       "fixedAffixes": [
         "体力值低于80%时，自身每拥有1层[战意]，造成的伤害提升6%。"
       ],
-      "randomAffixes": [
-        "魅力提升6点。",
-        "使用强化骰技能时，每使用一个强化骰，造成的架势伤害提升6%。",
-        "触发破绽点数检定时，造成伤害提升3级，持续1回合。"
-      ],
       "flavor": "当喉咙里的怒吼比剑刃更锋利时，绝境不过是新生的序章。",
       "source": "行装掉落",
       "image": "/images/equipment/roaring-straight-sword.png",
-      "buildNotes": "咆哮直剑是紫色单手剑，低体力时配合[战意]层数提供高额增伤。\n注意紫色品质以上装备必须满足穿戴属性要求，否则攻击力、护盾效果等自带属性会下降。\n"
+      "buildNotes": "咆哮直剑是紫色单手剑，低体力时配合[战意]层数提供高额增伤。\n注意紫色品质以上装备必须满足穿戴属性要求，否则攻击力、护盾效果等自带属性会下降。\n",
+      "randomAffixIds": [
+        "rand-568ed0ba",
+        "rand-560d40d3",
+        "rand-7528c062"
+      ]
     },
     {
       "id": "equip-secret-of-gorgeous-fantasy",
@@ -1693,14 +1926,14 @@
       "fixedAffixes": [
         "造成伤害时，此次伤害额外提升X%，X=命中的目标数量×[战意]层数×2，[火星飞溅]生效次数变为无限。"
       ],
-      "randomAffixes": [
-        "攻击体力值高于50%的敌方单位时，造成的伤害提升8%。",
-        "令其他我方单位获得[正面状态]时，为其恢复2%的体力值，1回合生效1次。",
-        "有敌方单位[力竭]时，场上其他敌方单位所受伤害提升3级，持续1回合。"
-      ],
       "flavor": "英格莱姆在想一场酣畅的战斗——挥舞起华丽的剑，盎然的战意，包围他的敌人应声倒下……他只是想想。",
       "source": "行装掉落",
-      "image": "/images/equipment/secret-of-gorgeous-fantasy.png"
+      "image": "/images/equipment/secret-of-gorgeous-fantasy.png",
+      "randomAffixIds": [
+        "rand-58e65c0d",
+        "rand-964d0868",
+        "rand-2cb27154"
+      ]
     },
     {
       "id": "equip-shark-short-gun",
@@ -1717,12 +1950,12 @@
       "fixedAffixes": [
         "有敌方单位架势被击破时，自身获得固定伤害提升3级，持续2回合。"
       ],
-      "randomAffixes": [
-        "使用招牌技时，造成的伤害提升2级，治疗效果提升2级，持续1回合。"
-      ],
       "flavor": "鲨鱼咬中猎物的瞬间，兴奋令其浑身发烫，如同炙热的枪管，为击破敌人而欢呼。",
       "source": "行装掉落",
-      "image": "/images/equipment/shark-short-gun.png"
+      "image": "/images/equipment/shark-short-gun.png",
+      "randomAffixIds": [
+        "rand-dce7df64"
+      ]
     },
     {
       "id": "equip-shen-hai-huan-meng",
@@ -1823,15 +2056,15 @@
       "fixedAffixes": [
         "将要消耗敌方单位的[暗影]时，有50%概率免于消耗并依旧触发相关效果。每需消耗1层[暗影]，伤害提升6%。"
       ],
-      "randomAffixes": [
-        "攻击后，造成的伤害提升1级，持续1回合。",
-        "体力值大于50%时，造成的伤害提升4%，治疗效果提升4%。",
-        "当有其他我方单位体力值低于30%时，自身受击权重提升3级，持续1回合。"
-      ],
       "flavor": "分开的双刃，阋墙的兄弟——那一瞬间，两处的心脏发出同一种哀鸣。",
       "source": "行装掉落",
       "image": "/images/equipment/shuang-sheng-bi-shou.png",
-      "buildNotes": "双生匕首是紫色匕首，围绕[暗影]消耗机制提供免消耗触发与增伤，适合暗影体系输出角色。\n"
+      "buildNotes": "双生匕首是紫色匕首，围绕[暗影]消耗机制提供免消耗触发与增伤，适合暗影体系输出角色。\n",
+      "randomAffixIds": [
+        "rand-942a3801",
+        "rand-cecc4f66",
+        "rand-1926abb5"
+      ]
     },
     {
       "id": "equip-solitary-flower-mask",
@@ -1915,14 +2148,14 @@
       "fixedAffixes": [
         "造成的伤害提升36%。每回合开始时清空能量。"
       ],
-      "randomAffixes": [
-        "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合。",
-        "暴击后，暴击率提升6级，持续1回合。",
-        "令其他我方单位行动提前时，使其攻击力提升2级，持续1回合。"
-      ],
       "flavor": "极致的美只能绽放一次，重复等于亵渎。",
       "source": "行装掉落",
-      "image": "/images/equipment/solitary-flower-mask.png"
+      "image": "/images/equipment/solitary-flower-mask.png",
+      "randomAffixIds": [
+        "rand-5a0371ac",
+        "rand-510ebc5d",
+        "rand-3f68ff3e"
+      ]
     },
     {
       "id": "equip-sturdy-heavy-shield",
@@ -2009,14 +2242,14 @@
       "fixedAffixes": [
         "给予的护盾效果提升[铠甲]层数×1%，至多提升15%。"
       ],
-      "randomAffixes": [
-        "攻击拥有[气绝]的敌方单位时，造成的伤害提升8%。",
-        "对拥有[负面状态]的敌方单位暴击率提升2.5%，暴击伤害提升2.5%。",
-        "每当自身获得护盾时，攻击力提升1级，持续2回合，至多提升至2级。"
-      ],
       "flavor": "贝壳在伤疤上垒砌更多，永不因为恐惧退缩。",
       "source": "行装掉落",
-      "image": "/images/equipment/sturdy-heavy-shield.png"
+      "image": "/images/equipment/sturdy-heavy-shield.png",
+      "randomAffixIds": [
+        "rand-51e1e318",
+        "rand-0dbcd834",
+        "rand-c476b9e3"
+      ]
     },
     {
       "id": "equip-tao-qiao-chang-xue",
@@ -2100,15 +2333,15 @@
       "fixedAffixes": [
         "位于战斗小队1/2/3/4号位时，分别获得获得护盾效果提升12%/暴击率提升4%/能量恢复效率提升6%/速度提升12%。"
       ],
-      "randomAffixes": [
-        "暴击后，暴击率提升6级，持续1回合。",
-        "额外行动时，造成的伤害提升3级。",
-        "每场战斗首个回合造成的伤害提升20%。"
-      ],
       "flavor": "决定展示什么取决于你的财富，决定掩饰什么取决于你的智慧。",
       "source": "行装掉落",
       "image": "/images/equipment/tao-qiao-chang-xue.png",
-      "buildNotes": "讨巧长靴是紫色腿部行装，固定词条根据站位提供不同增益，适合需要灵活站位调整的敏捷/感知角色。\n"
+      "buildNotes": "讨巧长靴是紫色腿部行装，固定词条根据站位提供不同增益，适合需要灵活站位调整的敏捷/感知角色。\n",
+      "randomAffixIds": [
+        "rand-510ebc5d",
+        "rand-52c545c8",
+        "rand-436428a2"
+      ]
     },
     {
       "id": "equip-terrifying-mask",
@@ -2124,12 +2357,12 @@
       "fixedAffixes": [
         "每拥有1个[正面状态]，造成的[附加伤害]提升3%，至多提升15%。"
       ],
-      "randomAffixes": [
-        "获得[正面状态]时，恢复5%体力值。"
-      ],
       "flavor": "恐慌从他脸上消失，转移到了每一个路过的人脸上。",
       "source": "行装掉落",
-      "image": "/images/equipment/terrifying-mask.png"
+      "image": "/images/equipment/terrifying-mask.png",
+      "randomAffixIds": [
+        "rand-2016d348"
+      ]
     },
     {
       "id": "equip-unreturned-nest",
@@ -2143,6 +2376,757 @@
       "flavor": "奥森头盔上的鸟巢。\n奥森在世时一直身处前线，但这些鸟从未伤及分毫。奥森离世后，这身铠甲静置在了王宫，但鸟儿再也没有飞回来过。\n",
       "source": "奇珍掉落",
       "image": "/images/equipment/unreturned-nest.png"
+    },
+    {
+      "id": "equip-xiao-chou-dun-pai",
+      "slug": "xiao-chou-dun-pai",
+      "name": "小丑盾牌",
+      "slot": "手部",
+      "handType": "盾牌",
+      "rarity": "蓝",
+      "enhance": 2,
+      "statsByLevel": {
+        "2": {
+          "atk": 14,
+          "hp": 633,
+          "critRate": "-2.3%"
+        }
+      },
+      "fixedAffixes": [
+        "自身拥有的护盾每达体力上限的10%，受击权重提升1级，最高提升5级。"
+      ],
+      "randomAffixIds": [
+        "rand-09381335"
+      ],
+      "flavor": "敌人越是愤怒，它的笑容就越灿烂。",
+      "source": "行装掉落",
+      "image": "/images/equipment/xiao-chou-dun-pai.png",
+      "buildNotes": "小丑盾牌是蓝色盾牌，护盾越高受击权重越高，适合需要主动吸引火力的坦克。\n"
+    },
+    {
+      "id": "equip-yu-ren-xie",
+      "slug": "yu-ren-xie",
+      "name": "渔人鞋",
+      "slot": "腿部",
+      "rarity": "蓝",
+      "enhance": 2,
+      "statsByLevel": {
+        "2": {
+          "spd": 7,
+          "damageBoost": "14.7%"
+        }
+      },
+      "fixedAffixes": [
+        "回合开始时，有100%基础概率为攻击力最高的敌方单位施加2层[腐蚀]。"
+      ],
+      "randomAffixIds": [
+        "rand-72657fe7"
+      ],
+      "flavor": "越大的鱼，受伤之后，越藏不住腥味。",
+      "source": "行装掉落",
+      "image": "/images/equipment/yu-ren-xie.png",
+      "buildNotes": "渔人鞋是蓝色腿部行装，回合开始时给高攻敌人挂[腐蚀]，适合需要破甲/dot 铺垫的敏捷角色。\n"
+    }
+  ],
+  "randomAffixes": [
+    {
+      "id": "rand-018cf302",
+      "slug": "rand-018cf302",
+      "name": "造成的持续伤害提升4%",
+      "effect": "造成的持续伤害提升4%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-e-meng-rong-guang",
+          "equipmentSlug": "e-meng-rong-guang",
+          "equipmentName": "噩梦荣光",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-09381335",
+      "slug": "rand-09381335",
+      "name": "暴击伤害提升1%",
+      "effect": "暴击伤害提升1%。每次暴击时，暴击伤害额外提升1级，持续2回合，至多提升至2级。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-xiao-chou-dun-pai",
+          "equipmentSlug": "xiao-chou-dun-pai",
+          "equipmentName": "小丑盾牌",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "rand-09f7a2d6",
+      "slug": "rand-09f7a2d6",
+      "name": "位于战斗小队2号位时，攻击力提升3%，暴击率提升4%",
+      "effect": "位于战斗小队2号位时，攻击力提升3%，暴击率提升4%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-butterfly-endless",
+          "equipmentSlug": "die-die-bu-xiu",
+          "equipmentName": "蝶蝶不休",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": "rand-0dbcd834",
+      "slug": "rand-0dbcd834",
+      "name": "对拥有[负面状态]的敌方单位暴击率提升2.5%，暴击伤害提升2.5%",
+      "effect": "对拥有[负面状态]的敌方单位暴击率提升2.5%，暴击伤害提升2.5%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-sturdy-heavy-shield",
+          "equipmentSlug": "jian-qiang-zhong-dun",
+          "equipmentName": "坚强重盾",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-18016727",
+      "slug": "rand-18016727",
+      "name": "首次触发[RogueLuck]（捣蛋时刻）时，刷新自身[个人技]的冷却时间",
+      "effect": "首次触发[RogueLuck]（捣蛋时刻）时，刷新自身[个人技]的冷却时间。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-harbor-hippie",
+          "equipmentSlug": "hai-gang-xi-pi",
+          "equipmentName": "海港嬉皮",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-1926abb5",
+      "slug": "rand-1926abb5",
+      "name": "当有其他我方单位体力值低于30%时，自身受击权重提升3级，持续1回合",
+      "effect": "当有其他我方单位体力值低于30%时，自身受击权重提升3级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-butterfly-endless",
+          "equipmentSlug": "die-die-bu-xiu",
+          "equipmentName": "蝶蝶不休",
+          "level": 5
+        },
+        {
+          "equipmentId": "equip-shuang-sheng-bi-shou",
+          "equipmentSlug": "shuang-sheng-bi-shou",
+          "equipmentName": "双生匕首",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-1ba0de0f",
+      "slug": "rand-1ba0de0f",
+      "name": "力量提升6点",
+      "effect": "力量提升6点。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-fang-zhi-mian-zhao",
+          "equipmentSlug": "fang-zhi-mian-zhao",
+          "equipmentName": "防治面罩",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "rand-2016d348",
+      "slug": "rand-2016d348",
+      "name": "获得[正面状态]时，恢复5%体力值",
+      "effect": "获得[正面状态]时，恢复5%体力值。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-terrifying-mask",
+          "equipmentSlug": "ke-pa-mian-ju",
+          "equipmentName": "可怕面具",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-29e2c2c2",
+      "slug": "rand-29e2c2c2",
+      "name": "战斗开始时，若处在日间则攻击力提升2级，若处在夜间则暴击率提升2级，持续3回合",
+      "effect": "战斗开始时，若处在日间则攻击力提升2级，若处在夜间则暴击率提升2级，持续3回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-du-xing-ke-de-nu-huo",
+          "equipmentSlug": "du-xing-ke-de-nu-huo",
+          "equipmentName": "独行客的怒火",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-2cb27154",
+      "slug": "rand-2cb27154",
+      "name": "有敌方单位[力竭]时，场上其他敌方单位所受伤害提升3级，持续1回合",
+      "effect": "有敌方单位[力竭]时，场上其他敌方单位所受伤害提升3级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-secret-of-gorgeous-fantasy",
+          "equipmentSlug": "hua-cai-huan-xiang-de-mi-mi",
+          "equipmentName": "华彩幻想的秘密",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-2d4a4d54",
+      "slug": "rand-2d4a4d54",
+      "name": "感知提升6点",
+      "effect": "感知提升6点。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-du-xing-ke-de-nu-huo",
+          "equipmentSlug": "du-xing-ke-de-nu-huo",
+          "equipmentName": "独行客的怒火",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-2feb4d3b",
+      "slug": "rand-2feb4d3b",
+      "name": "攻击力提升3%",
+      "effect": "攻击力提升3%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-aged-medicine-bottle",
+          "equipmentSlug": "chen-niang-yao-ping",
+          "equipmentName": "沉酿药瓶",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-325f4e35",
+      "slug": "rand-325f4e35",
+      "name": "有敌方单位力竭时，场上其他敌方单位所受伤害提升3级，持续1回合",
+      "effect": "有敌方单位力竭时，场上其他敌方单位所受伤害提升3级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-butterfly-endless",
+          "equipmentSlug": "die-die-bu-xiu",
+          "equipmentName": "蝶蝶不休",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": "rand-3f68ff3e",
+      "slug": "rand-3f68ff3e",
+      "name": "令其他我方单位行动提前时，使其攻击力提升2级，持续1回合",
+      "effect": "令其他我方单位行动提前时，使其攻击力提升2级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-solitary-flower-mask",
+          "equipmentSlug": "gu-hua-mian-ju",
+          "equipmentName": "孤花面具",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-436428a2",
+      "slug": "rand-436428a2",
+      "name": "每场战斗首个回合造成的伤害提升20%",
+      "effect": "每场战斗首个回合造成的伤害提升20%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-harbor-hippie",
+          "equipmentSlug": "hai-gang-xi-pi",
+          "equipmentName": "海港嬉皮",
+          "level": 6
+        },
+        {
+          "equipmentId": "equip-tao-qiao-chang-xue",
+          "equipmentSlug": "tao-qiao-chang-xue",
+          "equipmentName": "讨巧长靴",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-495c1bd1",
+      "slug": "rand-495c1bd1",
+      "name": "战斗开始时，若自身拥有[疾病]，则攻击力提升2级",
+      "effect": "战斗开始时，若自身拥有[疾病]，则攻击力提升2级。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-aged-medicine-bottle",
+          "equipmentSlug": "chen-niang-yao-ping",
+          "equipmentName": "沉酿药瓶",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-4e6280bb",
+      "slug": "rand-4e6280bb",
+      "name": "[招牌技]伤害提升8%",
+      "effect": "[招牌技]伤害提升8%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-fang-zhi-mian-zhao",
+          "equipmentSlug": "fang-zhi-mian-zhao",
+          "equipmentName": "防治面罩",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "rand-510ebc5d",
+      "slug": "rand-510ebc5d",
+      "name": "暴击后，暴击率提升6级，持续1回合",
+      "effect": "暴击后，暴击率提升6级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-lian-dao-mian-kui",
+          "equipmentSlug": "lian-dao-mian-kui",
+          "equipmentName": "镰刀面盔",
+          "level": 2
+        },
+        {
+          "equipmentId": "equip-solitary-flower-mask",
+          "equipmentSlug": "gu-hua-mian-ju",
+          "equipmentName": "孤花面具",
+          "level": 6
+        },
+        {
+          "equipmentId": "equip-tao-qiao-chang-xue",
+          "equipmentSlug": "tao-qiao-chang-xue",
+          "equipmentName": "讨巧长靴",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-51e1e318",
+      "slug": "rand-51e1e318",
+      "name": "攻击拥有[气绝]的敌方单位时，造成的伤害提升8%",
+      "effect": "攻击拥有[气绝]的敌方单位时，造成的伤害提升8%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-sturdy-heavy-shield",
+          "equipmentSlug": "jian-qiang-zhong-dun",
+          "equipmentName": "坚强重盾",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-52c545c8",
+      "slug": "rand-52c545c8",
+      "name": "额外行动时，造成的伤害提升3级",
+      "effect": "额外行动时，造成的伤害提升3级。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-tao-qiao-chang-xue",
+          "equipmentSlug": "tao-qiao-chang-xue",
+          "equipmentName": "讨巧长靴",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-560d40d3",
+      "slug": "rand-560d40d3",
+      "name": "使用强化骰技能时，每使用一个强化骰，造成的架势伤害提升6%",
+      "effect": "使用强化骰技能时，每使用一个强化骰，造成的架势伤害提升6%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-roaring-straight-sword",
+          "equipmentSlug": "pao-xiao-zhi-jian",
+          "equipmentName": "咆哮直剑",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-568ed0ba",
+      "slug": "rand-568ed0ba",
+      "name": "魅力提升6点",
+      "effect": "魅力提升6点。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-roaring-straight-sword",
+          "equipmentSlug": "pao-xiao-zhi-jian",
+          "equipmentName": "咆哮直剑",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-56fc737c",
+      "slug": "rand-56fc737c",
+      "name": "敌方单位每有1种持续伤害，本装备拥有者施加的持续伤害提升1.2%",
+      "effect": "敌方单位每有1种持续伤害，本装备拥有者施加的持续伤害提升1.2%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-bian-se-long-ruan-jia",
+          "equipmentSlug": "bian-se-long-ruan-jia",
+          "equipmentName": "变色龙软甲",
+          "level": 2
+        },
+        {
+          "equipmentId": "equip-heart-guard-armor",
+          "equipmentSlug": "shou-xin-kui-jia",
+          "equipmentName": "守心盔甲",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-58e65c0d",
+      "slug": "rand-58e65c0d",
+      "name": "攻击体力值高于50%的敌方单位时，造成的伤害提升8%",
+      "effect": "攻击体力值高于50%的敌方单位时，造成的伤害提升8%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-secret-of-gorgeous-fantasy",
+          "equipmentSlug": "hua-cai-huan-xiang-de-mi-mi",
+          "equipmentName": "华彩幻想的秘密",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-5a0371ac",
+      "slug": "rand-5a0371ac",
+      "name": "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合",
+      "effect": "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-aged-medicine-bottle",
+          "equipmentSlug": "chen-niang-yao-ping",
+          "equipmentName": "沉酿药瓶",
+          "level": 6
+        },
+        {
+          "equipmentId": "equip-solitary-flower-mask",
+          "equipmentSlug": "gu-hua-mian-ju",
+          "equipmentName": "孤花面具",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-5c96b2ab",
+      "slug": "rand-5c96b2ab",
+      "name": "[个人技]伤害提升4%",
+      "effect": "[个人技]伤害提升4%。每次使用[个人技]后，[个人技]等级提升1级，持续2回合，至多提升至3级。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-bian-se-long-ruan-jia",
+          "equipmentSlug": "bian-se-long-ruan-jia",
+          "equipmentName": "变色龙软甲",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "rand-5ff64242",
+      "slug": "rand-5ff64242",
+      "name": "固定伤害提升1%",
+      "effect": "固定伤害提升1%。每次造成固定伤害后，固定伤害额外提升1级，持续2回合，至多提升至2级。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-black-iron-hood",
+          "equipmentSlug": "hei-tie-tou-zhao",
+          "equipmentName": "黑铁头罩",
+          "level": 6
+        },
+        {
+          "equipmentId": "equip-fang-zhi-mian-zhao",
+          "equipmentSlug": "fang-zhi-mian-zhao",
+          "equipmentName": "防治面罩",
+          "level": 2
+        },
+        {
+          "equipmentId": "equip-pointed-iron-shoes",
+          "equipmentSlug": "jian-tou-tie-xie",
+          "equipmentName": "尖头铁鞋",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-72657fe7",
+      "slug": "rand-72657fe7",
+      "name": "拥有正面状态的其他我方单位造成的伤害提升3%",
+      "effect": "拥有正面状态的其他我方单位造成的伤害提升3%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-yu-ren-xie",
+          "equipmentSlug": "yu-ren-xie",
+          "equipmentName": "渔人鞋",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "rand-7528c062",
+      "slug": "rand-7528c062",
+      "name": "触发破绽点数检定时，造成伤害提升3级，持续1回合",
+      "effect": "触发破绽点数检定时，造成伤害提升3级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-roaring-straight-sword",
+          "equipmentSlug": "pao-xiao-zhi-jian",
+          "equipmentName": "咆哮直剑",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-7813f0a9",
+      "slug": "rand-7813f0a9",
+      "name": "对暴露破绽的敌方单位，检定难度降低1点",
+      "effect": "对暴露破绽的敌方单位，检定难度降低1点。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-e-meng-rong-guang",
+          "equipmentSlug": "e-meng-rong-guang",
+          "equipmentName": "噩梦荣光",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-8085eec9",
+      "slug": "rand-8085eec9",
+      "name": "每使用10个强化骰，则获得1个强化点",
+      "effect": "每使用10个强化骰，则获得1个强化点。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-ku-tong-zhong-ri",
+          "equipmentSlug": "ku-tong-zhong-ri",
+          "equipmentName": "苦痛终日",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-8505491e",
+      "slug": "rand-8505491e",
+      "name": "为我方单位恢复体力后，治疗效果提升1级，持续1回合",
+      "effect": "为我方单位恢复体力后，治疗效果提升1级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-dense-hood",
+          "equipmentSlug": "mi-shi-tou-tao",
+          "equipmentName": "密实头套",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-942a3801",
+      "slug": "rand-942a3801",
+      "name": "攻击后，造成的伤害提升1级，持续1回合",
+      "effect": "攻击后，造成的伤害提升1级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-shuang-sheng-bi-shou",
+          "equipmentSlug": "shuang-sheng-bi-shou",
+          "equipmentName": "双生匕首",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-964d0868",
+      "slug": "rand-964d0868",
+      "name": "令其他我方单位获得[正面状态]时，为其恢复2%的体力值，1回合生效1次",
+      "effect": "令其他我方单位获得[正面状态]时，为其恢复2%的体力值，1回合生效1次。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-bian-se-long-ruan-jia",
+          "equipmentSlug": "bian-se-long-ruan-jia",
+          "equipmentName": "变色龙软甲",
+          "level": 2
+        },
+        {
+          "equipmentId": "equip-secret-of-gorgeous-fantasy",
+          "equipmentSlug": "hua-cai-huan-xiang-de-mi-mi",
+          "equipmentName": "华彩幻想的秘密",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-ae91bb5d",
+      "slug": "rand-ae91bb5d",
+      "name": "战斗中主属性提升1点",
+      "effect": "战斗中主属性提升1点。每有1点主属性，效果命中提升0.06%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-du-xing-ke-de-nu-huo",
+          "equipmentSlug": "du-xing-ke-de-nu-huo",
+          "equipmentName": "独行客的怒火",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-c40ac0b6",
+      "slug": "rand-c40ac0b6",
+      "name": "其他我方单位掷出强化骰点数大于6时，造成的伤害提升2%",
+      "effect": "其他我方单位掷出强化骰点数大于6时，造成的伤害提升2%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-ji-tui-chen-shan",
+          "equipmentSlug": "ji-tui-chen-shan",
+          "equipmentName": "鸡腿衬衫",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "rand-c476b9e3",
+      "slug": "rand-c476b9e3",
+      "name": "每当自身获得护盾时，攻击力提升1级，持续2回合，至多提升至2级",
+      "effect": "每当自身获得护盾时，攻击力提升1级，持续2回合，至多提升至2级。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-sturdy-heavy-shield",
+          "equipmentSlug": "jian-qiang-zhong-dun",
+          "equipmentName": "坚强重盾",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-cbf58165",
+      "slug": "rand-cbf58165",
+      "name": "治疗其他我方单位后，自身[附加伤害]提升3级，持续1回合",
+      "effect": "治疗其他我方单位后，自身[附加伤害]提升3级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-e-meng-rong-guang",
+          "equipmentSlug": "e-meng-rong-guang",
+          "equipmentName": "噩梦荣光",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-cecc4f66",
+      "slug": "rand-cecc4f66",
+      "name": "体力值大于50%时，造成的伤害提升4%，治疗效果提升4%",
+      "effect": "体力值大于50%时，造成的伤害提升4%，治疗效果提升4%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-shuang-sheng-bi-shou",
+          "equipmentSlug": "shuang-sheng-bi-shou",
+          "equipmentName": "双生匕首",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-dce7df64",
+      "slug": "rand-dce7df64",
+      "name": "使用招牌技时，造成的伤害提升2级，治疗效果提升2级，持续1回合",
+      "effect": "使用招牌技时，造成的伤害提升2级，治疗效果提升2级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-shark-short-gun",
+          "equipmentSlug": "sha-yu-duan-qiang",
+          "equipmentName": "鲨鱼短枪",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-e25d491f",
+      "slug": "rand-e25d491f",
+      "name": "每受到5次攻击，自身额外行动伤害提升4级，持续2回合",
+      "effect": "每受到5次攻击，自身额外行动伤害提升4级，持续2回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-ku-tong-zhong-ri",
+          "equipmentSlug": "ku-tong-zhong-ri",
+          "equipmentName": "苦痛终日",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-e7665505",
+      "slug": "rand-e7665505",
+      "name": "连续使用同一技能时，造成的伤害提升5%",
+      "effect": "连续使用同一技能时，造成的伤害提升5%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-ku-tong-zhong-ri",
+          "equipmentSlug": "ku-tong-zhong-ri",
+          "equipmentName": "苦痛终日",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-efbbb6dc",
+      "slug": "rand-efbbb6dc",
+      "name": "暴击伤害提升8%",
+      "effect": "暴击伤害提升8%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-harbor-hippie",
+          "equipmentSlug": "hai-gang-xi-pi",
+          "equipmentName": "海港嬉皮",
+          "level": 6
+        }
+      ]
     }
   ],
   "items": [
@@ -2510,6 +3494,15 @@
       "related": [
         "个人技",
         "骰子"
+      ]
+    },
+    {
+      "id": "glossary-corrosion",
+      "slug": "glossary-corrosion",
+      "term": "腐蚀",
+      "definition": "防御力降低此状态层数×1%。自身回合开始时，受到此状态层数×给予此状态者攻击力10%的伤害，最多叠加10层。无视防御。",
+      "related": [
+        "负面状态"
       ]
     },
     {
@@ -4829,6 +5822,17 @@
       "keywords": []
     },
     {
+      "id": "equip-bian-se-long-ruan-jia",
+      "title": "变色龙软甲",
+      "type": "行装",
+      "route": "/equipment/bian-se-long-ruan-jia",
+      "tags": [
+        "躯干",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-black-iron-hood",
       "title": "黑铁头罩",
       "type": "行装",
@@ -4895,6 +5899,17 @@
       "keywords": []
     },
     {
+      "id": "equip-fang-zhi-mian-zhao",
+      "title": "防治面罩",
+      "type": "行装",
+      "route": "/equipment/fang-zhi-mian-zhao",
+      "tags": [
+        "头部",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-fire-scene-belt",
       "title": "火场腰带",
       "type": "行装",
@@ -4929,6 +5944,17 @@
       "keywords": []
     },
     {
+      "id": "equip-ji-tui-chen-shan",
+      "title": "鸡腿衬衫",
+      "type": "行装",
+      "route": "/equipment/ji-tui-chen-shan",
+      "tags": [
+        "躯干",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-ku-tong-zhong-ri",
       "title": "苦痛终日",
       "type": "行装",
@@ -4936,6 +5962,17 @@
       "tags": [
         "腿部",
         "金"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-lian-dao-mian-kui",
+      "title": "镰刀面盔",
+      "type": "行装",
+      "route": "/equipment/lian-dao-mian-kui",
+      "tags": [
+        "头部",
+        "蓝"
       ],
       "keywords": []
     },
@@ -5070,6 +6107,458 @@
         "紫"
       ],
       "keywords": []
+    },
+    {
+      "id": "equip-xiao-chou-dun-pai",
+      "title": "小丑盾牌",
+      "type": "行装",
+      "route": "/equipment/xiao-chou-dun-pai",
+      "tags": [
+        "手部",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-yu-ren-xie",
+      "title": "渔人鞋",
+      "type": "行装",
+      "route": "/equipment/yu-ren-xie",
+      "tags": [
+        "腿部",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "rand-018cf302",
+      "title": "造成的持续伤害提升4%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-018cf302",
+      "tags": [],
+      "keywords": [
+        "造成的持续伤害提升4%。"
+      ]
+    },
+    {
+      "id": "rand-09381335",
+      "title": "暴击伤害提升1%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-09381335",
+      "tags": [],
+      "keywords": [
+        "暴击伤害提升1%。每次暴击时，暴击伤害额外提升1级，持续2回合，至多提升至2级。"
+      ]
+    },
+    {
+      "id": "rand-09f7a2d6",
+      "title": "位于战斗小队2号位时，攻击力提升3%，暴击率提升4%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-09f7a2d6",
+      "tags": [],
+      "keywords": [
+        "位于战斗小队2号位时，攻击力提升3%，暴击率提升4%。"
+      ]
+    },
+    {
+      "id": "rand-0dbcd834",
+      "title": "对拥有[负面状态]的敌方单位暴击率提升2.5%，暴击伤害提升2.5%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-0dbcd834",
+      "tags": [],
+      "keywords": [
+        "对拥有[负面状态]的敌方单位暴击率提升2.5%，暴击伤害提升2.5%。"
+      ]
+    },
+    {
+      "id": "rand-18016727",
+      "title": "首次触发[RogueLuck]（捣蛋时刻）时，刷新自身[个人技]的冷却时间",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-18016727",
+      "tags": [],
+      "keywords": [
+        "首次触发[RogueLuck]（捣蛋时刻）时，刷新自身[个人技]的冷却时间。"
+      ]
+    },
+    {
+      "id": "rand-1926abb5",
+      "title": "当有其他我方单位体力值低于30%时，自身受击权重提升3级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-1926abb5",
+      "tags": [],
+      "keywords": [
+        "当有其他我方单位体力值低于30%时，自身受击权重提升3级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-1ba0de0f",
+      "title": "力量提升6点",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-1ba0de0f",
+      "tags": [],
+      "keywords": [
+        "力量提升6点。"
+      ]
+    },
+    {
+      "id": "rand-2016d348",
+      "title": "获得[正面状态]时，恢复5%体力值",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-2016d348",
+      "tags": [],
+      "keywords": [
+        "获得[正面状态]时，恢复5%体力值。"
+      ]
+    },
+    {
+      "id": "rand-29e2c2c2",
+      "title": "战斗开始时，若处在日间则攻击力提升2级，若处在夜间则暴击率提升2级，持续3回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-29e2c2c2",
+      "tags": [],
+      "keywords": [
+        "战斗开始时，若处在日间则攻击力提升2级，若处在夜间则暴击率提升2级，持续3回合。"
+      ]
+    },
+    {
+      "id": "rand-2cb27154",
+      "title": "有敌方单位[力竭]时，场上其他敌方单位所受伤害提升3级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-2cb27154",
+      "tags": [],
+      "keywords": [
+        "有敌方单位[力竭]时，场上其他敌方单位所受伤害提升3级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-2d4a4d54",
+      "title": "感知提升6点",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-2d4a4d54",
+      "tags": [],
+      "keywords": [
+        "感知提升6点。"
+      ]
+    },
+    {
+      "id": "rand-2feb4d3b",
+      "title": "攻击力提升3%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-2feb4d3b",
+      "tags": [],
+      "keywords": [
+        "攻击力提升3%。"
+      ]
+    },
+    {
+      "id": "rand-325f4e35",
+      "title": "有敌方单位力竭时，场上其他敌方单位所受伤害提升3级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-325f4e35",
+      "tags": [],
+      "keywords": [
+        "有敌方单位力竭时，场上其他敌方单位所受伤害提升3级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-3f68ff3e",
+      "title": "令其他我方单位行动提前时，使其攻击力提升2级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-3f68ff3e",
+      "tags": [],
+      "keywords": [
+        "令其他我方单位行动提前时，使其攻击力提升2级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-436428a2",
+      "title": "每场战斗首个回合造成的伤害提升20%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-436428a2",
+      "tags": [],
+      "keywords": [
+        "每场战斗首个回合造成的伤害提升20%。"
+      ]
+    },
+    {
+      "id": "rand-495c1bd1",
+      "title": "战斗开始时，若自身拥有[疾病]，则攻击力提升2级",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-495c1bd1",
+      "tags": [],
+      "keywords": [
+        "战斗开始时，若自身拥有[疾病]，则攻击力提升2级。"
+      ]
+    },
+    {
+      "id": "rand-4e6280bb",
+      "title": "[招牌技]伤害提升8%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-4e6280bb",
+      "tags": [],
+      "keywords": [
+        "[招牌技]伤害提升8%。"
+      ]
+    },
+    {
+      "id": "rand-510ebc5d",
+      "title": "暴击后，暴击率提升6级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-510ebc5d",
+      "tags": [],
+      "keywords": [
+        "暴击后，暴击率提升6级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-51e1e318",
+      "title": "攻击拥有[气绝]的敌方单位时，造成的伤害提升8%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-51e1e318",
+      "tags": [],
+      "keywords": [
+        "攻击拥有[气绝]的敌方单位时，造成的伤害提升8%。"
+      ]
+    },
+    {
+      "id": "rand-52c545c8",
+      "title": "额外行动时，造成的伤害提升3级",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-52c545c8",
+      "tags": [],
+      "keywords": [
+        "额外行动时，造成的伤害提升3级。"
+      ]
+    },
+    {
+      "id": "rand-560d40d3",
+      "title": "使用强化骰技能时，每使用一个强化骰，造成的架势伤害提升6%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-560d40d3",
+      "tags": [],
+      "keywords": [
+        "使用强化骰技能时，每使用一个强化骰，造成的架势伤害提升6%。"
+      ]
+    },
+    {
+      "id": "rand-568ed0ba",
+      "title": "魅力提升6点",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-568ed0ba",
+      "tags": [],
+      "keywords": [
+        "魅力提升6点。"
+      ]
+    },
+    {
+      "id": "rand-56fc737c",
+      "title": "敌方单位每有1种持续伤害，本装备拥有者施加的持续伤害提升1.2%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-56fc737c",
+      "tags": [],
+      "keywords": [
+        "敌方单位每有1种持续伤害，本装备拥有者施加的持续伤害提升1.2%。"
+      ]
+    },
+    {
+      "id": "rand-58e65c0d",
+      "title": "攻击体力值高于50%的敌方单位时，造成的伤害提升8%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-58e65c0d",
+      "tags": [],
+      "keywords": [
+        "攻击体力值高于50%的敌方单位时，造成的伤害提升8%。"
+      ]
+    },
+    {
+      "id": "rand-5a0371ac",
+      "title": "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-5a0371ac",
+      "tags": [],
+      "keywords": [
+        "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-5c96b2ab",
+      "title": "[个人技]伤害提升4%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-5c96b2ab",
+      "tags": [],
+      "keywords": [
+        "[个人技]伤害提升4%。每次使用[个人技]后，[个人技]等级提升1级，持续2回合，至多提升至3级。"
+      ]
+    },
+    {
+      "id": "rand-5ff64242",
+      "title": "固定伤害提升1%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-5ff64242",
+      "tags": [],
+      "keywords": [
+        "固定伤害提升1%。每次造成固定伤害后，固定伤害额外提升1级，持续2回合，至多提升至2级。"
+      ]
+    },
+    {
+      "id": "rand-72657fe7",
+      "title": "拥有正面状态的其他我方单位造成的伤害提升3%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-72657fe7",
+      "tags": [],
+      "keywords": [
+        "拥有正面状态的其他我方单位造成的伤害提升3%。"
+      ]
+    },
+    {
+      "id": "rand-7528c062",
+      "title": "触发破绽点数检定时，造成伤害提升3级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-7528c062",
+      "tags": [],
+      "keywords": [
+        "触发破绽点数检定时，造成伤害提升3级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-7813f0a9",
+      "title": "对暴露破绽的敌方单位，检定难度降低1点",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-7813f0a9",
+      "tags": [],
+      "keywords": [
+        "对暴露破绽的敌方单位，检定难度降低1点。"
+      ]
+    },
+    {
+      "id": "rand-8085eec9",
+      "title": "每使用10个强化骰，则获得1个强化点",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-8085eec9",
+      "tags": [],
+      "keywords": [
+        "每使用10个强化骰，则获得1个强化点。"
+      ]
+    },
+    {
+      "id": "rand-8505491e",
+      "title": "为我方单位恢复体力后，治疗效果提升1级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-8505491e",
+      "tags": [],
+      "keywords": [
+        "为我方单位恢复体力后，治疗效果提升1级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-942a3801",
+      "title": "攻击后，造成的伤害提升1级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-942a3801",
+      "tags": [],
+      "keywords": [
+        "攻击后，造成的伤害提升1级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-964d0868",
+      "title": "令其他我方单位获得[正面状态]时，为其恢复2%的体力值，1回合生效1次",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-964d0868",
+      "tags": [],
+      "keywords": [
+        "令其他我方单位获得[正面状态]时，为其恢复2%的体力值，1回合生效1次。"
+      ]
+    },
+    {
+      "id": "rand-ae91bb5d",
+      "title": "战斗中主属性提升1点",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-ae91bb5d",
+      "tags": [],
+      "keywords": [
+        "战斗中主属性提升1点。每有1点主属性，效果命中提升0.06%。"
+      ]
+    },
+    {
+      "id": "rand-c40ac0b6",
+      "title": "其他我方单位掷出强化骰点数大于6时，造成的伤害提升2%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-c40ac0b6",
+      "tags": [],
+      "keywords": [
+        "其他我方单位掷出强化骰点数大于6时，造成的伤害提升2%。"
+      ]
+    },
+    {
+      "id": "rand-c476b9e3",
+      "title": "每当自身获得护盾时，攻击力提升1级，持续2回合，至多提升至2级",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-c476b9e3",
+      "tags": [],
+      "keywords": [
+        "每当自身获得护盾时，攻击力提升1级，持续2回合，至多提升至2级。"
+      ]
+    },
+    {
+      "id": "rand-cbf58165",
+      "title": "治疗其他我方单位后，自身[附加伤害]提升3级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-cbf58165",
+      "tags": [],
+      "keywords": [
+        "治疗其他我方单位后，自身[附加伤害]提升3级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-cecc4f66",
+      "title": "体力值大于50%时，造成的伤害提升4%，治疗效果提升4%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-cecc4f66",
+      "tags": [],
+      "keywords": [
+        "体力值大于50%时，造成的伤害提升4%，治疗效果提升4%。"
+      ]
+    },
+    {
+      "id": "rand-dce7df64",
+      "title": "使用招牌技时，造成的伤害提升2级，治疗效果提升2级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-dce7df64",
+      "tags": [],
+      "keywords": [
+        "使用招牌技时，造成的伤害提升2级，治疗效果提升2级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-e25d491f",
+      "title": "每受到5次攻击，自身额外行动伤害提升4级，持续2回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-e25d491f",
+      "tags": [],
+      "keywords": [
+        "每受到5次攻击，自身额外行动伤害提升4级，持续2回合。"
+      ]
+    },
+    {
+      "id": "rand-e7665505",
+      "title": "连续使用同一技能时，造成的伤害提升5%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-e7665505",
+      "tags": [],
+      "keywords": [
+        "连续使用同一技能时，造成的伤害提升5%。"
+      ]
+    },
+    {
+      "id": "rand-efbbb6dc",
+      "title": "暴击伤害提升8%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-efbbb6dc",
+      "tags": [],
+      "keywords": [
+        "暴击伤害提升8%。"
+      ]
     },
     {
       "id": "item-sea-soul-crystal",
@@ -5521,6 +7010,16 @@
       "tags": [
         "个人技",
         "骰子"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-corrosion",
+      "title": "腐蚀",
+      "type": "术语",
+      "route": "/glossary#glossary-corrosion",
+      "tags": [
+        "负面状态"
       ],
       "keywords": []
     },

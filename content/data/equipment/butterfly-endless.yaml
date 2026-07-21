@@ -10,13 +10,11 @@ maxEnhanceByFruitLevel:
     maxEnhance: 10
 baseStats:
   atk: 106
-  dotBoost: "7.2%"
+  dotBoost: 7.2%
   def: -8
-
 requirements:
   int: 104
   per: 55
-
 enhanceRequirements:
   - level: 1
     int: 51
@@ -27,19 +25,15 @@ enhanceRequirements:
   - level: 10
     int: 142
     per: 76
-
 fixedAffixes:
-  - "效果命中中越高，额外行动伤害越高，每有1%的效果命中，自身额外行动伤害提升0.6%。"
-
-randomAffixes:
-  - "当有其他我方单位体力值低于30%时，自身受击权重提升3级，持续1回合。"
-  - "位于战斗小队2号位时，攻击力提升3%，暴击率提升4%。"
-  - "有敌方单位力竭时，场上其他敌方单位所受伤害提升3级，持续1回合。"
-
-flavor: "有些美丽的物件，只可远观，不可亵玩。"
-source: "失落海域·金果子等级 5 掉落"
+  - 效果命中中越高，额外行动伤害越高，每有1%的效果命中，自身额外行动伤害提升0.6%。
+flavor: 有些美丽的物件，只可远观，不可亵玩。
+source: 失落海域·金果子等级 5 掉落
 image: /images/equipment/butterfly-endless.png
-
 buildNotes: |
   海葬核心毕业装之一。固定词条与额外行动机制高度契合，优先强化。
   注意穿戴要求：紫色品质以上行装不满足属性要求时，自带属性会下降。
+randomAffixIds:
+  - rand-1926abb5
+  - rand-09f7a2d6
+  - rand-325f4e35

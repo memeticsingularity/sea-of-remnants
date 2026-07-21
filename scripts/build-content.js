@@ -26,6 +26,7 @@ const COLLECTIONS = [
   'dice',
   'songs',
   'equipment',
+  'random-affixes',
   'items',
   'quests',
   'locations',
@@ -106,6 +107,9 @@ function buildSearchIndex(data) {
   data.songs.forEach((s) => add(s, '船歌', `/songs/${s.slug}`))
   data.equipment.forEach((e) =>
     add(e, '行装', `/equipment/${e.slug}`, [e.slot, e.rarity]),
+  )
+  ;(data.randomAffixes || []).forEach((a) =>
+    add(a, '随机词条', `/random-affixes/${a.slug}`, [], [a.effect]),
   )
   data.items.forEach((i) => add(i, '物品', `/items/${i.slug}`, [i.type, i.rarity]))
   data.quests.forEach((q) => add(q, '任务', `/quests/${q.slug}`, [q.category]))
@@ -190,6 +194,22 @@ async function main() {
       ...page,
       content: await readMarkdownFile(page.markdown),
     })
+  }
+
+  // Build reverse occurrence index for random affixes
+  const randomAffixMap = new Map((data.randomAffixes || []).map((a) => [a.id, a]))
+  for (const eq of data.equipment || []) {
+    for (const affixId of eq.randomAffixIds || []) {
+      const affix = randomAffixMap.get(affixId)
+      if (!affix) continue
+      if (!affix.occurrences) affix.occurrences = []
+      affix.occurrences.push({
+        equipmentId: eq.id,
+        equipmentSlug: eq.slug,
+        equipmentName: eq.name,
+        level: eq.enhance ?? 1,
+      })
+    }
   }
 
   // Build search index

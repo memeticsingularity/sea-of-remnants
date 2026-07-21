@@ -10,11 +10,11 @@ maxEnhanceByFruitLevel:
     maxEnhance: 10
 baseStats:
   atk: 56
-  effectHit: "8.1%"
+  effectHit: 8.1%
 statsByLevel:
-  6:
+  "6":
     atk: 56
-    effectHit: "8.1%"
+    effectHit: 8.1%
 requirements:
   int: 85
   per: 45
@@ -50,11 +50,11 @@ enhanceRequirements:
     int: 126
     per: 67
 fixedAffixes:
-  - "每拥有1层[灵感]使[加料]的概率提升0.5%，伤害提升1%。"
-randomAffixes:
-  - "攻击力提升3%。"
-  - "使用[招牌技]时，造成的伤害提升2级，治疗效果提升2级，持续1回合。"
-  - "战斗开始时，若自身拥有[疾病]，则攻击力提升2级。"
-flavor: "老海耗子教育新人，在开战前，先喝五瓶章鱼浓汁。头脑昏昏，准头翻番。"
+  - 每拥有1层[灵感]使[加料]的概率提升0.5%，伤害提升1%。
+flavor: 老海耗子教育新人，在开战前，先喝五瓶章鱼浓汁。头脑昏昏，准头翻番。
 source: 行装掉落
 image: /images/equipment/aged-medicine-bottle.png
+randomAffixIds:
+  - rand-2feb4d3b
+  - rand-5a0371ac
+  - rand-495c1bd1

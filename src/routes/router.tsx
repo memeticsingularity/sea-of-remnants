@@ -13,6 +13,8 @@ import { RecruitmentSimulatorPage } from '@/pages/RecruitmentSimulatorPage'
 import { CollectionPage } from '@/pages/CollectionPage'
 import { FigureheadPrayerPage } from '@/pages/FigureheadPrayerPage'
 import { FigureheadPrayerRecommendPage } from '@/pages/FigureheadPrayerRecommendPage'
+import { RandomAffixListPage } from '@/pages/RandomAffixListPage'
+import { RandomAffixDetailPage } from '@/pages/RandomAffixDetailPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
 export const router = createBrowserRouter([
@@ -39,6 +41,8 @@ export const router = createBrowserRouter([
       { path: 'songs/:slug', element: <NotFoundPage /> },
       { path: 'equipment', element: <CategoryPage category="equipment" /> },
       { path: 'equipment/:slug', element: <EquipmentDetailPage /> },
+      { path: 'random-affixes', element: <RandomAffixListPage /> },
+      { path: 'random-affixes/:slug', element: <RandomAffixDetailPage /> },
       { path: 'items', element: <CategoryPage category="items" /> },
       { path: 'items/:slug', element: <NotFoundPage /> },
       { path: 'quests', element: <CategoryPage category="quests" /> },

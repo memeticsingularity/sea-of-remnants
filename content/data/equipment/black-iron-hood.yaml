@@ -5,18 +5,17 @@ slot: 头部
 rarity: 蓝
 enhance: 6
 baseStats:
-  shieldEffect: "17.5%"
+  shieldEffect: 17.5%
   def: 14
 requirements:
   str: 85
   con: 45
 fixedAffixes:
-  - "给予和获得的护盾效果提升5%。"
-randomAffixes:
-  - "固定伤害提升1%。每次造成固定伤害后，固定伤害额外提升1级，持续2回合，至多提升至2级。"
-flavor: "坚强的眼睛盯紧了难过的日子。"
+  - 给予和获得的护盾效果提升5%。
+flavor: 坚强的眼睛盯紧了难过的日子。
 source: 行装掉落
 image: /images/equipment/black-iron-hood.png
-
 buildNotes: |
   黑铁头罩是偏向护盾流派的头部防具，固定词条直接提升护盾获取与给予效率，适合护盾体系前排或辅助。
+randomAffixIds:
+  - rand-5ff64242

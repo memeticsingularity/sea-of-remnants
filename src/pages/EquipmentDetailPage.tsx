@@ -161,9 +161,34 @@ export function EquipmentDetailPage() {
             </Card>
           )}
 
-          {equipment.randomAffixes && equipment.randomAffixes.length > 0 && (
+          {equipment.randomAffixIds && equipment.randomAffixIds.length > 0 && (
             <Card className="mb-6">
               <h2 className="mb-4 text-xl font-bold text-text">可能出现的随机词条</h2>
+              <ul className="space-y-2">
+                {equipment.randomAffixIds.map((id) => {
+                  const affix = wikiData.randomAffixes.find((a) => a.id === id)
+                  if (!affix) return null
+                  return (
+                    <li key={id} className="flex flex-wrap gap-2 text-text-muted">
+                      <span>•</span>
+                      <Link
+                        to={`/random-affixes/${affix.slug}`}
+                        className="text-accent-cyan hover:underline"
+                      >
+                        {affix.name}
+                      </Link>
+                      <span>—</span>
+                      <GlossaryTooltip text={affix.effect} />
+                    </li>
+                  )
+                })}
+              </ul>
+            </Card>
+          )}
+
+          {equipment.randomAffixes && equipment.randomAffixes.length > 0 && (
+            <Card className="mb-6">
+              <h2 className="mb-4 text-xl font-bold text-text">可能出现的随机词条（旧格式）</h2>
               <ul className="space-y-2">
                 {equipment.randomAffixes.map((affix, index) => (
                   <li key={index} className="flex gap-2 text-text-muted">

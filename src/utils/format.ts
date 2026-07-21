@@ -31,6 +31,7 @@ const statNameMap: Record<string, string> = {
   effectResist: '效果抵抗',
   dotBoost: '持续伤害提升',
   fixedDamage: '固定伤害',
+  damageBoost: '伤害提升',
   // 防御/辅助属性
   shieldEffect: '护盾效果',
   threat: '受击权重',

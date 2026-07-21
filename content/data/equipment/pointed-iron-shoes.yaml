@@ -6,11 +6,11 @@ rarity: 蓝
 enhance: 6
 baseStats:
   spd: 9
-  critRate: "8.7%"
+  critRate: 8.7%
 fixedAffixes:
-  - "每击败1个敌方单位，恢复1点能量，每回合至多恢复3点。"
-randomAffixes:
-  - "固定伤害提升1%。每次造成固定伤害后，固定伤害额外提升1级，持续2回合，至多提升至2级。"
-flavor: "调饮师不会靠个人魅力让客人付钱就只能靠这种鞋子了。"
+  - 每击败1个敌方单位，恢复1点能量，每回合至多恢复3点。
+flavor: 调饮师不会靠个人魅力让客人付钱就只能靠这种鞋子了。
 source: 行装掉落
 image: /images/equipment/pointed-iron-shoes.png
+randomAffixIds:
+  - rand-5ff64242

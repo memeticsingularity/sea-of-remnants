@@ -9,11 +9,11 @@ maxEnhanceByFruitLevel:
     maxEnhance: 10
 baseStats:
   spd: 15
-  critDamage: "30%"
+  critDamage: 30%
 statsByLevel:
-  6:
+  "6":
     spd: 15
-    critDamage: "30%"
+    critDamage: 30%
 requirements:
   str: 110
   con: 58
@@ -49,15 +49,14 @@ enhanceRequirements:
     str: 142
     con: 76
 fixedAffixes:
-  - "回合开始时，自身每损失1%的体力值，所受伤害降低0.3%，至多降低15%。"
-randomAffixes:
-  - "每受到5次攻击，自身额外行动伤害提升4级，持续2回合。"
-  - "连续使用同一技能时，造成的伤害提升5%。"
-  - "每使用10个强化骰，则获得1个强化点。"
-flavor: "第一根荆棘，感到疼痛。第二根荆棘，发出一声叹息。第三根荆棘，也许是四根。洁鲁夏不知道。"
+  - 回合开始时，自身每损失1%的体力值，所受伤害降低0.3%，至多降低15%。
+flavor: 第一根荆棘，感到疼痛。第二根荆棘，发出一声叹息。第三根荆棘，也许是四根。洁鲁夏不知道。
 source: 行装掉落
 image: /images/equipment/ku-tong-zhong-ri.png
-
 buildNotes: |
   苦痛终日是金色腿部行装，低体力时提供高额减伤，配合自残或压血玩法收益较高。
   随机词条兼顾额外行动伤害、技能连发增伤与强化点续航，适合战士/坦克定位。
+randomAffixIds:
+  - rand-e25d491f
+  - rand-e7665505
+  - rand-8085eec9

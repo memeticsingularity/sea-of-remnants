@@ -25,6 +25,7 @@ const COLLECTIONS = [
   'dice',
   'songs',
   'equipment',
+  'random-affixes',
   'items',
   'quests',
   'locations',
@@ -130,6 +131,23 @@ async function validateCollection(collection, items, allIds, allSlugs) {
       }
       if (data.rarity && !VALID_RARITIES.includes(data.rarity)) {
         error(`[${collection}/${file}] Invalid rarity: ${data.rarity}`)
+      }
+      if (data.randomAffixes && data.randomAffixIds) {
+        warn(`[${collection}/${file}] Has both randomAffixes and randomAffixIds`)
+      }
+      for (const level of Object.keys(data.statsByLevel || {})) {
+        const n = Number(level)
+        if (!Number.isInteger(n) || n < 1 || n > 10) {
+          warn(`[${collection}/${file}] statsByLevel key out of range: ${level}`)
+        }
+      }
+    }
+
+    if (collection === 'random-affixes') {
+      for (const field of ['name', 'effect']) {
+        if (!data[field]) {
+          error(`[${collection}/${file}] Missing required field: ${field}`)
+        }
       }
     }
 
@@ -245,6 +263,27 @@ async function validateReferences(collections) {
     for (const related of data.related || []) {
       if (!glossaryTerms.has(related)) {
         error(`[glossary/${file}] Related term not found: ${related}`)
+      }
+    }
+  }
+
+  // Validate random-affix glossary references
+  for (const { file, data } of collections['random-affixes'] || []) {
+    for (const related of data.relatedGlossary || []) {
+      if (!glossaryTerms.has(related)) {
+        error(`[random-affixes/${file}] Related glossary term not found: ${related}`)
+      }
+    }
+  }
+
+  // Validate equipment random affix references
+  const randomAffixIds = new Set(
+    (collections['random-affixes'] || []).map(({ data }) => data.id),
+  )
+  for (const { file, data } of collections.equipment || []) {
+    for (const affixId of data.randomAffixIds || []) {
+      if (!randomAffixIds.has(affixId)) {
+        error(`[equipment/${file}] Referenced random affix not found: ${affixId}`)
       }
     }
   }

@@ -1,0 +1,21 @@
+id: equip-ji-tui-chen-shan
+slug: ji-tui-chen-shan
+name: 鸡腿衬衫
+slot: 躯干
+rarity: 蓝
+enhance: 2
+statsByLevel:
+  2:
+    hp: 949
+    def: 5
+    threat: -16
+fixedAffixes:
+  - "受到攻击后，有60%概率恢复5%的体力值。1回合生效1次。"
+randomAffixIds:
+  - rand-c40ac0b6
+flavor: "别亏待自己，把敌袭当做餐铃，连伤口都能蘸着油水吃成开胃菜。"
+source: 行装掉落
+image: /images/equipment/ji-tui-chen-shan.png
+
+buildNotes: |
+  鸡腿衬衫是蓝色躯干行装，受击概率回血，适合前排坦克过渡使用。

@@ -81,7 +81,10 @@ export interface Equipment {
   requirements?: Record<string, number>
   enhanceRequirements?: EnhanceRequirementEntry[]
   fixedAffixes?: string[]
+  /** 旧格式：直接写词条文本；保留做兼容 */
   randomAffixes?: string[]
+  /** 新格式：引用 random-affixes 库的 ID */
+  randomAffixIds?: string[]
   set?: string
   setBonus?: SetBonusEntry[]
   flavor?: string
@@ -103,6 +106,25 @@ export interface EnhanceRequirementEntry {
 export interface SetBonusEntry {
   pieces: number
   effect: string
+}
+
+export interface RandomAffix {
+  id: string
+  slug: string
+  name: string
+  effect: string
+  relatedGlossary?: string[]
+  source?: string
+  buildNotes?: string
+  /** 由 build-content.js 根据装备引用自动生成 */
+  occurrences?: RandomAffixOccurrence[]
+}
+
+export interface RandomAffixOccurrence {
+  equipmentId: string
+  equipmentSlug: string
+  equipmentName: string
+  level: number
 }
 
 export interface Crew {
@@ -336,6 +358,7 @@ export interface WikiData {
   dice: Dice[]
   songs: Song[]
   equipment: Equipment[]
+  randomAffixes: RandomAffix[]
   items: Item[]
   quests: Quest[]
   locations: Location[]

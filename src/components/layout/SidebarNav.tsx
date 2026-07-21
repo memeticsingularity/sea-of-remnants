@@ -25,6 +25,7 @@ const navGroups: NavItem[] = [
   { label: '强化骰', to: '/dice', icon: <Dices className="h-4 w-4" /> },
   { label: '船歌', to: '/songs', icon: <Music className="h-4 w-4" /> },
   { label: '行装', to: '/equipment', icon: <Shield className="h-4 w-4" /> },
+  { label: '随机词条', to: '/random-affixes', icon: <Dices className="h-4 w-4" /> },
   { label: '物品', to: '/items', icon: <Package className="h-4 w-4" /> },
   { label: '任务', to: '/quests', icon: <Scroll className="h-4 w-4" /> },
   { label: '地点', to: '/locations', icon: <Map className="h-4 w-4" /> },

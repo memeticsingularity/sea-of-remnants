@@ -1,0 +1,20 @@
+id: equip-yu-ren-xie
+slug: yu-ren-xie
+name: 渔人鞋
+slot: 腿部
+rarity: 蓝
+enhance: 2
+statsByLevel:
+  2:
+    spd: 7
+    damageBoost: "14.7%"
+fixedAffixes:
+  - "回合开始时，有100%基础概率为攻击力最高的敌方单位施加2层[腐蚀]。"
+randomAffixIds:
+  - rand-72657fe7
+flavor: "越大的鱼，受伤之后，越藏不住腥味。"
+source: 行装掉落
+image: /images/equipment/yu-ren-xie.png
+
+buildNotes: |
+  渔人鞋是蓝色腿部行装，回合开始时给高攻敌人挂[腐蚀]，适合需要破甲/dot 铺垫的敏捷角色。

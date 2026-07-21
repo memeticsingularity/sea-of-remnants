@@ -9,11 +9,11 @@ maxEnhanceByFruitLevel:
     maxEnhance: 10
 baseStats:
   spd: 13
-  critRate: "6.6%"
+  critRate: 6.6%
 statsByLevel:
-  6:
+  "6":
     spd: 13
-    critRate: "6.6%"
+    critRate: 6.6%
 requirements:
   agi: 68
   per: 54
@@ -49,14 +49,13 @@ enhanceRequirements:
     agi: 101
     per: 80
 fixedAffixes:
-  - "位于战斗小队1/2/3/4号位时，分别获得获得护盾效果提升12%/暴击率提升4%/能量恢复效率提升6%/速度提升12%。"
-randomAffixes:
-  - "暴击后，暴击率提升6级，持续1回合。"
-  - "额外行动时，造成的伤害提升3级。"
-  - "每场战斗首个回合造成的伤害提升20%。"
-flavor: "决定展示什么取决于你的财富，决定掩饰什么取决于你的智慧。"
+  - 位于战斗小队1/2/3/4号位时，分别获得获得护盾效果提升12%/暴击率提升4%/能量恢复效率提升6%/速度提升12%。
+flavor: 决定展示什么取决于你的财富，决定掩饰什么取决于你的智慧。
 source: 行装掉落
 image: /images/equipment/tao-qiao-chang-xue.png
-
 buildNotes: |
   讨巧长靴是紫色腿部行装，固定词条根据站位提供不同增益，适合需要灵活站位调整的敏捷/感知角色。
+randomAffixIds:
+  - rand-510ebc5d
+  - rand-52c545c8
+  - rand-436428a2
