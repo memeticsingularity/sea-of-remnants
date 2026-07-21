@@ -1,0 +1,15 @@
+id: song-cold-minor
+slug: leng-ku-xiao-diao
+name: 冷酷小调
+type: 船歌
+effect: "额外行动时，暴击率提升4%。"
+tags:
+  - 额外行动
+relatedGlossary:
+  - 额外行动
+  - 暴击
+source: 船歌解锁
+
+buildNotes: |
+  额外行动标签船歌，适合依赖额外行动触发的暴击 build。
+  「额外行动」标签对应的职业较多（如饲虫人/灾厄虫母、讨债人/首席讨债人等），未在截图中限定单一职业，暂不绑定 class。

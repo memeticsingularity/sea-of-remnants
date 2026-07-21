@@ -1,0 +1,15 @@
+id: class-carrion-crow
+slug: fu-ya
+name: 腐鸦
+type: 职业
+tier: II
+role: 持续伤害
+description: "智力系 II 阶职业，对应标签「持续伤害」。标签累积数量可影响三阶职业被动效果。"
+unlockCondition: 职业学习（II阶）
+songs:
+  - song-unrestrained-minor
+  - song-reverse-pour-drink
+
+buildNotes: |
+  腐鸦对应船歌「畅快小调」「倒灌佳饮」，专注于持续伤害的施加与叠加。
+  更详细的技能、解锁条件与三阶进阶路线待后续补充。

@@ -1,0 +1,11 @@
+id: class-unyielding-lion
+slug: bu-qu-xiong-shi
+name: 不屈雄狮
+type: 职业
+tier: III
+role: 受击 / 防御
+description: "体质系 III 阶职业，由狮心者进阶而来，对应标签「受击」。"
+unlockCondition: 职业进阶（III阶）
+
+buildNotes: |
+  三阶职业，具体技能与被动效果待后续补充。

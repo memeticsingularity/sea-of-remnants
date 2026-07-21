@@ -1,0 +1,14 @@
+id: song-lucky-minor
+slug: xing-yun-xiao-diao
+name: 幸运小调
+type: 船歌
+effect: "使用强化骰时，造成的架势伤害提升2点。"
+tags:
+  - 强化骰
+relatedGlossary:
+  - 强化骰
+source: 船歌解锁
+
+buildNotes: |
+  强化骰标签船歌，与「轻快小调」同属强化骰/智力系选择池。
+  可直接提升强化骰造成的架势伤害，适合需要打架势破的 build。

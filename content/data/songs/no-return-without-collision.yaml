@@ -1,0 +1,14 @@
+id: song-no-return-without-collision
+slug: bu-zhuang-bu-hui-tou
+name: 不撞不回头
+type: 船歌
+effect: "连续攻击同一主目标时，溅射伤害提升15%。"
+tags:
+  - 溅射
+relatedGlossary:
+  - 溅射
+source: 船歌解锁
+
+buildNotes: |
+  溅射标签船歌，强化对同一主目标连续攻击时的溅射伤害。
+  当前版本「溅射」标签暂无可习得的对应职业。

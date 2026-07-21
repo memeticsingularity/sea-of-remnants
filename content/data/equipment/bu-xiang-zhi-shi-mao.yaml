@@ -1,0 +1,60 @@
+id: equip-bu-xiang-zhi-shi-mao
+slug: bu-xiang-zhi-shi-mao
+name: 不祥制式帽
+slot: 头部
+rarity: 紫
+enhance: 4
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+statsByLevel:
+  4:
+    critRate: "11.5%"
+    critDamage: "30.6%"
+    def: -6
+requirements:
+  agi: 67
+  int: 36
+enhanceRequirements:
+  - level: 1
+    agi: 33
+    int: 18
+  - level: 2
+    agi: 47
+    int: 25
+  - level: 3
+    agi: 51
+    int: 27
+  - level: 4
+    agi: 67
+    int: 36
+  - level: 5
+    agi: 75
+    int: 40
+  - level: 6
+    agi: 85
+    int: 45
+  - level: 7
+    agi: 91
+    int: 48
+  - level: 8
+    agi: 104
+    int: 55
+  - level: 9
+    agi: 114
+    int: 61
+  - level: 10
+    agi: 126
+    int: 67
+fixedAffixes:
+  - "自身攻击时，目标每有1层[暗影]，则自身暴击率提升1.2%，至多提升18%。"
+randomAffixIds:
+  - rand-4d6c3994
+  - rand-88425eff
+  - rand-436428a2
+flavor: "前司递送，使命必达，如有挡路者，得罪勿怪。"
+source: 行装掉落
+image: /images/equipment/bu-xiang-zhi-shi-mao.png
+
+buildNotes: |
+  紫色头部暴击装，固定词条根据目标[暗影]层数提升暴击率，适合能频繁施加[暗影]的敏捷输出。

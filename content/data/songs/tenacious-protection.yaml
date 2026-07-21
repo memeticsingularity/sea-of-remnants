@@ -1,0 +1,14 @@
+id: song-tenacious-protection
+slug: jian-ren-hu-ti
+name: 坚韧护体
+type: 船歌
+effect: "受到攻击后，有10%概率进入防御状态。若本次未生效，使该概率提高2%，直到生效后重置。"
+tags:
+  - 受击
+relatedGlossary:
+  - 防御
+source: 船歌解锁
+
+buildNotes: |
+  该船歌带有「受击」标签，对应 II 阶职业「狮心者」与 III 阶职业「不屈雄狮」。
+  受击时概率获得[防御]，适合需要提高生存能力的体质/防御 build。

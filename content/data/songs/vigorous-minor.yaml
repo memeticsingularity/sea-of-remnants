@@ -1,0 +1,12 @@
+id: song-vigorous-minor
+slug: peng-bo-xiao-diao
+name: 蓬勃小调
+type: 船歌
+effect: "自身回合开始时，为体力值比例最低的友方单位回复等同于自身体力值上限2%的体力值。"
+tags:
+  - 治疗
+source: 船歌解锁
+
+buildNotes: |
+  治疗标签船歌，按自身生命上限为最低血量队友回血。
+  当前版本「治疗」标签暂无可习得的对应职业。

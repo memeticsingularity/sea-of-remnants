@@ -1,0 +1,11 @@
+id: class-silent-giant-shell
+slug: jing-mo-ju-ke
+name: 静默巨壳
+type: 职业
+tier: III
+role: 防御 / 生存
+description: "体质系 III 阶职业，由笨壳进阶而来，对应标签「防御」。"
+unlockCondition: 职业进阶（III阶）
+
+buildNotes: |
+  三阶职业，具体技能与被动效果待后续补充。

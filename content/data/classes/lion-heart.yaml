@@ -1,0 +1,14 @@
+id: class-lion-heart
+slug: shi-xin-zhe
+name: 狮心者
+type: 职业
+tier: II
+role: 受击 / 防御
+description: "体质系 II 阶职业，对应标签「受击」。标签累积数量可影响三阶职业被动效果。"
+unlockCondition: 职业学习（II阶）
+songs:
+  - song-tenacious-protection
+
+buildNotes: |
+  狮心者对应船歌「坚韧护体」，可通过受击触发防御状态提高生存。
+  更详细的技能、解锁条件与三阶进阶路线待后续补充。

@@ -1,0 +1,17 @@
+id: class-lone-traveler-apprentice
+slug: du-xing-ke-xue-tu
+name: 独行客学徒
+type: 职业
+tier: I
+role: 敏捷 / 初始
+combatRoles:
+  - 主攻
+description: "敏捷系 I 阶初始职业，可进阶为 II 阶职业缠命人、讨债人、水仙、蚁妈。"
+unlockCondition: 初始职业
+passives:
+  - name: 幽暗之影
+    level: 2
+    effect: "攻击敌方单位后，为其施加1层[暗影]。受到敏捷系船员攻击时，每层此状态使自身所受伤害提升1.7%，最多叠加20层。"
+
+buildNotes: |
+  敏捷系基础职业，核心机制是[暗影]叠加。进阶路线包括暴击、额外行动、负面状态、招牌技四个 II 阶方向。

@@ -1,0 +1,17 @@
+id: skill-heng-ren
+slug: heng-ren
+name: 横刃
+type: 职业技能
+level: 3
+maxLevel: 10
+shortDesc: "对敌方单体造成2次攻击力90%的伤害。"
+detailedDesc: "对敌方单体造成2次攻击力22.5%×强化骰数量+90%的伤害。"
+tags: []
+relatedGlossary:
+  - 强化骰
+source: 职业技图鉴
+
+buildNotes: |
+  截图显示为等级 3，说明职业技能可以升级。
+
+  该技能在截图里没有额外标签——部分职业技能本身就不带标签。所属职业未在截图中显示，待后续补充。

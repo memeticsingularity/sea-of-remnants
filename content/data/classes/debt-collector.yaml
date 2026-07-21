@@ -1,0 +1,28 @@
+id: class-debt-collector
+slug: tao-zhai-ren
+name: 讨债人
+type: 职业
+tier: II
+role: 额外行动 / 爆发
+combatRoles:
+  - 主攻
+description: "敏捷系 II 阶职业，对应标签「额外行动」。标签累积数量可影响三阶职业被动效果。"
+unlockCondition: 职业学习（II阶）
+skills:
+  - skill-harvest-time
+passives:
+  - name: 清算条款
+    level: 1
+    effect: "自身每累计消耗12层[暗影]，便发动[追猎]追击目标。自身每次行动为本技能累计1层[暗影]消耗。最终伤害提升额外行动增伤的30%，至多提升30%。"
+attributeBoost: "每获得1个【额外行动】标签，船员的额外行动伤害提升属性额外提升3%。"
+tagRequirement:
+  tag: 额外行动
+  required: 4
+  owned: 0
+talentPoints: 1
+statBoosts:
+  六维属性强化: "6"
+
+buildNotes: |
+  讨债人可选职业技「收割时间」拥有额外行动标签，适合敏捷系单体爆发 build。
+  更详细的解锁条件与三阶进阶路线待后续补充。

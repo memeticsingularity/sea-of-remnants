@@ -1,0 +1,14 @@
+id: song-fear-minor
+slug: kong-ju-xiao-diao
+name: 恐惧小调
+type: 船歌
+effect: "对体力值低于30%的敌方单位造成暴击时，暴击伤害提升20%。"
+tags:
+  - 暴击
+relatedGlossary:
+  - 暴击
+source: 船歌解锁
+
+buildNotes: |
+  该船歌带有「暴击」标签，对应 II 阶职业「缠命人」。
+  对低血量目标的收割型船歌，适合暴击伤害较高的敏捷输出 build。

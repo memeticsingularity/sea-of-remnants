@@ -1,0 +1,12 @@
+id: song-unrestrained-minor
+slug: chang-kuai-xiao-diao
+name: 畅快小调
+type: 船歌
+effect: "击破敌方单位时，有70%概率为目标施加2种随机持续伤害。"
+tags:
+  - 持续伤害
+source: 船歌解锁
+
+buildNotes: |
+  持续伤害标签船歌，对应 II 阶职业「腐鸦」与 III 阶职业「狂欢腐鸦」。
+  击破目标时高概率追加随机持续伤害，适合 dot 收割 build。

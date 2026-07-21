@@ -1,0 +1,21 @@
+id: skill-blinding-blow
+slug: zhi-mang-qiao-da
+name: 致盲敲打
+type: 职业技能
+class: 水仙
+level: 2
+maxLevel: 10
+shortDesc: "对敌方单体造成2次攻击力88%的伤害，并对其施加防御力下降2级，持续3回合。"
+detailedDesc: "对敌方单体造成2次攻击力22%×强化骰数量+88%的伤害，并对其施加防御力下降强化骰数量+2级，持续3回合。"
+tags:
+  - 负面状态
+  - 职业技能
+relatedGlossary:
+  - 负面状态
+  - 强化骰
+source: 职业技图鉴
+
+buildNotes: |
+  该技能携带「负面状态×2」标签，是 II 阶职业「水仙」的可选职业技之一。
+
+  能够稳定施加防御力下降，提升全队对单体的物理/混合伤害，适合需要破甲的敏捷/物理队伍。

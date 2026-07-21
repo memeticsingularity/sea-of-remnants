@@ -1,0 +1,11 @@
+id: class-revelry-carrion-crow
+slug: kuang-huan-fu-ya
+name: 狂欢腐鸦
+type: 职业
+tier: III
+role: 持续伤害
+description: "智力系 III 阶职业，由腐鸦进阶而来，对应标签「持续伤害」。"
+unlockCondition: 职业进阶（III阶）
+
+buildNotes: |
+  三阶职业，具体技能与被动效果待后续补充。

@@ -1,0 +1,12 @@
+id: song-reverse-pour-drink
+slug: dao-guan-jia-yin
+name: 倒灌佳饮
+type: 船歌
+effect: "技能命中拥有持续伤害的敌方单位时，有50%概率令其持续伤害层数增加1层。"
+tags:
+  - 持续伤害
+source: 船歌解锁
+
+buildNotes: |
+  持续伤害标签船歌，与「畅快小调」同属持续伤害/智力系选择池，对应 II 阶职业「腐鸦」。
+  可延长并叠加目标身上的持续伤害层数，适合 dot 队。

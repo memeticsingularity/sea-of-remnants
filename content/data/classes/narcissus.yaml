@@ -1,0 +1,29 @@
+id: class-narcissus
+slug: shui-xian
+name: 水仙
+type: 职业
+tier: II
+role: 负面状态 / 控制
+combatRoles:
+  - 协攻
+  - 辅助
+description: "敏捷系 II 阶职业，对应标签「负面状态」。标签累积数量可影响三阶职业被动效果。"
+unlockCondition: 职业学习（II阶）
+skills:
+  - skill-blinding-blow
+passives:
+  - name: 回旋的裙摆
+    level: 1
+    effect: "对主目标施加[暗影]时，额外触发1次[暗影刃]，单次行动内最多触发5次[暗影刃]。战斗开始时对所有敌方单位附加1层[心碎]。"
+attributeBoost: "每获得1个【负面状态】标签，船员的伤害提升属性额外提升2%。"
+tagRequirement:
+  tag: 负面状态
+  required: 4
+  owned: 0
+talentPoints: 1
+statBoosts:
+  六维属性强化: "6"
+
+buildNotes: |
+  水仙可选职业技「致盲敲打」可施加防御力下降，适合需要破甲/控制的队伍。
+  更详细的解锁条件与三阶进阶路线待后续补充。

@@ -1,0 +1,35 @@
+id: class-fate-weaver
+slug: chan-ming-ren
+name: 缠命人
+type: 职业
+tier: II
+role: 暴击 / 爆发
+combatRoles:
+  - 主攻
+description: "敏捷系 II 阶职业，对应标签「暴击」。标签累积数量可影响三阶职业被动效果。"
+unlockCondition: 职业学习（II阶）
+skills:
+  - skill-one-hit-settlement
+songs:
+  - song-fear-minor
+  - song-violent-minor
+  - song-sin-minor
+  - song-breathing-quintet
+passives:
+  - name: 仇敌清单
+    level: 1
+    effect: "使自身暴击率提高10%。自身暴击伤害额外提高全场[暗影]层数×1%。若技能暴击，则储存暴击伤害的20%为[威吓]。"
+attributeBoost: "每获得1个【暴击】标签，船员的暴击伤害属性额外提升3%。"
+tagRequirement:
+  tag: 暴击
+  required: 4
+  owned: 4
+talentPoints: 1
+statBoosts:
+  六维属性强化: "6"
+  暴击伤害: "+12%"
+
+buildNotes: |
+  缠命人可选职业技「一击清算」自带暴击率加成，适合暴击伤害 build。
+  对应船歌包括「恐惧小调」「暴戾小调」「罪孽小调」「呼吸五重奏」，可进一步强化暴击与斩杀能力。
+  更详细的解锁条件与三阶进阶路线待后续补充。

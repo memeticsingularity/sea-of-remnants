@@ -1,0 +1,21 @@
+id: skill-one-hit-settlement
+slug: yi-ji-qing-suan
+name: 一击清算
+type: 职业技能
+class: 缠命人
+level: 2
+maxLevel: 10
+shortDesc: "使此次技能暴击率提高10%，并对敌方单体造成2段攻击力88%的伤害。"
+detailedDesc: "使此次技能暴击率提高10%，并对敌方单体造成2段攻击力22%×强化骰数量+88%的伤害。"
+tags:
+  - 暴击
+  - 职业技能
+relatedGlossary:
+  - 暴击
+  - 强化骰
+source: 职业技图鉴
+
+buildNotes: |
+  该技能携带「暴击×2」标签，是 II 阶职业「缠命人」的可选职业技之一。
+
+  技能自带10%暴击率加成，且为多段伤害，适合堆叠暴击与暴击伤害的敏捷输出build。

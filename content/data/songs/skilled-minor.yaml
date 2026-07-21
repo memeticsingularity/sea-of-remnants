@@ -1,0 +1,14 @@
+id: song-skilled-minor
+slug: shu-ren-xiao-diao
+name: 熟稔小调
+type: 船歌
+effect: "每获得1个强化点，令随机1个我方单位速度提升1级。"
+tags:
+  - 强化骰
+relatedGlossary:
+  - 强化点
+source: 船歌解锁
+
+buildNotes: |
+  强化骰标签船歌，获取强化点时为随机友方提速。
+  适合需要速度优势的智力/辅助 build。

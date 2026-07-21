@@ -1,0 +1,15 @@
+id: song-sin-minor
+slug: zui-nie-xiao-diao
+name: 罪孽小调
+type: 船歌
+effect: "使用招牌技后，自身获得暴击率提升3级，持续2回合。"
+tags:
+  - 暴击
+relatedGlossary:
+  - 暴击
+  - 招牌技
+source: 船歌解锁
+
+buildNotes: |
+  暴击标签船歌，适合以招牌技起手的暴击 build。
+  可与缠命人等暴击职业搭配，进一步堆高开场暴击率。

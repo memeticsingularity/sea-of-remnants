@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-21T14:33:35.461Z"
+    "generatedAt": "2026-07-21T14:51:07.115Z"
   },
   "crews": [
     {
@@ -1292,6 +1292,21 @@
       "buildNotes": "额外行动标签船歌，适合依赖额外行动触发的暴击 build。\n「额外行动」标签对应的职业较多（如饲虫人/灾厄虫母、讨债人/首席讨债人等），未在截图中限定单一职业，暂不绑定 class。\n"
     },
     {
+      "id": "song-evil-minor",
+      "slug": "zui-e-xiao-diao",
+      "name": "罪恶小调",
+      "type": "船歌",
+      "effect": "额外行动时，恢复4%的体力值，该效果每回合最多触发1次。",
+      "tags": [
+        "额外行动"
+      ],
+      "relatedGlossary": [
+        "额外行动"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "额外行动标签船歌，提供额外行动时的自疗续航。\n适合依赖额外行动输出且需要一定生存的 build。\n"
+    },
+    {
       "id": "song-fear-minor",
       "slug": "kong-ju-xiao-diao",
       "name": "恐惧小调",
@@ -1305,6 +1320,22 @@
       ],
       "source": "船歌解锁",
       "buildNotes": "该船歌带有「暴击」标签，对应 II 阶职业「缠命人」。\n对低血量目标的收割型船歌，适合暴击伤害较高的敏捷输出 build。\n"
+    },
+    {
+      "id": "song-induced-achievement",
+      "slug": "you-fa-cheng-jiu",
+      "name": "诱发成就",
+      "type": "船歌",
+      "effect": "若攻击技能使用强化骰，则有40%概率结算1次主目标的持续伤害。",
+      "tags": [
+        "持续伤害"
+      ],
+      "relatedGlossary": [
+        "强化骰",
+        "持续伤害"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "持续伤害标签船歌，使用强化骰时有概率提前结算主目标的 dot。\n适合智力系持续伤害 build，可加快 dot 出伤节奏。\n"
     },
     {
       "id": "song-light-and-quick",
@@ -1368,6 +1399,21 @@
       "buildNotes": "溅射标签船歌，强化对同一主目标连续攻击时的溅射伤害。\n当前版本「溅射」标签暂无可习得的对应职业。\n"
     },
     {
+      "id": "song-refined-specimen",
+      "slug": "jing-zhi-biao-ben",
+      "name": "精制标本",
+      "type": "船歌",
+      "effect": "每次额外行动造成伤害时，赋予目标防御力下降2级，最多6级，持续2回合。",
+      "tags": [
+        "额外行动"
+      ],
+      "relatedGlossary": [
+        "额外行动"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "额外行动标签船歌，通过额外行动叠加防御力下降，适合物理/混合输出队破甲。\n"
+    },
+    {
       "id": "song-reverse-pour-drink",
       "slug": "dao-guan-jia-yin",
       "name": "倒灌佳饮",
@@ -1394,6 +1440,21 @@
       ],
       "source": "船歌解锁",
       "buildNotes": "暴击标签船歌，适合以招牌技起手的暴击 build。\n可与缠命人等暴击职业搭配，进一步堆高开场暴击率。\n"
+    },
+    {
+      "id": "song-skilled-minor",
+      "slug": "shu-ren-xiao-diao",
+      "name": "熟稔小调",
+      "type": "船歌",
+      "effect": "每获得1个强化点，令随机1个我方单位速度提升1级。",
+      "tags": [
+        "强化骰"
+      ],
+      "relatedGlossary": [
+        "强化点"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "强化骰标签船歌，获取强化点时为随机友方提速。\n适合需要速度优势的智力/辅助 build。\n"
     },
     {
       "id": "song-slacking-minor",
@@ -1557,6 +1618,96 @@
         "rand-5a0371ac",
         "rand-495c1bd1"
       ]
+    },
+    {
+      "id": "equip-an-xi-zhi-ying",
+      "slug": "an-xi-zhi-ying",
+      "name": "安息之影",
+      "slot": "躯干",
+      "rarity": "紫",
+      "enhance": 4,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "statsByLevel": {
+        "4": {
+          "hp": 1520,
+          "damageBoost": "13.8%",
+          "shieldEffect": "-6%"
+        }
+      },
+      "requirements": {
+        "agi": 81,
+        "int": 43
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "agi": 51,
+          "int": 27
+        },
+        {
+          "level": 2,
+          "agi": 55,
+          "int": 29
+        },
+        {
+          "level": 3,
+          "agi": 75,
+          "int": 40
+        },
+        {
+          "level": 4,
+          "agi": 81,
+          "int": 43
+        },
+        {
+          "level": 5,
+          "agi": 104,
+          "int": 55
+        },
+        {
+          "level": 6,
+          "agi": 110,
+          "int": 58
+        },
+        {
+          "level": 7,
+          "agi": 114,
+          "int": 61
+        },
+        {
+          "level": 8,
+          "agi": 119,
+          "int": 64
+        },
+        {
+          "level": 9,
+          "agi": 136,
+          "int": 72
+        },
+        {
+          "level": 10,
+          "agi": 142,
+          "int": 76
+        }
+      ],
+      "fixedAffixes": [
+        "每次攻击敌人时，有70%概率使目标获得[安息]，持续2回合。",
+        "[安息]：对此状态给予者造成的伤害降低此状态层数×5%，最多叠加3层。"
+      ],
+      "randomAffixIds": [
+        "rand-2feb4d3b",
+        "rand-630c5bd5",
+        "rand-4ef965f4"
+      ],
+      "flavor": "豹是野兽，一切行为只为捕食和取暖。但有时，也会是因为一点怀念。",
+      "source": "行装掉落",
+      "image": "/images/equipment/an-xi-zhi-ying.png",
+      "buildNotes": "紫色躯干行装，攻击概率附加[安息]以降低来自该目标的输出，适合需要生存与干扰的敏捷/智力角色。\n"
     },
     {
       "id": "equip-bai-fa-bi-zhong-qiang",
@@ -1764,6 +1915,95 @@
       "randomAffixIds": [
         "rand-5ff64242"
       ]
+    },
+    {
+      "id": "equip-bu-xiang-zhi-shi-mao",
+      "slug": "bu-xiang-zhi-shi-mao",
+      "name": "不祥制式帽",
+      "slot": "头部",
+      "rarity": "紫",
+      "enhance": 4,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "statsByLevel": {
+        "4": {
+          "critRate": "11.5%",
+          "critDamage": "30.6%",
+          "def": -6
+        }
+      },
+      "requirements": {
+        "agi": 67,
+        "int": 36
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "agi": 33,
+          "int": 18
+        },
+        {
+          "level": 2,
+          "agi": 47,
+          "int": 25
+        },
+        {
+          "level": 3,
+          "agi": 51,
+          "int": 27
+        },
+        {
+          "level": 4,
+          "agi": 67,
+          "int": 36
+        },
+        {
+          "level": 5,
+          "agi": 75,
+          "int": 40
+        },
+        {
+          "level": 6,
+          "agi": 85,
+          "int": 45
+        },
+        {
+          "level": 7,
+          "agi": 91,
+          "int": 48
+        },
+        {
+          "level": 8,
+          "agi": 104,
+          "int": 55
+        },
+        {
+          "level": 9,
+          "agi": 114,
+          "int": 61
+        },
+        {
+          "level": 10,
+          "agi": 126,
+          "int": 67
+        }
+      ],
+      "fixedAffixes": [
+        "自身攻击时，目标每有1层[暗影]，则自身暴击率提升1.2%，至多提升18%。"
+      ],
+      "randomAffixIds": [
+        "rand-4d6c3994",
+        "rand-88425eff",
+        "rand-436428a2"
+      ],
+      "flavor": "前司递送，使命必达，如有挡路者，得罪勿怪。",
+      "source": "行装掉落",
+      "image": "/images/equipment/bu-xiang-zhi-shi-mao.png",
+      "buildNotes": "紫色头部暴击装，固定词条根据目标[暗影]层数提升暴击率，适合能频繁施加[暗影]的敏捷输出。\n"
     },
     {
       "id": "equip-butterfly-endless",
@@ -2716,6 +2956,96 @@
       ]
     },
     {
+      "id": "equip-shang-hen-zhong-dun",
+      "slug": "shang-hen-zhong-dun",
+      "name": "伤痕重盾",
+      "slot": "手部",
+      "handType": "盾牌",
+      "rarity": "紫",
+      "enhance": 4,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "statsByLevel": {
+        "4": {
+          "atk": 23,
+          "shieldEffect": "11.5%",
+          "critRate": "-3.3%"
+        }
+      },
+      "requirements": {
+        "con": 67,
+        "str": 36
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "con": 33,
+          "str": 18
+        },
+        {
+          "level": 2,
+          "con": 47,
+          "str": 25
+        },
+        {
+          "level": 3,
+          "con": 51,
+          "str": 27
+        },
+        {
+          "level": 4,
+          "con": 67,
+          "str": 36
+        },
+        {
+          "level": 5,
+          "con": 75,
+          "str": 40
+        },
+        {
+          "level": 6,
+          "con": 85,
+          "str": 45
+        },
+        {
+          "level": 7,
+          "con": 91,
+          "str": 48
+        },
+        {
+          "level": 8,
+          "con": 104,
+          "str": 55
+        },
+        {
+          "level": 9,
+          "con": 114,
+          "str": 61
+        },
+        {
+          "level": 10,
+          "con": 126,
+          "str": 67
+        }
+      ],
+      "fixedAffixes": [
+        "所受伤害降低[铠甲]层数×1%，至多降低9%。"
+      ],
+      "randomAffixIds": [
+        "rand-018cf302",
+        "rand-48344c8f",
+        "rand-1926abb5"
+      ],
+      "flavor": "吃一堑长一智，最好的防御，永远是上一道伤口结的疤。",
+      "source": "行装掉落",
+      "image": "/images/equipment/shang-hen-zhong-dun.png",
+      "buildNotes": "紫色盾牌，依赖[铠甲]层数减免伤害，适合能稳定叠甲的前排坦克。\n"
+    },
+    {
       "id": "equip-shark-short-gun",
       "slug": "sha-yu-duan-qiang",
       "name": "鲨鱼短枪",
@@ -3416,6 +3746,12 @@
           "equipmentSlug": "e-meng-rong-guang",
           "equipmentName": "噩梦荣光",
           "level": 6
+        },
+        {
+          "equipmentId": "equip-shang-hen-zhong-dun",
+          "equipmentSlug": "shang-hen-zhong-dun",
+          "equipmentName": "伤痕重盾",
+          "level": 4
         }
       ]
     },
@@ -3497,6 +3833,12 @@
           "equipmentSlug": "die-die-bu-xiu",
           "equipmentName": "蝶蝶不休",
           "level": 5
+        },
+        {
+          "equipmentId": "equip-shang-hen-zhong-dun",
+          "equipmentSlug": "shang-hen-zhong-dun",
+          "equipmentName": "伤痕重盾",
+          "level": 4
         },
         {
           "equipmentId": "equip-shuang-sheng-bi-shou",
@@ -3593,6 +3935,12 @@
           "equipmentSlug": "chen-niang-yao-ping",
           "equipmentName": "沉酿药瓶",
           "level": 6
+        },
+        {
+          "equipmentId": "equip-an-xi-zhi-ying",
+          "equipmentSlug": "an-xi-zhi-ying",
+          "equipmentName": "安息之影",
+          "level": 4
         }
       ]
     },
@@ -3649,6 +3997,12 @@
       "source": "行装随机词条",
       "occurrences": [
         {
+          "equipmentId": "equip-bu-xiang-zhi-shi-mao",
+          "equipmentSlug": "bu-xiang-zhi-shi-mao",
+          "equipmentName": "不祥制式帽",
+          "level": 4
+        },
+        {
           "equipmentId": "equip-harbor-hippie",
           "equipmentSlug": "hai-gang-xi-pi",
           "equipmentName": "海港嬉皮",
@@ -3659,6 +4013,21 @@
           "equipmentSlug": "tao-qiao-chang-xue",
           "equipmentName": "讨巧长靴",
           "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-48344c8f",
+      "slug": "rand-48344c8f",
+      "name": "令其他我方单位获得正面状态时，为其恢复2%的体力值，1回合生效1次",
+      "effect": "令其他我方单位获得正面状态时，为其恢复2%的体力值，1回合生效1次。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-shang-hen-zhong-dun",
+          "equipmentSlug": "shang-hen-zhong-dun",
+          "equipmentName": "伤痕重盾",
+          "level": 4
         }
       ]
     },
@@ -3678,6 +4047,21 @@
       ]
     },
     {
+      "id": "rand-4d6c3994",
+      "slug": "rand-4d6c3994",
+      "name": "护盾效果提升0.5%。每令其他我方单位获得护盾后，自身护盾效果额外提升1级，持续5回合，至多提升至2级",
+      "effect": "护盾效果提升0.5%。每令其他我方单位获得护盾后，自身护盾效果额外提升1级，持续5回合，至多提升至2级。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-bu-xiang-zhi-shi-mao",
+          "equipmentSlug": "bu-xiang-zhi-shi-mao",
+          "equipmentName": "不祥制式帽",
+          "level": 4
+        }
+      ]
+    },
+    {
       "id": "rand-4e6280bb",
       "slug": "rand-4e6280bb",
       "name": "[招牌技]伤害提升8%",
@@ -3689,6 +4073,21 @@
           "equipmentSlug": "fang-zhi-mian-zhao",
           "equipmentName": "防治面罩",
           "level": 2
+        }
+      ]
+    },
+    {
+      "id": "rand-4ef965f4",
+      "slug": "rand-4ef965f4",
+      "name": "对拥有负面状态的敌方单位暴击率提升2.5%，暴击伤害提升2.5%",
+      "effect": "对拥有负面状态的敌方单位暴击率提升2.5%，暴击伤害提升2.5%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-an-xi-zhi-ying",
+          "equipmentSlug": "an-xi-zhi-ying",
+          "equipmentName": "安息之影",
+          "level": 4
         }
       ]
     },
@@ -3918,6 +4317,21 @@
       ]
     },
     {
+      "id": "rand-630c5bd5",
+      "slug": "rand-630c5bd5",
+      "name": "使用防御技能时，受击权重提升3级，持续2回合",
+      "effect": "使用防御技能时，受击权重提升3级，持续2回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-an-xi-zhi-ying",
+          "equipmentSlug": "an-xi-zhi-ying",
+          "equipmentName": "安息之影",
+          "level": 4
+        }
+      ]
+    },
+    {
       "id": "rand-6eab994b",
       "slug": "rand-6eab994b",
       "name": "位于战斗小队2号位时，体力上限提升6%，防御力提升4%",
@@ -4019,6 +4433,21 @@
           "equipmentSlug": "mi-shi-tou-tao",
           "equipmentName": "密实头套",
           "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-88425eff",
+      "slug": "rand-88425eff",
+      "name": "战斗开始时，行动提前20%",
+      "effect": "战斗开始时，行动提前20%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-bu-xiang-zhi-shi-mao",
+          "equipmentSlug": "bu-xiang-zhi-shi-mao",
+          "equipmentName": "不祥制式帽",
+          "level": 4
         }
       ]
     },
@@ -4627,6 +5056,15 @@
       "definition": "战斗开始时，获得10层灵感。使用职业技能时，有概率触发加料，追加1/2/3次技能伤害，并消耗对应层数灵感。",
       "related": [
         "灵感"
+      ]
+    },
+    {
+      "id": "glossary-an-xi",
+      "slug": "glossary-an-xi",
+      "term": "安息",
+      "definition": "对此状态给予者造成的伤害降低此状态层数×5%，最多叠加3层。",
+      "related": [
+        "负面状态"
       ]
     },
     {
@@ -7236,12 +7674,32 @@
       "keywords": []
     },
     {
+      "id": "song-evil-minor",
+      "title": "罪恶小调",
+      "type": "船歌",
+      "route": "/songs/zui-e-xiao-diao",
+      "tags": [
+        "额外行动"
+      ],
+      "keywords": []
+    },
+    {
       "id": "song-fear-minor",
       "title": "恐惧小调",
       "type": "船歌",
       "route": "/songs/kong-ju-xiao-diao",
       "tags": [
         "暴击"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-induced-achievement",
+      "title": "诱发成就",
+      "type": "船歌",
+      "route": "/songs/you-fa-cheng-jiu",
+      "tags": [
+        "持续伤害"
       ],
       "keywords": []
     },
@@ -7286,6 +7744,16 @@
       "keywords": []
     },
     {
+      "id": "song-refined-specimen",
+      "title": "精制标本",
+      "type": "船歌",
+      "route": "/songs/jing-zhi-biao-ben",
+      "tags": [
+        "额外行动"
+      ],
+      "keywords": []
+    },
+    {
       "id": "song-reverse-pour-drink",
       "title": "倒灌佳饮",
       "type": "船歌",
@@ -7302,6 +7770,16 @@
       "route": "/songs/zui-nie-xiao-diao",
       "tags": [
         "暴击"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-skilled-minor",
+      "title": "熟稔小调",
+      "type": "船歌",
+      "route": "/songs/shu-ren-xiao-diao",
+      "tags": [
+        "强化骰"
       ],
       "keywords": []
     },
@@ -7367,6 +7845,17 @@
       "keywords": []
     },
     {
+      "id": "equip-an-xi-zhi-ying",
+      "title": "安息之影",
+      "type": "行装",
+      "route": "/equipment/an-xi-zhi-ying",
+      "tags": [
+        "躯干",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-bai-fa-bi-zhong-qiang",
       "title": "百发必中枪",
       "type": "行装",
@@ -7396,6 +7885,17 @@
       "tags": [
         "头部",
         "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-bu-xiang-zhi-shi-mao",
+      "title": "不祥制式帽",
+      "type": "行装",
+      "route": "/equipment/bu-xiang-zhi-shi-mao",
+      "tags": [
+        "头部",
+        "紫"
       ],
       "keywords": []
     },
@@ -7606,6 +8106,17 @@
       "tags": [
         "手部",
         "金"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-shang-hen-zhong-dun",
+      "title": "伤痕重盾",
+      "type": "行装",
+      "route": "/equipment/shang-hen-zhong-dun",
+      "tags": [
+        "手部",
+        "紫"
       ],
       "keywords": []
     },
@@ -7935,6 +8446,16 @@
       ]
     },
     {
+      "id": "rand-48344c8f",
+      "title": "令其他我方单位获得正面状态时，为其恢复2%的体力值，1回合生效1次",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-48344c8f",
+      "tags": [],
+      "keywords": [
+        "令其他我方单位获得正面状态时，为其恢复2%的体力值，1回合生效1次。"
+      ]
+    },
+    {
       "id": "rand-495c1bd1",
       "title": "战斗开始时，若自身拥有[疾病]，则攻击力提升2级",
       "type": "随机词条",
@@ -7945,6 +8466,16 @@
       ]
     },
     {
+      "id": "rand-4d6c3994",
+      "title": "护盾效果提升0.5%。每令其他我方单位获得护盾后，自身护盾效果额外提升1级，持续5回合，至多提升至2级",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-4d6c3994",
+      "tags": [],
+      "keywords": [
+        "护盾效果提升0.5%。每令其他我方单位获得护盾后，自身护盾效果额外提升1级，持续5回合，至多提升至2级。"
+      ]
+    },
+    {
       "id": "rand-4e6280bb",
       "title": "[招牌技]伤害提升8%",
       "type": "随机词条",
@@ -7952,6 +8483,16 @@
       "tags": [],
       "keywords": [
         "[招牌技]伤害提升8%。"
+      ]
+    },
+    {
+      "id": "rand-4ef965f4",
+      "title": "对拥有负面状态的敌方单位暴击率提升2.5%，暴击伤害提升2.5%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-4ef965f4",
+      "tags": [],
+      "keywords": [
+        "对拥有负面状态的敌方单位暴击率提升2.5%，暴击伤害提升2.5%。"
       ]
     },
     {
@@ -8065,6 +8606,16 @@
       ]
     },
     {
+      "id": "rand-630c5bd5",
+      "title": "使用防御技能时，受击权重提升3级，持续2回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-630c5bd5",
+      "tags": [],
+      "keywords": [
+        "使用防御技能时，受击权重提升3级，持续2回合。"
+      ]
+    },
+    {
       "id": "rand-6eab994b",
       "title": "位于战斗小队2号位时，体力上限提升6%，防御力提升4%",
       "type": "随机词条",
@@ -8132,6 +8683,16 @@
       "tags": [],
       "keywords": [
         "为我方单位恢复体力后，治疗效果提升1级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-88425eff",
+      "title": "战斗开始时，行动提前20%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-88425eff",
+      "tags": [],
+      "keywords": [
+        "战斗开始时，行动提前20%。"
       ]
     },
     {
@@ -8710,6 +9271,16 @@
       "route": "/glossary#glossary-additive",
       "tags": [
         "灵感"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-an-xi",
+      "title": "安息",
+      "type": "术语",
+      "route": "/glossary#glossary-an-xi",
+      "tags": [
+        "负面状态"
       ],
       "keywords": []
     },

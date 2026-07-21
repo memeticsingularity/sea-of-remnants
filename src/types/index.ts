@@ -184,11 +184,36 @@ export interface GameClass {
   slug: string
   name: string
   role?: string
+  /** 战斗定位标签，如 主攻 / 协攻 / 辅助 */
+  combatRoles?: string[]
   description?: string
   unlockCondition?: string
   skills?: string[]
+  songs?: string[]
   image?: string
+  /** 被动技能 */
+  passives?: ClassPassive[]
+  /** 职业属性提升说明 */
+  attributeBoost?: string
+  /** 标签要求 */
+  tagRequirement?: TagRequirement
+  /** 习得后获得天赋点 */
+  talentPoints?: number
+  /** 六维等属性强化 */
+  statBoosts?: Record<string, string>
   buildNotes?: string
+}
+
+export interface ClassPassive {
+  name: string
+  level: number
+  effect: string
+}
+
+export interface TagRequirement {
+  tag: string
+  required: number
+  owned?: number
 }
 
 export interface Item {

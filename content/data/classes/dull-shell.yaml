@@ -1,0 +1,14 @@
+id: class-dull-shell
+slug: ben-ke
+name: 笨壳
+type: 职业
+tier: II
+role: 防御 / 生存
+description: "体质系 II 阶职业，对应标签「防御」。标签累积数量可影响三阶职业被动效果。"
+unlockCondition: 职业学习（II阶）
+songs:
+  - song-slacking-minor
+
+buildNotes: |
+  笨壳对应船歌「偷懒小调」，可在防御状态下回复体力。
+  更详细的技能、解锁条件与三阶进阶路线待后续补充。

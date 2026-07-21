@@ -1,0 +1,14 @@
+id: song-violent-minor
+slug: bao-li-xiao-diao
+name: 暴戾小调
+type: 船歌
+effect: "战斗开始时，获得暴击率提升4级，持续2回合。"
+tags:
+  - 暴击
+relatedGlossary:
+  - 暴击
+source: 船歌解锁
+
+buildNotes: |
+  该船歌带有「暴击」标签，对应 II 阶职业「缠命人」。
+  开场即可提高暴击率，适合需要前两回合稳定暴击的爆发 build。

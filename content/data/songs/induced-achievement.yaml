@@ -1,0 +1,15 @@
+id: song-induced-achievement
+slug: you-fa-cheng-jiu
+name: 诱发成就
+type: 船歌
+effect: "若攻击技能使用强化骰，则有40%概率结算1次主目标的持续伤害。"
+tags:
+  - 持续伤害
+relatedGlossary:
+  - 强化骰
+  - 持续伤害
+source: 船歌解锁
+
+buildNotes: |
+  持续伤害标签船歌，使用强化骰时有概率提前结算主目标的 dot。
+  适合智力系持续伤害 build，可加快 dot 出伤节奏。

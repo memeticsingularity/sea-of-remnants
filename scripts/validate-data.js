@@ -125,6 +125,23 @@ async function validateCollection(collection, items, allIds, allSlugs) {
     }
 
     // Collection-specific validation
+    if (collection === 'classes') {
+      if (data.passives && !Array.isArray(data.passives)) {
+        error(`[${collection}/${file}] passives must be an array`)
+      }
+      if (data.tagRequirement) {
+        if (!data.tagRequirement.tag) {
+          error(`[${collection}/${file}] tagRequirement missing tag`)
+        }
+        if (typeof data.tagRequirement.required !== 'number') {
+          error(`[${collection}/${file}] tagRequirement missing required count`)
+        }
+      }
+      if (data.talentPoints !== undefined && typeof data.talentPoints !== 'number') {
+        error(`[${collection}/${file}] talentPoints must be a number`)
+      }
+    }
+
     if (collection === 'equipment') {
       if (!VALID_EQUIPMENT_SLOTS.includes(data.slot)) {
         error(`[${collection}/${file}] Invalid equipment slot: ${data.slot}`)
@@ -251,6 +268,11 @@ async function validateReferences(collections) {
     for (const skillId of data.skills || []) {
       if (!ids.has(skillId)) {
         error(`[classes/${file}] Referenced skill not found: ${skillId}`)
+      }
+    }
+    for (const songId of data.songs || []) {
+      if (!ids.has(songId)) {
+        error(`[classes/${file}] Referenced song not found: ${songId}`)
       }
     }
   }

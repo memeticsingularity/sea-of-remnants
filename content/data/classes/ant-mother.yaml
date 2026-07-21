@@ -1,0 +1,28 @@
+id: class-ant-mother
+slug: yi-ma
+name: 蚁妈
+type: 职业
+tier: II
+role: 招牌技
+combatRoles:
+  - 主攻
+description: "II 阶职业，对应标签「招牌技」。标签累积数量可影响三阶职业被动效果。"
+unlockCondition: 职业学习（II阶）
+songs:
+  - song-molting-residue
+passives:
+  - name: 收获季
+    level: 1
+    effect: "自身施加[暗影]时会额外施加1层。在本次航行中每施加30层[暗影]，额外发动[收获季]释放一次伤害降低25%的招牌技。"
+attributeBoost: "每获得1个【招牌技】标签，船员的招牌技伤害提升属性额外提升3%。"
+tagRequirement:
+  tag: 招牌技
+  required: 4
+  owned: 0
+talentPoints: 1
+statBoosts:
+  六维属性强化: "6"
+
+buildNotes: |
+  蚁妈对应船歌「蜕皮残留物」，可通过招牌技强化后续额外行动伤害。
+  更详细的技能、解锁条件与三阶进阶路线待后续补充。

@@ -1,0 +1,14 @@
+id: song-evil-minor
+slug: zui-e-xiao-diao
+name: 罪恶小调
+type: 船歌
+effect: "额外行动时，恢复4%的体力值，该效果每回合最多触发1次。"
+tags:
+  - 额外行动
+relatedGlossary:
+  - 额外行动
+source: 船歌解锁
+
+buildNotes: |
+  额外行动标签船歌，提供额外行动时的自疗续航。
+  适合依赖额外行动输出且需要一定生存的 build。

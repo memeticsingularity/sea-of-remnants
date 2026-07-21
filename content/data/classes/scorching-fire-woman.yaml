@@ -1,0 +1,15 @@
+id: class-scorching-fire-woman
+slug: jiao-huo-nv
+name: 焦火女
+type: 职业
+tier: II
+role: 强化骰 / 持续伤害
+description: "智力系 II 阶职业，对应标签「强化骰」。标签累积数量可影响三阶职业被动效果。"
+unlockCondition: 职业学习（II阶）
+songs:
+  - song-light-and-quick
+  - song-lucky-minor
+
+buildNotes: |
+  焦火女对应船歌「轻快小调」「幸运小调」，围绕强化骰触发持续伤害或架势伤害。
+  更详细的技能、解锁条件与三阶进阶路线待后续补充。

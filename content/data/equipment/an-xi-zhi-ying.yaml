@@ -1,0 +1,61 @@
+id: equip-an-xi-zhi-ying
+slug: an-xi-zhi-ying
+name: 安息之影
+slot: 躯干
+rarity: 紫
+enhance: 4
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+statsByLevel:
+  4:
+    hp: 1520
+    damageBoost: "13.8%"
+    shieldEffect: "-6%"
+requirements:
+  agi: 81
+  int: 43
+enhanceRequirements:
+  - level: 1
+    agi: 51
+    int: 27
+  - level: 2
+    agi: 55
+    int: 29
+  - level: 3
+    agi: 75
+    int: 40
+  - level: 4
+    agi: 81
+    int: 43
+  - level: 5
+    agi: 104
+    int: 55
+  - level: 6
+    agi: 110
+    int: 58
+  - level: 7
+    agi: 114
+    int: 61
+  - level: 8
+    agi: 119
+    int: 64
+  - level: 9
+    agi: 136
+    int: 72
+  - level: 10
+    agi: 142
+    int: 76
+fixedAffixes:
+  - "每次攻击敌人时，有70%概率使目标获得[安息]，持续2回合。"
+  - "[安息]：对此状态给予者造成的伤害降低此状态层数×5%，最多叠加3层。"
+randomAffixIds:
+  - rand-2feb4d3b
+  - rand-630c5bd5
+  - rand-4ef965f4
+flavor: "豹是野兽，一切行为只为捕食和取暖。但有时，也会是因为一点怀念。"
+source: 行装掉落
+image: /images/equipment/an-xi-zhi-ying.png
+
+buildNotes: |
+  紫色躯干行装，攻击概率附加[安息]以降低来自该目标的输出，适合需要生存与干扰的敏捷/智力角色。

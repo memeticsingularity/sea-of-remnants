@@ -1,0 +1,14 @@
+id: song-slacking-minor
+slug: tou-lan-xiao-diao
+name: 偷懒小调
+type: 船歌
+effect: "[防御]时，恢复3%的体力值。"
+tags:
+  - 防御
+relatedGlossary:
+  - 防御
+source: 船歌解锁
+
+buildNotes: |
+  该船歌带有「防御」标签，对应 II 阶职业「笨壳」与 III 阶职业「静默巨壳」。
+  在[防御]状态下提供回血，适合站桩防御的体质 build。

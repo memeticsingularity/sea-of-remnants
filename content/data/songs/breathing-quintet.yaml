@@ -1,0 +1,15 @@
+id: song-breathing-quintet
+slug: hu-xi-wu-zhong-zou
+name: 呼吸五重奏
+type: 船歌
+effect: "暴击率额外提高5%。若目标携带负面状态，则每层额外提高暴击伤害3%，上限5层。"
+tags:
+  - 暴击
+relatedGlossary:
+  - 暴击
+  - 负面状态
+source: 船歌解锁
+
+buildNotes: |
+  暴击标签船歌，自带常驻暴击率，并对带负面状态的目标提供额外暴伤。
+  适合能稳定施加负面状态、再由暴击手收割的队伍。

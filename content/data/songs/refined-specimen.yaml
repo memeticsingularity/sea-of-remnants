@@ -1,0 +1,13 @@
+id: song-refined-specimen
+slug: jing-zhi-biao-ben
+name: 精制标本
+type: 船歌
+effect: "每次额外行动造成伤害时，赋予目标防御力下降2级，最多6级，持续2回合。"
+tags:
+  - 额外行动
+relatedGlossary:
+  - 额外行动
+source: 船歌解锁
+
+buildNotes: |
+  额外行动标签船歌，通过额外行动叠加防御力下降，适合物理/混合输出队破甲。

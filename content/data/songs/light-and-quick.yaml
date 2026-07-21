@@ -1,0 +1,14 @@
+id: song-light-and-quick
+slug: qing-kuai-xiao-diao
+name: 轻快小调
+type: 船歌
+effect: "使用强化骰掷出的总点数不低于3时，为随机敌方单位施加2层随机持续伤害。"
+tags:
+  - 强化骰
+relatedGlossary:
+  - 强化骰
+source: 船歌解锁
+
+buildNotes: |
+  强化骰标签船歌，对应 II 阶职业「焦火女」。
+  通过强化骰高总点数触发持续伤害，适合智力系持续伤害 build。

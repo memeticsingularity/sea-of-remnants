@@ -1,0 +1,15 @@
+id: song-molting-residue
+slug: tui-pi-can-liu-wu
+name: 蜕皮残留物
+type: 船歌
+effect: "释放招牌技后，使接下来3次额外行动伤害提高12%，持续2回合。"
+tags:
+  - 招牌技
+relatedGlossary:
+  - 招牌技
+  - 额外行动
+source: 船歌解锁
+
+buildNotes: |
+  该船歌带有「招牌技」标签，对应 II 阶职业「蚁妈」。
+  适合以招牌技起手、依赖后续额外行动爆发的 build。
