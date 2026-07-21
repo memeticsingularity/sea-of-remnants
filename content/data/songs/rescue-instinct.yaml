@@ -1,0 +1,13 @@
+id: song-rescue-instinct
+slug: yuan-jiu-ben-neng
+name: 援救本能
+type: 船歌
+effect: "若有我方单位受到伤害后体力值低于50%，使其获得受到治疗效果提升5级，持续2回合。"
+tags:
+  - 治疗
+relatedGlossary:
+  - 治疗
+source: 船歌解锁
+
+buildNotes: |
+  治疗标签船歌，队友残血时为其提供受到治疗效果提升，适合保命/治疗体质 build。

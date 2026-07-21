@@ -1,0 +1,13 @@
+id: song-siegers-elegy
+slug: gong-cheng-zhe-bei-ge
+name: 攻城者悲歌
+type: 船歌
+effect: "回合结束时，护盾值提升6%，上限为体力值的6%。"
+tags:
+  - 护盾
+relatedGlossary:
+  - 护盾效果
+source: 船歌解锁
+
+buildNotes: |
+  护盾标签船歌，每回合结束时提升护盾值，适合需要持续堆叠护盾的体质 build。

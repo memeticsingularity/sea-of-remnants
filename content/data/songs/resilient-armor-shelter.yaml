@@ -1,0 +1,13 @@
+id: song-resilient-armor-shelter
+slug: ren-jia-bi-hu
+name: 韧甲庇护
+type: 船歌
+effect: "受到攻击时，获得体力值1.5%的护盾，持续1回合。叠加护盾值不超过赋予者最大体力值的12%。"
+tags:
+  - 受击
+relatedGlossary:
+  - 护盾效果
+source: 船歌解锁
+
+buildNotes: |
+  受击标签船歌，受击时按自身生命上限获得护盾，适合需要常驻小护盾的坦克 build。

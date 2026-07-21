@@ -1,0 +1,14 @@
+id: song-raise-the-cup
+slug: gao-ju-bei-zhan
+name: 高举杯盏
+type: 船歌
+effect: "战斗开始时，获得[鼓舞]，持续3回合。"
+tags:
+  - 正面状态
+relatedGlossary:
+  - 正面状态
+  - 鼓舞
+source: 船歌解锁
+
+buildNotes: |
+  正面状态标签船歌，开场获得[鼓舞]状态。鼓舞的具体效果待补充术语定义。

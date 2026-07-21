@@ -1,0 +1,13 @@
+id: song-innocent-minor
+slug: chun-zhen-xiao-diao
+name: 纯真小调
+type: 船歌
+effect: "战斗开始时，使攻击力最高的友方单位获得伤害提升12级，持续2回合。"
+tags:
+  - 正面状态
+relatedGlossary:
+  - 正面状态
+source: 船歌解锁
+
+buildNotes: |
+  正面状态标签船歌，开场为最高攻击友方提供高额伤害提升，适合辅助型魅力 build。

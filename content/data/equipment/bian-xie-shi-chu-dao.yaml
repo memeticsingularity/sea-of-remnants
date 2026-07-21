@@ -1,0 +1,20 @@
+id: equip-bian-xie-shi-chu-dao
+slug: bian-xie-shi-chu-dao
+name: 便携式厨刀
+slot: 手部
+handType: 匕首
+rarity: 蓝
+enhance: 3
+statsByLevel:
+  3:
+    atk: 39
+fixedAffixes:
+  - "每击败1个敌方单位，伤害提升0.5%。每场战斗至多提升2%，可继承至下一场战斗，每次出航至多提升12%。"
+randomAffixIds:
+  - rand-3e3d04bd
+flavor: "自从厨师长把它当作武器丢向敌人，水手们就再也没享受过规格统一的鱼片了。"
+source: 行装掉落
+image: /images/equipment/bian-xie-shi-chu-dao.png
+
+buildNotes: |
+  蓝色匕首，击败敌人可永久叠加伤害，出航上限12%，适合频繁击杀杂兵的输出角色。

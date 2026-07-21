@@ -1,0 +1,19 @@
+id: skill-march
+slug: jin-xing-qu
+name: 进行曲
+type: 职业技能
+class: 宠儿
+level: 1
+maxLevel: 10
+shortDesc: "令我方单体获得攻击力提升强化骰数量+3级，体力持续恢复强化骰数量+3级，持续2回合。"
+tags:
+  - 正面状态
+  - 职业技能
+relatedGlossary:
+  - 强化骰
+  - 正面状态
+source: 职业技图鉴
+
+buildNotes: |
+  该技能携带「正面状态×2」标签，是 II 阶魅力职业「宠儿」的可选职业技之一。
+  为友方提供攻击提升与持续回血双 buff，适合辅助/增益魅力 build。

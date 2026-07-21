@@ -1,0 +1,13 @@
+id: song-frank-minor
+slug: shuai-zhi-xiao-diao
+name: 率直小调
+type: 船歌
+effect: "技能目标为我方单位时，使其防御力提升3级，持续2回合。"
+tags:
+  - 正面状态
+relatedGlossary:
+  - 正面状态
+source: 船歌解锁
+
+buildNotes: |
+  正面状态标签船歌，对我方释放技能即可附加防御提升，适合辅助型魅力 build。

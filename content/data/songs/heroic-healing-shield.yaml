@@ -1,0 +1,13 @@
+id: song-heroic-healing-shield
+slug: zhuang-lie-liao-dun
+name: 壮烈疗盾
+type: 船歌
+effect: "受治疗效果提升6%。体力值低于50%时，受治疗效果再提升6%。"
+tags:
+  - 受击
+relatedGlossary:
+  - 受击
+source: 船歌解锁
+
+buildNotes: |
+  受击标签船歌，常驻提升受治疗效果，残血时额外提升，适合高生存体质 build。

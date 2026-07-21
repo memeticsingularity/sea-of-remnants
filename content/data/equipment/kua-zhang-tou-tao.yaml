@@ -1,0 +1,21 @@
+id: equip-kua-zhang-tou-tao
+slug: kua-zhang-tou-tao
+name: 夸张头套
+slot: 头部
+rarity: 蓝
+enhance: 3
+statsByLevel:
+  3:
+    def: 5
+    healBoost: "11.5%"
+fixedAffixes:
+  - "场上每有1个来源是自身的正面状态，治疗效果提升3%，至多提升9%。"
+randomAffixIds:
+  - rand-4ef965f4
+  - rand-2016d348
+flavor: "自信是最好的整容手术，而在海耗子们的字典里，虚张声势就是最好用的护具。"
+source: 行装掉落
+image: /images/equipment/kua-zhang-tou-tao.png
+
+buildNotes: |
+  蓝色头部治疗装，依赖自身正面状态叠治疗加成，适合能自挂增益的辅助/治疗角色。随机词条为多次掉落观测记录，单件实际仅携带其中一条。

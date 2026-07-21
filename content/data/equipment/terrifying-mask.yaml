@@ -4,13 +4,21 @@ name: 可怕面具
 slot: 头部
 rarity: 蓝
 enhance: 6
-baseStats:
-  def: 14
-  hpGainEfficiency: 6.5%
+statsByLevel:
+  3:
+    def: 10
+    hpGainEfficiency: "5.7%"
+  6:
+    def: 14
+    hpGainEfficiency: "6.5%"
 fixedAffixes:
-  - 每拥有1个[正面状态]，造成的[附加伤害]提升3%，至多提升15%。
-flavor: 恐慌从他脸上消失，转移到了每一个路过的人脸上。
-source: 行装掉落
-image: /images/equipment/terrifying-mask.png
+  - "场上每有1个来源是自身的[正面状态]，治疗效果提升3%，至多提升9%。"
 randomAffixIds:
   - rand-2016d348
+  - rand-8d42839a
+flavor: "恐慌从他脸上消失，转移到了每一个路过的人脸上。"
+source: 行装掉落
+image: /images/equipment/terrifying-mask.png
+
+buildNotes: |
+  蓝色头部治疗装，依赖自身正面状态提升治疗效果，适合能自挂增益的辅助/治疗角色。随机词条为多次掉落观测记录，单件实际仅携带其中一条。

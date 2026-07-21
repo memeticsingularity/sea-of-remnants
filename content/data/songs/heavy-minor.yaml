@@ -1,0 +1,14 @@
+id: song-heavy-minor
+slug: hou-zhong-xiao-diao
+name: 厚重小调
+type: 船歌
+effect: "[防御]时，获得防御力200%的护盾，持续1回合。叠加护盾值不超过本来源的3倍。"
+tags:
+  - 防御
+relatedGlossary:
+  - 防御
+  - 护盾效果
+source: 船歌解锁
+
+buildNotes: |
+  防御标签船歌，在[防御]状态下提供基于防御力的护盾，适合高防御体质 build。

@@ -2,7 +2,7 @@ id: equip-an-xi-zhi-ying
 slug: an-xi-zhi-ying
 name: 安息之影
 slot: 躯干
-rarity: 紫
+rarity: 金
 enhance: 4
 maxEnhanceByFruitLevel:
   - fruitLevel: 5

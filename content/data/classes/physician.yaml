@@ -1,0 +1,16 @@
+id: class-physician
+slug: ling-yi
+name: 灵医
+type: 职业
+tier: II
+role: 治疗 / 辅助
+combatRoles:
+  - 辅助
+description: "魅力系 II 阶职业，对应标签「治疗」。标签累积数量可影响三阶职业被动效果。"
+unlockCondition: 职业学习（II阶）
+skills:
+  - skill-aria
+
+buildNotes: |
+  灵医可选职业技「咏叹调」，兼顾单体伤害与治疗。
+  更详细的被动、解锁条件与三阶进阶路线待后续补充。

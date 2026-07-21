@@ -1,0 +1,13 @@
+id: song-steadfast-minor
+slug: jian-yi-xiao-diao
+name: 坚毅小调
+type: 船歌
+effect: "为我方单位恢复体力后，令其获得防御力提升3级，持续1回合。"
+tags:
+  - 治疗
+relatedGlossary:
+  - 治疗
+source: 船歌解锁
+
+buildNotes: |
+  治疗标签船歌，治疗的同时为队友附加防御提升，适合防御向的魅力治疗 build。

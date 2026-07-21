@@ -1,0 +1,13 @@
+id: song-flying-minor
+slug: fei-yang-xiao-diao
+name: 飞扬小调
+type: 船歌
+effect: "战斗开始时，自身速度提升5级，持续3回合。"
+tags:
+  - 正面状态
+relatedGlossary:
+  - 正面状态
+source: 船歌解锁
+
+buildNotes: |
+  正面状态标签船歌，开场提供高额速度提升，适合需要抢先手的魅力/辅助 build。

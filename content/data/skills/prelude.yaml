@@ -1,0 +1,20 @@
+id: skill-prelude
+slug: qian-zou-qu
+name: 前奏曲
+type: 职业技能
+class: 麻烦精
+level: 1
+maxLevel: 10
+shortDesc: "对敌方单体造成自身体力值6%的伤害，并令自身获得治疗效果提升3级，持续1回合。"
+detailedDesc: "对敌方单体造成自身体力值1.5%×强化骰数量+6%的伤害，并令自身获得治疗效果提升强化骰数量+3级，持续1回合。"
+tags:
+  - 附加伤害
+  - 职业技能
+relatedGlossary:
+  - 强化骰
+  - 附加伤害
+source: 职业技图鉴
+
+buildNotes: |
+  该技能携带「附加伤害×2」标签，是 II 阶魅力职业「麻烦精」的可选职业技之一。
+  按自身生命上限造成附加伤害，同时提高自身治疗 effectiveness。

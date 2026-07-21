@@ -1,0 +1,17 @@
+id: class-troublemaker
+slug: ma-fan-jing
+name: 麻烦精
+type: 职业
+tier: II
+role: 附加伤害 / 辅助
+combatRoles:
+  - 协攻
+  - 辅助
+description: "魅力系 II 阶职业，对应标签「附加伤害」。标签累积数量可影响三阶职业被动效果。"
+unlockCondition: 职业学习（II阶）
+skills:
+  - skill-prelude
+
+buildNotes: |
+  麻烦精可选职业技「前奏曲」，以自身生命上限造成附加伤害并提升自身治疗效果。
+  更详细的被动、解锁条件与三阶进阶路线待后续补充。

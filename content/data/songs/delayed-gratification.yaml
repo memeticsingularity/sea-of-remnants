@@ -1,0 +1,14 @@
+id: song-delayed-gratification
+slug: yan-chi-man-zu
+name: 延迟满足
+type: 船歌
+effect: "[防御]时，令自身层数最高的3个正面状态持续回合数+1。"
+tags:
+  - 防御
+relatedGlossary:
+  - 防御
+  - 正面状态
+source: 船歌解锁
+
+buildNotes: |
+  防御标签船歌，通过[防御]延长关键正面状态的持续时间，适合依赖 buff 的体质/辅助 build。

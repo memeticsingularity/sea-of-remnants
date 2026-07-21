@@ -1,0 +1,13 @@
+id: song-steadfast-minor-constitution
+slug: jian-yi-xiao-diao-ti
+name: 坚毅小调
+type: 船歌
+effect: "友方单位受到攻击时，自身获得受击权重提升2级，持续1回合。可叠加，最高至6级。"
+tags:
+  - 受击
+relatedGlossary:
+  - 受击
+source: 船歌解锁
+
+buildNotes: |
+  受击标签船歌，友方被攻击时提高自身受击权重，适合需要替队友承伤的体质坦克 build。

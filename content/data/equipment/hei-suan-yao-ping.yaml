@@ -12,9 +12,10 @@ fixedAffixes:
   - "[加料]伤害提升18%。"
 randomAffixIds:
   - rand-c40ac0b6
+  - rand-35b0b4b4
 flavor: "谣言在群体里传播，真相是没人愿意喝的解药。"
 source: 行装掉落
 image: /images/equipment/hei-suan-yao-ping.png
 
 buildNotes: |
-  黑酸药瓶是蓝色炼金壶，提升[加料]伤害，适合依赖加料机制的智力输出。
+  黑酸药瓶是蓝色炼金壶，提升[加料]伤害，适合依赖加料机制的智力输出。随机词条为多次掉落观测记录，单件实际仅携带其中一条。

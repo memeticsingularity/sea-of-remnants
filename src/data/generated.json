@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-21T14:51:07.115Z"
+    "generatedAt": "2026-07-21T15:36:05.473Z"
   },
   "crews": [
     {
@@ -636,6 +636,23 @@
       "buildNotes": "三阶职业，具体技能与被动效果待后续补充。\n"
     },
     {
+      "id": "class-darling",
+      "slug": "chong-er",
+      "name": "宠儿",
+      "type": "职业",
+      "tier": "II",
+      "role": "正面状态 / 辅助",
+      "combatRoles": [
+        "辅助"
+      ],
+      "description": "魅力系 II 阶职业，对应标签「正面状态」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "skills": [
+        "skill-march"
+      ],
+      "buildNotes": "宠儿可选职业技「进行曲」，为友方提供攻击力提升与体力持续恢复。\n更详细的被动、解锁条件与三阶进阶路线待后续补充。\n"
+    },
+    {
       "id": "class-debt-collector",
       "slug": "tao-zhai-ren",
       "name": "讨债人",
@@ -819,6 +836,23 @@
       "buildNotes": "水仙可选职业技「致盲敲打」可施加防御力下降，适合需要破甲/控制的队伍。\n更详细的解锁条件与三阶进阶路线待后续补充。\n"
     },
     {
+      "id": "class-physician",
+      "slug": "ling-yi",
+      "name": "灵医",
+      "type": "职业",
+      "tier": "II",
+      "role": "治疗 / 辅助",
+      "combatRoles": [
+        "辅助"
+      ],
+      "description": "魅力系 II 阶职业，对应标签「治疗」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "skills": [
+        "skill-aria"
+      ],
+      "buildNotes": "灵医可选职业技「咏叹调」，兼顾单体伤害与治疗。\n更详细的被动、解锁条件与三阶进阶路线待后续补充。\n"
+    },
+    {
       "id": "class-poison-master",
       "slug": "du-shi",
       "name": "毒士",
@@ -830,6 +864,20 @@
         "skill-swarm-hunt"
       ],
       "buildNotes": "毒士适合堆效果命中和持续伤害加成，配合海葬等角色可打出高额毒伤。\n"
+    },
+    {
+      "id": "class-pure-darling",
+      "slug": "chun-bai-chong-er",
+      "name": "纯白宠儿",
+      "type": "职业",
+      "tier": "III",
+      "role": "正面状态 / 辅助",
+      "combatRoles": [
+        "辅助"
+      ],
+      "description": "魅力系 III 阶职业，由宠儿进阶而来，对应标签「正面状态」。",
+      "unlockCondition": "职业进阶（III阶）",
+      "buildNotes": "三阶职业，具体技能与被动效果待后续补充。\n"
     },
     {
       "id": "class-revelry-carrion-crow",
@@ -869,6 +917,53 @@
       "buildNotes": "三阶职业，具体技能与被动效果待后续补充。\n"
     },
     {
+      "id": "class-silent-physician",
+      "slug": "jian-mo-ling-yi",
+      "name": "缄默灵医",
+      "type": "职业",
+      "tier": "III",
+      "role": "治疗 / 辅助",
+      "combatRoles": [
+        "辅助"
+      ],
+      "description": "魅力系 III 阶职业，由灵医进阶而来，对应标签「治疗」。",
+      "unlockCondition": "职业进阶（III阶）",
+      "buildNotes": "三阶职业，具体技能与被动效果待后续补充。\n"
+    },
+    {
+      "id": "class-trouble-artist",
+      "slug": "ma-fan-yi-shu-jia",
+      "name": "麻烦艺术家",
+      "type": "职业",
+      "tier": "III",
+      "role": "附加伤害 / 辅助",
+      "combatRoles": [
+        "协攻",
+        "辅助"
+      ],
+      "description": "魅力系 III 阶职业，由麻烦精进阶而来，对应标签「附加伤害」。",
+      "unlockCondition": "职业进阶（III阶）",
+      "buildNotes": "三阶职业，具体技能与被动效果待后续补充。\n"
+    },
+    {
+      "id": "class-troublemaker",
+      "slug": "ma-fan-jing",
+      "name": "麻烦精",
+      "type": "职业",
+      "tier": "II",
+      "role": "附加伤害 / 辅助",
+      "combatRoles": [
+        "协攻",
+        "辅助"
+      ],
+      "description": "魅力系 II 阶职业，对应标签「附加伤害」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "skills": [
+        "skill-prelude"
+      ],
+      "buildNotes": "麻烦精可选职业技「前奏曲」，以自身生命上限造成附加伤害并提升自身治疗效果。\n更详细的被动、解锁条件与三阶进阶路线待后续补充。\n"
+    },
+    {
       "id": "class-unyielding-lion",
       "slug": "bu-qu-xiong-shi",
       "name": "不屈雄狮",
@@ -892,6 +987,27 @@
     }
   ],
   "skills": [
+    {
+      "id": "skill-aria",
+      "slug": "yong-tan-diao",
+      "name": "咏叹调",
+      "type": "职业技能",
+      "class": "灵医",
+      "level": 1,
+      "maxLevel": 10,
+      "shortDesc": "对敌方单体造成攻击力70%的伤害，并为体力值百分比最低的我方单位恢复自身（320+2%体力值+60%攻击力）的体力。",
+      "detailedDesc": "对敌方单体造成攻击力17.5%×强化骰数量+70%的伤害，并为体力值百分比最低的我方单位恢复自身（160×强化骰数量+320+强化骰数量%+2%体力值+30%×强化骰数量+60%攻击力）的体力。",
+      "tags": [
+        "治疗",
+        "职业技能"
+      ],
+      "relatedGlossary": [
+        "治疗",
+        "强化骰"
+      ],
+      "source": "职业技图鉴",
+      "buildNotes": "该技能携带「治疗×2」标签，是 II 阶魅力职业「灵医」的可选职业技之一。\n兼具单体伤害与按自身血量/攻击力的治疗，适合辅助型魅力 build。\n"
+    },
     {
       "id": "skill-blinding-blow",
       "slug": "zhi-mang-qiao-da",
@@ -954,6 +1070,26 @@
       "buildNotes": "截图显示为等级 3，说明职业技能可以升级。\n\n该技能在截图里没有额外标签——部分职业技能本身就不带标签。所属职业未在截图中显示，待后续补充。\n"
     },
     {
+      "id": "skill-march",
+      "slug": "jin-xing-qu",
+      "name": "进行曲",
+      "type": "职业技能",
+      "class": "宠儿",
+      "level": 1,
+      "maxLevel": 10,
+      "shortDesc": "令我方单体获得攻击力提升强化骰数量+3级，体力持续恢复强化骰数量+3级，持续2回合。",
+      "tags": [
+        "正面状态",
+        "职业技能"
+      ],
+      "relatedGlossary": [
+        "强化骰",
+        "正面状态"
+      ],
+      "source": "职业技图鉴",
+      "buildNotes": "该技能携带「正面状态×2」标签，是 II 阶魅力职业「宠儿」的可选职业技之一。\n为友方提供攻击提升与持续回血双 buff，适合辅助/增益魅力 build。\n"
+    },
+    {
       "id": "skill-one-hit-settlement",
       "slug": "yi-ji-qing-suan",
       "name": "一击清算",
@@ -973,6 +1109,45 @@
       ],
       "source": "职业技图鉴",
       "buildNotes": "该技能携带「暴击×2」标签，是 II 阶职业「缠命人」的可选职业技之一。\n\n技能自带10%暴击率加成，且为多段伤害，适合堆叠暴击与暴击伤害的敏捷输出build。\n"
+    },
+    {
+      "id": "skill-play-zither",
+      "slug": "fu-qin",
+      "name": "抚琴",
+      "type": "职业技能",
+      "level": 1,
+      "maxLevel": 10,
+      "shortDesc": "对敌方单体造成攻击力120%的伤害，并为体力值百分比最低的我方单位恢复自身（200+1.2%体力值+40%攻击力）的体力。",
+      "detailedDesc": "对敌方单体造成攻击力30%×强化骰数量+120%的伤害，并为体力值百分比最低的我方单位恢复自身（100×强化骰数量+200+0.6%×强化骰数量+1.2%体力值+20%×强化骰数量+40%攻击力）的体力。",
+      "tags": [
+        "职业技能"
+      ],
+      "relatedGlossary": [
+        "强化骰"
+      ],
+      "source": "职业技图鉴",
+      "buildNotes": "魅力系职业技能，截图中未显示额外标签与所属职业，待后续补充。\n"
+    },
+    {
+      "id": "skill-prelude",
+      "slug": "qian-zou-qu",
+      "name": "前奏曲",
+      "type": "职业技能",
+      "class": "麻烦精",
+      "level": 1,
+      "maxLevel": 10,
+      "shortDesc": "对敌方单体造成自身体力值6%的伤害，并令自身获得治疗效果提升3级，持续1回合。",
+      "detailedDesc": "对敌方单体造成自身体力值1.5%×强化骰数量+6%的伤害，并令自身获得治疗效果提升强化骰数量+3级，持续1回合。",
+      "tags": [
+        "附加伤害",
+        "职业技能"
+      ],
+      "relatedGlossary": [
+        "强化骰",
+        "附加伤害"
+      ],
+      "source": "职业技图鉴",
+      "buildNotes": "该技能携带「附加伤害×2」标签，是 II 阶魅力职业「麻烦精」的可选职业技之一。\n按自身生命上限造成附加伤害，同时提高自身治疗 effectiveness。\n"
     },
     {
       "id": "skill-swarm-hunt",
@@ -1276,6 +1451,21 @@
       "buildNotes": "暴击标签船歌，自带常驻暴击率，并对带负面状态的目标提供额外暴伤。\n适合能稳定施加负面状态、再由暴击手收割的队伍。\n"
     },
     {
+      "id": "song-cold-echo",
+      "slug": "leng-ying-de-hui-xiang",
+      "name": "冷硬的回响",
+      "type": "船歌",
+      "effect": "拥有护盾时被攻击，对攻击者造成攻击力80%的伤害。",
+      "tags": [
+        "护盾"
+      ],
+      "relatedGlossary": [
+        "护盾效果"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "护盾标签船歌，拥有护盾时提供反伤，适合高护盾体质坦克 build。\n"
+    },
+    {
       "id": "song-cold-minor",
       "slug": "leng-ku-xiao-diao",
       "name": "冷酷小调",
@@ -1290,6 +1480,22 @@
       ],
       "source": "船歌解锁",
       "buildNotes": "额外行动标签船歌，适合依赖额外行动触发的暴击 build。\n「额外行动」标签对应的职业较多（如饲虫人/灾厄虫母、讨债人/首席讨债人等），未在截图中限定单一职业，暂不绑定 class。\n"
+    },
+    {
+      "id": "song-delayed-gratification",
+      "slug": "yan-chi-man-zu",
+      "name": "延迟满足",
+      "type": "船歌",
+      "effect": "[防御]时，令自身层数最高的3个正面状态持续回合数+1。",
+      "tags": [
+        "防御"
+      ],
+      "relatedGlossary": [
+        "防御",
+        "正面状态"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "防御标签船歌，通过[防御]延长关键正面状态的持续时间，适合依赖 buff 的体质/辅助 build。\n"
     },
     {
       "id": "song-evil-minor",
@@ -1322,6 +1528,82 @@
       "buildNotes": "该船歌带有「暴击」标签，对应 II 阶职业「缠命人」。\n对低血量目标的收割型船歌，适合暴击伤害较高的敏捷输出 build。\n"
     },
     {
+      "id": "song-flying-minor",
+      "slug": "fei-yang-xiao-diao",
+      "name": "飞扬小调",
+      "type": "船歌",
+      "effect": "战斗开始时，自身速度提升5级，持续3回合。",
+      "tags": [
+        "正面状态"
+      ],
+      "relatedGlossary": [
+        "正面状态"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "正面状态标签船歌，开场提供高额速度提升，适合需要抢先手的魅力/辅助 build。\n"
+    },
+    {
+      "id": "song-frank-minor",
+      "slug": "shuai-zhi-xiao-diao",
+      "name": "率直小调",
+      "type": "船歌",
+      "effect": "技能目标为我方单位时，使其防御力提升3级，持续2回合。",
+      "tags": [
+        "正面状态"
+      ],
+      "relatedGlossary": [
+        "正面状态"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "正面状态标签船歌，对我方释放技能即可附加防御提升，适合辅助型魅力 build。\n"
+    },
+    {
+      "id": "song-heavy-armor-minor",
+      "slug": "zhong-zhuang-xiao-diao",
+      "name": "重装小调",
+      "type": "船歌",
+      "effect": "拥有护盾时，受到伤害降低5%。",
+      "tags": [
+        "护盾"
+      ],
+      "relatedGlossary": [
+        "护盾效果"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "护盾标签船歌，拥有护盾时获得常驻减伤，适合高护盾体质坦克 build。\n"
+    },
+    {
+      "id": "song-heavy-minor",
+      "slug": "hou-zhong-xiao-diao",
+      "name": "厚重小调",
+      "type": "船歌",
+      "effect": "[防御]时，获得防御力200%的护盾，持续1回合。叠加护盾值不超过本来源的3倍。",
+      "tags": [
+        "防御"
+      ],
+      "relatedGlossary": [
+        "防御",
+        "护盾效果"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "防御标签船歌，在[防御]状态下提供基于防御力的护盾，适合高防御体质 build。\n"
+    },
+    {
+      "id": "song-heroic-healing-shield",
+      "slug": "zhuang-lie-liao-dun",
+      "name": "壮烈疗盾",
+      "type": "船歌",
+      "effect": "受治疗效果提升6%。体力值低于50%时，受治疗效果再提升6%。",
+      "tags": [
+        "受击"
+      ],
+      "relatedGlossary": [
+        "受击"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "受击标签船歌，常驻提升受治疗效果，残血时额外提升，适合高生存体质 build。\n"
+    },
+    {
       "id": "song-induced-achievement",
       "slug": "you-fa-cheng-jiu",
       "name": "诱发成就",
@@ -1336,6 +1618,21 @@
       ],
       "source": "船歌解锁",
       "buildNotes": "持续伤害标签船歌，使用强化骰时有概率提前结算主目标的 dot。\n适合智力系持续伤害 build，可加快 dot 出伤节奏。\n"
+    },
+    {
+      "id": "song-innocent-minor",
+      "slug": "chun-zhen-xiao-diao",
+      "name": "纯真小调",
+      "type": "船歌",
+      "effect": "战斗开始时，使攻击力最高的友方单位获得伤害提升12级，持续2回合。",
+      "tags": [
+        "正面状态"
+      ],
+      "relatedGlossary": [
+        "正面状态"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "正面状态标签船歌，开场为最高攻击友方提供高额伤害提升，适合辅助型魅力 build。\n"
     },
     {
       "id": "song-light-and-quick",
@@ -1399,6 +1696,37 @@
       "buildNotes": "溅射标签船歌，强化对同一主目标连续攻击时的溅射伤害。\n当前版本「溅射」标签暂无可习得的对应职业。\n"
     },
     {
+      "id": "song-provocation-minor",
+      "slug": "tiao-xin-xiao-diao",
+      "name": "挑衅小调",
+      "type": "船歌",
+      "effect": "受到攻击时，有30%概率获得等同于自身最大体力值3%的护盾，持续1回合。叠加护盾值不超过本来源的3倍。",
+      "tags": [
+        "护盾"
+      ],
+      "relatedGlossary": [
+        "护盾效果"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "护盾标签船歌，受击时概率获得基于最大生命的护盾，适合高血量体质坦克 build。\n"
+    },
+    {
+      "id": "song-raise-the-cup",
+      "slug": "gao-ju-bei-zhan",
+      "name": "高举杯盏",
+      "type": "船歌",
+      "effect": "战斗开始时，获得[鼓舞]，持续3回合。",
+      "tags": [
+        "正面状态"
+      ],
+      "relatedGlossary": [
+        "正面状态",
+        "鼓舞"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "正面状态标签船歌，开场获得[鼓舞]状态。鼓舞的具体效果待补充术语定义。\n"
+    },
+    {
       "id": "song-refined-specimen",
       "slug": "jing-zhi-biao-ben",
       "name": "精制标本",
@@ -1414,6 +1742,36 @@
       "buildNotes": "额外行动标签船歌，通过额外行动叠加防御力下降，适合物理/混合输出队破甲。\n"
     },
     {
+      "id": "song-rescue-instinct",
+      "slug": "yuan-jiu-ben-neng",
+      "name": "援救本能",
+      "type": "船歌",
+      "effect": "若有我方单位受到伤害后体力值低于50%，使其获得受到治疗效果提升5级，持续2回合。",
+      "tags": [
+        "治疗"
+      ],
+      "relatedGlossary": [
+        "治疗"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "治疗标签船歌，队友残血时为其提供受到治疗效果提升，适合保命/治疗体质 build。\n"
+    },
+    {
+      "id": "song-resilient-armor-shelter",
+      "slug": "ren-jia-bi-hu",
+      "name": "韧甲庇护",
+      "type": "船歌",
+      "effect": "受到攻击时，获得体力值1.5%的护盾，持续1回合。叠加护盾值不超过赋予者最大体力值的12%。",
+      "tags": [
+        "受击"
+      ],
+      "relatedGlossary": [
+        "护盾效果"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "受击标签船歌，受击时按自身生命上限获得护盾，适合需要常驻小护盾的坦克 build。\n"
+    },
+    {
       "id": "song-reverse-pour-drink",
       "slug": "dao-guan-jia-yin",
       "name": "倒灌佳饮",
@@ -1424,6 +1782,21 @@
       ],
       "source": "船歌解锁",
       "buildNotes": "持续伤害标签船歌，与「畅快小调」同属持续伤害/智力系选择池，对应 II 阶职业「腐鸦」。\n可延长并叠加目标身上的持续伤害层数，适合 dot 队。\n"
+    },
+    {
+      "id": "song-siegers-elegy",
+      "slug": "gong-cheng-zhe-bei-ge",
+      "name": "攻城者悲歌",
+      "type": "船歌",
+      "effect": "回合结束时，护盾值提升6%，上限为体力值的6%。",
+      "tags": [
+        "护盾"
+      ],
+      "relatedGlossary": [
+        "护盾效果"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "护盾标签船歌，每回合结束时提升护盾值，适合需要持续堆叠护盾的体质 build。\n"
     },
     {
       "id": "song-sin-minor",
@@ -1472,6 +1845,36 @@
       "buildNotes": "该船歌带有「防御」标签，对应 II 阶职业「笨壳」与 III 阶职业「静默巨壳」。\n在[防御]状态下提供回血，适合站桩防御的体质 build。\n"
     },
     {
+      "id": "song-steadfast-minor-constitution",
+      "slug": "jian-yi-xiao-diao-ti",
+      "name": "坚毅小调",
+      "type": "船歌",
+      "effect": "友方单位受到攻击时，自身获得受击权重提升2级，持续1回合。可叠加，最高至6级。",
+      "tags": [
+        "受击"
+      ],
+      "relatedGlossary": [
+        "受击"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "受击标签船歌，友方被攻击时提高自身受击权重，适合需要替队友承伤的体质坦克 build。\n"
+    },
+    {
+      "id": "song-steadfast-minor",
+      "slug": "jian-yi-xiao-diao",
+      "name": "坚毅小调",
+      "type": "船歌",
+      "effect": "为我方单位恢复体力后，令其获得防御力提升3级，持续1回合。",
+      "tags": [
+        "治疗"
+      ],
+      "relatedGlossary": [
+        "治疗"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "治疗标签船歌，治疗的同时为队友附加防御提升，适合防御向的魅力治疗 build。\n"
+    },
+    {
       "id": "song-tenacious-protection",
       "slug": "jian-ren-hu-ti",
       "name": "坚韧护体",
@@ -1485,6 +1888,21 @@
       ],
       "source": "船歌解锁",
       "buildNotes": "该船歌带有「受击」标签，对应 II 阶职业「狮心者」与 III 阶职业「不屈雄狮」。\n受击时概率获得[防御]，适合需要提高生存能力的体质/防御 build。\n"
+    },
+    {
+      "id": "song-tranquil-minor",
+      "slug": "an-ning-xiao-diao",
+      "name": "安宁小调",
+      "type": "船歌",
+      "effect": "友方角色首次体力值低于50%时，回复其等同于自身体力值上限5%的体力值。",
+      "tags": [
+        "治疗"
+      ],
+      "relatedGlossary": [
+        "治疗"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "治疗标签船歌，在友方首次半血以下时提供一次自动回血，适合治疗/保命魅力 build。\n"
     },
     {
       "id": "song-unrestrained-minor",
@@ -1624,7 +2042,7 @@
       "slug": "an-xi-zhi-ying",
       "name": "安息之影",
       "slot": "躯干",
-      "rarity": "紫",
+      "rarity": "金",
       "enhance": 4,
       "maxEnhanceByFruitLevel": [
         {
@@ -1889,6 +2307,30 @@
         "rand-964d0868",
         "rand-5c96b2ab"
       ]
+    },
+    {
+      "id": "equip-bian-xie-shi-chu-dao",
+      "slug": "bian-xie-shi-chu-dao",
+      "name": "便携式厨刀",
+      "slot": "手部",
+      "handType": "匕首",
+      "rarity": "蓝",
+      "enhance": 3,
+      "statsByLevel": {
+        "3": {
+          "atk": 39
+        }
+      },
+      "fixedAffixes": [
+        "每击败1个敌方单位，伤害提升0.5%。每场战斗至多提升2%，可继承至下一场战斗，每次出航至多提升12%。"
+      ],
+      "randomAffixIds": [
+        "rand-3e3d04bd"
+      ],
+      "flavor": "自从厨师长把它当作武器丢向敌人，水手们就再也没享受过规格统一的鱼片了。",
+      "source": "行装掉落",
+      "image": "/images/equipment/bian-xie-shi-chu-dao.png",
+      "buildNotes": "蓝色匕首，击败敌人可永久叠加伤害，出航上限12%，适合频繁击杀杂兵的输出角色。\n"
     },
     {
       "id": "equip-black-iron-hood",
@@ -2524,12 +2966,13 @@
         "[加料]伤害提升18%。"
       ],
       "randomAffixIds": [
-        "rand-c40ac0b6"
+        "rand-c40ac0b6",
+        "rand-35b0b4b4"
       ],
       "flavor": "谣言在群体里传播，真相是没人愿意喝的解药。",
       "source": "行装掉落",
       "image": "/images/equipment/hei-suan-yao-ping.png",
-      "buildNotes": "黑酸药瓶是蓝色炼金壶，提升[加料]伤害，适合依赖加料机制的智力输出。\n"
+      "buildNotes": "黑酸药瓶是蓝色炼金壶，提升[加料]伤害，适合依赖加料机制的智力输出。随机词条为多次掉落观测记录，单件实际仅携带其中一条。\n"
     },
     {
       "id": "equip-hong-sui-chang-jian",
@@ -2581,6 +3024,30 @@
       "source": "行装掉落",
       "image": "/images/equipment/ji-tui-chen-shan.png",
       "buildNotes": "鸡腿衬衫是蓝色躯干行装，受击概率回血，适合前排坦克过渡使用。\n"
+    },
+    {
+      "id": "equip-jian-shang-chang-pao",
+      "slug": "jian-shang-chang-pao",
+      "name": "奸商长袍",
+      "slot": "躯干",
+      "rarity": "蓝",
+      "enhance": 3,
+      "statsByLevel": {
+        "3": {
+          "hp": 715,
+          "damageBoost": "7.7%"
+        }
+      },
+      "fixedAffixes": [
+        "若攻击的敌方单位体力值高于70%，则伤害提升30%。"
+      ],
+      "randomAffixIds": [
+        "rand-e25d491f"
+      ],
+      "flavor": "老道的商人深知富人的钱最好赚。",
+      "source": "行装掉落",
+      "image": "/images/equipment/jian-shang-chang-pao.png",
+      "buildNotes": "蓝色躯干输出装，对高血量目标有固定增伤，适合先手压血或收割型角色过渡。\n"
     },
     {
       "id": "equip-ku-tong-zhong-ri",
@@ -2673,6 +3140,31 @@
         "rand-e7665505",
         "rand-8085eec9"
       ]
+    },
+    {
+      "id": "equip-kua-zhang-tou-tao",
+      "slug": "kua-zhang-tou-tao",
+      "name": "夸张头套",
+      "slot": "头部",
+      "rarity": "蓝",
+      "enhance": 3,
+      "statsByLevel": {
+        "3": {
+          "def": 5,
+          "healBoost": "11.5%"
+        }
+      },
+      "fixedAffixes": [
+        "场上每有1个来源是自身的正面状态，治疗效果提升3%，至多提升9%。"
+      ],
+      "randomAffixIds": [
+        "rand-4ef965f4",
+        "rand-2016d348"
+      ],
+      "flavor": "自信是最好的整容手术，而在海耗子们的字典里，虚张声势就是最好用的护具。",
+      "source": "行装掉落",
+      "image": "/images/equipment/kua-zhang-tou-tao.png",
+      "buildNotes": "蓝色头部治疗装，依赖自身正面状态叠治疗加成，适合能自挂增益的辅助/治疗角色。随机词条为多次掉落观测记录，单件实际仅携带其中一条。\n"
     },
     {
       "id": "equip-kuai-feng-bi-shou",
@@ -3510,19 +4002,27 @@
       "slot": "头部",
       "rarity": "蓝",
       "enhance": 6,
-      "baseStats": {
-        "def": 14,
-        "hpGainEfficiency": "6.5%"
+      "statsByLevel": {
+        "3": {
+          "def": 10,
+          "hpGainEfficiency": "5.7%"
+        },
+        "6": {
+          "def": 14,
+          "hpGainEfficiency": "6.5%"
+        }
       },
       "fixedAffixes": [
-        "每拥有1个[正面状态]，造成的[附加伤害]提升3%，至多提升15%。"
+        "场上每有1个来源是自身的[正面状态]，治疗效果提升3%，至多提升9%。"
+      ],
+      "randomAffixIds": [
+        "rand-2016d348",
+        "rand-8d42839a"
       ],
       "flavor": "恐慌从他脸上消失，转移到了每一个路过的人脸上。",
       "source": "行装掉落",
       "image": "/images/equipment/terrifying-mask.png",
-      "randomAffixIds": [
-        "rand-2016d348"
-      ]
+      "buildNotes": "蓝色头部治疗装，依赖自身正面状态提升治疗效果，适合能自挂增益的辅助/治疗角色。随机词条为多次掉落观测记录，单件实际仅携带其中一条。\n"
     },
     {
       "id": "equip-unreturned-nest",
@@ -3871,6 +4371,12 @@
       "source": "行装随机词条",
       "occurrences": [
         {
+          "equipmentId": "equip-kua-zhang-tou-tao",
+          "equipmentSlug": "kua-zhang-tou-tao",
+          "equipmentName": "夸张头套",
+          "level": 3
+        },
+        {
           "equipmentId": "equip-terrifying-mask",
           "equipmentSlug": "ke-pa-mian-ju",
           "equipmentName": "可怕面具",
@@ -3960,6 +4466,21 @@
       ]
     },
     {
+      "id": "rand-35b0b4b4",
+      "slug": "rand-35b0b4b4",
+      "name": "溅射伤害提升1%。每次造成溅射伤害后，溅射伤害额外提升1级，持续2回合，至多提升至3级",
+      "effect": "溅射伤害提升1%。每次造成溅射伤害后，溅射伤害额外提升1级，持续2回合，至多提升至3级。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-hei-suan-yao-ping",
+          "equipmentSlug": "hei-suan-yao-ping",
+          "equipmentName": "黑酸药瓶",
+          "level": 3
+        }
+      ]
+    },
+    {
       "id": "rand-3b41c7e6",
       "slug": "rand-3b41c7e6",
       "name": "场上每有1个敌方单位，自身伤害提升1%",
@@ -3970,6 +4491,21 @@
           "equipmentId": "equip-shou-hui-tao-zhuang",
           "equipmentSlug": "shou-hui-tao-zhuang",
           "equipmentName": "手绘套装",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "rand-3e3d04bd",
+      "slug": "rand-3e3d04bd",
+      "name": "攻击暴露破绽的敌方单位时，造成的伤害提升8%",
+      "effect": "攻击暴露破绽的敌方单位时，造成的伤害提升8%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-bian-xie-shi-chu-dao",
+          "equipmentSlug": "bian-xie-shi-chu-dao",
+          "equipmentName": "便携式厨刀",
           "level": 3
         }
       ]
@@ -4088,6 +4624,12 @@
           "equipmentSlug": "an-xi-zhi-ying",
           "equipmentName": "安息之影",
           "level": 4
+        },
+        {
+          "equipmentId": "equip-kua-zhang-tou-tao",
+          "equipmentSlug": "kua-zhang-tou-tao",
+          "equipmentName": "夸张头套",
+          "level": 3
         }
       ]
     },
@@ -4452,6 +4994,21 @@
       ]
     },
     {
+      "id": "rand-8d42839a",
+      "slug": "rand-8d42839a",
+      "name": "敌方单位数量大于3个时，造成的伤害提升4%，治疗效果提升4%",
+      "effect": "敌方单位数量大于3个时，造成的伤害提升4%，治疗效果提升4%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-terrifying-mask",
+          "equipmentSlug": "ke-pa-mian-ju",
+          "equipmentName": "可怕面具",
+          "level": 6
+        }
+      ]
+    },
+    {
       "id": "rand-8e2514fb",
       "slug": "rand-8e2514fb",
       "name": "使用强化骰后，效果命中提升5级，持续1回合",
@@ -4671,6 +5228,12 @@
       "effect": "每受到5次攻击，自身额外行动伤害提升4级，持续2回合。",
       "source": "行装随机词条",
       "occurrences": [
+        {
+          "equipmentId": "equip-jian-shang-chang-pao",
+          "equipmentSlug": "jian-shang-chang-pao",
+          "equipmentName": "奸商长袍",
+          "level": 3
+        },
         {
           "equipmentId": "equip-ku-tong-zhong-ri",
           "equipmentSlug": "ku-tong-zhong-ri",
@@ -7367,6 +7930,14 @@
       "keywords": []
     },
     {
+      "id": "class-darling",
+      "title": "宠儿",
+      "type": "职业",
+      "route": "/classes/chong-er",
+      "tags": [],
+      "keywords": []
+    },
+    {
       "id": "class-debt-collector",
       "title": "讨债人",
       "type": "职业",
@@ -7423,10 +7994,26 @@
       "keywords": []
     },
     {
+      "id": "class-physician",
+      "title": "灵医",
+      "type": "职业",
+      "route": "/classes/ling-yi",
+      "tags": [],
+      "keywords": []
+    },
+    {
       "id": "class-poison-master",
       "title": "毒士",
       "type": "职业",
       "route": "/classes/du-shi",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-pure-darling",
+      "title": "纯白宠儿",
+      "type": "职业",
+      "route": "/classes/chun-bai-chong-er",
       "tags": [],
       "keywords": []
     },
@@ -7455,6 +8042,30 @@
       "keywords": []
     },
     {
+      "id": "class-silent-physician",
+      "title": "缄默灵医",
+      "type": "职业",
+      "route": "/classes/jian-mo-ling-yi",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-trouble-artist",
+      "title": "麻烦艺术家",
+      "type": "职业",
+      "route": "/classes/ma-fan-yi-shu-jia",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-troublemaker",
+      "title": "麻烦精",
+      "type": "职业",
+      "route": "/classes/ma-fan-jing",
+      "tags": [],
+      "keywords": []
+    },
+    {
       "id": "class-unyielding-lion",
       "title": "不屈雄狮",
       "type": "职业",
@@ -7469,6 +8080,22 @@
       "route": "/classes/si-chong-ren",
       "tags": [],
       "keywords": []
+    },
+    {
+      "id": "skill-aria",
+      "title": "咏叹调",
+      "type": "技能",
+      "route": "/skills/yong-tan-diao",
+      "tags": [
+        "治疗",
+        "职业技能",
+        "治疗",
+        "职业技能"
+      ],
+      "keywords": [
+        "灵医",
+        "职业技能"
+      ]
     },
     {
       "id": "skill-blinding-blow",
@@ -7514,6 +8141,22 @@
       ]
     },
     {
+      "id": "skill-march",
+      "title": "进行曲",
+      "type": "技能",
+      "route": "/skills/jin-xing-qu",
+      "tags": [
+        "正面状态",
+        "职业技能",
+        "正面状态",
+        "职业技能"
+      ],
+      "keywords": [
+        "宠儿",
+        "职业技能"
+      ]
+    },
+    {
       "id": "skill-one-hit-settlement",
       "title": "一击清算",
       "type": "技能",
@@ -7526,6 +8169,36 @@
       ],
       "keywords": [
         "缠命人",
+        "职业技能"
+      ]
+    },
+    {
+      "id": "skill-play-zither",
+      "title": "抚琴",
+      "type": "技能",
+      "route": "/skills/fu-qin",
+      "tags": [
+        "职业技能",
+        "职业技能"
+      ],
+      "keywords": [
+        null,
+        "职业技能"
+      ]
+    },
+    {
+      "id": "skill-prelude",
+      "title": "前奏曲",
+      "type": "技能",
+      "route": "/skills/qian-zou-qu",
+      "tags": [
+        "附加伤害",
+        "职业技能",
+        "附加伤害",
+        "职业技能"
+      ],
+      "keywords": [
+        "麻烦精",
         "职业技能"
       ]
     },
@@ -7664,12 +8337,32 @@
       "keywords": []
     },
     {
+      "id": "song-cold-echo",
+      "title": "冷硬的回响",
+      "type": "船歌",
+      "route": "/songs/leng-ying-de-hui-xiang",
+      "tags": [
+        "护盾"
+      ],
+      "keywords": []
+    },
+    {
       "id": "song-cold-minor",
       "title": "冷酷小调",
       "type": "船歌",
       "route": "/songs/leng-ku-xiao-diao",
       "tags": [
         "额外行动"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-delayed-gratification",
+      "title": "延迟满足",
+      "type": "船歌",
+      "route": "/songs/yan-chi-man-zu",
+      "tags": [
+        "防御"
       ],
       "keywords": []
     },
@@ -7694,12 +8387,72 @@
       "keywords": []
     },
     {
+      "id": "song-flying-minor",
+      "title": "飞扬小调",
+      "type": "船歌",
+      "route": "/songs/fei-yang-xiao-diao",
+      "tags": [
+        "正面状态"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-frank-minor",
+      "title": "率直小调",
+      "type": "船歌",
+      "route": "/songs/shuai-zhi-xiao-diao",
+      "tags": [
+        "正面状态"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-heavy-armor-minor",
+      "title": "重装小调",
+      "type": "船歌",
+      "route": "/songs/zhong-zhuang-xiao-diao",
+      "tags": [
+        "护盾"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-heavy-minor",
+      "title": "厚重小调",
+      "type": "船歌",
+      "route": "/songs/hou-zhong-xiao-diao",
+      "tags": [
+        "防御"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-heroic-healing-shield",
+      "title": "壮烈疗盾",
+      "type": "船歌",
+      "route": "/songs/zhuang-lie-liao-dun",
+      "tags": [
+        "受击"
+      ],
+      "keywords": []
+    },
+    {
       "id": "song-induced-achievement",
       "title": "诱发成就",
       "type": "船歌",
       "route": "/songs/you-fa-cheng-jiu",
       "tags": [
         "持续伤害"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-innocent-minor",
+      "title": "纯真小调",
+      "type": "船歌",
+      "route": "/songs/chun-zhen-xiao-diao",
+      "tags": [
+        "正面状态"
       ],
       "keywords": []
     },
@@ -7744,6 +8497,26 @@
       "keywords": []
     },
     {
+      "id": "song-provocation-minor",
+      "title": "挑衅小调",
+      "type": "船歌",
+      "route": "/songs/tiao-xin-xiao-diao",
+      "tags": [
+        "护盾"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-raise-the-cup",
+      "title": "高举杯盏",
+      "type": "船歌",
+      "route": "/songs/gao-ju-bei-zhan",
+      "tags": [
+        "正面状态"
+      ],
+      "keywords": []
+    },
+    {
       "id": "song-refined-specimen",
       "title": "精制标本",
       "type": "船歌",
@@ -7754,12 +8527,42 @@
       "keywords": []
     },
     {
+      "id": "song-rescue-instinct",
+      "title": "援救本能",
+      "type": "船歌",
+      "route": "/songs/yuan-jiu-ben-neng",
+      "tags": [
+        "治疗"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-resilient-armor-shelter",
+      "title": "韧甲庇护",
+      "type": "船歌",
+      "route": "/songs/ren-jia-bi-hu",
+      "tags": [
+        "受击"
+      ],
+      "keywords": []
+    },
+    {
       "id": "song-reverse-pour-drink",
       "title": "倒灌佳饮",
       "type": "船歌",
       "route": "/songs/dao-guan-jia-yin",
       "tags": [
         "持续伤害"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-siegers-elegy",
+      "title": "攻城者悲歌",
+      "type": "船歌",
+      "route": "/songs/gong-cheng-zhe-bei-ge",
+      "tags": [
+        "护盾"
       ],
       "keywords": []
     },
@@ -7794,12 +8597,42 @@
       "keywords": []
     },
     {
+      "id": "song-steadfast-minor-constitution",
+      "title": "坚毅小调",
+      "type": "船歌",
+      "route": "/songs/jian-yi-xiao-diao-ti",
+      "tags": [
+        "受击"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-steadfast-minor",
+      "title": "坚毅小调",
+      "type": "船歌",
+      "route": "/songs/jian-yi-xiao-diao",
+      "tags": [
+        "治疗"
+      ],
+      "keywords": []
+    },
+    {
       "id": "song-tenacious-protection",
       "title": "坚韧护体",
       "type": "船歌",
       "route": "/songs/jian-ren-hu-ti",
       "tags": [
         "受击"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-tranquil-minor",
+      "title": "安宁小调",
+      "type": "船歌",
+      "route": "/songs/an-ning-xiao-diao",
+      "tags": [
+        "治疗"
       ],
       "keywords": []
     },
@@ -7851,7 +8684,7 @@
       "route": "/equipment/an-xi-zhi-ying",
       "tags": [
         "躯干",
-        "紫"
+        "金"
       ],
       "keywords": []
     },
@@ -7874,6 +8707,17 @@
       "tags": [
         "躯干",
         "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-bian-xie-shi-chu-dao",
+      "title": "便携式厨刀",
+      "type": "行装",
+      "route": "/equipment/bian-xie-shi-chu-dao",
+      "tags": [
+        "手部",
+        "蓝"
       ],
       "keywords": []
     },
@@ -8033,6 +8877,17 @@
       "keywords": []
     },
     {
+      "id": "equip-jian-shang-chang-pao",
+      "title": "奸商长袍",
+      "type": "行装",
+      "route": "/equipment/jian-shang-chang-pao",
+      "tags": [
+        "躯干",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-ku-tong-zhong-ri",
       "title": "苦痛终日",
       "type": "行装",
@@ -8040,6 +8895,17 @@
       "tags": [
         "腿部",
         "金"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-kua-zhang-tou-tao",
+      "title": "夸张头套",
+      "type": "行装",
+      "route": "/equipment/kua-zhang-tou-tao",
+      "tags": [
+        "头部",
+        "蓝"
       ],
       "keywords": []
     },
@@ -8416,6 +9282,16 @@
       ]
     },
     {
+      "id": "rand-35b0b4b4",
+      "title": "溅射伤害提升1%。每次造成溅射伤害后，溅射伤害额外提升1级，持续2回合，至多提升至3级",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-35b0b4b4",
+      "tags": [],
+      "keywords": [
+        "溅射伤害提升1%。每次造成溅射伤害后，溅射伤害额外提升1级，持续2回合，至多提升至3级。"
+      ]
+    },
+    {
       "id": "rand-3b41c7e6",
       "title": "场上每有1个敌方单位，自身伤害提升1%",
       "type": "随机词条",
@@ -8423,6 +9299,16 @@
       "tags": [],
       "keywords": [
         "场上每有1个敌方单位，自身伤害提升1%。"
+      ]
+    },
+    {
+      "id": "rand-3e3d04bd",
+      "title": "攻击暴露破绽的敌方单位时，造成的伤害提升8%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-3e3d04bd",
+      "tags": [],
+      "keywords": [
+        "攻击暴露破绽的敌方单位时，造成的伤害提升8%。"
       ]
     },
     {
@@ -8693,6 +9579,16 @@
       "tags": [],
       "keywords": [
         "战斗开始时，行动提前20%。"
+      ]
+    },
+    {
+      "id": "rand-8d42839a",
+      "title": "敌方单位数量大于3个时，造成的伤害提升4%，治疗效果提升4%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-8d42839a",
+      "tags": [],
+      "keywords": [
+        "敌方单位数量大于3个时，造成的伤害提升4%，治疗效果提升4%。"
       ]
     },
     {

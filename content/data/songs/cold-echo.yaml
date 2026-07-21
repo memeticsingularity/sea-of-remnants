@@ -1,0 +1,13 @@
+id: song-cold-echo
+slug: leng-ying-de-hui-xiang
+name: 冷硬的回响
+type: 船歌
+effect: "拥有护盾时被攻击，对攻击者造成攻击力80%的伤害。"
+tags:
+  - 护盾
+relatedGlossary:
+  - 护盾效果
+source: 船歌解锁
+
+buildNotes: |
+  护盾标签船歌，拥有护盾时提供反伤，适合高护盾体质坦克 build。

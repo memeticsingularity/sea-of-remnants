@@ -1,0 +1,13 @@
+id: song-provocation-minor
+slug: tiao-xin-xiao-diao
+name: 挑衅小调
+type: 船歌
+effect: "受到攻击时，有30%概率获得等同于自身最大体力值3%的护盾，持续1回合。叠加护盾值不超过本来源的3倍。"
+tags:
+  - 护盾
+relatedGlossary:
+  - 护盾效果
+source: 船歌解锁
+
+buildNotes: |
+  护盾标签船歌，受击时概率获得基于最大生命的护盾，适合高血量体质坦克 build。

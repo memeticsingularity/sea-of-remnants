@@ -1,0 +1,13 @@
+id: song-heavy-armor-minor
+slug: zhong-zhuang-xiao-diao
+name: 重装小调
+type: 船歌
+effect: "拥有护盾时，受到伤害降低5%。"
+tags:
+  - 护盾
+relatedGlossary:
+  - 护盾效果
+source: 船歌解锁
+
+buildNotes: |
+  护盾标签船歌，拥有护盾时获得常驻减伤，适合高护盾体质坦克 build。
