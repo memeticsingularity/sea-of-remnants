@@ -1,0 +1,22 @@
+id: equip-xi-li-tong-qin
+slug: xi-li-tong-qin
+name: 犀利铜琴
+slot: 手部
+handType: 里拉琴
+rarity: 蓝
+enhance: 3
+statsByLevel:
+  3:
+    atk: 31
+    damageBoost: "5%"
+    threat: -18
+fixedAffixes:
+  - "每次为我方单位恢复体力后，自身造成的[附加伤害]提升3%，至多提升12%。"
+randomAffixIds:
+  - rand-09381335
+flavor: "优雅而有侵略性的演奏，像给老船长灌药一般不留余地，要知道医生最注重眼疾手快。"
+source: 行装掉落
+image: /images/equipment/xi-li-tong-qin.png
+
+buildNotes: |
+  犀利铜琴是蓝色里拉琴，治疗队友后提升附加伤害，适合辅助治疗/输出兼顾的角色。

@@ -12,6 +12,11 @@ baseStats:
   atk: 56
   shieldEffect: 6.2%
   hpRegenEfficiency: 3.1%
+statsByLevel:
+  3:
+    atk: 42
+    shieldEffect: "5.5%"
+    hpRegenEfficiency: "2.7%"
 requirements:
   str: 85
   con: 45
@@ -58,3 +63,6 @@ randomAffixIds:
   - rand-568ed0ba
   - rand-560d40d3
   - rand-7528c062
+  - rand-52c545c8
+  - rand-6eab994b
+  - rand-83ad8551

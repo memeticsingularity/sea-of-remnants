@@ -1,0 +1,60 @@
+id: equip-yan-suan-chang-pao
+slug: yan-suan-chang-pao
+name: 演算长袍
+slot: 躯干
+rarity: 紫
+enhance: 3
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+statsByLevel:
+  3:
+    hp: 996
+    effectHit: "14.3%"
+    def: -6
+requirements:
+  int: 51
+  per: 27
+enhanceRequirements:
+  - level: 1
+    int: 33
+    per: 18
+  - level: 2
+    int: 47
+    per: 25
+  - level: 3
+    int: 51
+    per: 27
+  - level: 4
+    int: 67
+    per: 36
+  - level: 5
+    int: 75
+    per: 40
+  - level: 6
+    int: 85
+    per: 45
+  - level: 7
+    int: 91
+    per: 48
+  - level: 8
+    int: 104
+    per: 55
+  - level: 9
+    int: 114
+    per: 61
+  - level: 10
+    int: 126
+    per: 67
+fixedAffixes:
+  - "触发[加料]时，使目标获得攻击力降低4级，持续2回合。"
+randomAffixIds:
+  - rand-510ebc5d
+  - rand-a095bac9
+  - rand-e25d491f
+flavor: "学者预判了对手每一丝肌肉的颤动，算准了每一次对手出手的轨迹——如同用智慧编织出了无形的护甲。"
+source: 行装掉落
+image: /images/equipment/yan-suan-chang-pao.png
+
+buildNotes: |
+  演算长袍是紫色躯干行装，触发[加料]时削弱目标攻击力，适合依赖效果命中与控制技能的智慧/感知角色。

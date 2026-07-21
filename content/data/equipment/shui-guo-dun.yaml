@@ -1,0 +1,22 @@
+id: equip-shui-guo-dun
+slug: shui-guo-dun
+name: 水果盾
+slot: 手部
+handType: 盾牌
+rarity: 蓝
+enhance: 3
+statsByLevel:
+  3:
+    atk: 16
+    hp: 715
+    critRate: "-2.3%"
+fixedAffixes:
+  - "受到攻击时，[反伤]5%。[反伤]伤害提升10%。"
+randomAffixIds:
+  - rand-abd77dc6
+flavor: "“长官，这不是私藏武器，只是水果农场的生产工具罢了。”"
+source: 行装掉落
+image: /images/equipment/shui-guo-dun.png
+
+buildNotes: |
+  水果盾是蓝色盾牌，固定词条提供反伤与反伤增伤，适合前排坦克过渡使用。

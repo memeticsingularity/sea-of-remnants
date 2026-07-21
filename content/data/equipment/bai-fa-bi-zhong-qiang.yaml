@@ -1,0 +1,60 @@
+id: equip-bai-fa-bi-zhong-qiang
+slug: bai-fa-bi-zhong-qiang
+name: 百发必中枪
+slot: 手部
+handType: 火枪
+rarity: 紫
+enhance: 3
+maxEnhanceByFruitLevel:
+  - fruitLevel: 5
+    maxEnhance: 10
+statsByLevel:
+  3:
+    atk: 42
+    breakDamageBoost: "11%"
+requirements:
+  per: 51
+  agi: 27
+enhanceRequirements:
+  - level: 1
+    per: 33
+    agi: 18
+  - level: 2
+    per: 47
+    agi: 25
+  - level: 3
+    per: 51
+    agi: 27
+  - level: 4
+    per: 67
+    agi: 36
+  - level: 5
+    per: 75
+    agi: 40
+  - level: 6
+    per: 85
+    agi: 45
+  - level: 7
+    per: 91
+    agi: 48
+  - level: 8
+    per: 104
+    agi: 55
+  - level: 9
+    per: 114
+    agi: 61
+  - level: 10
+    per: 126
+    agi: 67
+fixedAffixes:
+  - "拥有7层以上[专注]时，造成的架势伤害提升25%。"
+randomAffixIds:
+  - rand-cecc4f66
+  - rand-8e2514fb
+  - rand-916345a6
+flavor: "前几发子弹哑火的霉运，都会变成最后一发的必中祝福。"
+source: 行装掉落
+image: /images/equipment/bai-fa-bi-zhong-qiang.png
+
+buildNotes: |
+  百发必中枪是紫色火枪，固定词条在[专注]层数高时提升架势伤害，适合专注流敏捷/感知输出。

@@ -1,0 +1,20 @@
+id: equip-shou-hui-tao-zhuang
+slug: shou-hui-tao-zhuang
+name: 手绘套装
+slot: 躯干
+rarity: 蓝
+enhance: 3
+statsByLevel:
+  3:
+    hp: 715
+    healBoost: "7.7%"
+fixedAffixes:
+  - "每次使用[个人技]后，防御力提升9%，至多提升18%。"
+randomAffixIds:
+  - rand-3b41c7e6
+flavor: "即使被生活揍得遍体鳞伤，也要有个梦想，或者假装有个梦想。"
+source: 行装掉落
+image: /images/equipment/shou-hui-tao-zhuang.png
+
+buildNotes: |
+  手绘套装是蓝色躯干行装，使用个人技后叠防御，适合需要生存的智慧/感知角色。

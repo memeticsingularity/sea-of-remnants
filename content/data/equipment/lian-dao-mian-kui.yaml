@@ -3,15 +3,19 @@ slug: lian-dao-mian-kui
 name: 镰刀面盔
 slot: 头部
 rarity: 蓝
-enhance: 2
+enhance: 3
 statsByLevel:
   2:
     effectHit: "14.3%"
     dotBoost: "22%"
+  3:
+    effectHit: "15%"
+    dotBoost: "23.1%"
 fixedAffixes:
   - "攻击时，目标每拥有1个持续伤害，造成的伤害提升3%，至多提升9%。"
 randomAffixIds:
   - rand-510ebc5d
+  - rand-51e1e318
 flavor: "伤口撒盐，火上浇油，快乐加倍。"
 source: 行装掉落
 image: /images/equipment/lian-dao-mian-kui.png

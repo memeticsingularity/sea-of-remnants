@@ -1,0 +1,22 @@
+id: equip-kuai-feng-bi-shou
+slug: kuai-feng-bi-shou
+name: 快风匕首
+slot: 手部
+handType: 匕首
+rarity: 蓝
+enhance: 3
+statsByLevel:
+  3:
+    atk: 31
+    critRate: "2.5%"
+    threat: -18
+fixedAffixes:
+  - "造成伤害时，有50%概率为目标施加暴击抗性下降3级，持续4回合。"
+randomAffixIds:
+  - rand-96f594c2
+flavor: "当速度快到一种程度，风便不再是阻力，而是刺穿命运的推手。"
+source: 行装掉落
+image: /images/equipment/kuai-feng-bi-shou.png
+
+buildNotes: |
+  快风匕首是蓝色匕首，固定词条提供暴击抗性削弱，适合需要提升团队暴击收益的敏捷输出。

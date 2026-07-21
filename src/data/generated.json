@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-21T12:50:29.064Z"
+    "generatedAt": "2026-07-21T14:33:35.461Z"
   },
   "crews": [
     {
@@ -565,6 +565,260 @@
   ],
   "classes": [
     {
+      "id": "class-ant-mother",
+      "slug": "yi-ma",
+      "name": "蚁妈",
+      "type": "职业",
+      "tier": "II",
+      "role": "招牌技",
+      "combatRoles": [
+        "主攻"
+      ],
+      "description": "II 阶职业，对应标签「招牌技」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "songs": [
+        "song-molting-residue"
+      ],
+      "passives": [
+        {
+          "name": "收获季",
+          "level": 1,
+          "effect": "自身施加[暗影]时会额外施加1层。在本次航行中每施加30层[暗影]，额外发动[收获季]释放一次伤害降低25%的招牌技。"
+        }
+      ],
+      "attributeBoost": "每获得1个【招牌技】标签，船员的招牌技伤害提升属性额外提升3%。",
+      "tagRequirement": {
+        "tag": "招牌技",
+        "required": 4,
+        "owned": 0
+      },
+      "talentPoints": 1,
+      "statBoosts": {
+        "六维属性强化": "6"
+      },
+      "buildNotes": "蚁妈对应船歌「蜕皮残留物」，可通过招牌技强化后续额外行动伤害。\n更详细的技能、解锁条件与三阶进阶路线待后续补充。\n"
+    },
+    {
+      "id": "class-calamity-mother-of-worms",
+      "slug": "zai-e-chong-mu",
+      "name": "灾厄虫母",
+      "type": "职业",
+      "tier": "III",
+      "role": "额外行动",
+      "description": "智力系 III 阶职业，由饲虫人进阶而来，对应标签「额外行动」。",
+      "unlockCondition": "职业进阶（III阶）",
+      "buildNotes": "三阶职业，具体技能与被动效果待后续补充。\n"
+    },
+    {
+      "id": "class-carrion-crow",
+      "slug": "fu-ya",
+      "name": "腐鸦",
+      "type": "职业",
+      "tier": "II",
+      "role": "持续伤害",
+      "description": "智力系 II 阶职业，对应标签「持续伤害」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "songs": [
+        "song-unrestrained-minor",
+        "song-reverse-pour-drink"
+      ],
+      "buildNotes": "腐鸦对应船歌「畅快小调」「倒灌佳饮」，专注于持续伤害的施加与叠加。\n更详细的技能、解锁条件与三阶进阶路线待后续补充。\n"
+    },
+    {
+      "id": "class-chief-debt-collector",
+      "slug": "shou-xi-tao-zhai-ren",
+      "name": "首席讨债人",
+      "type": "职业",
+      "tier": "III",
+      "role": "额外行动 / 爆发",
+      "description": "敏捷系 III 阶职业，由讨债人进阶而来，对应标签「额外行动」。",
+      "unlockCondition": "职业进阶（III阶）",
+      "buildNotes": "三阶职业，具体技能与被动效果待后续补充。\n"
+    },
+    {
+      "id": "class-debt-collector",
+      "slug": "tao-zhai-ren",
+      "name": "讨债人",
+      "type": "职业",
+      "tier": "II",
+      "role": "额外行动 / 爆发",
+      "combatRoles": [
+        "主攻"
+      ],
+      "description": "敏捷系 II 阶职业，对应标签「额外行动」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "skills": [
+        "skill-harvest-time"
+      ],
+      "passives": [
+        {
+          "name": "清算条款",
+          "level": 1,
+          "effect": "自身每累计消耗12层[暗影]，便发动[追猎]追击目标。自身每次行动为本技能累计1层[暗影]消耗。最终伤害提升额外行动增伤的30%，至多提升30%。"
+        }
+      ],
+      "attributeBoost": "每获得1个【额外行动】标签，船员的额外行动伤害提升属性额外提升3%。",
+      "tagRequirement": {
+        "tag": "额外行动",
+        "required": 4,
+        "owned": 0
+      },
+      "talentPoints": 1,
+      "statBoosts": {
+        "六维属性强化": "6"
+      },
+      "buildNotes": "讨债人可选职业技「收割时间」拥有额外行动标签，适合敏捷系单体爆发 build。\n更详细的解锁条件与三阶进阶路线待后续补充。\n"
+    },
+    {
+      "id": "class-dull-shell",
+      "slug": "ben-ke",
+      "name": "笨壳",
+      "type": "职业",
+      "tier": "II",
+      "role": "防御 / 生存",
+      "description": "体质系 II 阶职业，对应标签「防御」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "songs": [
+        "song-slacking-minor"
+      ],
+      "buildNotes": "笨壳对应船歌「偷懒小调」，可在防御状态下回复体力。\n更详细的技能、解锁条件与三阶进阶路线待后续补充。\n"
+    },
+    {
+      "id": "class-exotic-fate-weaver",
+      "slug": "yi-xiang-chan-ming-ren",
+      "name": "异香缠命人",
+      "type": "职业",
+      "tier": "III",
+      "role": "暴击 / 爆发",
+      "combatRoles": [
+        "主攻"
+      ],
+      "description": "敏捷系 III 阶职业，由缠命人进阶而来，对应标签「暴击」。",
+      "unlockCondition": "由缠命人进阶（III阶）",
+      "passives": [
+        {
+          "name": "复仇日",
+          "level": 1,
+          "effect": "暴击时，若目标为散怪且体力值低于50%，则有10%的概率令其瞬间力竭。若目标不是散怪则改为造成1.5倍暴击伤害。每导致1个敌方单位瞬间力竭，本次航行中自身暴击率永久提升0.1%，至多提升5%。"
+        }
+      ],
+      "statBoosts": {
+        "六维属性强化": "12"
+      },
+      "buildNotes": "三阶暴击职业，被动「复仇日」对低血量散怪有概率直接力竭，对非散怪则提高暴伤倍率。\n\n根据标签数量，被动效果还会进一步提升：\n- 暴击×4：造成瞬间力竭的概率提升 1% / 2% / 3% / 4%\n- 暴击×4：造成瞬间力竭时，若目标不是散怪，造成的1.5倍暴击伤害最终值增加 6% / 12% / 18% / 24%\n- 额外行动×0：造成瞬间力竭时，对目标发动[追猎]，伤害系数为 40% / 80% / 120%\n- 负面状态×0：造成瞬间力竭时，为目标施加[心碎]，层数为 1 / 2 / 3\n- 招牌技×0：每回合最多生效1次。造成瞬间力竭时，回复招牌技能量 5% / 10% / 15%\n\n当前标签进度示例：暴击 4/8、额外行动 0/8、负面状态 0/8、招牌技 0/8。\n"
+    },
+    {
+      "id": "class-fate-weaver",
+      "slug": "chan-ming-ren",
+      "name": "缠命人",
+      "type": "职业",
+      "tier": "II",
+      "role": "暴击 / 爆发",
+      "combatRoles": [
+        "主攻"
+      ],
+      "description": "敏捷系 II 阶职业，对应标签「暴击」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "skills": [
+        "skill-one-hit-settlement"
+      ],
+      "songs": [
+        "song-fear-minor",
+        "song-violent-minor",
+        "song-sin-minor",
+        "song-breathing-quintet"
+      ],
+      "passives": [
+        {
+          "name": "仇敌清单",
+          "level": 1,
+          "effect": "使自身暴击率提高10%。自身暴击伤害额外提高全场[暗影]层数×1%。若技能暴击，则储存暴击伤害的20%为[威吓]。"
+        }
+      ],
+      "attributeBoost": "每获得1个【暴击】标签，船员的暴击伤害属性额外提升3%。",
+      "tagRequirement": {
+        "tag": "暴击",
+        "required": 4,
+        "owned": 4
+      },
+      "talentPoints": 1,
+      "statBoosts": {
+        "六维属性强化": "6",
+        "暴击伤害": "+12%"
+      },
+      "buildNotes": "缠命人可选职业技「一击清算」自带暴击率加成，适合暴击伤害 build。\n对应船歌包括「恐惧小调」「暴戾小调」「罪孽小调」「呼吸五重奏」，可进一步强化暴击与斩杀能力。\n更详细的解锁条件与三阶进阶路线待后续补充。\n"
+    },
+    {
+      "id": "class-lion-heart",
+      "slug": "shi-xin-zhe",
+      "name": "狮心者",
+      "type": "职业",
+      "tier": "II",
+      "role": "受击 / 防御",
+      "description": "体质系 II 阶职业，对应标签「受击」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "songs": [
+        "song-tenacious-protection"
+      ],
+      "buildNotes": "狮心者对应船歌「坚韧护体」，可通过受击触发防御状态提高生存。\n更详细的技能、解锁条件与三阶进阶路线待后续补充。\n"
+    },
+    {
+      "id": "class-lone-traveler-apprentice",
+      "slug": "du-xing-ke-xue-tu",
+      "name": "独行客学徒",
+      "type": "职业",
+      "tier": "I",
+      "role": "敏捷 / 初始",
+      "combatRoles": [
+        "主攻"
+      ],
+      "description": "敏捷系 I 阶初始职业，可进阶为 II 阶职业缠命人、讨债人、水仙、蚁妈。",
+      "unlockCondition": "初始职业",
+      "passives": [
+        {
+          "name": "幽暗之影",
+          "level": 2,
+          "effect": "攻击敌方单位后，为其施加1层[暗影]。受到敏捷系船员攻击时，每层此状态使自身所受伤害提升1.7%，最多叠加20层。"
+        }
+      ],
+      "buildNotes": "敏捷系基础职业，核心机制是[暗影]叠加。进阶路线包括暴击、额外行动、负面状态、招牌技四个 II 阶方向。\n"
+    },
+    {
+      "id": "class-narcissus",
+      "slug": "shui-xian",
+      "name": "水仙",
+      "type": "职业",
+      "tier": "II",
+      "role": "负面状态 / 控制",
+      "combatRoles": [
+        "协攻",
+        "辅助"
+      ],
+      "description": "敏捷系 II 阶职业，对应标签「负面状态」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "skills": [
+        "skill-blinding-blow"
+      ],
+      "passives": [
+        {
+          "name": "回旋的裙摆",
+          "level": 1,
+          "effect": "对主目标施加[暗影]时，额外触发1次[暗影刃]，单次行动内最多触发5次[暗影刃]。战斗开始时对所有敌方单位附加1层[心碎]。"
+        }
+      ],
+      "attributeBoost": "每获得1个【负面状态】标签，船员的伤害提升属性额外提升2%。",
+      "tagRequirement": {
+        "tag": "负面状态",
+        "required": 4,
+        "owned": 0
+      },
+      "talentPoints": 1,
+      "statBoosts": {
+        "六维属性强化": "6"
+      },
+      "buildNotes": "水仙可选职业技「致盲敲打」可施加防御力下降，适合需要破甲/控制的队伍。\n更详细的解锁条件与三阶进阶路线待后续补充。\n"
+    },
+    {
       "id": "class-poison-master",
       "slug": "du-shi",
       "name": "毒士",
@@ -576,9 +830,150 @@
         "skill-swarm-hunt"
       ],
       "buildNotes": "毒士适合堆效果命中和持续伤害加成，配合海葬等角色可打出高额毒伤。\n"
+    },
+    {
+      "id": "class-revelry-carrion-crow",
+      "slug": "kuang-huan-fu-ya",
+      "name": "狂欢腐鸦",
+      "type": "职业",
+      "tier": "III",
+      "role": "持续伤害",
+      "description": "智力系 III 阶职业，由腐鸦进阶而来，对应标签「持续伤害」。",
+      "unlockCondition": "职业进阶（III阶）",
+      "buildNotes": "三阶职业，具体技能与被动效果待后续补充。\n"
+    },
+    {
+      "id": "class-scorching-fire-woman",
+      "slug": "jiao-huo-nv",
+      "name": "焦火女",
+      "type": "职业",
+      "tier": "II",
+      "role": "强化骰 / 持续伤害",
+      "description": "智力系 II 阶职业，对应标签「强化骰」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "songs": [
+        "song-light-and-quick",
+        "song-lucky-minor"
+      ],
+      "buildNotes": "焦火女对应船歌「轻快小调」「幸运小调」，围绕强化骰触发持续伤害或架势伤害。\n更详细的技能、解锁条件与三阶进阶路线待后续补充。\n"
+    },
+    {
+      "id": "class-silent-giant-shell",
+      "slug": "jing-mo-ju-ke",
+      "name": "静默巨壳",
+      "type": "职业",
+      "tier": "III",
+      "role": "防御 / 生存",
+      "description": "体质系 III 阶职业，由笨壳进阶而来，对应标签「防御」。",
+      "unlockCondition": "职业进阶（III阶）",
+      "buildNotes": "三阶职业，具体技能与被动效果待后续补充。\n"
+    },
+    {
+      "id": "class-unyielding-lion",
+      "slug": "bu-qu-xiong-shi",
+      "name": "不屈雄狮",
+      "type": "职业",
+      "tier": "III",
+      "role": "受击 / 防御",
+      "description": "体质系 III 阶职业，由狮心者进阶而来，对应标签「受击」。",
+      "unlockCondition": "职业进阶（III阶）",
+      "buildNotes": "三阶职业，具体技能与被动效果待后续补充。\n"
+    },
+    {
+      "id": "class-worm-keeper",
+      "slug": "si-chong-ren",
+      "name": "饲虫人",
+      "type": "职业",
+      "tier": "II",
+      "role": "额外行动",
+      "description": "智力系 II 阶职业，对应标签「额外行动」。标签累积数量可影响三阶职业被动效果。",
+      "unlockCondition": "职业学习（II阶）",
+      "buildNotes": "饲虫人使用「额外行动」标签，三阶进阶为「灾厄虫母」。\n更详细的技能、解锁条件与对应船歌待后续补充。\n"
     }
   ],
   "skills": [
+    {
+      "id": "skill-blinding-blow",
+      "slug": "zhi-mang-qiao-da",
+      "name": "致盲敲打",
+      "type": "职业技能",
+      "class": "水仙",
+      "level": 2,
+      "maxLevel": 10,
+      "shortDesc": "对敌方单体造成2次攻击力88%的伤害，并对其施加防御力下降2级，持续3回合。",
+      "detailedDesc": "对敌方单体造成2次攻击力22%×强化骰数量+88%的伤害，并对其施加防御力下降强化骰数量+2级，持续3回合。",
+      "tags": [
+        "负面状态",
+        "职业技能"
+      ],
+      "relatedGlossary": [
+        "负面状态",
+        "强化骰"
+      ],
+      "source": "职业技图鉴",
+      "buildNotes": "该技能携带「负面状态×2」标签，是 II 阶职业「水仙」的可选职业技之一。\n\n能够稳定施加防御力下降，提升全队对单体的物理/混合伤害，适合需要破甲的敏捷/物理队伍。\n"
+    },
+    {
+      "id": "skill-harvest-time",
+      "slug": "shou-ge-shi-jian",
+      "name": "收割时间",
+      "type": "职业技能",
+      "class": "讨债人",
+      "level": 2,
+      "maxLevel": 10,
+      "shortDesc": "对敌方单体造成2段攻击力77%的伤害，若目标拥有[暗影]，则消耗1层[暗影]使本次伤害提高10%；若目标当前体力值高于80%，则追击1次[初始技能]。",
+      "detailedDesc": "对敌方单体造成2段攻击力19.25%×强化骰数量+77%的伤害，若目标拥有[暗影]，则消耗1层[暗影]使本次伤害提高10%；若目标当前体力值高于80%，则追击1次[初始技能]。",
+      "tags": [
+        "额外行动",
+        "职业技能"
+      ],
+      "extraActions": 2,
+      "relatedGlossary": [
+        "暗影",
+        "额外行动",
+        "强化骰",
+        "初始技能"
+      ],
+      "source": "职业技图鉴",
+      "buildNotes": "该技能携带「额外行动×2」标签，是 II 阶职业「讨债人」的可选职业技之一。\n\n伤害倍率会随强化骰数量提升；目标身上有[暗影]时再增伤，且对高血量目标可追加[初始技能]。\n适合作为敏捷系单体收割手段。\n"
+    },
+    {
+      "id": "skill-heng-ren",
+      "slug": "heng-ren",
+      "name": "横刃",
+      "type": "职业技能",
+      "level": 3,
+      "maxLevel": 10,
+      "shortDesc": "对敌方单体造成2次攻击力90%的伤害。",
+      "detailedDesc": "对敌方单体造成2次攻击力22.5%×强化骰数量+90%的伤害。",
+      "tags": [],
+      "relatedGlossary": [
+        "强化骰"
+      ],
+      "source": "职业技图鉴",
+      "buildNotes": "截图显示为等级 3，说明职业技能可以升级。\n\n该技能在截图里没有额外标签——部分职业技能本身就不带标签。所属职业未在截图中显示，待后续补充。\n"
+    },
+    {
+      "id": "skill-one-hit-settlement",
+      "slug": "yi-ji-qing-suan",
+      "name": "一击清算",
+      "type": "职业技能",
+      "class": "缠命人",
+      "level": 2,
+      "maxLevel": 10,
+      "shortDesc": "使此次技能暴击率提高10%，并对敌方单体造成2段攻击力88%的伤害。",
+      "detailedDesc": "使此次技能暴击率提高10%，并对敌方单体造成2段攻击力22%×强化骰数量+88%的伤害。",
+      "tags": [
+        "暴击",
+        "职业技能"
+      ],
+      "relatedGlossary": [
+        "暴击",
+        "强化骰"
+      ],
+      "source": "职业技图鉴",
+      "buildNotes": "该技能携带「暴击×2」标签，是 II 阶职业「缠命人」的可选职业技之一。\n\n技能自带10%暴击率加成，且为多段伤害，适合堆叠暴击与暴击伤害的敏捷输出build。\n"
+    },
     {
       "id": "skill-swarm-hunt",
       "slug": "chong-qun-wei-lie",
@@ -863,6 +1258,211 @@
       "image": "/images/songs/applause.png",
       "source": "船歌解锁",
       "buildNotes": "适合依赖强化点爆发的队伍。触发捣蛋时刻时稳定补充强化点，续航能力强。\n"
+    },
+    {
+      "id": "song-breathing-quintet",
+      "slug": "hu-xi-wu-zhong-zou",
+      "name": "呼吸五重奏",
+      "type": "船歌",
+      "effect": "暴击率额外提高5%。若目标携带负面状态，则每层额外提高暴击伤害3%，上限5层。",
+      "tags": [
+        "暴击"
+      ],
+      "relatedGlossary": [
+        "暴击",
+        "负面状态"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "暴击标签船歌，自带常驻暴击率，并对带负面状态的目标提供额外暴伤。\n适合能稳定施加负面状态、再由暴击手收割的队伍。\n"
+    },
+    {
+      "id": "song-cold-minor",
+      "slug": "leng-ku-xiao-diao",
+      "name": "冷酷小调",
+      "type": "船歌",
+      "effect": "额外行动时，暴击率提升4%。",
+      "tags": [
+        "额外行动"
+      ],
+      "relatedGlossary": [
+        "额外行动",
+        "暴击"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "额外行动标签船歌，适合依赖额外行动触发的暴击 build。\n「额外行动」标签对应的职业较多（如饲虫人/灾厄虫母、讨债人/首席讨债人等），未在截图中限定单一职业，暂不绑定 class。\n"
+    },
+    {
+      "id": "song-fear-minor",
+      "slug": "kong-ju-xiao-diao",
+      "name": "恐惧小调",
+      "type": "船歌",
+      "effect": "对体力值低于30%的敌方单位造成暴击时，暴击伤害提升20%。",
+      "tags": [
+        "暴击"
+      ],
+      "relatedGlossary": [
+        "暴击"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "该船歌带有「暴击」标签，对应 II 阶职业「缠命人」。\n对低血量目标的收割型船歌，适合暴击伤害较高的敏捷输出 build。\n"
+    },
+    {
+      "id": "song-light-and-quick",
+      "slug": "qing-kuai-xiao-diao",
+      "name": "轻快小调",
+      "type": "船歌",
+      "effect": "使用强化骰掷出的总点数不低于3时，为随机敌方单位施加2层随机持续伤害。",
+      "tags": [
+        "强化骰"
+      ],
+      "relatedGlossary": [
+        "强化骰"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "强化骰标签船歌，对应 II 阶职业「焦火女」。\n通过强化骰高总点数触发持续伤害，适合智力系持续伤害 build。\n"
+    },
+    {
+      "id": "song-lucky-minor",
+      "slug": "xing-yun-xiao-diao",
+      "name": "幸运小调",
+      "type": "船歌",
+      "effect": "使用强化骰时，造成的架势伤害提升2点。",
+      "tags": [
+        "强化骰"
+      ],
+      "relatedGlossary": [
+        "强化骰"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "强化骰标签船歌，与「轻快小调」同属强化骰/智力系选择池。\n可直接提升强化骰造成的架势伤害，适合需要打架势破的 build。\n"
+    },
+    {
+      "id": "song-molting-residue",
+      "slug": "tui-pi-can-liu-wu",
+      "name": "蜕皮残留物",
+      "type": "船歌",
+      "effect": "释放招牌技后，使接下来3次额外行动伤害提高12%，持续2回合。",
+      "tags": [
+        "招牌技"
+      ],
+      "relatedGlossary": [
+        "招牌技",
+        "额外行动"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "该船歌带有「招牌技」标签，对应 II 阶职业「蚁妈」。\n适合以招牌技起手、依赖后续额外行动爆发的 build。\n"
+    },
+    {
+      "id": "song-no-return-without-collision",
+      "slug": "bu-zhuang-bu-hui-tou",
+      "name": "不撞不回头",
+      "type": "船歌",
+      "effect": "连续攻击同一主目标时，溅射伤害提升15%。",
+      "tags": [
+        "溅射"
+      ],
+      "relatedGlossary": [
+        "溅射"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "溅射标签船歌，强化对同一主目标连续攻击时的溅射伤害。\n当前版本「溅射」标签暂无可习得的对应职业。\n"
+    },
+    {
+      "id": "song-reverse-pour-drink",
+      "slug": "dao-guan-jia-yin",
+      "name": "倒灌佳饮",
+      "type": "船歌",
+      "effect": "技能命中拥有持续伤害的敌方单位时，有50%概率令其持续伤害层数增加1层。",
+      "tags": [
+        "持续伤害"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "持续伤害标签船歌，与「畅快小调」同属持续伤害/智力系选择池，对应 II 阶职业「腐鸦」。\n可延长并叠加目标身上的持续伤害层数，适合 dot 队。\n"
+    },
+    {
+      "id": "song-sin-minor",
+      "slug": "zui-nie-xiao-diao",
+      "name": "罪孽小调",
+      "type": "船歌",
+      "effect": "使用招牌技后，自身获得暴击率提升3级，持续2回合。",
+      "tags": [
+        "暴击"
+      ],
+      "relatedGlossary": [
+        "暴击",
+        "招牌技"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "暴击标签船歌，适合以招牌技起手的暴击 build。\n可与缠命人等暴击职业搭配，进一步堆高开场暴击率。\n"
+    },
+    {
+      "id": "song-slacking-minor",
+      "slug": "tou-lan-xiao-diao",
+      "name": "偷懒小调",
+      "type": "船歌",
+      "effect": "[防御]时，恢复3%的体力值。",
+      "tags": [
+        "防御"
+      ],
+      "relatedGlossary": [
+        "防御"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "该船歌带有「防御」标签，对应 II 阶职业「笨壳」与 III 阶职业「静默巨壳」。\n在[防御]状态下提供回血，适合站桩防御的体质 build。\n"
+    },
+    {
+      "id": "song-tenacious-protection",
+      "slug": "jian-ren-hu-ti",
+      "name": "坚韧护体",
+      "type": "船歌",
+      "effect": "受到攻击后，有10%概率进入防御状态。若本次未生效，使该概率提高2%，直到生效后重置。",
+      "tags": [
+        "受击"
+      ],
+      "relatedGlossary": [
+        "防御"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "该船歌带有「受击」标签，对应 II 阶职业「狮心者」与 III 阶职业「不屈雄狮」。\n受击时概率获得[防御]，适合需要提高生存能力的体质/防御 build。\n"
+    },
+    {
+      "id": "song-unrestrained-minor",
+      "slug": "chang-kuai-xiao-diao",
+      "name": "畅快小调",
+      "type": "船歌",
+      "effect": "击破敌方单位时，有70%概率为目标施加2种随机持续伤害。",
+      "tags": [
+        "持续伤害"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "持续伤害标签船歌，对应 II 阶职业「腐鸦」与 III 阶职业「狂欢腐鸦」。\n击破目标时高概率追加随机持续伤害，适合 dot 收割 build。\n"
+    },
+    {
+      "id": "song-vigorous-minor",
+      "slug": "peng-bo-xiao-diao",
+      "name": "蓬勃小调",
+      "type": "船歌",
+      "effect": "自身回合开始时，为体力值比例最低的友方单位回复等同于自身体力值上限2%的体力值。",
+      "tags": [
+        "治疗"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "治疗标签船歌，按自身生命上限为最低血量队友回血。\n当前版本「治疗」标签暂无可习得的对应职业。\n"
+    },
+    {
+      "id": "song-violent-minor",
+      "slug": "bao-li-xiao-diao",
+      "name": "暴戾小调",
+      "type": "船歌",
+      "effect": "战斗开始时，获得暴击率提升4级，持续2回合。",
+      "tags": [
+        "暴击"
+      ],
+      "relatedGlossary": [
+        "暴击"
+      ],
+      "source": "船歌解锁",
+      "buildNotes": "该船歌带有「暴击」标签，对应 II 阶职业「缠命人」。\n开场即可提高暴击率，适合需要前两回合稳定暴击的爆发 build。\n"
     }
   ],
   "equipment": [
@@ -957,6 +1557,95 @@
         "rand-5a0371ac",
         "rand-495c1bd1"
       ]
+    },
+    {
+      "id": "equip-bai-fa-bi-zhong-qiang",
+      "slug": "bai-fa-bi-zhong-qiang",
+      "name": "百发必中枪",
+      "slot": "手部",
+      "handType": "火枪",
+      "rarity": "紫",
+      "enhance": 3,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "statsByLevel": {
+        "3": {
+          "atk": 42,
+          "breakDamageBoost": "11%"
+        }
+      },
+      "requirements": {
+        "per": 51,
+        "agi": 27
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "per": 33,
+          "agi": 18
+        },
+        {
+          "level": 2,
+          "per": 47,
+          "agi": 25
+        },
+        {
+          "level": 3,
+          "per": 51,
+          "agi": 27
+        },
+        {
+          "level": 4,
+          "per": 67,
+          "agi": 36
+        },
+        {
+          "level": 5,
+          "per": 75,
+          "agi": 40
+        },
+        {
+          "level": 6,
+          "per": 85,
+          "agi": 45
+        },
+        {
+          "level": 7,
+          "per": 91,
+          "agi": 48
+        },
+        {
+          "level": 8,
+          "per": 104,
+          "agi": 55
+        },
+        {
+          "level": 9,
+          "per": 114,
+          "agi": 61
+        },
+        {
+          "level": 10,
+          "per": 126,
+          "agi": 67
+        }
+      ],
+      "fixedAffixes": [
+        "拥有7层以上[专注]时，造成的架势伤害提升25%。"
+      ],
+      "randomAffixIds": [
+        "rand-cecc4f66",
+        "rand-8e2514fb",
+        "rand-916345a6"
+      ],
+      "flavor": "前几发子弹哑火的霉运，都会变成最后一发的必中祝福。",
+      "source": "行装掉落",
+      "image": "/images/equipment/bai-fa-bi-zhong-qiang.png",
+      "buildNotes": "百发必中枪是紫色火枪，固定词条在[专注]层数高时提升架势伤害，适合专注流敏捷/感知输出。\n"
     },
     {
       "id": "equip-bian-se-long-ruan-jia",
@@ -1579,6 +2268,56 @@
       ]
     },
     {
+      "id": "equip-hei-suan-yao-ping",
+      "slug": "hei-suan-yao-ping",
+      "name": "黑酸药瓶",
+      "slot": "手部",
+      "handType": "炼金壶",
+      "rarity": "蓝",
+      "enhance": 3,
+      "statsByLevel": {
+        "3": {
+          "atk": 39
+        }
+      },
+      "fixedAffixes": [
+        "[加料]伤害提升18%。"
+      ],
+      "randomAffixIds": [
+        "rand-c40ac0b6"
+      ],
+      "flavor": "谣言在群体里传播，真相是没人愿意喝的解药。",
+      "source": "行装掉落",
+      "image": "/images/equipment/hei-suan-yao-ping.png",
+      "buildNotes": "黑酸药瓶是蓝色炼金壶，提升[加料]伤害，适合依赖加料机制的智力输出。\n"
+    },
+    {
+      "id": "equip-hong-sui-chang-jian",
+      "slug": "hong-sui-chang-jian",
+      "name": "红穗长剑",
+      "slot": "手部",
+      "handType": "单手剑",
+      "rarity": "蓝",
+      "enhance": 3,
+      "statsByLevel": {
+        "3": {
+          "atk": 31,
+          "damageBoost": "3.8%",
+          "threat": 18
+        }
+      },
+      "fixedAffixes": [
+        "造成的[附加伤害]提升12%。"
+      ],
+      "randomAffixIds": [
+        "rand-5a264e80"
+      ],
+      "flavor": "精的铁剑刺穿对手，穗子抽脸达成二次羞辱。",
+      "source": "行装掉落",
+      "image": "/images/equipment/hong-sui-chang-jian.png",
+      "buildNotes": "红穗长剑是蓝色单手剑，固定词条提升附加伤害，适合依赖附加伤害的输出角色。\n"
+    },
+    {
       "id": "equip-ji-tui-chen-shan",
       "slug": "ji-tui-chen-shan",
       "name": "鸡腿衬衫",
@@ -1696,23 +2435,54 @@
       ]
     },
     {
+      "id": "equip-kuai-feng-bi-shou",
+      "slug": "kuai-feng-bi-shou",
+      "name": "快风匕首",
+      "slot": "手部",
+      "handType": "匕首",
+      "rarity": "蓝",
+      "enhance": 3,
+      "statsByLevel": {
+        "3": {
+          "atk": 31,
+          "critRate": "2.5%",
+          "threat": -18
+        }
+      },
+      "fixedAffixes": [
+        "造成伤害时，有50%概率为目标施加暴击抗性下降3级，持续4回合。"
+      ],
+      "randomAffixIds": [
+        "rand-96f594c2"
+      ],
+      "flavor": "当速度快到一种程度，风便不再是阻力，而是刺穿命运的推手。",
+      "source": "行装掉落",
+      "image": "/images/equipment/kuai-feng-bi-shou.png",
+      "buildNotes": "快风匕首是蓝色匕首，固定词条提供暴击抗性削弱，适合需要提升团队暴击收益的敏捷输出。\n"
+    },
+    {
       "id": "equip-lian-dao-mian-kui",
       "slug": "lian-dao-mian-kui",
       "name": "镰刀面盔",
       "slot": "头部",
       "rarity": "蓝",
-      "enhance": 2,
+      "enhance": 3,
       "statsByLevel": {
         "2": {
           "effectHit": "14.3%",
           "dotBoost": "22%"
+        },
+        "3": {
+          "effectHit": "15%",
+          "dotBoost": "23.1%"
         }
       },
       "fixedAffixes": [
         "攻击时，目标每拥有1个持续伤害，造成的伤害提升3%，至多提升9%。"
       ],
       "randomAffixIds": [
-        "rand-510ebc5d"
+        "rand-510ebc5d",
+        "rand-51e1e318"
       ],
       "flavor": "伤口撒盐，火上浇油，快乐加倍。",
       "source": "行装掉落",
@@ -1771,6 +2541,13 @@
         "atk": 56,
         "shieldEffect": "6.2%",
         "hpRegenEfficiency": "3.1%"
+      },
+      "statsByLevel": {
+        "3": {
+          "atk": 42,
+          "shieldEffect": "5.5%",
+          "hpRegenEfficiency": "2.7%"
+        }
       },
       "requirements": {
         "str": 85,
@@ -1838,7 +2615,10 @@
       "randomAffixIds": [
         "rand-568ed0ba",
         "rand-560d40d3",
-        "rand-7528c062"
+        "rand-7528c062",
+        "rand-52c545c8",
+        "rand-6eab994b",
+        "rand-83ad8551"
       ]
     },
     {
@@ -1972,6 +2752,30 @@
       "buildNotes": "深海幻梦是金色奇珍，可在每场战斗中免疫一次致命伤害，是保护核心输出或脆皮辅助的强力生存件。\n"
     },
     {
+      "id": "equip-shou-hui-tao-zhuang",
+      "slug": "shou-hui-tao-zhuang",
+      "name": "手绘套装",
+      "slot": "躯干",
+      "rarity": "蓝",
+      "enhance": 3,
+      "statsByLevel": {
+        "3": {
+          "hp": 715,
+          "healBoost": "7.7%"
+        }
+      },
+      "fixedAffixes": [
+        "每次使用[个人技]后，防御力提升9%，至多提升18%。"
+      ],
+      "randomAffixIds": [
+        "rand-3b41c7e6"
+      ],
+      "flavor": "即使被生活揍得遍体鳞伤，也要有个梦想，或者假装有个梦想。",
+      "source": "行装掉落",
+      "image": "/images/equipment/shou-hui-tao-zhuang.png",
+      "buildNotes": "手绘套装是蓝色躯干行装，使用个人技后叠防御，适合需要生存的智慧/感知角色。\n"
+    },
+    {
       "id": "equip-shuang-sheng-bi-shou",
       "slug": "shuang-sheng-bi-shou",
       "name": "双生匕首",
@@ -2065,6 +2869,32 @@
         "rand-cecc4f66",
         "rand-1926abb5"
       ]
+    },
+    {
+      "id": "equip-shui-guo-dun",
+      "slug": "shui-guo-dun",
+      "name": "水果盾",
+      "slot": "手部",
+      "handType": "盾牌",
+      "rarity": "蓝",
+      "enhance": 3,
+      "statsByLevel": {
+        "3": {
+          "atk": 16,
+          "hp": 715,
+          "critRate": "-2.3%"
+        }
+      },
+      "fixedAffixes": [
+        "受到攻击时，[反伤]5%。[反伤]伤害提升10%。"
+      ],
+      "randomAffixIds": [
+        "rand-abd77dc6"
+      ],
+      "flavor": "“长官，这不是私藏武器，只是水果农场的生产工具罢了。”",
+      "source": "行装掉落",
+      "image": "/images/equipment/shui-guo-dun.png",
+      "buildNotes": "水果盾是蓝色盾牌，固定词条提供反伤与反伤增伤，适合前排坦克过渡使用。\n"
     },
     {
       "id": "equip-solitary-flower-mask",
@@ -2378,17 +3208,48 @@
       "image": "/images/equipment/unreturned-nest.png"
     },
     {
+      "id": "equip-xi-li-tong-qin",
+      "slug": "xi-li-tong-qin",
+      "name": "犀利铜琴",
+      "slot": "手部",
+      "handType": "里拉琴",
+      "rarity": "蓝",
+      "enhance": 3,
+      "statsByLevel": {
+        "3": {
+          "atk": 31,
+          "damageBoost": "5%",
+          "threat": -18
+        }
+      },
+      "fixedAffixes": [
+        "每次为我方单位恢复体力后，自身造成的[附加伤害]提升3%，至多提升12%。"
+      ],
+      "randomAffixIds": [
+        "rand-09381335"
+      ],
+      "flavor": "优雅而有侵略性的演奏，像给老船长灌药一般不留余地，要知道医生最注重眼疾手快。",
+      "source": "行装掉落",
+      "image": "/images/equipment/xi-li-tong-qin.png",
+      "buildNotes": "犀利铜琴是蓝色里拉琴，治疗队友后提升附加伤害，适合辅助治疗/输出兼顾的角色。\n"
+    },
+    {
       "id": "equip-xiao-chou-dun-pai",
       "slug": "xiao-chou-dun-pai",
       "name": "小丑盾牌",
       "slot": "手部",
       "handType": "盾牌",
       "rarity": "蓝",
-      "enhance": 2,
+      "enhance": 3,
       "statsByLevel": {
         "2": {
           "atk": 14,
           "hp": 633,
+          "critRate": "-2.3%"
+        },
+        "3": {
+          "atk": 16,
+          "hp": 715,
           "critRate": "-2.3%"
         }
       },
@@ -2396,12 +3257,126 @@
         "自身拥有的护盾每达体力上限的10%，受击权重提升1级，最高提升5级。"
       ],
       "randomAffixIds": [
-        "rand-09381335"
+        "rand-09381335",
+        "rand-510ebc5d"
       ],
       "flavor": "敌人越是愤怒，它的笑容就越灿烂。",
       "source": "行装掉落",
       "image": "/images/equipment/xiao-chou-dun-pai.png",
       "buildNotes": "小丑盾牌是蓝色盾牌，护盾越高受击权重越高，适合需要主动吸引火力的坦克。\n"
+    },
+    {
+      "id": "equip-xiu-yang-bu-yi",
+      "slug": "xiu-yang-bu-yi",
+      "name": "休养布衣",
+      "slot": "躯干",
+      "rarity": "蓝",
+      "enhance": 3,
+      "statsByLevel": {
+        "3": {
+          "hp": 715,
+          "shieldEffect": "7.7%"
+        }
+      },
+      "fixedAffixes": [
+        "每拥有1种[疫病]，防御力提升3%。"
+      ],
+      "randomAffixIds": [
+        "rand-f8db657a"
+      ],
+      "flavor": "他病得不轻，眼中的布衣都冒出了金星。",
+      "source": "行装掉落",
+      "image": "/images/equipment/xiu-yang-bu-yi.png",
+      "buildNotes": "休养布衣是蓝色躯干行装，根据疫病种类提升防御，随机词条提供治疗与减伤辅助。\n"
+    },
+    {
+      "id": "equip-yan-suan-chang-pao",
+      "slug": "yan-suan-chang-pao",
+      "name": "演算长袍",
+      "slot": "躯干",
+      "rarity": "紫",
+      "enhance": 3,
+      "maxEnhanceByFruitLevel": [
+        {
+          "fruitLevel": 5,
+          "maxEnhance": 10
+        }
+      ],
+      "statsByLevel": {
+        "3": {
+          "hp": 996,
+          "effectHit": "14.3%",
+          "def": -6
+        }
+      },
+      "requirements": {
+        "int": 51,
+        "per": 27
+      },
+      "enhanceRequirements": [
+        {
+          "level": 1,
+          "int": 33,
+          "per": 18
+        },
+        {
+          "level": 2,
+          "int": 47,
+          "per": 25
+        },
+        {
+          "level": 3,
+          "int": 51,
+          "per": 27
+        },
+        {
+          "level": 4,
+          "int": 67,
+          "per": 36
+        },
+        {
+          "level": 5,
+          "int": 75,
+          "per": 40
+        },
+        {
+          "level": 6,
+          "int": 85,
+          "per": 45
+        },
+        {
+          "level": 7,
+          "int": 91,
+          "per": 48
+        },
+        {
+          "level": 8,
+          "int": 104,
+          "per": 55
+        },
+        {
+          "level": 9,
+          "int": 114,
+          "per": 61
+        },
+        {
+          "level": 10,
+          "int": 126,
+          "per": 67
+        }
+      ],
+      "fixedAffixes": [
+        "触发[加料]时，使目标获得攻击力降低4级，持续2回合。"
+      ],
+      "randomAffixIds": [
+        "rand-510ebc5d",
+        "rand-a095bac9",
+        "rand-e25d491f"
+      ],
+      "flavor": "学者预判了对手每一丝肌肉的颤动，算准了每一次对手出手的轨迹——如同用智慧编织出了无形的护甲。",
+      "source": "行装掉落",
+      "image": "/images/equipment/yan-suan-chang-pao.png",
+      "buildNotes": "演算长袍是紫色躯干行装，触发[加料]时削弱目标攻击力，适合依赖效果命中与控制技能的智慧/感知角色。\n"
     },
     {
       "id": "equip-yu-ren-xie",
@@ -2452,10 +3427,16 @@
       "source": "行装随机词条",
       "occurrences": [
         {
+          "equipmentId": "equip-xi-li-tong-qin",
+          "equipmentSlug": "xi-li-tong-qin",
+          "equipmentName": "犀利铜琴",
+          "level": 3
+        },
+        {
           "equipmentId": "equip-xiao-chou-dun-pai",
           "equipmentSlug": "xiao-chou-dun-pai",
           "equipmentName": "小丑盾牌",
-          "level": 2
+          "level": 3
         }
       ]
     },
@@ -2631,6 +3612,21 @@
       ]
     },
     {
+      "id": "rand-3b41c7e6",
+      "slug": "rand-3b41c7e6",
+      "name": "场上每有1个敌方单位，自身伤害提升1%",
+      "effect": "场上每有1个敌方单位，自身伤害提升1%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-shou-hui-tao-zhuang",
+          "equipmentSlug": "shou-hui-tao-zhuang",
+          "equipmentName": "手绘套装",
+          "level": 3
+        }
+      ]
+    },
+    {
       "id": "rand-3f68ff3e",
       "slug": "rand-3f68ff3e",
       "name": "令其他我方单位行动提前时，使其攻击力提升2级，持续1回合",
@@ -2707,7 +3703,7 @@
           "equipmentId": "equip-lian-dao-mian-kui",
           "equipmentSlug": "lian-dao-mian-kui",
           "equipmentName": "镰刀面盔",
-          "level": 2
+          "level": 3
         },
         {
           "equipmentId": "equip-solitary-flower-mask",
@@ -2720,6 +3716,18 @@
           "equipmentSlug": "tao-qiao-chang-xue",
           "equipmentName": "讨巧长靴",
           "level": 6
+        },
+        {
+          "equipmentId": "equip-xiao-chou-dun-pai",
+          "equipmentSlug": "xiao-chou-dun-pai",
+          "equipmentName": "小丑盾牌",
+          "level": 3
+        },
+        {
+          "equipmentId": "equip-yan-suan-chang-pao",
+          "equipmentSlug": "yan-suan-chang-pao",
+          "equipmentName": "演算长袍",
+          "level": 3
         }
       ]
     },
@@ -2730,6 +3738,12 @@
       "effect": "攻击拥有[气绝]的敌方单位时，造成的伤害提升8%。",
       "source": "行装随机词条",
       "occurrences": [
+        {
+          "equipmentId": "equip-lian-dao-mian-kui",
+          "equipmentSlug": "lian-dao-mian-kui",
+          "equipmentName": "镰刀面盔",
+          "level": 3
+        },
         {
           "equipmentId": "equip-sturdy-heavy-shield",
           "equipmentSlug": "jian-qiang-zhong-dun",
@@ -2745,6 +3759,12 @@
       "effect": "额外行动时，造成的伤害提升3级。",
       "source": "行装随机词条",
       "occurrences": [
+        {
+          "equipmentId": "equip-roaring-straight-sword",
+          "equipmentSlug": "pao-xiao-zhi-jian",
+          "equipmentName": "咆哮直剑",
+          "level": 6
+        },
         {
           "equipmentId": "equip-tao-qiao-chang-xue",
           "equipmentSlug": "tao-qiao-chang-xue",
@@ -2841,6 +3861,21 @@
       ]
     },
     {
+      "id": "rand-5a264e80",
+      "slug": "rand-5a264e80",
+      "name": "[附加伤害]提升3%",
+      "effect": "[附加伤害]提升3%。每次造成[附加伤害]后，[附加伤害]额外提升1级，持续2回合，至多提升至2级。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-hong-sui-chang-jian",
+          "equipmentSlug": "hong-sui-chang-jian",
+          "equipmentName": "红穗长剑",
+          "level": 3
+        }
+      ]
+    },
+    {
       "id": "rand-5c96b2ab",
       "slug": "rand-5c96b2ab",
       "name": "[个人技]伤害提升4%",
@@ -2878,6 +3913,21 @@
           "equipmentId": "equip-pointed-iron-shoes",
           "equipmentSlug": "jian-tou-tie-xie",
           "equipmentName": "尖头铁鞋",
+          "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-6eab994b",
+      "slug": "rand-6eab994b",
+      "name": "位于战斗小队2号位时，体力上限提升6%，防御力提升4%",
+      "effect": "位于战斗小队2号位时，体力上限提升6%，防御力提升4%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-roaring-straight-sword",
+          "equipmentSlug": "pao-xiao-zhi-jian",
+          "equipmentName": "咆哮直剑",
           "level": 6
         }
       ]
@@ -2943,6 +3993,21 @@
       ]
     },
     {
+      "id": "rand-83ad8551",
+      "slug": "rand-83ad8551",
+      "name": "对体力值高于70%的敌方单位造成的伤害提升10%",
+      "effect": "对体力值高于70%的敌方单位造成的伤害提升10%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-roaring-straight-sword",
+          "equipmentSlug": "pao-xiao-zhi-jian",
+          "equipmentName": "咆哮直剑",
+          "level": 6
+        }
+      ]
+    },
+    {
       "id": "rand-8505491e",
       "slug": "rand-8505491e",
       "name": "为我方单位恢复体力后，治疗效果提升1级，持续1回合",
@@ -2954,6 +4019,36 @@
           "equipmentSlug": "mi-shi-tou-tao",
           "equipmentName": "密实头套",
           "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-8e2514fb",
+      "slug": "rand-8e2514fb",
+      "name": "使用强化骰后，效果命中提升5级，持续1回合",
+      "effect": "使用强化骰后，效果命中提升5级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-bai-fa-bi-zhong-qiang",
+          "equipmentSlug": "bai-fa-bi-zhong-qiang",
+          "equipmentName": "百发必中枪",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "rand-916345a6",
+      "slug": "rand-916345a6",
+      "name": "职业技能造成的伤害提升5%，职业技能治疗效果提升5%",
+      "effect": "职业技能造成的伤害提升5%，职业技能治疗效果提升5%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-bai-fa-bi-zhong-qiang",
+          "equipmentSlug": "bai-fa-bi-zhong-qiang",
+          "equipmentName": "百发必中枪",
+          "level": 3
         }
       ]
     },
@@ -2994,6 +4089,51 @@
       ]
     },
     {
+      "id": "rand-96f594c2",
+      "slug": "rand-96f594c2",
+      "name": "敌方单位拥有的负面状态大于2种时，其所受伤害提升3%",
+      "effect": "敌方单位拥有的负面状态大于2种时，其所受伤害提升3%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-kuai-feng-bi-shou",
+          "equipmentSlug": "kuai-feng-bi-shou",
+          "equipmentName": "快风匕首",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "rand-a095bac9",
+      "slug": "rand-a095bac9",
+      "name": "战斗小队的强化点大于2时，造成的伤害提升4%，治疗效果提升4%",
+      "effect": "战斗小队的强化点大于2时，造成的伤害提升4%，治疗效果提升4%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-yan-suan-chang-pao",
+          "equipmentSlug": "yan-suan-chang-pao",
+          "equipmentName": "演算长袍",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "rand-abd77dc6",
+      "slug": "rand-abd77dc6",
+      "name": "场上每有1个体力值低于50%的其他我方单位，自身护盾效果提升3%",
+      "effect": "场上每有1个体力值低于50%的其他我方单位，自身护盾效果提升3%。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-shui-guo-dun",
+          "equipmentSlug": "shui-guo-dun",
+          "equipmentName": "水果盾",
+          "level": 3
+        }
+      ]
+    },
+    {
       "id": "rand-ae91bb5d",
       "slug": "rand-ae91bb5d",
       "name": "战斗中主属性提升1点",
@@ -3015,6 +4155,12 @@
       "effect": "其他我方单位掷出强化骰点数大于6时，造成的伤害提升2%。",
       "source": "行装随机词条",
       "occurrences": [
+        {
+          "equipmentId": "equip-hei-suan-yao-ping",
+          "equipmentSlug": "hei-suan-yao-ping",
+          "equipmentName": "黑酸药瓶",
+          "level": 3
+        },
         {
           "equipmentId": "equip-ji-tui-chen-shan",
           "equipmentSlug": "ji-tui-chen-shan",
@@ -3061,6 +4207,12 @@
       "source": "行装随机词条",
       "occurrences": [
         {
+          "equipmentId": "equip-bai-fa-bi-zhong-qiang",
+          "equipmentSlug": "bai-fa-bi-zhong-qiang",
+          "equipmentName": "百发必中枪",
+          "level": 3
+        },
+        {
           "equipmentId": "equip-shuang-sheng-bi-shou",
           "equipmentSlug": "shuang-sheng-bi-shou",
           "equipmentName": "双生匕首",
@@ -3095,6 +4247,12 @@
           "equipmentSlug": "ku-tong-zhong-ri",
           "equipmentName": "苦痛终日",
           "level": 6
+        },
+        {
+          "equipmentId": "equip-yan-suan-chang-pao",
+          "equipmentSlug": "yan-suan-chang-pao",
+          "equipmentName": "演算长袍",
+          "level": 3
         }
       ]
     },
@@ -3125,6 +4283,21 @@
           "equipmentSlug": "hai-gang-xi-pi",
           "equipmentName": "海港嬉皮",
           "level": 6
+        }
+      ]
+    },
+    {
+      "id": "rand-f8db657a",
+      "slug": "rand-f8db657a",
+      "name": "治疗体力值低于70%的其他我方单位时，治疗效果提升3%并使其所受伤害降低3级，持续1回合",
+      "effect": "治疗体力值低于70%的其他我方单位时，治疗效果提升3%并使其所受伤害降低3级，持续1回合。",
+      "source": "行装随机词条",
+      "occurrences": [
+        {
+          "equipmentId": "equip-xiu-yang-bu-yi",
+          "equipmentSlug": "xiu-yang-bu-yi",
+          "equipmentName": "休养布衣",
+          "level": 3
         }
       ]
     }
@@ -3562,6 +4735,15 @@
       ]
     },
     {
+      "id": "glossary-du-xing-ke-xue-tu",
+      "slug": "glossary-du-xing-ke-xue-tu",
+      "term": "独行客学徒",
+      "definition": "TBD",
+      "related": [
+        "暗影"
+      ]
+    },
+    {
       "id": "glossary-effect-hit",
       "slug": "glossary-effect-hit",
       "term": "效果命中",
@@ -3611,6 +4793,15 @@
       ]
     },
     {
+      "id": "glossary-focus",
+      "slug": "glossary-focus",
+      "term": "专注",
+      "definition": "攻击时额外造成此状态层数×1点固定伤害和此状态层数×0.2点架势伤害。最多叠加10层。不可被其他技能消除。",
+      "related": [
+        "负面状态"
+      ]
+    },
+    {
       "id": "glossary-full-armed",
       "slug": "glossary-full-armed",
       "term": "全副武装",
@@ -3618,6 +4809,15 @@
       "related": [
         "铠甲",
         "防御"
+      ]
+    },
+    {
+      "id": "glossary-initial-skill",
+      "slug": "initial-skill",
+      "term": "初始技能",
+      "definition": "船员每次出航时拥有的第一个职业技能。",
+      "related": [
+        "职业技能"
       ]
     },
     {
@@ -3698,7 +4898,7 @@
       "id": "glossary-shadow",
       "slug": "shadow",
       "term": "暗影",
-      "definition": "受到敏捷系船员攻击时，每层此状态使自身所受伤害提升1.4%，最多叠加20层。不可被其他技能消除。",
+      "definition": "攻击敌方单位后可为其施加1层[暗影]（如独行客学徒被动「幽暗之影」）。受到敏捷系船员攻击时，每层此状态使自身所受伤害提升，具体数值随来源/等级变化（如独行客学徒 Lv.2 为1.7%），最多叠加20层。不可被其他技能消除。",
       "related": [
         "负面状态"
       ]
@@ -3752,12 +4952,30 @@
       ]
     },
     {
+      "id": "glossary-thorns",
+      "slug": "glossary-thorns",
+      "term": "反伤",
+      "definition": "将所受伤害的一定比例返还给攻击者。",
+      "related": [
+        "负面状态"
+      ]
+    },
+    {
       "id": "glossary-xie-zhan",
       "slug": "xie-zhan",
       "term": "协战",
       "definition": "友方单位攻击触发的自身额外行动。",
       "related": [
         "额外行动"
+      ]
+    },
+    {
+      "id": "glossary-you-an-zhi-ying",
+      "slug": "glossary-you-an-zhi-ying",
+      "term": "幽暗之影",
+      "definition": "TBD",
+      "related": [
+        "暗影"
       ]
     }
   ],
@@ -5679,12 +6897,199 @@
       "keywords": []
     },
     {
+      "id": "class-ant-mother",
+      "title": "蚁妈",
+      "type": "职业",
+      "route": "/classes/yi-ma",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-calamity-mother-of-worms",
+      "title": "灾厄虫母",
+      "type": "职业",
+      "route": "/classes/zai-e-chong-mu",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-carrion-crow",
+      "title": "腐鸦",
+      "type": "职业",
+      "route": "/classes/fu-ya",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-chief-debt-collector",
+      "title": "首席讨债人",
+      "type": "职业",
+      "route": "/classes/shou-xi-tao-zhai-ren",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-debt-collector",
+      "title": "讨债人",
+      "type": "职业",
+      "route": "/classes/tao-zhai-ren",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-dull-shell",
+      "title": "笨壳",
+      "type": "职业",
+      "route": "/classes/ben-ke",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-exotic-fate-weaver",
+      "title": "异香缠命人",
+      "type": "职业",
+      "route": "/classes/yi-xiang-chan-ming-ren",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-fate-weaver",
+      "title": "缠命人",
+      "type": "职业",
+      "route": "/classes/chan-ming-ren",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-lion-heart",
+      "title": "狮心者",
+      "type": "职业",
+      "route": "/classes/shi-xin-zhe",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-lone-traveler-apprentice",
+      "title": "独行客学徒",
+      "type": "职业",
+      "route": "/classes/du-xing-ke-xue-tu",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-narcissus",
+      "title": "水仙",
+      "type": "职业",
+      "route": "/classes/shui-xian",
+      "tags": [],
+      "keywords": []
+    },
+    {
       "id": "class-poison-master",
       "title": "毒士",
       "type": "职业",
       "route": "/classes/du-shi",
       "tags": [],
       "keywords": []
+    },
+    {
+      "id": "class-revelry-carrion-crow",
+      "title": "狂欢腐鸦",
+      "type": "职业",
+      "route": "/classes/kuang-huan-fu-ya",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-scorching-fire-woman",
+      "title": "焦火女",
+      "type": "职业",
+      "route": "/classes/jiao-huo-nv",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-silent-giant-shell",
+      "title": "静默巨壳",
+      "type": "职业",
+      "route": "/classes/jing-mo-ju-ke",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-unyielding-lion",
+      "title": "不屈雄狮",
+      "type": "职业",
+      "route": "/classes/bu-qu-xiong-shi",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "class-worm-keeper",
+      "title": "饲虫人",
+      "type": "职业",
+      "route": "/classes/si-chong-ren",
+      "tags": [],
+      "keywords": []
+    },
+    {
+      "id": "skill-blinding-blow",
+      "title": "致盲敲打",
+      "type": "技能",
+      "route": "/skills/zhi-mang-qiao-da",
+      "tags": [
+        "负面状态",
+        "职业技能",
+        "负面状态",
+        "职业技能"
+      ],
+      "keywords": [
+        "水仙",
+        "职业技能"
+      ]
+    },
+    {
+      "id": "skill-harvest-time",
+      "title": "收割时间",
+      "type": "技能",
+      "route": "/skills/shou-ge-shi-jian",
+      "tags": [
+        "额外行动",
+        "职业技能",
+        "额外行动",
+        "职业技能"
+      ],
+      "keywords": [
+        "讨债人",
+        "职业技能"
+      ]
+    },
+    {
+      "id": "skill-heng-ren",
+      "title": "横刃",
+      "type": "技能",
+      "route": "/skills/heng-ren",
+      "tags": [],
+      "keywords": [
+        null,
+        "职业技能"
+      ]
+    },
+    {
+      "id": "skill-one-hit-settlement",
+      "title": "一击清算",
+      "type": "技能",
+      "route": "/skills/yi-ji-qing-suan",
+      "tags": [
+        "暴击",
+        "职业技能",
+        "暴击",
+        "职业技能"
+      ],
+      "keywords": [
+        "缠命人",
+        "职业技能"
+      ]
     },
     {
       "id": "skill-swarm-hunt",
@@ -5811,10 +7216,161 @@
       "keywords": []
     },
     {
+      "id": "song-breathing-quintet",
+      "title": "呼吸五重奏",
+      "type": "船歌",
+      "route": "/songs/hu-xi-wu-zhong-zou",
+      "tags": [
+        "暴击"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-cold-minor",
+      "title": "冷酷小调",
+      "type": "船歌",
+      "route": "/songs/leng-ku-xiao-diao",
+      "tags": [
+        "额外行动"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-fear-minor",
+      "title": "恐惧小调",
+      "type": "船歌",
+      "route": "/songs/kong-ju-xiao-diao",
+      "tags": [
+        "暴击"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-light-and-quick",
+      "title": "轻快小调",
+      "type": "船歌",
+      "route": "/songs/qing-kuai-xiao-diao",
+      "tags": [
+        "强化骰"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-lucky-minor",
+      "title": "幸运小调",
+      "type": "船歌",
+      "route": "/songs/xing-yun-xiao-diao",
+      "tags": [
+        "强化骰"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-molting-residue",
+      "title": "蜕皮残留物",
+      "type": "船歌",
+      "route": "/songs/tui-pi-can-liu-wu",
+      "tags": [
+        "招牌技"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-no-return-without-collision",
+      "title": "不撞不回头",
+      "type": "船歌",
+      "route": "/songs/bu-zhuang-bu-hui-tou",
+      "tags": [
+        "溅射"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-reverse-pour-drink",
+      "title": "倒灌佳饮",
+      "type": "船歌",
+      "route": "/songs/dao-guan-jia-yin",
+      "tags": [
+        "持续伤害"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-sin-minor",
+      "title": "罪孽小调",
+      "type": "船歌",
+      "route": "/songs/zui-nie-xiao-diao",
+      "tags": [
+        "暴击"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-slacking-minor",
+      "title": "偷懒小调",
+      "type": "船歌",
+      "route": "/songs/tou-lan-xiao-diao",
+      "tags": [
+        "防御"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-tenacious-protection",
+      "title": "坚韧护体",
+      "type": "船歌",
+      "route": "/songs/jian-ren-hu-ti",
+      "tags": [
+        "受击"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-unrestrained-minor",
+      "title": "畅快小调",
+      "type": "船歌",
+      "route": "/songs/chang-kuai-xiao-diao",
+      "tags": [
+        "持续伤害"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-vigorous-minor",
+      "title": "蓬勃小调",
+      "type": "船歌",
+      "route": "/songs/peng-bo-xiao-diao",
+      "tags": [
+        "治疗"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "song-violent-minor",
+      "title": "暴戾小调",
+      "type": "船歌",
+      "route": "/songs/bao-li-xiao-diao",
+      "tags": [
+        "暴击"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-aged-medicine-bottle",
       "title": "沉酿药瓶",
       "type": "行装",
       "route": "/equipment/chen-niang-yao-ping",
+      "tags": [
+        "手部",
+        "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-bai-fa-bi-zhong-qiang",
+      "title": "百发必中枪",
+      "type": "行装",
+      "route": "/equipment/bai-fa-bi-zhong-qiang",
       "tags": [
         "手部",
         "紫"
@@ -5944,6 +7500,28 @@
       "keywords": []
     },
     {
+      "id": "equip-hei-suan-yao-ping",
+      "title": "黑酸药瓶",
+      "type": "行装",
+      "route": "/equipment/hei-suan-yao-ping",
+      "tags": [
+        "手部",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-hong-sui-chang-jian",
+      "title": "红穗长剑",
+      "type": "行装",
+      "route": "/equipment/hong-sui-chang-jian",
+      "tags": [
+        "手部",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-ji-tui-chen-shan",
       "title": "鸡腿衬衫",
       "type": "行装",
@@ -5962,6 +7540,17 @@
       "tags": [
         "腿部",
         "金"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-kuai-feng-bi-shou",
+      "title": "快风匕首",
+      "type": "行装",
+      "route": "/equipment/kuai-feng-bi-shou",
+      "tags": [
+        "手部",
+        "蓝"
       ],
       "keywords": []
     },
@@ -6043,6 +7632,17 @@
       "keywords": []
     },
     {
+      "id": "equip-shou-hui-tao-zhuang",
+      "title": "手绘套装",
+      "type": "行装",
+      "route": "/equipment/shou-hui-tao-zhuang",
+      "tags": [
+        "躯干",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-shuang-sheng-bi-shou",
       "title": "双生匕首",
       "type": "行装",
@@ -6050,6 +7650,17 @@
       "tags": [
         "手部",
         "紫"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-shui-guo-dun",
+      "title": "水果盾",
+      "type": "行装",
+      "route": "/equipment/shui-guo-dun",
+      "tags": [
+        "手部",
+        "蓝"
       ],
       "keywords": []
     },
@@ -6109,6 +7720,17 @@
       "keywords": []
     },
     {
+      "id": "equip-xi-li-tong-qin",
+      "title": "犀利铜琴",
+      "type": "行装",
+      "route": "/equipment/xi-li-tong-qin",
+      "tags": [
+        "手部",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
       "id": "equip-xiao-chou-dun-pai",
       "title": "小丑盾牌",
       "type": "行装",
@@ -6116,6 +7738,28 @@
       "tags": [
         "手部",
         "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-xiu-yang-bu-yi",
+      "title": "休养布衣",
+      "type": "行装",
+      "route": "/equipment/xiu-yang-bu-yi",
+      "tags": [
+        "躯干",
+        "蓝"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "equip-yan-suan-chang-pao",
+      "title": "演算长袍",
+      "type": "行装",
+      "route": "/equipment/yan-suan-chang-pao",
+      "tags": [
+        "躯干",
+        "紫"
       ],
       "keywords": []
     },
@@ -6261,6 +7905,16 @@
       ]
     },
     {
+      "id": "rand-3b41c7e6",
+      "title": "场上每有1个敌方单位，自身伤害提升1%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-3b41c7e6",
+      "tags": [],
+      "keywords": [
+        "场上每有1个敌方单位，自身伤害提升1%。"
+      ]
+    },
+    {
       "id": "rand-3f68ff3e",
       "title": "令其他我方单位行动提前时，使其攻击力提升2级，持续1回合",
       "type": "随机词条",
@@ -6381,6 +8035,16 @@
       ]
     },
     {
+      "id": "rand-5a264e80",
+      "title": "[附加伤害]提升3%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-5a264e80",
+      "tags": [],
+      "keywords": [
+        "[附加伤害]提升3%。每次造成[附加伤害]后，[附加伤害]额外提升1级，持续2回合，至多提升至2级。"
+      ]
+    },
+    {
       "id": "rand-5c96b2ab",
       "title": "[个人技]伤害提升4%",
       "type": "随机词条",
@@ -6398,6 +8062,16 @@
       "tags": [],
       "keywords": [
         "固定伤害提升1%。每次造成固定伤害后，固定伤害额外提升1级，持续2回合，至多提升至2级。"
+      ]
+    },
+    {
+      "id": "rand-6eab994b",
+      "title": "位于战斗小队2号位时，体力上限提升6%，防御力提升4%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-6eab994b",
+      "tags": [],
+      "keywords": [
+        "位于战斗小队2号位时，体力上限提升6%，防御力提升4%。"
       ]
     },
     {
@@ -6441,6 +8115,16 @@
       ]
     },
     {
+      "id": "rand-83ad8551",
+      "title": "对体力值高于70%的敌方单位造成的伤害提升10%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-83ad8551",
+      "tags": [],
+      "keywords": [
+        "对体力值高于70%的敌方单位造成的伤害提升10%。"
+      ]
+    },
+    {
       "id": "rand-8505491e",
       "title": "为我方单位恢复体力后，治疗效果提升1级，持续1回合",
       "type": "随机词条",
@@ -6448,6 +8132,26 @@
       "tags": [],
       "keywords": [
         "为我方单位恢复体力后，治疗效果提升1级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-8e2514fb",
+      "title": "使用强化骰后，效果命中提升5级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-8e2514fb",
+      "tags": [],
+      "keywords": [
+        "使用强化骰后，效果命中提升5级，持续1回合。"
+      ]
+    },
+    {
+      "id": "rand-916345a6",
+      "title": "职业技能造成的伤害提升5%，职业技能治疗效果提升5%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-916345a6",
+      "tags": [],
+      "keywords": [
+        "职业技能造成的伤害提升5%，职业技能治疗效果提升5%。"
       ]
     },
     {
@@ -6468,6 +8172,36 @@
       "tags": [],
       "keywords": [
         "令其他我方单位获得[正面状态]时，为其恢复2%的体力值，1回合生效1次。"
+      ]
+    },
+    {
+      "id": "rand-96f594c2",
+      "title": "敌方单位拥有的负面状态大于2种时，其所受伤害提升3%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-96f594c2",
+      "tags": [],
+      "keywords": [
+        "敌方单位拥有的负面状态大于2种时，其所受伤害提升3%。"
+      ]
+    },
+    {
+      "id": "rand-a095bac9",
+      "title": "战斗小队的强化点大于2时，造成的伤害提升4%，治疗效果提升4%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-a095bac9",
+      "tags": [],
+      "keywords": [
+        "战斗小队的强化点大于2时，造成的伤害提升4%，治疗效果提升4%。"
+      ]
+    },
+    {
+      "id": "rand-abd77dc6",
+      "title": "场上每有1个体力值低于50%的其他我方单位，自身护盾效果提升3%",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-abd77dc6",
+      "tags": [],
+      "keywords": [
+        "场上每有1个体力值低于50%的其他我方单位，自身护盾效果提升3%。"
       ]
     },
     {
@@ -6558,6 +8292,16 @@
       "tags": [],
       "keywords": [
         "暴击伤害提升8%。"
+      ]
+    },
+    {
+      "id": "rand-f8db657a",
+      "title": "治疗体力值低于70%的其他我方单位时，治疗效果提升3%并使其所受伤害降低3级，持续1回合",
+      "type": "随机词条",
+      "route": "/random-affixes/rand-f8db657a",
+      "tags": [],
+      "keywords": [
+        "治疗体力值低于70%的其他我方单位时，治疗效果提升3%并使其所受伤害降低3级，持续1回合。"
       ]
     },
     {
@@ -7086,6 +8830,16 @@
       "keywords": []
     },
     {
+      "id": "glossary-du-xing-ke-xue-tu",
+      "title": "独行客学徒",
+      "type": "术语",
+      "route": "/glossary#glossary-du-xing-ke-xue-tu",
+      "tags": [
+        "暗影"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-effect-hit",
       "title": "效果命中",
       "type": "术语",
@@ -7140,6 +8894,16 @@
       "keywords": []
     },
     {
+      "id": "glossary-focus",
+      "title": "专注",
+      "type": "术语",
+      "route": "/glossary#glossary-focus",
+      "tags": [
+        "负面状态"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-full-armed",
       "title": "全副武装",
       "type": "术语",
@@ -7147,6 +8911,16 @@
       "tags": [
         "铠甲",
         "防御"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-initial-skill",
+      "title": "初始技能",
+      "type": "术语",
+      "route": "/glossary#glossary-initial-skill",
+      "tags": [
+        "职业技能"
       ],
       "keywords": []
     },
@@ -7296,12 +9070,32 @@
       "keywords": []
     },
     {
+      "id": "glossary-thorns",
+      "title": "反伤",
+      "type": "术语",
+      "route": "/glossary#glossary-thorns",
+      "tags": [
+        "负面状态"
+      ],
+      "keywords": []
+    },
+    {
       "id": "glossary-xie-zhan",
       "title": "协战",
       "type": "术语",
       "route": "/glossary#glossary-xie-zhan",
       "tags": [
         "额外行动"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "glossary-you-an-zhi-ying",
+      "title": "幽暗之影",
+      "type": "术语",
+      "route": "/glossary#glossary-you-an-zhi-ying",
+      "tags": [
+        "暗影"
       ],
       "keywords": []
     },

@@ -1,0 +1,22 @@
+id: equip-hong-sui-chang-jian
+slug: hong-sui-chang-jian
+name: 红穗长剑
+slot: 手部
+handType: 单手剑
+rarity: 蓝
+enhance: 3
+statsByLevel:
+  3:
+    atk: 31
+    damageBoost: "3.8%"
+    threat: 18
+fixedAffixes:
+  - "造成的[附加伤害]提升12%。"
+randomAffixIds:
+  - rand-5a264e80
+flavor: "精的铁剑刺穿对手，穗子抽脸达成二次羞辱。"
+source: 行装掉落
+image: /images/equipment/hong-sui-chang-jian.png
+
+buildNotes: |
+  红穗长剑是蓝色单手剑，固定词条提升附加伤害，适合依赖附加伤害的输出角色。

@@ -1,0 +1,6 @@
+id: glossary-focus
+slug: glossary-focus
+term: 专注
+definition: "攻击时额外造成此状态层数×1点固定伤害和此状态层数×0.2点架势伤害。最多叠加10层。不可被其他技能消除。"
+related:
+  - 负面状态
