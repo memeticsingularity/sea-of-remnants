@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Search } from 'lucide-react'
-import { useSearch, useSearchShortcut } from '@/hooks/useSearch'
+import { useSearchQuery, useSearchShortcut } from '@/hooks/useSearch'
 
 /**
  * 全局搜索框组件
@@ -17,7 +17,7 @@ export function SearchBox() {
   const inputRef = useRef<HTMLInputElement>(null)
   const navigate = useNavigate()
   // 基于 query 从 Fuse.js 索引中获取搜索结果
-  const results = useSearch(query)
+  const results = useSearchQuery(query)
 
   useSearchShortcut(inputRef)
 

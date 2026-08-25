@@ -25,11 +25,11 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'crews', element: <CategoryPage category="crews" /> },
+      { path: 'crews/figurehead-prayer', element: <Navigate to="/figurehead-prayer" replace /> },
+      { path: 'crews/figurehead-prayer/recommend', element: <Navigate to="/figurehead-prayer/recommend" replace /> },
       { path: 'crews/:slug', element: <CrewDetailPage /> },
       { path: 'figurehead-prayer', element: <FigureheadPrayerPage /> },
       { path: 'figurehead-prayer/recommend', element: <FigureheadPrayerRecommendPage /> },
-      { path: 'crews/figurehead-prayer', element: <Navigate to="/figurehead-prayer" replace /> },
-      { path: 'crews/figurehead-prayer/recommend', element: <Navigate to="/figurehead-prayer/recommend" replace /> },
       { path: 'ships', element: <CategoryPage category="ships" /> },
       { path: 'ships/:slug', element: <NotFoundPage /> },
       { path: 'classes', element: <CategoryPage category="classes" /> },

@@ -1,14 +1,14 @@
 import { useMemo, useEffect } from 'react'
 import Fuse from 'fuse.js'
-import { useCollection } from '@/hooks/useCollection'
+import { useSearch } from '@/hooks/useCollection'
 import type { SearchIndexEntry } from '@/types'
 
-export function useSearch(query: string, limit = 10) {
-  const { data: index, status } = useCollection<SearchIndexEntry>('searchIndex')
+export function useSearchQuery(query: string, limit = 10) {
+  const { data: index, status } = useSearch()
   const fuse = useMemo(
     () =>
       index && status === 'ready'
-        ? new Fuse(index, {
+        ? new Fuse(index as SearchIndexEntry[], {
             keys: ['title', 'tags', 'keywords'],
             threshold: 0.35,
             includeScore: true,

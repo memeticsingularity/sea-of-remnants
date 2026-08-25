@@ -6,6 +6,7 @@
   "scripts": {
     "predev": "node scripts/build-content.js",
     "dev": "vite",
+    "validate": "node scripts/validate-data.js",
     "prebuild": "node scripts/validate-data.js && node scripts/build-content.js",
     "build": "tsc -b && vite build",
     "preview": "vite preview",

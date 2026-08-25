@@ -1,19 +1,28 @@
 import { useState } from 'react'
 import { Users, X } from 'lucide-react'
-import { useCollection } from '@/hooks/useCollection'
+import { useCrewSummaries } from '@/hooks/useCollection'
 import { Card } from '@/components/ui/Card'
 import { usePartyConfig } from '@/hooks/usePartyConfig'
-import type { Crew } from '@/types'
+
+interface CrewSummary {
+  id: string
+  slug: string
+  name: string
+  image?: string
+  element?: string
+  rarity?: string
+  primaryStat?: string
+}
 
 export function PartyConfigFloat() {
   const [open, setOpen] = useState(false)
   const { config, setCrew, clearSlot, resetConfig } = usePartyConfig()
-  const { data: crewData } = useCollection<Crew>('crews')
+  const { data: crewData } = useCrewSummaries(open)
   const crews = crewData ?? []
 
   const filledCount = config.slots.filter((s) => s.crewId !== '').length
 
-  function getCrew(crewId: string): Crew | undefined {
+  function getCrew(crewId: string): CrewSummary | undefined {
     return crews.find((c) => c.id === crewId)
   }
 
@@ -73,7 +82,7 @@ export function PartyConfigFloat() {
             <div className="mt-3 flex flex-wrap gap-1">
               {config.slots
                 .map((s) => getCrew(s.crewId))
-                .filter((c): c is Crew => c !== undefined)
+                .filter((c): c is CrewSummary => c !== undefined)
                 .map((c) => (
                   <span
                     key={c.id}

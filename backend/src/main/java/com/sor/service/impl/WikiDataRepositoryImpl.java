@@ -1,4 +1,4 @@
-package com.sor.service;
+package com.sor.service.impl;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -6,12 +6,13 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.NullNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
+import com.sor.service.WikiDataRepository;
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,19 +26,19 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 加载并组装 Wiki 数据
+ * Wiki 数据仓储实现。
  *
  * 数据真源是 frontend/content/data/ 下的 YAML（构建期由 Maven 拷到 classpath 的 data/yaml/）。
- * 本服务在启动时把全部 YAML 组装成一棵内存 JsonNode（root），并复刻 build-content.js 的
+ * 启动时把全部 YAML 组装成一棵内存 JsonNode（root），并复刻 build-content.js 的
  * 派生逻辑（pages.content、random-affixes occurrences 反向索引、searchIndex）。
  */
-@Service
-public class WikiDataService {
+@Repository
+public class WikiDataRepositoryImpl implements WikiDataRepository {
 
-  private static final Logger log = LoggerFactory.getLogger(WikiDataService.class);
+  private static final Logger log = LoggerFactory.getLogger(WikiDataRepositoryImpl.class);
 
-  private final ObjectMapper objectMapper = new ObjectMapper();
-  private final YAMLMapper yamlMapper = new YAMLMapper();
+  private final ObjectMapper objectMapper;
+  private final YAMLMapper yamlMapper;
   private final PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 
   /** 17 个集合目录（kebab-case），顺序与 frontend/scripts/build-content.js 的 COLLECTIONS 一致 */
@@ -55,14 +56,19 @@ public class WikiDataService {
     for (String c : COLLECTIONS) {
       set.add(toCamel(c));
     }
-    // pages 来自 index.yaml（无独立目录），但作为一等派生集合由 /api/pages 暴露，
-    // 供 GuidePage 等前端按需拉取（stats() 与 build-content.js 同样把它当独立集合）。
+    // pages 来自 index.yaml（无独立目录），但作为一等派生集合暴露。
     set.add("pages");
     VALID_COLLECTIONS = Collections.unmodifiableSet(set);
   }
 
   private JsonNode root;
 
+  public WikiDataRepositoryImpl(ObjectMapper objectMapper, YAMLMapper yamlMapper) {
+    this.objectMapper = objectMapper;
+    this.yamlMapper = yamlMapper;
+  }
+
+  @Override
   @PostConstruct
   public void loadData() throws IOException {
     long start = System.currentTimeMillis();
@@ -71,6 +77,7 @@ public class WikiDataService {
         System.currentTimeMillis() - start);
   }
 
+  @Override
   public JsonNode getRoot() {
     return root;
   }
@@ -79,6 +86,7 @@ public class WikiDataService {
     return VALID_COLLECTIONS.contains(collection);
   }
 
+  @Override
   public List<JsonNode> list(String collection) {
     List<JsonNode> result = new ArrayList<>();
     JsonNode array = root.path(collection);
@@ -90,6 +98,7 @@ public class WikiDataService {
     return result;
   }
 
+  @Override
   public JsonNode findBySlug(String collection, String slug) {
     JsonNode array = root.path(collection);
     if (!array.isArray()) {
@@ -103,6 +112,7 @@ public class WikiDataService {
     return null;
   }
 
+  @Override
   public JsonNode findById(String collection, String id) {
     JsonNode array = root.path(collection);
     if (!array.isArray()) {
@@ -116,15 +126,12 @@ public class WikiDataService {
     return null;
   }
 
+  @Override
   public List<String> collectionNames() {
-    List<String> names = new ArrayList<>();
-    for (String key : VALID_COLLECTIONS) {
-      names.add(key);
-    }
-    return names;
+    return new ArrayList<>(VALID_COLLECTIONS);
   }
 
-  /** 各集合长度（用于首页入口计数） */
+  @Override
   public Map<String, Integer> stats() {
     Map<String, Integer> stats = new java.util.LinkedHashMap<>();
     for (String key : VALID_COLLECTIONS) {
@@ -135,11 +142,12 @@ public class WikiDataService {
     return stats;
   }
 
+  @Override
   public JsonNode searchIndex() {
     return root.path("searchIndex");
   }
 
-  /** 查找持有某个技能的船员与职业（精简字段） */
+  @Override
   public JsonNode skillOwners(String skillId) {
     ObjectNode result = objectMapper.createObjectNode();
     ArrayNode crews = result.putArray("crews");
@@ -172,29 +180,26 @@ public class WikiDataService {
   }
 
   private static JsonNode slim(JsonNode node) {
-    ObjectNode o = node.deepCopy(); // 简单起见保留原字段，字段量很小
-    return o;
+    // 字段量很小，直接深拷贝；后续可改为只保留 id/slug/name/image 等摘要字段
+    return node.deepCopy();
   }
 
-  // ---------------------------------------------------------------------
+  // -----------------------------------------------------------------
   // 组装
-  // ---------------------------------------------------------------------
+  // -----------------------------------------------------------------
 
   private JsonNode assemble() throws IOException {
     ObjectNode data = objectMapper.createObjectNode();
 
-    // meta
     ObjectNode meta = data.putObject("meta");
     meta.put("version", "1.0.0");
     meta.put("generatedAt", Instant.now().toString());
 
-    // 每个集合目录下的 YAML 文件
     for (String collection : COLLECTIONS) {
       ArrayNode arr = data.withArray(toCamel(collection));
       Resource[] files = resolver.getResources("classpath:data/yaml/" + collection + "/*.{yaml,yml}");
       for (Resource res : files) {
         String name = res.getFilename();
-        // 文件系统模式下花括号通配会过宽匹配到 README.md 等非 YAML 文件，此处按扩展名过滤
         if (name == null || !(name.endsWith(".yaml") || name.endsWith(".yml"))) {
           continue;
         }
@@ -207,7 +212,6 @@ public class WikiDataService {
       }
     }
 
-    // pages：index.yaml.pages[].markdown -> content
     ArrayNode pages = data.withArray("pages");
     JsonNode indexData = readYaml(resolver.getResource("classpath:data/yaml/index.yaml"));
     if (indexData != null) {
@@ -251,7 +255,6 @@ public class WikiDataService {
     }
   }
 
-  /** 复刻 build-content.js 的 random-affixes 反向索引 */
   private void enrichRandomAffixOccurrences(ObjectNode data) {
     java.util.Map<String, JsonNode> affixMap = new java.util.HashMap<>();
     for (JsonNode affix : data.path("randomAffixes")) {
@@ -284,17 +287,13 @@ public class WikiDataService {
     }
   }
 
-  // ---------------------------------------------------------------------
-  // searchIndex（复刻 build-content.js 的 buildSearchIndex）
-  // ---------------------------------------------------------------------
-
   private void buildSearchIndex(ObjectNode data, ArrayNode index) {
     forEach(data.path("crews"), c -> addEntry(index, c, "船员", "/crews/" + text(c, "slug"),
         List.of(), List.of(norm(c.path("role")), norm(c.path("element")))));
     forEach(data.path("ships"), s -> addEntry(index, s, "船只", "/ships/" + text(s, "slug"),
         List.of(), List.of()));
     forEach(data.path("classes"), cl -> addEntry(index, cl, "职业", "/classes/" + text(cl, "slug"),
-        List.of(), List.of()));
+        List.of(), List.of(norm(cl.path("role")), norm(cl.path("type")))));
     forEach(data.path("skills"), sk -> addEntry(index, sk, "技能", "/skills/" + text(sk, "slug"),
         nodeList(sk.path("tags")), List.of(norm(sk.path("class")), norm(sk.path("type")))));
     forEach(data.path("dice"), d -> addEntry(index, d, "骰子", "/dice/" + text(d, "slug"),
@@ -375,7 +374,6 @@ public class WikiDataService {
     });
   }
 
-  /** 复刻 add：tags = [...(item.tags||[]), ...extraTags]，keywords = [...extraKeywords] */
   private void addEntry(ArrayNode index, JsonNode item, String type, String route,
                         List<JsonNode> extraTags, List<JsonNode> extraKeywords) {
     ObjectNode entry = index.addObject();
@@ -388,11 +386,11 @@ public class WikiDataService {
     JsonNode itemTags = item.path("tags");
     if (itemTags.isArray()) {
       for (JsonNode t : itemTags) {
-        tags.add(norm(t));
+        tags.add(tagText(t));
       }
     }
     for (JsonNode t : extraTags) {
-      tags.add(norm(t));
+      tags.add(tagText(t));
     }
 
     ArrayNode keywords = entry.putArray("keywords");
@@ -401,15 +399,15 @@ public class WikiDataService {
     }
   }
 
-  // ---------------------------------------------------------------------
+  // -----------------------------------------------------------------
   // 小工具
-  // ---------------------------------------------------------------------
+  // -----------------------------------------------------------------
 
-  private interface Consumer {
+  private interface NodeConsumer {
     void accept(JsonNode node);
   }
 
-  private static void forEach(JsonNode array, Consumer consumer) {
+  private static void forEach(JsonNode array, NodeConsumer consumer) {
     if (array != null && array.isArray()) {
       for (JsonNode node : array) {
         consumer.accept(node);
@@ -435,6 +433,22 @@ public class WikiDataService {
     return (n == null || n.isMissingNode() || n.isNull()) ? NullNode.getInstance() : n;
   }
 
+  private static JsonNode tagText(JsonNode tag) {
+    if (tag == null || tag.isMissingNode() || tag.isNull()) {
+      return NullNode.getInstance();
+    }
+    if (tag.isTextual()) {
+      return tag;
+    }
+    if (tag.isObject()) {
+      JsonNode name = tag.path("name");
+      if (!name.isMissingNode() && !name.isNull()) {
+        return name;
+      }
+    }
+    return NullNode.getInstance();
+  }
+
   private static List<JsonNode> nodeList(JsonNode array) {
     List<JsonNode> list = new ArrayList<>();
     if (array != null && array.isArray()) {
@@ -445,7 +459,7 @@ public class WikiDataService {
     return list;
   }
 
-  private static String toCamel(String collection) {
+  public static String toCamel(String collection) {
     StringBuilder sb = new StringBuilder();
     boolean upper = false;
     for (char ch : collection.toCharArray()) {

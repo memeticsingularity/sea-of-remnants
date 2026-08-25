@@ -1,5 +1,5 @@
 /**
- * 类型化内容端点，对应后端 /api/*
+ * 类型化内容端点，对应后端 /sor/api/*
  */
 import { request } from './client'
 import type {
@@ -62,8 +62,12 @@ export function fetchStats(): Promise<HomeStats> {
   return request<HomeStats>('/stats')
 }
 
-export function fetchSearchIndex(): Promise<SearchIndexEntry[]> {
-  return request<SearchIndexEntry[]>('/searchIndex')
+export function fetchSearch(): Promise<SearchIndexEntry[]> {
+  return request<SearchIndexEntry[]>('/search')
+}
+
+export function fetchCrewSummaries(): Promise<Pick<Crew, 'id' | 'slug' | 'name' | 'image' | 'element' | 'rarity' | 'primaryStat'>[]> {
+  return request<Pick<Crew, 'id' | 'slug' | 'name' | 'image' | 'element' | 'rarity' | 'primaryStat'>[]>('/crews/summary')
 }
 
 export function fetchSkillOwners(slug: string): Promise<SkillOwners> {

@@ -1,5 +1,39 @@
 # 变更日志
 
+## 2026-08-26
+
+### 改造
+
+- **后端领域分层与 API 前缀迁移**
+  - API 前缀从 `/api` 统一迁移到 `/sor/api`，避免与其他服务冲突。
+  - 拆分原 `WikiController` + `WikiDataService` 大泥球为领域分层：
+    - `Controller`：Crew / Skill / Dice / Equipment / GameClass / CommonEntity / Search / Stats / Page。
+    - `Service`：各领域 Service 接口 + `impl` 实现。
+    - `Repository`：`WikiDataRepository` 作为 YAML 加载与派生数据真源。
+  - 5 个核心实体（Crew/Skill/Dice/Equipment/GameClass）建立强类型 POJO，字段与前端类型对齐。
+  - 12 个简单集合（ships/songs/items/quests/locations/glossary/symptoms/shadows/recruitment-pools/guardians/ship-tags/random-affixes）使用 `BaseEntity + @JsonAnyGetter` 透传字段。
+  - 新增 `CrewSummary` 摘要 DTO 与 `/sor/api/crews/summary` 接口，供列表、浮窗、选择器使用。
+  - 统一 Jackson 配置，注入 Spring `ObjectMapper`，关闭 `FAIL_ON_EMPTY_BEANS`，默认不序列化 null 字段。
+
+### 修复
+
+- **船员详情页不再误触发全量 crews 请求**
+  - 根因：全局组件 `PartyConfigFloat` 在所有路由下无条件调用 `useCollection('crews')`。
+  - 修复：`PartyConfigFloat` 改用 `/sor/api/crews/summary`，且折叠时不发起请求。
+- **修复 `/crews/figurehead-prayer` 静态重定向被动态路由 `/crews/:slug` 吞掉的问题**
+  - 将 `/crews/figurehead-prayer` 与 `/crews/figurehead-prayer/recommend` 两条静态重定向路由移到 `/crews/:slug` 之前。
+- **修复 `/sor/api/search` 因部分词条 tags 为对象而导致的反序列化 500**
+  - `WikiDataRepositoryImpl.addEntry` 现在对对象型 tag 提取 `name` 字段，只把文本加入搜索索引 tags。
+
+### 工程
+
+- `frontend/package.json` 新增 `validate` 脚本，与 `CLAUDE.md` 描述一致。
+- 根目录 `package.json` 的 `dev:backend` / `build:backend` 改为使用 `bash backend/mvnw -f backend/pom.xml ...`，适配 Windows npm 脚本执行环境。
+
+### 文档
+
+- 更新 `docs/plans/architecture.md`：补充后端分层、数据流、`/sor/api` 前缀与字段裁剪原则。
+
 ## 2026-07-20
 
 ### 新增

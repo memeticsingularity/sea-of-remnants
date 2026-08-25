@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import { ApiError } from '@/api/client'
 import {
   fetchCollection,
+  fetchCrewSummaries,
   fetchEntity,
+  fetchSearch,
   fetchStats,
   fetchSkillOwners,
   type HomeStats,
@@ -40,13 +42,21 @@ export function invalidate(cacheKey: string) {
   cache.delete(cacheKey)
 }
 
-function useData<T>(cacheKey: string, makePromise: () => Promise<T>): UseDataResult<T> {
+function useData<T>(
+  cacheKey: string,
+  makePromise: () => Promise<T>,
+  enabled = true,
+): UseDataResult<T> {
   const [state, setState] = useState<UseDataResult<T>>({ status: 'loading' })
   const makeRef = useRef(makePromise)
   makeRef.current = makePromise
 
   useEffect(() => {
     let alive = true
+    if (!enabled) {
+      setState({ status: 'loading' })
+      return
+    }
     setState({ status: 'loading' })
     makeRef
       .current()
@@ -62,33 +72,58 @@ function useData<T>(cacheKey: string, makePromise: () => Promise<T>): UseDataRes
     return () => {
       alive = false
     }
-  }, [cacheKey])
+  }, [cacheKey, enabled])
 
   return state
 }
 
 /** 整集合数据 */
-export function useCollection<T>(key: string): UseDataResult<T[]> {
-  return useData<T[]>(key, () => getOrFetch(key, () => fetchCollection<T>(key)))
+export function useCollection<T>(key: string, enabled = true): UseDataResult<T[]> {
+  return useData<T[]>(key, () => getOrFetch(key, () => fetchCollection<T>(key)), enabled)
 }
 
 /** 单个实体（按 slug）；404 时 status 为 notfound */
-export function useEntity<T>(key: string, slug: string | undefined): UseDataResult<T> {
+export function useEntity<T>(
+  key: string,
+  slug: string | undefined,
+  enabled = true,
+): UseDataResult<T> {
   const cacheKey = `${key}/${slug ?? ''}`
-  return useData<T>(cacheKey, () =>
-    getOrFetch(cacheKey, () => fetchEntity<T>(key, slug ?? '')),
+  return useData<T>(
+    cacheKey,
+    () => getOrFetch(cacheKey, () => fetchEntity<T>(key, slug ?? '')),
+    enabled,
+  )
+}
+
+/** 船员摘要（列表/浮窗/选择器使用，避免拉全量 Crew） */
+export function useCrewSummaries(enabled = true) {
+  return useData(
+    'crews/summary',
+    () => getOrFetch('crews/summary', fetchCrewSummaries),
+    enabled,
   )
 }
 
 /** 首页入口统计 */
-export function useStats(): UseDataResult<HomeStats> {
-  return useData<HomeStats>('stats', () => getOrFetch('stats', fetchStats))
+export function useStats(enabled = true): UseDataResult<HomeStats> {
+  return useData<HomeStats>('stats', () => getOrFetch('stats', fetchStats), enabled)
 }
 
-/** 技能/骰子所属角色与职业（聚合接口 /api/skills/{slug}/owners） */
-export function useSkillOwners(slug: string | undefined): UseDataResult<SkillOwners> {
+/** 搜索索引 */
+export function useSearch(enabled = true) {
+  return useData('search', () => getOrFetch('search', fetchSearch), enabled)
+}
+
+/** 技能/骰子所属角色与职业（聚合接口 /sor/api/skills/{slug}/owners） */
+export function useSkillOwners(
+  slug: string | undefined,
+  enabled = true,
+): UseDataResult<SkillOwners> {
   const cacheKey = `skills/${slug ?? ''}/owners`
-  return useData<SkillOwners>(cacheKey, () =>
-    getOrFetch(cacheKey, () => fetchSkillOwners(slug ?? '')),
+  return useData<SkillOwners>(
+    cacheKey,
+    () => getOrFetch(cacheKey, () => fetchSkillOwners(slug ?? '')),
+    enabled,
   )
 }

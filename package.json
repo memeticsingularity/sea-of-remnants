@@ -7,10 +7,10 @@
     "postinstall": "npm install --prefix frontend",
     "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
     "dev:frontend": "npm run --prefix frontend dev",
-    "dev:backend": "backend/mvnw -f backend/pom.xml spring-boot:run",
+    "dev:backend": "bash backend/mvnw -f backend/pom.xml spring-boot:run",
     "build": "npm run build:frontend && npm run build:backend",
     "build:frontend": "npm run --prefix frontend build",
-    "build:backend": "backend/mvnw -f backend/pom.xml package -DskipTests",
+    "build:backend": "bash backend/mvnw -f backend/pom.xml package -DskipTests",
     "validate": "npm run --prefix frontend validate",
     "lint": "npm run --prefix frontend lint",
     "test": "npm run --prefix frontend test"
