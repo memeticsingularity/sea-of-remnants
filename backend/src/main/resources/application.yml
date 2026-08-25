@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: sea-of-remnants-server
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.sor: INFO
