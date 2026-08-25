@@ -1,7 +1,9 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
-import { wikiData } from '@/data'
+import { useCollection, invalidate } from '@/hooks/useCollection'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
 import { Card } from '@/components/ui/Card'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Tag } from '@/components/ui/Tag'
@@ -12,7 +14,7 @@ import { useGuardianState } from '@/hooks/useGuardianState'
 import { usePartyConfig } from '@/hooks/usePartyConfig'
 import { getTagCounts, getTagSummary } from '@/utils/guardianRecommend'
 import { evaluateGuardianTrigger } from '@/utils/partyMatch'
-import type { Guardian, ShipTag } from '@/types'
+import type { Guardian, ShipTag, Crew } from '@/types'
 
 function TagDelta({ guardian, baseCounts, shipTags }: {
   guardian: Guardian
@@ -98,12 +100,16 @@ function TriggerBadge({
 }
 
 export function FigureheadPrayerRecommendPage() {
-  const guardians = wikiData.guardians
-  const shipTags = wikiData.shipTags
-  const crews = wikiData.crews
+  const guardiansRes = useCollection<Guardian>('guardians')
+  const shipTagsRes = useCollection<ShipTag>('shipTags')
+  const crewsRes = useCollection<Crew>('crews')
 
   const { state, toggleFocusTag, clearOwned } = useGuardianState()
   const { config } = usePartyConfig()
+
+  const guardians = guardiansRes.data ?? []
+  const shipTags = shipTagsRes.data ?? []
+  const crews = crewsRes.data ?? []
   const [pickerValue, setPickerValue] = useState<(Guardian | undefined)[]>([
     undefined,
     undefined,
@@ -129,6 +135,23 @@ export function FigureheadPrayerRecommendPage() {
   )
 
   const validCandidates = pickerValue.filter((g): g is Guardian => g !== undefined)
+
+  if (
+    guardiansRes.status === 'loading' ||
+    shipTagsRes.status === 'loading' ||
+    crewsRes.status === 'loading'
+  ) {
+    return <Skeleton />
+  }
+  if (guardiansRes.status === 'error') {
+    return <ErrorState error={guardiansRes.error} onRetry={() => invalidate('guardians')} />
+  }
+  if (shipTagsRes.status === 'error') {
+    return <ErrorState error={shipTagsRes.error} onRetry={() => invalidate('shipTags')} />
+  }
+  if (crewsRes.status === 'error') {
+    return <ErrorState error={crewsRes.error} onRetry={() => invalidate('crews')} />
+  }
 
   return (
     <div className="space-y-6">

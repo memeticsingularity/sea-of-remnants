@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
-import { wikiData } from '@/data'
 import type { GachaResult } from '@/hooks/useGachaState'
+import type { Crew, Shadow, RecruitmentPool } from '@/types'
 
 export type CollectionEntityType = 'crew' | 'shadow'
 
@@ -28,12 +28,16 @@ function higherRarity(
   return RARITY_ORDER[a] < RARITY_ORDER[b] ? a : b
 }
 
-export function useCollectionStats(history: GachaResult[], poolId: string = 'all') {
+export function useCollectionStats(
+  history: GachaResult[],
+  poolId: string = 'all',
+  data: { pools: RecruitmentPool[]; crews: Crew[]; shadows: Shadow[] },
+) {
   return useMemo<CollectionItem[]>(() => {
     const pools =
       poolId === 'all'
-        ? wikiData.recruitmentPools
-        : wikiData.recruitmentPools.filter((p) => p.id === poolId)
+        ? data.pools
+        : data.pools.filter((p) => p.id === poolId)
 
     const entityMap = new Map<
       string,
@@ -101,8 +105,8 @@ export function useCollectionStats(history: GachaResult[], poolId: string = 'all
     for (const [id, meta] of entityMap) {
       const entity =
         meta.type === 'crew'
-          ? wikiData.crews.find((c) => c.id === id)
-          : wikiData.shadows.find((s) => s.id === id)
+          ? data.crews.find((c) => c.id === id)
+          : data.shadows.find((s) => s.id === id)
 
       if (!entity) continue
 
@@ -126,5 +130,5 @@ export function useCollectionStats(history: GachaResult[], poolId: string = 'all
     })
 
     return result
-  }, [history, poolId])
+  }, [history, poolId, data])
 }

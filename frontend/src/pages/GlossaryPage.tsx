@@ -1,30 +1,35 @@
 import { useState, useMemo, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { wikiData } from '@/data'
+import { useCollection, invalidate } from '@/hooks/useCollection'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
+import type { GlossaryEntry } from '@/types'
 import { Card } from '@/components/ui/Card'
 import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
 
 export function GlossaryPage() {
   const location = useLocation()
   const [query, setQuery] = useState('')
+  const { status, data, error } = useCollection<GlossaryEntry>('glossary')
+  const entries = data ?? []
 
   const filteredEntries = useMemo(() => {
     const q = query.trim().toLowerCase()
-    if (!q) return wikiData.glossary
-    return wikiData.glossary.filter(
+    if (!q) return entries
+    return entries.filter(
       (entry) =>
         entry.term.toLowerCase().includes(q) ||
         entry.definition.toLowerCase().includes(q) ||
         entry.related?.some((term) => term.toLowerCase().includes(q)),
     )
-  }, [query])
+  }, [query, entries])
 
   // 根据 URL hash 滚动到对应术语；若当前搜索筛选导致目标不可见，则清空搜索
   useEffect(() => {
     const hash = location.hash.replace('#', '')
     if (!hash) return
 
-    const target = wikiData.glossary.find((g) => g.id === hash)
+    const target = entries.find((g) => g.id === hash)
     if (!target) return
 
     const isVisible = filteredEntries.some((entry) => entry.id === hash)
@@ -37,7 +42,10 @@ export function GlossaryPage() {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
-  }, [location.hash, filteredEntries])
+  }, [location.hash, filteredEntries, entries])
+
+  if (status === 'loading') return <Skeleton />
+  if (status === 'error') return <ErrorState error={error} onRetry={() => invalidate('glossary')} />
 
   return (
     <div className="mx-auto max-w-4xl">
@@ -72,7 +80,7 @@ export function GlossaryPage() {
                     <div className="flex flex-wrap gap-2">
                       <span className="text-sm text-text-muted">相关：</span>
                       {entry.related.map((term) => {
-                        const related = wikiData.glossary.find((g) => g.term === term)
+                        const related = entries.find((g) => g.term === term)
                         return related ? (
                           <Link
                             key={term}

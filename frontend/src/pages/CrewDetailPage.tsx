@@ -1,31 +1,40 @@
 import { useParams, Link } from 'react-router-dom'
-import { wikiData, getEntityBySlug, getEntityById } from '@/data'
+import { getEntityById } from '@/data'
+import { useEntity, useCollection, invalidate } from '@/hooks/useCollection'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { StatBlock } from '@/components/ui/StatBlock'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { SkillCard } from '@/components/cards/SkillCard'
 import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
+import { NotFound } from '@/components/ui/NotFound'
+import type { Crew, Skill, Song, Equipment } from '@/types'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 export function CrewDetailPage() {
   const { slug } = useParams<{ slug: string }>()
-  const crew = getEntityBySlug(wikiData.crews, slug || '')
+  const { status, data: crew, error } = useEntity<Crew>('crews', slug)
+  const skillsCollection = useCollection<Skill>('skills')
+  const songsCollection = useCollection<Song>('songs')
+  const equipmentCollection = useCollection<Equipment>('equipment')
 
-  if (!crew) {
-    return <NotFound />
-  }
+  const skills = crew?.skills
+    ?.map((id) => getEntityById(skillsCollection.data ?? [], id))
+    .filter(Boolean)
+  const songs = crew?.songs
+    ?.map((id) => getEntityById(songsCollection.data ?? [], id))
+    .filter(Boolean)
+  const equipment = crew?.recommendedEquipment
+    ?.map((id) => getEntityById(equipmentCollection.data ?? [], id))
+    .filter(Boolean)
 
-  const skills = crew.skills
-    ?.map((id) => getEntityById(wikiData.skills, id))
-    .filter(Boolean)
-  const songs = crew.songs
-    ?.map((id) => getEntityById(wikiData.songs, id))
-    .filter(Boolean)
-  const equipment = crew.recommendedEquipment
-    ?.map((id) => getEntityById(wikiData.equipment, id))
-    .filter(Boolean)
+  if (status === 'loading') return <Skeleton />
+  if (status === 'error') return <ErrorState error={error} onRetry={() => invalidate(`crews/${slug ?? ''}`)} />
+  if (status === 'notfound' || !crew)
+    return <NotFound title="未找到该船员" backTo="/crews" backLabel="返回船员列表" />
 
   return (
     <div>
@@ -133,17 +142,6 @@ export function CrewDetailPage() {
           )}
         </div>
       </div>
-    </div>
-  )
-}
-
-function NotFound() {
-  return (
-    <div className="text-center">
-      <h2 className="text-2xl font-bold text-text">未找到该船员</h2>
-      <Link to="/crews" className="mt-4 inline-block text-accent-cyan hover:underline">
-        返回船员列表
-      </Link>
     </div>
   )
 }

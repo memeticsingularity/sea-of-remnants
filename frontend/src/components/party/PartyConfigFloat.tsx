@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Users, X } from 'lucide-react'
-import { wikiData } from '@/data'
+import { useCollection } from '@/hooks/useCollection'
 import { Card } from '@/components/ui/Card'
 import { usePartyConfig } from '@/hooks/usePartyConfig'
 import type { Crew } from '@/types'
@@ -8,7 +8,8 @@ import type { Crew } from '@/types'
 export function PartyConfigFloat() {
   const [open, setOpen] = useState(false)
   const { config, setCrew, clearSlot, resetConfig } = usePartyConfig()
-  const crews = wikiData.crews
+  const { data: crewData } = useCollection<Crew>('crews')
+  const crews = crewData ?? []
 
   const filledCount = config.slots.filter((s) => s.crewId !== '').length
 

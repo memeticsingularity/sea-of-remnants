@@ -1,6 +1,9 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { wikiData } from '@/data'
+import { useCollection, invalidate } from '@/hooks/useCollection'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { EmptyState } from '@/components/ui/EmptyState'
+import { ErrorState } from '@/components/ui/ErrorState'
 import { CrewCard } from '@/components/cards/CrewCard'
 import { SkillCard } from '@/components/cards/SkillCard'
 import { DiceCard } from '@/components/cards/DiceCard'
@@ -25,6 +28,19 @@ type CategoryKey =
 interface CategoryPageProps {
   category: CategoryKey
 }
+
+type CategoryItem =
+  | Crew
+  | Ship
+  | GameClass
+  | Skill
+  | Dice
+  | Song
+  | Equipment
+  | Item
+  | Quest
+  | Location
+  | Symptom
 
 const categoryLabels: Record<CategoryKey, string> = {
   crews: '船员',
@@ -97,9 +113,11 @@ const filterConfigs: Record<CategoryKey, FilterConfig[]> = {
 }
 
 export function CategoryPage({ category }: CategoryPageProps) {
-  const items = wikiData[category]
+  const { status, data, error } = useCollection<CategoryItem>(category)
   const configs = filterConfigs[category]
   const [activeFilters, setActiveFilters] = useState<Record<string, string>>({})
+
+  const items = data ?? []
 
   const filteredItems = useMemo(() => {
     if (Object.keys(activeFilters).length === 0) return items
@@ -127,6 +145,10 @@ export function CategoryPage({ category }: CategoryPageProps) {
       return { ...prev, [key]: value }
     })
   }
+
+  if (status === 'loading') return <Skeleton />
+  if (status === 'error') return <ErrorState error={error} onRetry={() => invalidate(category)} />
+  if (status === 'notfound') return <EmptyState title="暂无数据" />
 
   return (
     <div>
@@ -213,7 +235,7 @@ function FilterGroup({ config, items, activeValue, onSelect }: FilterGroupProps)
   )
 }
 
-function renderItemCard(category: CategoryKey, item: unknown) {
+function renderItemCard(category: CategoryKey, item: CategoryItem) {
   switch (category) {
     case 'crews':
       return <CrewCard key={(item as Crew).id} crew={item as Crew} />

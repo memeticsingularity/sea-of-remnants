@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Card } from '@/components/ui/Card'
-import { wikiData } from '@/data'
+import { useCollection } from '@/hooks/useCollection'
 import {
   useMemoryReunionLog,
   type MemoryReunionLogEntry,
 } from '@/hooks/useMemoryReunionLog'
-import type { RecruitmentPool } from '@/types'
+import type { RecruitmentPool, Crew, Shadow } from '@/types'
 
 type Depth = 'shallow' | 'middle' | 'deep'
 type Rarity = 'black' | 'purple'
@@ -33,20 +33,24 @@ const rarityText: Record<Rarity, string> = {
 }
 
 function usePoolObjects(pool: RecruitmentPool | undefined, rarity: Rarity, type: ObjectType) {
+  const { data: crewData } = useCollection<Crew>('crews')
+  const { data: shadowData } = useCollection<Shadow>('shadows')
   return useMemo(() => {
     if (!pool) return []
     const tier = pool.tiers.find((t) => t.key === rarity)
     if (!tier) return []
+    const crewList = crewData ?? []
+    const shadowList = shadowData ?? []
     const ids = type === 'crew' ? tier.pool.crewIds : tier.pool.shadowIds
     return ids.map((id) => {
       if (type === 'crew') {
-        const crew = wikiData.crews.find((c) => c.id === id)
+        const crew = crewList.find((c) => c.id === id)
         return { id, name: crew?.name ?? id }
       }
-      const shadow = wikiData.shadows.find((s) => s.id === id)
+      const shadow = shadowList.find((s) => s.id === id)
       return { id, name: shadow?.name ?? id }
     })
-  }, [pool, rarity, type])
+  }, [pool, rarity, type, crewData, shadowData])
 }
 
 export function MemoryReunionLogPanel({

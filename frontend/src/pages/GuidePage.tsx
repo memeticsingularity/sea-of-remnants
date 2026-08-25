@@ -1,5 +1,8 @@
 import { useParams, Link } from 'react-router-dom'
-import { wikiData } from '@/data'
+import { useCollection, invalidate } from '@/hooks/useCollection'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
+import type { Page } from '@/types'
 import { Card } from '@/components/ui/Card'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import ReactMarkdown from 'react-markdown'
@@ -7,7 +10,13 @@ import remarkGfm from 'remark-gfm'
 
 export function GuidePage() {
   const { slug } = useParams<{ slug: string }>()
-  const page = wikiData.pages.find((p) => p.route === `/guides/${slug}`)
+  const { status, data, error } = useCollection<Page>('pages')
+
+  const pages = data ?? []
+  const page = pages.find((p) => p.route === `/guides/${slug}`)
+
+  if (status === 'loading') return <Skeleton />
+  if (status === 'error') return <ErrorState error={error} onRetry={() => invalidate('pages')} />
 
   if (!page) {
     return (

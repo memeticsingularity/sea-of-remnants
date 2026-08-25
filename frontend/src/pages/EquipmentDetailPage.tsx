@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
-import { wikiData, getEntityBySlug } from '@/data'
+import { getEntityById } from '@/data'
+import { useEntity, useCollection, invalidate } from '@/hooks/useCollection'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
@@ -7,21 +8,21 @@ import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
 import { formatStatName } from '@/utils/format'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
+import { NotFound } from '@/components/ui/NotFound'
+import type { Equipment, RandomAffix } from '@/types'
 
 export function EquipmentDetailPage() {
   const { slug } = useParams<{ slug: string }>()
-  const equipment = getEntityBySlug(wikiData.equipment, slug || '')
+  const { status, data: equipment, error } = useEntity<Equipment>('equipment', slug)
+  const randomAffixesCollection = useCollection<RandomAffix>('randomAffixes')
 
-  if (!equipment) {
-    return (
-      <div className="text-center">
-        <h2 className="text-2xl font-bold text-text">未找到该行装</h2>
-        <Link to="/equipment" className="mt-4 inline-block text-accent-cyan hover:underline">
-          返回行装列表
-        </Link>
-      </div>
-    )
-  }
+  if (status === 'loading') return <Skeleton />
+  if (status === 'error')
+    return <ErrorState error={error} onRetry={() => invalidate(`equipment/${slug ?? ''}`)} />
+  if (status === 'notfound' || !equipment)
+    return <NotFound title="未找到该行装" backTo="/equipment" backLabel="返回行装列表" />
 
   const maxEnhanceLevel = equipment.slot === '奇珍' ? 0 : 10
   const statKeys = getAllStatKeys(equipment)
@@ -166,7 +167,7 @@ export function EquipmentDetailPage() {
               <h2 className="mb-4 text-xl font-bold text-text">可能出现的随机词条</h2>
               <ul className="space-y-2">
                 {equipment.randomAffixIds.map((id) => {
-                  const affix = wikiData.randomAffixes.find((a) => a.id === id)
+                  const affix = getEntityById(randomAffixesCollection.data ?? [], id)
                   if (!affix) return null
                   return (
                     <li key={id} className="flex flex-wrap gap-2 text-text-muted">

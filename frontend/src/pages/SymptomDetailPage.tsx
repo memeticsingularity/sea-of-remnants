@@ -1,23 +1,22 @@
-import { useParams, Link } from 'react-router-dom'
-import { wikiData, getEntityBySlug } from '@/data'
+import { useParams } from 'react-router-dom'
+import { useEntity, invalidate } from '@/hooks/useCollection'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
+import { NotFound } from '@/components/ui/NotFound'
+import type { Symptom } from '@/types'
 
 export function SymptomDetailPage() {
   const { slug } = useParams<{ slug: string }>()
-  const symptom = getEntityBySlug(wikiData.symptoms, slug || '')
+  const { status, data: symptom, error } = useEntity<Symptom>('symptoms', slug)
 
-  if (!symptom) {
-    return (
-      <div className="text-center">
-        <h2 className="text-2xl font-bold text-text">未找到该症状</h2>
-        <Link to="/symptoms" className="mt-4 inline-block text-accent-cyan hover:underline">
-          返回症状列表
-        </Link>
-      </div>
-    )
-  }
+  if (status === 'loading') return <Skeleton />
+  if (status === 'error')
+    return <ErrorState error={error} onRetry={() => invalidate(`symptoms/${slug ?? ''}`)} />
+  if (status === 'notfound' || !symptom)
+    return <NotFound title="未找到该症状" backTo="/symptoms" backLabel="返回症状列表" />
 
   return (
     <div className="mx-auto max-w-4xl">

@@ -1,11 +1,14 @@
 import { useMemo, useState } from 'react'
 import { Search } from 'lucide-react'
-import { wikiData } from '@/data'
+import { useCollection, invalidate } from '@/hooks/useCollection'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
 import { Card } from '@/components/ui/Card'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CollectionItemCard } from '@/components/recruitment/CollectionItemCard'
 import { useGachaHistory } from '@/hooks/useGachaState'
 import { useCollectionStats, type CollectionItem } from '@/hooks/useCollectionStats'
+import type { RecruitmentPool, Crew, Shadow } from '@/types'
 
 type FilterMode = 'all' | 'owned' | 'missing'
 type RarityFilter = 'all' | 'black' | 'purple' | 'blue'
@@ -24,8 +27,21 @@ const TYPE_OPTIONS: { key: TypeTab; label: string }[] = [
 ]
 
 export function CollectionPage() {
-  const pools = wikiData.recruitmentPools
+  const poolsResult = useCollection<RecruitmentPool>('recruitmentPools')
+  const crewsResult = useCollection<Crew>('crews')
+  const shadowsResult = useCollection<Shadow>('shadows')
   const { history } = useGachaHistory()
+
+  const collectionData = useMemo(
+    () => ({
+      pools: poolsResult.data ?? [],
+      crews: crewsResult.data ?? [],
+      shadows: shadowsResult.data ?? [],
+    }),
+    [poolsResult.data, crewsResult.data, shadowsResult.data],
+  )
+
+  const pools = collectionData.pools
 
   const [poolId, setPoolId] = useState<string>('all')
   const [filterMode, setFilterMode] = useState<FilterMode>('all')
@@ -33,7 +49,7 @@ export function CollectionPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [activeType, setActiveType] = useState<TypeTab>('crew')
 
-  const collection = useCollectionStats(history, poolId)
+  const collection = useCollectionStats(history, poolId, collectionData)
 
   const filtered = useMemo(() => {
     const query = searchQuery.trim().toLowerCase()
@@ -50,6 +66,10 @@ export function CollectionPage() {
 
   const ownedCount = collection.filter((item) => item.pulledCount > 0).length
   const activeOwnedCount = activeItems.filter((item) => item.pulledCount > 0).length
+
+  if (poolsResult.status === 'loading') return <Skeleton />
+  if (poolsResult.status === 'error')
+    return <ErrorState error={poolsResult.error} onRetry={() => invalidate('recruitmentPools')} />
 
   return (
     <div className="space-y-6">

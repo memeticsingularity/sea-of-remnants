@@ -1,6 +1,5 @@
 import { useCallback, useMemo } from 'react'
-import { wikiData } from '@/data'
-import type { RecruitmentPool, RecruitmentTier } from '@/types'
+import type { RecruitmentPool, RecruitmentTier, Crew, Shadow } from '@/types'
 import type { GachaResult, GachaState } from './useGachaState'
 
 export interface PullOutcome {
@@ -13,9 +12,10 @@ function isMemoryPool(pool: RecruitmentPool) {
   return pool.slug.endsWith('-memory')
 }
 
-export function useGachaEngine(pool: RecruitmentPool | undefined) {
-  const data = wikiData
-
+export function useGachaEngine(
+  pool: RecruitmentPool | undefined,
+  data: { crews: Crew[]; shadows: Shadow[] },
+) {
   const getName = useCallback(
     (id: string, type: 'crew' | 'shadow'): string => {
       if (type === 'crew') {

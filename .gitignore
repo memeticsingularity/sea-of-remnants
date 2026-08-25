@@ -25,7 +25,11 @@ dist-ssr
 
 # Backend
 backend/target/
-backend/.mvn/
+backend/.mvn/wrapper/
+!backend/.mvn/maven.config
 backend/mvnw
 backend/mvnw.cmd
 backend/.idea/
+
+# Project-local Maven repository
+.m2/repository/

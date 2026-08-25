@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { Card } from '@/components/ui/Card'
-import { wikiData } from '@/data'
-import type { RecruitmentPool } from '@/types'
+import { useCollection } from '@/hooks/useCollection'
+import type { RecruitmentPool, Crew, Shadow } from '@/types'
 
 interface DeepMemoryTargetSelectorProps {
   pool: RecruitmentPool
@@ -18,16 +18,20 @@ interface TargetGroup {
 }
 
 function useTargetGroups(pool: RecruitmentPool): TargetGroup[] {
+  const { data: crewData } = useCollection<Crew>('crews')
+  const { data: shadowData } = useCollection<Shadow>('shadows')
   return useMemo(() => {
+    const crewList = crewData ?? []
+    const shadowList = shadowData ?? []
     const crewIds = pool.upItems.flatMap((u) => u.crewIds || [])
     const shadowIds = pool.upItems.flatMap((u) => u.shadowIds || [])
 
     const getName = (id: string) => {
       if (id.startsWith('crew-')) {
-        return wikiData.crews.find((c) => c.id === id)?.name ?? id
+        return crewList.find((c) => c.id === id)?.name ?? id
       }
       if (id.startsWith('shadow-')) {
-        return wikiData.shadows.find((s) => s.id === id)?.name ?? id
+        return shadowList.find((s) => s.id === id)?.name ?? id
       }
       return id
     }
@@ -43,7 +47,7 @@ function useTargetGroups(pool: RecruitmentPool): TargetGroup[] {
       })
     }
     return groups
-  }, [pool])
+  }, [pool, crewData, shadowData])
 }
 
 export function DeepMemoryTargetSelector({

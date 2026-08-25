@@ -1,7 +1,10 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { HelpCircle, Trash2, Link2, Link2Off } from 'lucide-react'
-import { wikiData } from '@/data'
+import { useCollection, invalidate } from '@/hooks/useCollection'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
+import type { Guardian, ShipTag, Crew } from '@/types'
 import { Card } from '@/components/ui/Card'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import {
@@ -20,9 +23,9 @@ import {
 import { usePartyConfig } from '@/hooks/usePartyConfig'
 
 export function FigureheadPrayerPage() {
-  const guardians = wikiData.guardians
-  const shipTags = wikiData.shipTags
-  const crews = wikiData.crews
+  const guardiansRes = useCollection<Guardian>('guardians')
+  const shipTagsRes = useCollection<ShipTag>('shipTags')
+  const crewsRes = useCollection<Crew>('crews')
 
   const {
     state,
@@ -43,6 +46,10 @@ export function FigureheadPrayerPage() {
     onlyTrigger: false,
     searchQuery: '',
   })
+
+  const guardians = guardiansRes.data ?? []
+  const shipTags = shipTagsRes.data ?? []
+  const crews = crewsRes.data ?? []
 
   const partyAttrs = useMemo(
     () =>
@@ -81,6 +88,23 @@ export function FigureheadPrayerPage() {
     if (linked) {
       setGalleryCategory(category)
     }
+  }
+
+  if (
+    guardiansRes.status === 'loading' ||
+    shipTagsRes.status === 'loading' ||
+    crewsRes.status === 'loading'
+  ) {
+    return <Skeleton />
+  }
+  if (guardiansRes.status === 'error') {
+    return <ErrorState error={guardiansRes.error} onRetry={() => invalidate('guardians')} />
+  }
+  if (shipTagsRes.status === 'error') {
+    return <ErrorState error={shipTagsRes.error} onRetry={() => invalidate('shipTags')} />
+  }
+  if (crewsRes.status === 'error') {
+    return <ErrorState error={crewsRes.error} onRetry={() => invalidate('crews')} />
   }
 
   return (

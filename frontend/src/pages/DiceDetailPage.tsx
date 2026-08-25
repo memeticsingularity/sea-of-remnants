@@ -1,30 +1,26 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { wikiData, getEntityBySlug } from '@/data'
+import { useEntity, useCollection, invalidate } from '@/hooks/useCollection'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
+import { NotFound } from '@/components/ui/NotFound'
+import type { Dice, GlossaryEntry } from '@/types'
 
 export function DiceDetailPage() {
   const { slug } = useParams<{ slug: string }>()
+  const { status, data: dice, error } = useEntity<Dice>('dice', slug)
+  const glossaryCollection = useCollection<GlossaryEntry>('glossary')
   const [showDetailed, setShowDetailed] = useState(false)
 
-  const dice = getEntityBySlug(wikiData.dice, slug || '')
-
-  if (!dice) {
-    return (
-      <div className="text-center">
-        <h2 className="text-2xl font-bold text-text">未找到</h2>
-        <Link
-          to="/dice"
-          className="mt-4 inline-block text-accent-cyan hover:underline"
-        >
-          返回强化骰列表
-        </Link>
-      </div>
-    )
-  }
+  if (status === 'loading') return <Skeleton />
+  if (status === 'error')
+    return <ErrorState error={error} onRetry={() => invalidate(`dice/${slug ?? ''}`)} />
+  if (status === 'notfound' || !dice)
+    return <NotFound title="未找到" backTo="/dice" backLabel="返回强化骰列表" />
 
   const desc = showDetailed && dice.detailedDesc ? dice.detailedDesc : dice.shortDesc
 
@@ -119,7 +115,7 @@ export function DiceDetailPage() {
               <h2 className="mb-4 text-xl font-bold text-text">相关术语</h2>
               <div className="flex flex-wrap gap-2">
                 {dice.relatedGlossary.map((term) => {
-                  const entry = wikiData.glossary.find((g) => g.term === term)
+                  const entry = glossaryCollection.data?.find((g) => g.term === term)
                   return entry ? (
                     <Link
                       key={term}

@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react'
 import { Card } from '@/components/ui/Card'
 import type { GachaResult } from '@/hooks/useGachaState'
-import { wikiData } from '@/data'
+import { useCollection } from '@/hooks/useCollection'
+import type { RecruitmentPool } from '@/types'
 
 interface HistoryPanelProps {
   history: GachaResult[]
@@ -21,7 +22,8 @@ const rarityText: Record<GachaResult['rarity'], string> = {
 }
 
 export function HistoryPanel({ history, onClear }: HistoryPanelProps) {
-  const pools = wikiData.recruitmentPools
+  const { data: poolData } = useCollection<RecruitmentPool>('recruitmentPools')
+  const pools = poolData ?? []
   const [filterPoolId, setFilterPoolId] = useState<string>('all')
 
   const filteredHistory = useMemo(() => {

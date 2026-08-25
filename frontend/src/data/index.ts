@@ -1,13 +1,9 @@
-import type { WikiData, Crew, GameClass } from '@/types'
-import generated from './generated.json'
-
 /**
- * 前端使用的统一 Wiki 数据集
+ * 前端数据层纯函数工具
  *
- * 由 scripts/build-content.js 从 content/ 目录生成，
- * 包含船员、技能、行装、术语等所有内容。
+ * 集合内容不再在此处提供——各页面/组件统一通过 `@/hooks/useCollection`
+ * 从后端 `/api/*` 按需获取。本文件只保留对已加载数组的纯操作函数。
  */
-export const wikiData = generated as unknown as WikiData
 
 /**
  * 根据 slug 在集合中查找实体
@@ -60,12 +56,4 @@ export function getMaxSkillLevel(item: Levelable): number {
 
 export function getEffectAtLevel(item: Levelable, level: number): string | undefined {
   return getLevelDetailMap(item).get(level)
-}
-
-/** 查找持有某个技能的船员与职业 */
-
-export function getSkillOwners(skillId: string): { crews: Crew[]; classes: GameClass[] } {
-  const crews = wikiData.crews.filter((c) => c.skills?.includes(skillId))
-  const classes = wikiData.classes.filter((c) => c.skills?.includes(skillId))
-  return { crews, classes }
 }

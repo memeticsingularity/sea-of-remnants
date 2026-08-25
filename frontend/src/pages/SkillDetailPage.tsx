@@ -1,13 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { wikiData, getEntityBySlug, getAvailableLevels, getSkillOwners } from '@/data'
+import { getAvailableLevels } from '@/data'
+import { useEntity, useCollection, useSkillOwners, invalidate } from '@/hooks/useCollection'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
+import { NotFound } from '@/components/ui/NotFound'
 import { SkillLevelSelector } from '@/components/skills/SkillLevelSelector'
 import { SkillDescription } from '@/components/skills/SkillDescription'
 import { SkillDetailToggle } from '@/components/skills/SkillDetailToggle'
-import type { Skill, Dice } from '@/types'
+import type { Skill, Dice, GlossaryEntry } from '@/types'
 
 interface SkillDetailPageProps {
   type?: 'skill' | 'dice'
@@ -17,26 +21,34 @@ export function SkillDetailPage({ type = 'skill' }: SkillDetailPageProps) {
   const { slug } = useParams<{ slug: string }>()
   const [showDetailed, setShowDetailed] = useState(false)
 
-  const collection = type === 'dice' ? wikiData.dice : wikiData.skills
-  const item = getEntityBySlug(collection as (Skill | Dice)[], slug || '')
+  const collectionKey = type === 'dice' ? 'dice' : 'skills'
+  const itemResult = useEntity<Skill | Dice>(collectionKey, slug)
+  const diceCollection = useCollection<Dice>('dice')
+  const glossaryCollection = useCollection<GlossaryEntry>('glossary')
+  const ownersResult = useSkillOwners(slug)
 
-  const availableLevels = item ? getAvailableLevels(item as Skill | Dice) : []
-  const defaultLevel = availableLevels[0] ?? (item as Skill | Dice)?.level ?? 1
-  const [selectedLevel, setSelectedLevel] = useState(defaultLevel)
+  const [selectedLevel, setSelectedLevel] = useState(1)
+  useEffect(() => {
+    if (itemResult.status === 'ready' && itemResult.data) {
+      const lv = getAvailableLevels(itemResult.data)[0] ?? itemResult.data.level ?? 1
+      setSelectedLevel(lv)
+    }
+  }, [itemResult.status, itemResult.data])
 
-  if (!item) {
+  if (itemResult.status === 'loading') return <Skeleton />
+  if (itemResult.status === 'error')
     return (
-      <div className="text-center">
-        <h2 className="text-2xl font-bold text-text">未找到</h2>
-        <Link
-          to={type === 'dice' ? '/dice' : '/skills'}
-          className="mt-4 inline-block text-accent-cyan hover:underline"
-        >
-          返回列表
-        </Link>
-      </div>
+      <ErrorState
+        error={itemResult.error}
+        onRetry={() => invalidate(`${collectionKey}/${slug ?? ''}`)}
+      />
     )
-  }
+  if (itemResult.status === 'notfound' || !itemResult.data)
+    return (
+      <NotFound title="未找到" backTo={type === 'dice' ? '/dice' : '/skills'} backLabel="返回列表" />
+    )
+
+  const item = itemResult.data
 
   const isSkill = 'tags' in item
   const label = type === 'dice' ? '骰子' : '技能'
@@ -44,7 +56,7 @@ export function SkillDetailPage({ type = 'skill' }: SkillDetailPageProps) {
 
   const hasDetailed = Boolean(item.detailedDesc || (item as Skill).levelDetails?.length)
 
-  const owners = isSkill ? getSkillOwners(item.id) : { crews: [], classes: [] }
+  const owners = isSkill ? ownersResult.data ?? { crews: [], classes: [] } : { crews: [], classes: [] }
   const hasOwners = owners.crews.length > 0 || owners.classes.length > 0
 
   return (
@@ -126,7 +138,7 @@ export function SkillDetailPage({ type = 'skill' }: SkillDetailPageProps) {
                     <div className="mb-1 text-sm text-text-muted">槽位 {index + 1}</div>
                     <div className="flex flex-wrap gap-2">
                       {slot.alternatives.map((diceName) => {
-                        const dice = wikiData.dice.find((d) => d.name === diceName)
+                        const dice = (diceCollection.data ?? []).find((d) => d.name === diceName)
                         return dice ? (
                           <Link
                             key={diceName}
@@ -208,7 +220,7 @@ export function SkillDetailPage({ type = 'skill' }: SkillDetailPageProps) {
               <h2 className="mb-4 text-xl font-bold text-text">相关术语</h2>
               <div className="flex flex-wrap gap-2">
                 {item.relatedGlossary.map((term) => {
-                  const entry = wikiData.glossary.find((g) => g.term === term)
+                  const entry = (glossaryCollection.data ?? []).find((g) => g.term === term)
                   return entry ? (
                     <Link
                       key={term}

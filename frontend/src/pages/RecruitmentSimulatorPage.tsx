@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react'
-import { wikiData } from '@/data'
+import { useCollection, invalidate } from '@/hooks/useCollection'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
 import { Card } from '@/components/ui/Card'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { PoolSelector } from '@/components/recruitment/PoolSelector'
@@ -14,7 +16,7 @@ import { StatsPanel } from '@/components/recruitment/StatsPanel'
 import { MemoryReunionLogPanel } from '@/components/recruitment/MemoryReunionLogPanel'
 import { useGachaState, useGachaHistory, type GachaResult } from '@/hooks/useGachaState'
 import { useGachaEngine } from '@/hooks/useGachaEngine'
-import type { RecruitmentPool } from '@/types'
+import type { RecruitmentPool, Crew, Shadow } from '@/types'
 
 const MEMORY_GROUP_ID = 'pool-memory-reunion'
 const MEMORY_SLUGS = ['shallow-memory', 'middle-memory', 'deep-memory']
@@ -33,7 +35,15 @@ function getDefaultShadowTarget(pool: RecruitmentPool): string {
 }
 
 export function RecruitmentSimulatorPage() {
-  const pools = wikiData.recruitmentPools
+  const poolsResult = useCollection<RecruitmentPool>('recruitmentPools')
+  const crewsResult = useCollection<Crew>('crews')
+  const shadowsResult = useCollection<Shadow>('shadows')
+
+  const pools = poolsResult.data ?? []
+  const engineData = useMemo(
+    () => ({ crews: crewsResult.data ?? [], shadows: shadowsResult.data ?? [] }),
+    [crewsResult.data, shadowsResult.data],
+  )
 
   const memoryPools = useMemo(() => pools.filter(isMemoryPool), [pools])
   const otherPools = useMemo(() => pools.filter((p) => !isMemoryPool(p)), [pools])
@@ -114,7 +124,7 @@ export function RecruitmentSimulatorPage() {
 
   const { state, updateState, resetState } = useGachaState(activePool?.id ?? '')
   const { history, append, clear } = useGachaHistory()
-  const engine = useGachaEngine(activePool)
+  const engine = useGachaEngine(activePool, engineData)
 
   const [latestResults, setLatestResults] = useState<GachaResult[]>([])
   const [isAnimating, setIsAnimating] = useState(false)
@@ -123,6 +133,10 @@ export function RecruitmentSimulatorPage() {
     setCrewTargetAcquired(false)
     setShadowTargetAcquired(false)
   }
+
+  if (poolsResult.status === 'loading') return <Skeleton />
+  if (poolsResult.status === 'error')
+    return <ErrorState error={poolsResult.error} onRetry={() => invalidate('recruitmentPools')} />
 
   if (!activePool) {
     return (

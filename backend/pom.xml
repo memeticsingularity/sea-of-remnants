@@ -35,13 +35,38 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-yaml</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>${project.basedir}/../frontend/content/data</directory>
+        <targetPath>data/yaml</targetPath>
+        <filtering>false</filtering>
+      </resource>
+      <resource>
+        <directory>${project.basedir}/../frontend/content/markdown</directory>
+        <targetPath>data/markdown</targetPath>
+        <filtering>false</filtering>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <!-- 屏蔽 JDK 24+ 对原生访问(JNI)的 Warning 刷屏：Tomcat 启动时会 System::load，
+               加 JVM 参数后 stderr 不再逐行打印 "restricted method" 提醒（仅 mvnw spring-boot:run 生效） -->
+          <jvmArguments>--enable-native-access=ALL-UNNAMED</jvmArguments>
+        </configuration>
       </plugin>
     </plugins>
   </build>

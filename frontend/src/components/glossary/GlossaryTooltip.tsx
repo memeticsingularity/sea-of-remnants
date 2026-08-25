@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
-import { wikiData } from '@/data'
+import { useCollection } from '@/hooks/useCollection'
 import { MAIN_ATTRIBUTES } from '@/utils/partyMatch'
+import type { GlossaryEntry } from '@/types'
 
 interface GlossaryTooltipProps {
   /** 原始文本，其中 [术语名] 会被解析为高亮术语 */
@@ -29,6 +30,7 @@ export function GlossaryTooltip({
   placement = 'top',
   partyAttrs,
 }: GlossaryTooltipProps) {
+  const { data: glossary } = useCollection<GlossaryEntry>('glossary')
   const segments = useMemo(() => parseText(text), [text])
 
   return (
@@ -37,7 +39,14 @@ export function GlossaryTooltip({
         if (segment.type === 'term') {
           // tooltip 内部的术语统一向下弹出，避免遮挡父 tooltip
           const termPlacement = placement === 'top' ? 'bottom' : 'bottom'
-          return <Term key={index} term={segment.content} placement={termPlacement} />
+          return (
+            <Term
+              key={index}
+              term={segment.content}
+              placement={termPlacement}
+              glossary={glossary ?? []}
+            />
+          )
         }
         return (
           <HighlightedText
@@ -114,6 +123,7 @@ function HighlightedText({
 interface TermProps {
   term: string
   placement?: 'top' | 'bottom'
+  glossary: GlossaryEntry[]
 }
 
 /**
@@ -122,11 +132,11 @@ interface TermProps {
  * 在 glossary 中查找对应术语，找到则显示 hover 提示，
  * 未找到则按普通文本渲染。
  */
-function Term({ term, placement = 'top' }: TermProps) {
+function Term({ term, placement = 'top', glossary }: TermProps) {
   const [isOpen, setIsOpen] = useState(false)
   const entry = useMemo(
-    () => wikiData.glossary.find((g) => g.term === term),
-    [term],
+    () => glossary.find((g) => g.term === term),
+    [glossary, term],
   )
 
   if (!entry) {

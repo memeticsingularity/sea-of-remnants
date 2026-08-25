@@ -1,14 +1,22 @@
-import { wikiData } from '@/data'
+import { useCollection, invalidate } from '@/hooks/useCollection'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
+import type { RandomAffix } from '@/types'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { RandomAffixCard } from '@/components/cards/RandomAffixCard'
 
 export function RandomAffixListPage() {
-  const affixes = [...wikiData.randomAffixes].sort((a, b) => {
+  const { status, data, error } = useCollection<RandomAffix>('randomAffixes')
+
+  const affixes = [...(data ?? [])].sort((a, b) => {
     const countA = a.occurrences?.length || 0
     const countB = b.occurrences?.length || 0
     if (countB !== countA) return countB - countA
     return a.name.localeCompare(b.name, 'zh-CN')
   })
+
+  if (status === 'loading') return <Skeleton />
+  if (status === 'error') return <ErrorState error={error} onRetry={() => invalidate('randomAffixes')} />
 
   return (
     <div>

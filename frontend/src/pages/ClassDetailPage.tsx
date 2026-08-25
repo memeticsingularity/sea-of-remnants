@@ -1,32 +1,34 @@
-import { useParams, Link } from 'react-router-dom'
-import { wikiData, getEntityBySlug, getEntityById } from '@/data'
+import { useParams } from 'react-router-dom'
+import { getEntityById } from '@/data'
+import { useEntity, useCollection, invalidate } from '@/hooks/useCollection'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { SkillCard } from '@/components/cards/SkillCard'
 import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
+import { Skeleton } from '@/components/ui/Skeleton'
+import { ErrorState } from '@/components/ui/ErrorState'
+import { NotFound } from '@/components/ui/NotFound'
+import type { GameClass, Skill, Song } from '@/types'
 
 export function ClassDetailPage() {
   const { slug } = useParams<{ slug: string }>()
-  const gameClass = getEntityBySlug(wikiData.classes, slug || '')
+  const { status, data: gameClass, error } = useEntity<GameClass>('classes', slug)
+  const skillsCollection = useCollection<Skill>('skills')
+  const songsCollection = useCollection<Song>('songs')
 
-  if (!gameClass) {
-    return (
-      <div className="text-center">
-        <h2 className="text-2xl font-bold text-text">未找到该职业</h2>
-        <Link to="/classes" className="mt-4 inline-block text-accent-cyan hover:underline">
-          返回职业列表
-        </Link>
-      </div>
-    )
-  }
+  const skills = gameClass?.skills
+    ?.map((id) => getEntityById(skillsCollection.data ?? [], id))
+    .filter(Boolean)
+  const songs = gameClass?.songs
+    ?.map((id) => getEntityById(songsCollection.data ?? [], id))
+    .filter(Boolean)
 
-  const skills = gameClass.skills
-    ?.map((id) => getEntityById(wikiData.skills, id))
-    .filter(Boolean)
-  const songs = gameClass.songs
-    ?.map((id) => getEntityById(wikiData.songs, id))
-    .filter(Boolean)
+  if (status === 'loading') return <Skeleton />
+  if (status === 'error')
+    return <ErrorState error={error} onRetry={() => invalidate(`classes/${slug ?? ''}`)} />
+  if (status === 'notfound' || !gameClass)
+    return <NotFound title="未找到该职业" backTo="/classes" backLabel="返回职业列表" />
 
   return (
     <div>
