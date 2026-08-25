@@ -15,6 +15,7 @@ import { FigureheadPrayerPage } from '@/pages/FigureheadPrayerPage'
 import { FigureheadPrayerRecommendPage } from '@/pages/FigureheadPrayerRecommendPage'
 import { RandomAffixListPage } from '@/pages/RandomAffixListPage'
 import { RandomAffixDetailPage } from '@/pages/RandomAffixDetailPage'
+import { ClassDetailPage } from '@/pages/ClassDetailPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
 export const router = createBrowserRouter([
@@ -32,7 +33,7 @@ export const router = createBrowserRouter([
       { path: 'ships', element: <CategoryPage category="ships" /> },
       { path: 'ships/:slug', element: <NotFoundPage /> },
       { path: 'classes', element: <CategoryPage category="classes" /> },
-      { path: 'classes/:slug', element: <NotFoundPage /> },
+      { path: 'classes/:slug', element: <ClassDetailPage /> },
       { path: 'skills', element: <CategoryPage category="skills" /> },
       { path: 'skills/:slug', element: <SkillDetailPage /> },
       { path: 'dice', element: <CategoryPage category="dice" /> },

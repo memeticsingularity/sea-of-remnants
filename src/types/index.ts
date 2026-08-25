@@ -15,6 +15,8 @@ export interface Skill {
   maxLevel?: number
   shortDesc: string
   detailedDesc?: string
+  /** 各等级完整效果说明，key 为等级 */
+  levelDetails?: SkillLevelDetail[]
   tags: string[]
   extraActions?: number
   diceSlots?: DiceSlot[]
@@ -22,6 +24,11 @@ export interface Skill {
   image?: string
   source?: string
   buildNotes?: string
+}
+
+export interface SkillLevelDetail {
+  level: number
+  detailedDesc: string
 }
 
 export interface DiceSlot {
@@ -137,17 +144,48 @@ export interface Crew {
   element?: string
   /** 主属性：力量 / 敏捷 / 体质 / 智力 / 感知 / 魅力 */
   primaryStat?: string
-  /** 船队/阵营 */
+  /** 所在船队 */
   faction?: string
+  /** 阵营，如 奥托皇亚 / 破晓者 */
+  camp?: string
   obtain?: string
+  /** 获取状态：常驻 / 限定 等 */
+  availability?: string
+  /** 加入版本 */
+  versionAdded?: string
+  /** 喜爱食物 */
+  favoriteFood?: string
+  /** 角色简介 */
+  introduction?: string
+  /** 船员小传/背景故事 */
+  lore?: LoreEntry[]
   image?: string
   tags: string[]
   baseStats?: Record<string, number>
+  /** 满级/最大成长属性 */
+  maxStats?: Record<string, number>
+  /** 六维属性成长阶段表 */
+  statGrowth?: StatGrowthEntry[]
   skills?: string[]
   songs?: string[]
   recommendedEquipment?: string[]
   training?: TrainingPhase[]
   buildNotes?: string
+}
+
+export interface LoreEntry {
+  title: string
+  content: string
+}
+
+export interface StatGrowthEntry {
+  phase: number
+  力量: number
+  敏捷: number
+  体质: number
+  智力: number
+  感知: number
+  魅力: number
 }
 
 export interface TrainingPhase {
@@ -183,6 +221,7 @@ export interface GameClass {
   id: string
   slug: string
   name: string
+  tier?: string
   role?: string
   /** 战斗定位标签，如 主攻 / 协攻 / 辅助 */
   combatRoles?: string[]

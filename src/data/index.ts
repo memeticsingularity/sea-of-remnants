@@ -1,4 +1,4 @@
-import type { WikiData } from '@/types'
+import type { WikiData, Crew, GameClass } from '@/types'
 import generated from './generated.json'
 
 /**
@@ -31,4 +31,41 @@ export function getEntityById<T extends { id: string }>(
   id: string,
 ): T | undefined {
   return collection.find((item) => item.id === id)
+}
+
+/** 技能/骰子等级相关工具函数 */
+
+type Levelable = { level?: number; maxLevel?: number; levelDetails?: { level: number; detailedDesc: string }[] }
+
+export function getLevelDetailMap(item: Levelable): Map<number, string> {
+  const map = new Map<number, string>()
+  for (const detail of item.levelDetails || []) {
+    map.set(detail.level, detail.detailedDesc)
+  }
+  return map
+}
+
+export function getAvailableLevels(item: Levelable): number[] {
+  return (item.levelDetails || [])
+    .map((d) => d.level)
+    .filter((lv): lv is number => typeof lv === 'number')
+    .sort((a, b) => a - b)
+}
+
+export function getMaxSkillLevel(item: Levelable): number {
+  if (item.maxLevel) return item.maxLevel
+  const levels = getAvailableLevels(item)
+  return levels.length > 0 ? levels[levels.length - 1] : 1
+}
+
+export function getEffectAtLevel(item: Levelable, level: number): string | undefined {
+  return getLevelDetailMap(item).get(level)
+}
+
+/** 查找持有某个技能的船员与职业 */
+
+export function getSkillOwners(skillId: string): { crews: Crew[]; classes: GameClass[] } {
+  const crews = wikiData.crews.filter((c) => c.skills?.includes(skillId))
+  const classes = wikiData.classes.filter((c) => c.skills?.includes(skillId))
+  return { crews, classes }
 }

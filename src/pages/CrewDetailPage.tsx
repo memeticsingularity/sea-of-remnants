@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { StatBlock } from '@/components/ui/StatBlock'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { SkillCard } from '@/components/cards/SkillCard'
 import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -71,21 +72,9 @@ export function CrewDetailPage() {
           {skills && skills.length > 0 && (
             <Card className="mb-6">
               <h2 className="mb-4 text-xl font-bold text-text">职业技能</h2>
-              <div className="space-y-3">
+              <div className="grid gap-4">
                 {skills.map((skill) => (
-                  <Link
-                    key={skill!.id}
-                    to={`/skills/${skill!.slug}`}
-                    className="block rounded-md border border-border bg-surface-light p-3 hover:border-accent"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-bold text-text">{skill!.name}</span>
-                      <span className="text-sm text-text-muted">{skill!.type}</span>
-                    </div>
-                    <p className="mt-1 text-sm text-text-muted">
-                      <GlossaryTooltip text={skill!.shortDesc} />
-                    </p>
-                  </Link>
+                  <SkillCard key={skill!.id} skill={skill!} compact />
                 ))}
               </div>
             </Card>

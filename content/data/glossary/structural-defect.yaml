@@ -1,0 +1,8 @@
+id: glossary-structural-defect
+slug: structural-defect
+term: 结构缺陷
+definition: |
+  由鬼手船匠被动技「船匠锐眼」施加的减益状态。
+  降低目标防御力，记录携带者所受伤害，计数达到上限时对敌方全体造成等同于记录值的伤害并清空计数。
+related:
+  - 负面状态

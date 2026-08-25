@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { wikiData, getEntityBySlug } from '@/data'
+import { wikiData, getEntityBySlug, getAvailableLevels, getSkillOwners } from '@/data'
 import { Card } from '@/components/ui/Card'
 import { Tag } from '@/components/ui/Tag'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
-import { GlossaryTooltip } from '@/components/glossary/GlossaryTooltip'
+import { SkillLevelSelector } from '@/components/skills/SkillLevelSelector'
+import { SkillDescription } from '@/components/skills/SkillDescription'
+import { SkillDetailToggle } from '@/components/skills/SkillDetailToggle'
 import type { Skill, Dice } from '@/types'
 
 interface SkillDetailPageProps {
@@ -17,6 +19,10 @@ export function SkillDetailPage({ type = 'skill' }: SkillDetailPageProps) {
 
   const collection = type === 'dice' ? wikiData.dice : wikiData.skills
   const item = getEntityBySlug(collection as (Skill | Dice)[], slug || '')
+
+  const availableLevels = item ? getAvailableLevels(item as Skill | Dice) : []
+  const defaultLevel = availableLevels[0] ?? (item as Skill | Dice)?.level ?? 1
+  const [selectedLevel, setSelectedLevel] = useState(defaultLevel)
 
   if (!item) {
     return (
@@ -36,7 +42,10 @@ export function SkillDetailPage({ type = 'skill' }: SkillDetailPageProps) {
   const label = type === 'dice' ? '骰子' : '技能'
   const listPath = type === 'dice' ? '/dice' : '/skills'
 
-  const desc = showDetailed && item.detailedDesc ? item.detailedDesc : item.shortDesc
+  const hasDetailed = Boolean(item.detailedDesc || (item as Skill).levelDetails?.length)
+
+  const owners = isSkill ? getSkillOwners(item.id) : { crews: [], classes: [] }
+  const hasOwners = owners.crews.length > 0 || owners.classes.length > 0
 
   return (
     <div>
@@ -73,29 +82,32 @@ export function SkillDetailPage({ type = 'skill' }: SkillDetailPageProps) {
           </div>
         </div>
 
-        {item.detailedDesc && (
-          <button
-            type="button"
-            onClick={() => setShowDetailed(!showDetailed)}
-            className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
-              showDetailed
-                ? 'bg-accent text-white'
-                : 'bg-surface-light text-text-muted hover:text-text'
-            }`}
-          >
-            {showDetailed ? '简略' : '详细'}
-          </button>
+        {hasDetailed && (
+          <SkillDetailToggle
+            showDetailed={showDetailed}
+            onToggle={() => setShowDetailed((v) => !v)}
+          />
         )}
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2">
           <Card className="mb-6">
-            <h2 className="mb-4 text-xl font-bold text-text">效果说明</h2>
-            <p className="text-lg leading-relaxed text-text">
-              <GlossaryTooltip text={desc} />
-            </p>
-            {item.detailedDesc && (
+            <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+              <h2 className="text-xl font-bold text-text">效果说明</h2>
+              <SkillLevelSelector
+                item={item as Skill | Dice}
+                selectedLevel={selectedLevel}
+                onSelectLevel={setSelectedLevel}
+              />
+            </div>
+            <SkillDescription
+              item={item as Skill | Dice}
+              selectedLevel={selectedLevel}
+              showDetailed={showDetailed}
+              className="text-lg text-text"
+            />
+            {hasDetailed && (
               <p className="mt-2 text-xs text-text-muted">
                 {showDetailed ? '当前为详细描述' : '当前为简略描述，点击右上角切换'}
               </p>
@@ -145,6 +157,52 @@ export function SkillDetailPage({ type = 'skill' }: SkillDetailPageProps) {
         </div>
 
         <div>
+          {hasOwners && (
+            <Card className="mb-6">
+              <h2 className="mb-4 text-xl font-bold text-text">所属角色 / 职业</h2>
+              <div className="space-y-3">
+                {owners.crews.map((crew) => (
+                  <Link
+                    key={crew.id}
+                    to={`/crews/${crew.slug}`}
+                    className="flex items-center gap-3 rounded-md border border-border bg-surface-light p-3 hover:border-accent"
+                  >
+                    {crew.image ? (
+                      <img
+                        src={crew.image}
+                        alt={crew.name}
+                        className="h-10 w-10 rounded-md bg-surface object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-10 w-10 items-center justify-center rounded-md bg-surface text-text-dim">
+                        无图
+                      </div>
+                    )}
+                    <div>
+                      <div className="font-bold text-text">{crew.name}</div>
+                      <div className="text-xs text-text-muted">{crew.faction}</div>
+                    </div>
+                  </Link>
+                ))}
+                {owners.classes.map((gameClass) => (
+                  <Link
+                    key={gameClass.id}
+                    to={`/classes/${gameClass.slug}`}
+                    className="flex items-center gap-3 rounded-md border border-border bg-surface-light p-3 hover:border-accent"
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-md bg-surface text-accent">
+                      职
+                    </div>
+                    <div>
+                      <div className="font-bold text-text">{gameClass.name}</div>
+                      <div className="text-xs text-text-muted">{gameClass.role}</div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </Card>
+          )}
+
           {item.relatedGlossary && item.relatedGlossary.length > 0 && (
             <Card className="mb-6">
               <h2 className="mb-4 text-xl font-bold text-text">相关术语</h2>
